@@ -3,14 +3,14 @@
 This is a paper list about [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV) including:
 
 - Comprehensive **Surveys**
-- **VNE**: Virtual Network Embedding
+- **VNE**: Virtual Network Embedding Algorithms
 - **VNFC**: Virtual Network Function Chain Algorithms  
 - **VNFP**: Virtual Network Function Placement Algorithms  
 - **VNFS**: Virtual Network Function Scheduling Algorithms  
 
 Particularly, papers related with resource allocation are classified according to method categories.
 
-Favorably receive that submit relevant papers to this repository in the appropriate format.
+**Favorably receive that submit relevant papers to this repository in the appropriate format.**
 
 ## [Content](#content)
 
@@ -24,7 +24,7 @@ Favorably receive that submit relevant papers to this repository in the appropri
   - <a href="#value-based-drl">Value-based DRL</a>
   - <a href="#policy-based-drl">Policy-based DRL</a>
 
-<!-- Template
+<!-- Template :star:
 
 1. **An Online Algorithm for VNF Service Chain Scaling in Datacenters**
 
@@ -44,31 +44,31 @@ Favorably receive that submit relevant papers to this repository in the appropri
 
    - `Publication`: TPDS 2021 (**CCF-A**)
    - `Authors`: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu
-   - `Link`: [paper](https://ieeexplore.ieee.org/document/9169857)(To IEEE explore)
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9169857)
 
-1. **NFV Platform Design: A Survey**
+2. **NFV Platform Design: A Survey**
 
    - `Publication`: TNSM 2020 (**CCF-C**)
    - `Authors`: Tianzhu Zhang
-   - `Link`: [paper](https://arxiv.org/abs/2002.11059)(To IEEE explore)
+   - `Link`: [arXiv](https://arxiv.org/abs/2002.11059)(To IEEE explore)
 
-1. **A Survey on the Placement of Virtual Resources and Virtual Network Functions**
+3. **A Survey on the Placement of Virtual Resources and Virtual Network Functions**
 
    - `Publication`: IEEE Communications Surveys & Tutorials 2019 (**JCR-Q1**)
    - `Authors`: Abdelquoddouss Laghrissi and Tarik Taleb
    - `Link`: [paper](http://mosaic-lab.org/uploads/papers/078b601e-3e01-4a42-8a35-b98e2d113943.pdf)
 
-1. **Resource Allocation in NFV: A Comprehensive Survey**
+4. **Resource Allocation in NFV: A Comprehensive Survey**
 
    - `Publication`: TNSM 2019 (**CCF-C**)
    - `Authors`: Juliver Gil Herrera, Juan Felipe Botero
-   - `Link`: [paper](https://ieeexplore.ieee.org/document/7534741)(To IEEE explore)
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7534741)
 
-1. **A comprehensive survey of network function virtualization**
+5. **A comprehensive survey of network function virtualization**
 
    - `Publication`: CN 2018 (**CCF-B**)
    - `Authors`: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang
-   - `Link`: [paper](https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306)(To ScienceDirect)
+   - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306)(To ScienceDirect)
 
 ## [Mathematical-based](#content)
 
@@ -91,7 +91,14 @@ Favorably receive that submit relevant papers to this repository in the appropri
    - `Keyworks`: VNFS, VNFP, ILP (Integer Linear Program), Regularization, Rounding
    - `Objective`: Minimize the operating cost and deployment cost
    - `Link`: [paper](https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)
-Reliability Aware Service Placement Using a Viterbi-Based Algorithm
+
+1. **Congestion-Aware and Energy-Aware Virtual Network Embedding**
+
+   - `Publication`: TON 2020 (**CCF-A**)
+   - `Authors`: Minh Pham, Doan B. Hoang, Zenon Chaczko
+   - `Keyworks`: VNE, relaxed LP (linear Program), Congestion-aware, Energy-aware, SDN (Software-Defined Networks), SR (Segment Routing)
+   - `Objective`: Multiple-objective is to save cost, save energy and avoid network congestion simultaneously
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945162)
 
 1. **Reliability Aware Service Placement Using a Viterbi-Based Algorithm**
 
@@ -99,7 +106,7 @@ Reliability Aware Service Placement Using a Viterbi-Based Algorithm
    - `Authors`:  Mohammad Karimzadeh-Farshbafan, Vahid Shah-Mansouri, Dusit Niyato
    - `Keyworks`: VNFP, MICP (mixed integer convex programming), Viterbi-based
    - `Objective`: Minimize the cost of resources of the InPs and maximizing the reliability of the service
-   - `Link`: [paper](https://ieeexplore.ieee.org/document/8933111)
+   - `Link`: [IEEE Xplore]
 
 1. **Provably Efficient Algorithms for Placement of Service Function Chains with Ordering Constraints**
 
@@ -115,7 +122,7 @@ Reliability Aware Service Placement Using a Viterbi-Based Algorithm
    - `Authors`: Long Gong, Yonggang Wen, Zuqing Zhu and Tony Lee
    - `Keyworks`: VNE, GRC (Global Resource Control)
    - `Objective`: Maximize the revenue-to-cost ratio and acceptance ratio
-   - `Link`: [paper](https://ieeexplore.ieee.org/document/6847918)(To IEEE Explore)
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/6847918)
 
 ### [Meta-Heuristic](#content)
 
@@ -130,7 +137,7 @@ Reliability Aware Service Placement Using a Viterbi-Based Algorithm
    - `Keyworks`: VNFP, Dynamic Reliability-aware, MDP (Markov Deci-
 sion Process), Viterbi algorithm
    - `Objective`: Minimize the placement cost and maximize the number of admitted services
-   - `Link`: [paper](https://arxiv.org/abs/1911.06532)(To arXiv)
+   - `Link`: [arXiv](https://arxiv.org/abs/1911.06532)(To arXiv)
 
 1. **MUVINE: Multi-Stage Virtual Network Embedding in Cloud Data Centers Using Reinforcement Learning-Based Predictions**
 
@@ -183,17 +190,17 @@ sion Process), Viterbi algorithm
    - `Authors`: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li
    - `Keyworks`: VNE, A3C (Asynchronous Advantage Actor-Critic), GCN (Graph Convolutional Network)
    - `Objective`: Minimizing the acceptance ratio and long-term average revenue
-   - `Link`: [paper](https://ieeexplore.ieee.org/document/9060910)(To IEEE explore)
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9060910)
 
-1. **Virtual Network Function Placement Optimization With Deep Reinforcement Learning**
+2. **Virtual Network Function Placement Optimization With Deep Reinforcement Learning**
 
    - `Publication`: JSAC 2019 (**CCF-A**)
    - `Authors`: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal
    - `Keyworks`: VNFP, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)
    - `Objective`: Minimize the overall power consumption
-   - `Link`: [paper](https://ieeexplore.ieee.org/document/8945291)(To IEEE explore)
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
 
-1. **Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach**
+3. **Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach**
 
    - `Publication`: INFOCOM 2019 (**CCF-A**)
    - `Authors`: Pham Tran Anh Quang, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul
@@ -208,9 +215,9 @@ with the lowest cost
    - `Authors`: Sen Wang, Jun Bi, Jianping Wu, Athanasios V. Vasilakos, Qilin Fan
    - `Keyworks`: VNFP, TD (Temporal Difference), GRC (Global Resource Control)
    - `Objective`: Maximize the long-term time-average revenue of the InP
-   - `Link`: [paper](https://www.sciencedirect.com/science/article/abs/pii/S138912861830584X)(To ScienceDirect)
+   - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S138912861830584X)
 
-1. **NFVdeep: adaptive online service function chain deployment with deep reinforcement learning**
+2. **NFVdeep: adaptive online service function chain deployment with deep reinforcement learning**
 
    - `Publication`: IWQoS 2019 (**CCF-B**)
    - `Authors`: Yikai  Xiao, Qixia  Zhang, Fangming Liu, Jia  Wang, Miao  Zhao, Zhongxing  Zhang, Jiaxing  Zhang

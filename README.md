@@ -1,14 +1,14 @@
-# Papers on NFV
+# Papers on NFV-RA
 
-This is a paper list about [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV) including:
+This is a paper list about Resource Allocation in  [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV) including
 
 - Comprehensive **Surveys**
 - **VNE**: Virtual Network Embedding Algorithms
-- **VNFC**: Virtual Network Function Chain Algorithms  
+- **VNFC**: Virtual Network Function Chaining Algorithms  
 - **VNFP**: Virtual Network Function Placement Algorithms  
 - **VNFS**: Virtual Network Function Scheduling Algorithms  
 
-Particularly, papers related with resource allocation are classified according to method categories.
+Particularly, we mainly collect papers from high-quality journals and conferences, and classify them according to method categories.
 
 **Favorably receive that submit relevant papers to this repository in the appropriate format.**
 
@@ -17,8 +17,8 @@ Particularly, papers related with resource allocation are classified according t
 - <a href="#survey-papers">Survey</a>
 - <a href="#mathematical-based">Mathematical-based</a>
 - <a href="#heuristic-based">Heuristic-based</a>
-  - <a href="#basic-heruistics">Basic heruistics</a>
-  - <a href="#meta-heruistics">Meta-heruistics</a>
+  - <a href="#basic-heuristics">Basic heuristics</a>
+  - <a href="#meta-heuristics">Meta-heuristics</a>
 - <a href="#reinforcement-learning-based">Reinforcement Learning-based</a>
   - <a href="#basic-rl">Basic RL</a>
   - <a href="#value-based-drl">Value-based DRL</a>
@@ -46,29 +46,41 @@ Particularly, papers related with resource allocation are classified according t
    - `Authors`: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9169857)
 
-2. **NFV Platform Design: A Survey**
+2. **SDN/NFV-Empowered Future IoV With Enhanced Communication, Computing, and Caching**
 
-   - `Publication`: TNSM 2020 (**CCF-C**)
-   - `Authors`: Tianzhu Zhang
-   - `Link`: [arXiv](https://arxiv.org/abs/2002.11059)(To IEEE explore)
+   - `Publication`: Proc. IEEE 2020 (**CCF-A**)
+   - `Authors`: Weihua Zhuang; Qiang Ye; Feng Lyu; Nan Cheng; Ju Ren
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8907851)
 
-3. **A Survey on the Placement of Virtual Resources and Virtual Network Functions**
+3. **Survey of Performance Acceleration Techniques for Network Function Virtualization**
+
+   - `Publication`: Proc. IEEE 2019 (**CCF-A**)
+   - `Authors`: Leonardo Linguaglossa; Stanislav Lange; Salvatore Pontarelli; Gábor Rétvári; Dario Rossi; Thomas Zinner; Roberto Bifulco; Michael; Jarschel; Giuseppe Bianchi
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8666751)
+
+4. **Will Serverless Computing Revolutionize NFV?**
+
+   - `Publication`: Proc. IEEE 2019 (**CCF-A**)
+   - `Authors`: Paarijaat Aditya; Istemi Ekin Akkus; Andre Beck; Ruichuan Chen; Volker Hilt; Ivica Rimac; Klaus Satzke; Manuel Stein
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8653379)
+
+5. **A Survey on the Placement of Virtual Resources and Virtual Network Functions**
 
    - `Publication`: IEEE Communications Surveys & Tutorials 2019 (**JCR-Q1**)
    - `Authors`: Abdelquoddouss Laghrissi and Tarik Taleb
    - `Link`: [paper](http://mosaic-lab.org/uploads/papers/078b601e-3e01-4a42-8a35-b98e2d113943.pdf)
 
-4. **Resource Allocation in NFV: A Comprehensive Survey**
+6. **Resource Allocation in NFV: A Comprehensive Survey**
 
    - `Publication`: TNSM 2019 (**CCF-C**)
    - `Authors`: Juliver Gil Herrera, Juan Felipe Botero
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7534741)
 
-5. **A comprehensive survey of network function virtualization**
+7. **A comprehensive survey of network function virtualization**
 
    - `Publication`: CN 2018 (**CCF-B**)
    - `Authors`: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang
-   - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306)(To ScienceDirect)
+   - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306)
 
 ## [Mathematical-based](#content)
 
@@ -106,7 +118,7 @@ Particularly, papers related with resource allocation are classified according t
    - `Authors`:  Mohammad Karimzadeh-Farshbafan, Vahid Shah-Mansouri, Dusit Niyato
    - `Keyworks`: VNFP, MICP (mixed integer convex programming), Viterbi-based
    - `Objective`: Minimize the cost of resources of the InPs and maximizing the reliability of the service
-   - `Link`: [IEEE Xplore]
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8933111)
 
 1. **Provably Efficient Algorithms for Placement of Service Function Chains with Ordering Constraints**
 
@@ -137,7 +149,7 @@ Particularly, papers related with resource allocation are classified according t
    - `Keyworks`: VNFP, Dynamic Reliability-aware, MDP (Markov Deci-
 sion Process), Viterbi algorithm
    - `Objective`: Minimize the placement cost and maximize the number of admitted services
-   - `Link`: [arXiv](https://arxiv.org/abs/1911.06532)(To arXiv)
+   - `Link`: [paper](https://arxiv.org/abs/1911.06532)
 
 1. **MUVINE: Multi-Stage Virtual Network Embedding in Cloud Data Centers Using Reinforcement Learning-Based Predictions**
 
@@ -155,13 +167,13 @@ sion Process), Viterbi algorithm
    - `Objective`: Maximize the profit of InPs (revenue-to-cost and acceptance ratio)
    - `Link`: [paper](https://www.researchgate.net/publication/313873926_Virtual_Network_Embedding_via_Monte_Carlo_Tree_Search)
 
-1. **An efficient algorithm for virtual network function placement and chaining**
+1. **An Efficient Algorithm for Virtual Network Function Placement and Chaining**
 
    - `Publication`: CCNC 2017
    - `Authors`: Oussama Soualah, Marouen Mechtri, Chaima Ghribi, Djamal Zeghlache
    - `Keyworks`: VNFP, MCTS (Monte Carlo Tree Search)
    - `Objective`: Maximize the acceptance rate of provisioning requests
-   - `Link`: [paper](https://www.researchgate.net/publication/313873926_Virtual_Network_Embedding_via_Monte_Carlo_Tree_Search)
+   - `Link`: [paper](https://www.researchgate.net/publication/318579373_An_efficient_algorithm_for_virtual_network_function_placement_and_chaining)
 
 <!-- <details><summary> more </summary>  -->
 
@@ -172,7 +184,7 @@ sion Process), Viterbi algorithm
    - `Publication`: JSAC 2019 (**CCF-A**)
    - `Authors`: Jianing Pei, Peilin Hong, Miao Pan, Jiangqing Liu, Jingsong Zhou
    - `Keyworks`: VNFP, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)
-   - `Link`: [paper](https://www.researchgate.net/publication/313873926_Virtual_Network_Embedding_via_Monte_Carlo_Tree_Search)
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8932445)
 
 1. **DeepViNE: Virtual Network Embedding with Deep Reinforcement Learning**
 
@@ -192,7 +204,7 @@ sion Process), Viterbi algorithm
    - `Objective`: Minimizing the acceptance ratio and long-term average revenue
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9060910)
 
-2. **Virtual Network Function Placement Optimization With Deep Reinforcement Learning**
+1. **Virtual Network Function Placement Optimization With Deep Reinforcement Learning**
 
    - `Publication`: JSAC 2019 (**CCF-A**)
    - `Authors`: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal
@@ -200,7 +212,7 @@ sion Process), Viterbi algorithm
    - `Objective`: Minimize the overall power consumption
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
 
-3. **Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach**
+1. **Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach**
 
    - `Publication`: INFOCOM 2019 (**CCF-A**)
    - `Authors`: Pham Tran Anh Quang, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul
@@ -217,7 +229,7 @@ with the lowest cost
    - `Objective`: Maximize the long-term time-average revenue of the InP
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S138912861830584X)
 
-2. **NFVdeep: adaptive online service function chain deployment with deep reinforcement learning**
+1. **NFVdeep: adaptive online service function chain deployment with deep reinforcement learning**
 
    - `Publication`: IWQoS 2019 (**CCF-B**)
    - `Authors`: Yikai  Xiao, Qixia  Zhang, Fangming Liu, Jia  Wang, Miao  Zhao, Zhongxing  Zhang, Jiaxing  Zhang

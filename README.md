@@ -138,6 +138,30 @@ Particularly, we mainly collect papers from high-quality journals and conference
 
 ### [Meta-Heuristic](#content)
 
+1. **A Constructive Particle Swarm Optimizer for Virtual Network Embedding**
+
+   - `Publication`: TNSE 2020 (**JCR-Q1**)
+   - `Authors`: Yongqiang Gao; Haibing Guan; Zhengwei Qi; Yang Hou; Liang Liu
+   - `Keyworks`: VNE, CPSO (Constructive Particle Swarm Optimizer)
+   - `Objective`: MinimiziE the cost of bandwidth for embedding the VN
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8786166)
+
+2. **A Multi-objective Ant Colony System algorithm for Virtual Machine Placement in Cloud Computing**
+
+   - `Publication`: JCSS 2013 (**CCF-B**)
+   - `Authors`: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li
+   - `Keyworks`: VNFP, ACS (Ant Colony System), Multi-objective
+   - `Objective`: Minimize total resource wastage and power consumption
+   - `Link`: [IEEE Xplore](https://www.sciencedirect.com/science/article/pii/S0022000013000627)
+
+3. **Virtual Network Embedding through Topology Awareness and Optimization**
+
+   - `Publication`: CN 2012 (**CCF-B**)
+   - `Authors`: Xiang Cheng, Sen Su, Zhongbao Zhang, Kai Shuang, Fangchun Yang, Yan Luo, Jie Wang
+   - `Keyworks`: VNFP, PSO (Particle Swarm Optimization), Topology decomposition
+   - `Objective`: Minimize total resource wastage and power Consumption
+   - `Link`: [IEEE Xplore](https://www.researchgate.net/publication/257582253_Virtual_network_embedding_through_topology_awareness_and_optimization)
+
 ## [Reinforcement learning-based](#content)
 
 ### [Basic RL](#content)

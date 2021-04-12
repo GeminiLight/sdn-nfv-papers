@@ -103,11 +103,13 @@ Particularly, we mainly collect papers from high-quality journals and conference
    - `Objective`: Minimize the operating cost and deployment cost
    - `Link`: [paper](https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)
 1. **Congestion-Aware and Energy-Aware Virtual Network Embedding**
-- `Publication`: TON 2020 (**CCF-A**)
+   
+   - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Minh Pham, Doan B. Hoang, Zenon Chaczko
    - `Keyworks`: VNE, relaxed LP (linear Program), Congestion-aware, Energy-aware, SDN (Software-Defined Networks), SR (Segment Routing)
    - `Objective`: Multiple-objective is to save cost, save energy and avoid network congestion simultaneously
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945162)
+
 1. **Reliability Aware Service Placement Using a Viterbi-Based Algorithm**
 
    - `Publication`: TNSM 2020 (**CCF-C**)
@@ -115,6 +117,7 @@ Particularly, we mainly collect papers from high-quality journals and conference
    - `Keyworks`: VNFP, MICP (mixed integer convex programming), Viterbi-based
    - `Objective`: Minimize the cost of resources of the InPs and maximizing the reliability of the service
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8933111)
+
 1. **Provably Efficient Algorithms for Placement of Service Function Chains with Ordering Constraints**
 
    - `Publication`: INFOCOM 2018 (**CCF-A**)
@@ -122,6 +125,7 @@ Particularly, we mainly collect papers from high-quality journals and conference
    - `Keyworks`: VNFP, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)
    - `Objective`: Minimize the total deployment cost
    - `Link`: [paper](https://hal.inria.fr/hal-01743273/document)
+
 1. **Toward Profit-Seeking Virtual Network Embedding**
 
    - `Publication`: INFOCOM 2014 (**CCF-A**)
@@ -133,7 +137,7 @@ Particularly, we mainly collect papers from high-quality journals and conference
 ### [Meta-Heuristic](#content)
 
 1. **A Constructive Particle Swarm Optimizer for Virtual Network Embedding**
-- `Publication`: TNSE 2020 (**JCR-Q1**)
+   - `Publication`: TNSE 2020 (**JCR-Q1**)
    - `Authors`: Yongqiang Gao; Haibing Guan; Zhengwei Qi; Yang Hou; Liang Liu
    - `Keyworks`: VNE, CPSO (Constructive Particle Swarm Optimizer)
    - `Objective`: MinimiziE the cost of bandwidth for embedding the VN
@@ -196,12 +200,15 @@ sion Process), Viterbi algorithm
 ### [Deep RL](#content)
 
 1. **Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach With Graph Convolutional Networks**
+   
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li
    - `Keyworks`: VNE, A3C (Asynchronous Advantage Actor-Critic), GCN (Graph Convolutional Network)
    - `Objective`: Minimizing the acceptance ratio and long-term average revenue
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9060910)
+
 1. **Optimal VNF Placement via Deep Reinforcement Learning in SDN/NFV-Enabled Networks**
+
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Jianing Pei, Peilin Hong, Miao Pan, Jiangqing Liu, Jingsong Zhou
    - `Keyworks`: VNFP, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)
@@ -216,12 +223,13 @@ sion Process), Viterbi algorithm
    - `Link`: [paper](https://people.ucalgary.ca/~mghaderi/docs/infocom19-deepvine.pdf)
 
 1. **Virtual Network Function Placement Optimization With Deep Reinforcement Learning**
-- `Publication`: JSAC 2019 (**CCF-A**)
-    - `Authors`: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal
-    - `Keyworks`: VNFP, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)
-    - `Objective`: Minimize the overall power consumption
-    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
-    
+
+   - `Publication`: JSAC 2019 (**CCF-A**)
+   - `Authors`: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal
+   - `Keyworks`: VNFP, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)
+   - `Objective`: Minimize the overall power consumption
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
+   
 1. **Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach**
 
    - `Publication`: INFOCOM 2019 (**CCF-A**)
@@ -238,7 +246,8 @@ with the lowest cost
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S138912861830584X)
    
 1. **NFVdeep: adaptive online service function chain deployment with deep reinforcement learning**
-- `Publication`: IWQoS 2019 (**CCF-B**)
+
+   - `Publication`: IWQoS 2019 (**CCF-B**)
    - `Authors`: Yikai  Xiao, Qixia  Zhang, Fangming Liu, Jia  Wang, Miao  Zhao, Zhongxing  Zhang, Jiaxing  Zhang
    - `Keyworks`: VNFP, PG (Policy Gradient), Serialization and Backtracking, Time Slots
    - `Objective`: Minimize the operation cost of occupied servers and maximize the total throughput of accepted requests
@@ -254,13 +263,17 @@ with the lowest cost
     - `Keyworks`: VNFC, VNFP, Multi-domain
     - `Objective`: A novel architecture for orchestrating and enforcing multi-domain SFCs
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128621000013)
+
 1. **pSMART: A lightweight, privacy-aware service function chain orchestration in multi-domain NFV/SDN**
+
     - `Publication`: CN 2020 (**CCF-B**)
     - `Authors`: Kalpana D. Joshi , Kotaro Kataoka
     - `Keyworks`: VNFC, Multi-domain, Privacy
     - `Objective`: Utilize less sensitive information, to reduce privacy and security risks
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619311181)
+
 1. **End-to-end network slicing for future wireless in multi-region cloud platforms**
+
     - `Publication`: CN 2020 (**CCF-B**)
     - `Authors`: Simona Marinova , Thomas Lin, Hadi Bannazadeh, Alberto Leon-Garcia
     - `Keyworks`: VNFC, VNFP, Multi-domain, E2E (End-to-end) network slicing

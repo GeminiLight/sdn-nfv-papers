@@ -43,11 +43,10 @@ Particularly, we mainly collect papers from high-quality journals and conference
 ## [Survey papers](#content)
 
 1. **Recent Advances of Resource Allocation in Network Function Virtualization**
-
-   - `Publication`: TPDS 2021 (**CCF-A**)
+- `Publication`: TPDS 2021 (**CCF-A**)
    - `Authors`: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9169857)
-
+   
 2. **SDN/NFV-Empowered Future IoV With Enhanced Communication, Computing, and Caching**
 - `Publication`: Proc. IEEE 2020 (**CCF-A**)
    - `Authors`: Weihua Zhuang; Qiang Ye; Feng Lyu; Nan Cheng; Ju Ren
@@ -78,7 +77,7 @@ Particularly, we mainly collect papers from high-quality journals and conference
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7534741)
 
 7. **A comprehensive survey of network function virtualization**
-- `Publication`: CN 2018 (**CCF-B**)
+   - `Publication`: CN 2018 (**CCF-B**)
    - `Authors`: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306)
 
@@ -88,6 +87,14 @@ Particularly, we mainly collect papers from high-quality journals and conference
 
 ### [Basic Heuristic](#content)
 
+1. **Towards Latency Optimization in Hybrid Service Function Chain Composition and Embedding**
+
+   - `Publication`: INFOCOM 2020 (**CCF-A**)
+   - `Authors`: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li
+   - `Keyworks`: VNFC, VNFP, HSFCE (Hybrid SFC composition and Embedding), Latency-aware, Betweenness Centrality
+   - `Objective`: Minimize the latency for the constructed hybrid SFP
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9155529)
+
 1. **Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network Edge**
 
    - `Publication`: INFOCOM 2020 (**CCF-A**)
@@ -95,13 +102,23 @@ Particularly, we mainly collect papers from high-quality journals and conference
    - `Keyworks`: VNFP, MILP (Mixed Integer Iinear Programming), Latency-aware, CDFSA (constrained depth-first search algorithm)
    - `Objective`: Minimize the resource consumption of both servers and links with latency guarantees
    - `Link`: [paper](https://fangmingliu.github.io/files/INFOCOM20-Edge-NFV.pdf)
+
 1. **An Online Algorithm for VNF Service Chain Scaling in Datacenters**
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Ziyue Luo, Chuan Wu
-   - `Keyworks`: VNFS, VNFP, ILP (Integer Linear Program), Regularization, Rounding
+   - `Keyworks`: VNF scaling, VNFP, ILP (Integer Linear Program), Regularization, Rounding
    - `Objective`: Minimize the operating cost and deployment cost
    - `Link`: [paper](https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)
+
+1. **Reliability-Aware Virtualized Network Function Services Provisioning in Mobile Edge Computing**
+   
+   - `Publication`: TON 2020 (**CCF-A**)
+   - `Authors`: Meitian Huang, Weifa Liang, Xiaojun Shen, Yu Ma, Haibin Kan
+   - `Keyworks`: VNFP, Reliability-aware, approximation algorithms, DP (dynamic programming), MEC (mobile edge computing)
+   - `Objective`:  Maximize the network throughput
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9046286)
+
 1. **Congestion-Aware and Energy-Aware Virtual Network Embedding**
    
    - `Publication`: TON 2020 (**CCF-A**)
@@ -239,6 +256,7 @@ sion Process), Viterbi algorithm
 with the lowest cost
    - `Link`: [paper](https://hal.archives-ouvertes.fr/hal-02088819/file/MultiDomain_VNF_FG_embedding__A_Deep_reinforcement_learning_approach-authors%20version.pdf)
 1. **VNE-TD: A virtual network embedding algorithm based on temporal-difference learning**
+
    - `Publication`: CN 2019 (**CCF-B**)
    - `Authors`: Sen Wang, Jun Bi, Jianping Wu, Athanasios V. Vasilakos, Qilin Fan
    - `Keyworks`: VNFP, TD (Temporal Difference), GRC (Global Resource Control)
@@ -258,7 +276,8 @@ with the lowest cost
 > They will be classified as soon as possible.
 
 1. **On cross-domain Service Function Chain orchestration: An architectural framework**
-- `Publication`: CN 2021 (**CCF-B**)
+
+    - `Publication`: CN 2021 (**CCF-B**)
     - `Authors`: Nassima Toumi, Olivier Bernier, Djamal-Eddine Meddour, Adlen Ksentini
     - `Keyworks`: VNFC, VNFP, Multi-domain
     - `Objective`: A novel architecture for orchestrating and enforcing multi-domain SFCs

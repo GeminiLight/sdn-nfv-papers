@@ -9,11 +9,18 @@ This is a paper list about Resource Allocation in  [Network Functions Virtualiza
 - **VNFS**: Virtual Network Function Scheduling Algorithms  
 - **Multi-domain**: also known as cross-domain, multi-region or other resemble name.
 
-> Note: you can search the relevant papers by the direction keywords listed above, such as `VNE`.
-
 Particularly, we mainly collect papers from high-quality journals and conferences, and **classify them according to method categories**.
 
 **Favorably receive that submit relevant papers to this repository in the appropriate format.**
+
+
+> **Note:**  Search by tags
+> you can search the relevant papers by the direction keywords listed above, such as `VNE` or `Multi-domain`.
+> 
+> Other suggested keywords: 
+> - Awareness: `Latency`, `Reliability`, `Congestion`
+> - RL-aglo: `DQN`, `DDPG`, `A3C`
+> - NN-type: `CNN`, `RNN`, `GNN`
 
 ## [Content](#content)
 
@@ -43,12 +50,14 @@ Particularly, we mainly collect papers from high-quality journals and conference
 ## [Survey papers](#content)
 
 1. **Recent Advances of Resource Allocation in Network Function Virtualization**
-- `Publication`: TPDS 2021 (**CCF-A**)
+
+   - `Publication`: TPDS 2021 (**CCF-A**)
    - `Authors`: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9169857)
    
 2. **SDN/NFV-Empowered Future IoV With Enhanced Communication, Computing, and Caching**
-- `Publication`: Proc. IEEE 2020 (**CCF-A**)
+
+   - `Publication`: Proc. IEEE 2020 (**CCF-A**)
    - `Authors`: Weihua Zhuang; Qiang Ye; Feng Lyu; Nan Cheng; Ju Ren
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8907851)
    

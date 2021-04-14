@@ -4,9 +4,10 @@ This is a paper list about Resource Allocation in  [Network Functions Virtualiza
 
 - Comprehensive **Surveys**
 - **VNE**: Virtual Network Embedding Algorithms
-- **VNFC**: Virtual Network Function Chaining Algorithms  
-- **VNFP**: Virtual Network Function Placement Algorithms  
-- **VNFS**: Virtual Network Function Scheduling Algorithms  
+- **VNFC**: Virtual Network Functions Chaining Algorithms
+- **VNFP**: Virtual Network Functions Placement Algorithms
+- **VNFF**: Virtual Network Functions Migration Algorithms
+- **VNFS**: Virtual Network Functions Scheduling Algorithms
 - **Multi-domain**: also known as cross-domain, multi-region or other resemble name.
 
 Particularly, we mainly collect papers from high-quality journals and conferences, and **classify them according to method categories**.
@@ -14,13 +15,16 @@ Particularly, we mainly collect papers from high-quality journals and conference
 **Favorably receive that submit relevant papers to this repository in the appropriate format.**
 
 
-> **Note:**  Search by tags
-> you can search the relevant papers by the direction keywords listed above, such as `VNE` or `Multi-domain`.
-> 
-> Other suggested keywords: 
-> - Awareness: `Latency`, `Reliability`, `Congestion`
-> - RL-aglo: `DQN`, `DDPG`, `A3C`
-> - NN-type: `CNN`, `RNN`, `GNN`
+### Search by Keywords
+
+You can search the relevant papers by following keywords:
+
+- **Direction**: `VNE`, `VNFC`, `VNFP`, `VNFF`, `VNFS`, `Multi-domain`
+- **Publication**: `JSAC`, `TON`, `INFOCOM`, `CN`, ...
+- **PUB-rank**: `CCF-A`, `CCF-B`, `JCR-Q1`, ...
+- **Awareness**: `Latency`, `Reliability`, `Congestion`, ...
+- **RL-ALGO**: `DQN`, `DDPG`, `A3C`, ...S
+- **NN-type**: `CNN`, `RNN`, `GNN`, ...
 
 ## [Content](#content)
 
@@ -50,42 +54,40 @@ Particularly, we mainly collect papers from high-quality journals and conference
 ## [Survey papers](#content)
 
 1. **Recent Advances of Resource Allocation in Network Function Virtualization**
-
-   - `Publication`: TPDS 2021 (**CCF-A**)
+- `Publication`: TPDS 2021 (**CCF-A**)
    - `Authors`: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9169857)
    
-2. **SDN/NFV-Empowered Future IoV With Enhanced Communication, Computing, and Caching**
-
+1. **SDN/NFV-Empowered Future IoV With Enhanced Communication, Computing, and Caching**
    - `Publication`: Proc. IEEE 2020 (**CCF-A**)
    - `Authors`: Weihua Zhuang; Qiang Ye; Feng Lyu; Nan Cheng; Ju Ren
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8907851)
-   
-3. **Survey of Performance Acceleration Techniques for Network Function Virtualization**
+
+1. **Survey of Performance Acceleration Techniques for Network Function Virtualization**
 
    - `Publication`: Proc. IEEE 2019 (**CCF-A**)
    - `Authors`: Leonardo Linguaglossa; Stanislav Lange; Salvatore Pontarelli; Gábor Rétvári; Dario Rossi; Thomas Zinner; Roberto Bifulco; Michael; Jarschel; Giuseppe Bianchi
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8666751)
 
-4. **Will Serverless Computing Revolutionize NFV?**
+1. **Will Serverless Computing Revolutionize NFV?**
 
    - `Publication`: Proc. IEEE 2019 (**CCF-A**)
    - `Authors`: Paarijaat Aditya; Istemi Ekin Akkus; Andre Beck; Ruichuan Chen; Volker Hilt; Ivica Rimac; Klaus Satzke; Manuel Stein
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8653379)
 
-5. **A Survey on the Placement of Virtual Resources and Virtual Network Functions**
+1. **A Survey on the Placement of Virtual Resources and Virtual Network Functions**
 
    - `Publication`: IEEE Communications Surveys & Tutorials 2019 (**JCR-Q1**)
    - `Authors`: Abdelquoddouss Laghrissi and Tarik Taleb
    - `Link`: [paper](http://mosaic-lab.org/uploads/papers/078b601e-3e01-4a42-8a35-b98e2d113943.pdf)
 
-6. **Resource Allocation in NFV: A Comprehensive Survey**
+1. **Resource Allocation in NFV: A Comprehensive Survey**
 
    - `Publication`: TNSM 2019 (**CCF-C**)
    - `Authors`: Juliver Gil Herrera, Juan Felipe Botero
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7534741)
 
-7. **A comprehensive survey of network function virtualization**
+1. **A comprehensive survey of network function virtualization**
    - `Publication`: CN 2018 (**CCF-B**)
    - `Authors`: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306)
@@ -96,11 +98,19 @@ Particularly, we mainly collect papers from high-quality journals and conference
 
 ### [Basic Heuristic](#content)
 
+1. **Energy and Cost Efficient Resource Allocation for Blockchain-Enabled NFV**
+
+    - `Publication`: TSC 2021 (**CCF-B**)
+    - `Authors`: Shiva Kazemi Taskou, Mehdi Rasti, Pedro H. J. Nardelli
+    - `Keyworks`: VNFP, Blockchain-Enabled, HuRA (Hungarian-based Resource Allocation), HuRA (Hungarian-based Resource Allocation)
+    - `Objective`: Minimize the energy consumption and utilized resource cost simultaneously
+    - `Link`: [paper](https://arxiv.org/abs/2103.02139)
+
 1. **Towards Latency Optimization in Hybrid Service Function Chain Composition and Embedding**
 
    - `Publication`: INFOCOM 2020 (**CCF-A**)
    - `Authors`: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li
-   - `Keyworks`: VNFC, VNFP, HSFCE (Hybrid SFC composition and Embedding), Latency-aware, Betweenness Centrality
+   - `Keyworks`: VNFC & VNFP, HSFCE (Hybrid SFC composition and Embedding), Latency-aware, Betweenness Centrality
    - `Objective`: Minimize the latency for the constructed hybrid SFP
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9155529)
 
@@ -116,7 +126,7 @@ Particularly, we mainly collect papers from high-quality journals and conference
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Ziyue Luo, Chuan Wu
-   - `Keyworks`: VNF scaling, VNFP, ILP (Integer Linear Program), Regularization, Rounding
+   - `Keyworks`: VNFP, ILP (Integer Linear Program), Regularization, Rounding
    - `Objective`: Minimize the operating cost and deployment cost
    - `Link`: [paper](https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)
 
@@ -240,6 +250,23 @@ sion Process), Viterbi algorithm
    - `Keyworks`: VNFP, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)
    - `Objective`: Minimize the weighted cost consisting of VNF placement cost, penalty of reject SFCRs and VNFI running cost in every time interval $\Delta t$
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8932445)
+
+1. **Intelligent VNF Orchestration and Flow Scheduling via Model-Assisted Deep Reinforcement Learning**
+
+   - `Publication`: JSAC 2020 (**CCF-A**)
+   - `Authors`: Lin Gu, Deze Zeng, Wei Li, Song Guo, Albert Y. Zomaya, Hai Jin
+   - `Keyworks`: VNFS, Latency-awareness, flow, DDPG (Deep Deterministic Policy Gradient)
+   - `Objective`: Maximize the overall network utility with the consideration of end-to-end delay and various cost
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8932445)
+
+1. **Virtual Network Function Placement Optimization with Deep Reinforcement Learning**
+
+   - `Publication`: JSAC 2019 (**CCF-A**)
+   - `Authors`: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal
+   - `Keyworks`: VNFP, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)
+   - `Objective`: Minimize the overall power consumption
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
+
 1. **DeepViNE: Virtual Network Embedding with Deep Reinforcement Learning**
 
    - `Publication`: INFOCOM 2019 (**CCF-A**)
@@ -247,14 +274,6 @@ sion Process), Viterbi algorithm
    - `Keyworks`: VNE, DQN (Deep Q Network), Multi-channels Representations
    - `Objective`: Minimize the VN blocking probability
    - `Link`: [paper](https://people.ucalgary.ca/~mghaderi/docs/infocom19-deepvine.pdf)
-
-1. **Virtual Network Function Placement Optimization With Deep Reinforcement Learning**
-
-   - `Publication`: JSAC 2019 (**CCF-A**)
-   - `Authors`: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal
-   - `Keyworks`: VNFP, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)
-   - `Objective`: Minimize the overall power consumption
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
    
 1. **Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach**
 
@@ -264,6 +283,15 @@ sion Process), Viterbi algorithm
    - `Objective`: Maximize the number of allocated VNFs and VLs
 with the lowest cost
    - `Link`: [paper](https://hal.archives-ouvertes.fr/hal-02088819/file/MultiDomain_VNF_FG_embedding__A_Deep_reinforcement_learning_approach-authors%20version.pdf)
+
+1. **Deep Reinforcement Learning based VNF Management in Geo-distributed Edge Computing**
+
+   - `Publication`: ICDCS 2019 (**CCF-B**)
+   - `Authors`: Lin Gu, Deze Zeng, Wei Li, Song Guo, Albert Y. Zomaya, Hai Jin
+   - `Keyworks`: VNFS, Latency-awareness, flow, DDPG (Deep Deterministic Policy Gradient)
+   - `Objective`: Minimize the end-to-end delays and various operation costs
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8885151)
+
 1. **VNE-TD: A virtual network embedding algorithm based on temporal-difference learning**
 
    - `Publication`: CN 2019 (**CCF-B**)
@@ -284,26 +312,33 @@ with the lowest cost
 
 > They will be classified as soon as possible.
 
+1. **Virtual Network Functions Migration Cost: from Identification to Prediction**
+- `Publication`: CN 2020 (**CCF-B**)
+    - `Authors`: Rafael de JesusMartins, Cristiano Bonato Both, Juliano Araújo Wickboldt, Lisandro Zambenedett iGranville
+    - `Keyworks`: VNFM, Linear regression
+    - `Objective`: A novel architecture for orchestrating and enforcing multi-domain SFCs
+    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S138912862031118X)
+
+
 1. **On cross-domain Service Function Chain orchestration: An architectural framework**
 
     - `Publication`: CN 2021 (**CCF-B**)
     - `Authors`: Nassima Toumi, Olivier Bernier, Djamal-Eddine Meddour, Adlen Ksentini
-    - `Keyworks`: VNFC, VNFP, Multi-domain
+    - `Keyworks`: VNFC & VNFP, Multi-domain
     - `Objective`: A novel architecture for orchestrating and enforcing multi-domain SFCs
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128621000013)
 
 1. **pSMART: A lightweight, privacy-aware service function chain orchestration in multi-domain NFV/SDN**
-
-    - `Publication`: CN 2020 (**CCF-B**)
+- `Publication`: CN 2020 (**CCF-B**)
     - `Authors`: Kalpana D. Joshi , Kotaro Kataoka
     - `Keyworks`: VNFC, Multi-domain, Privacy
     - `Objective`: Utilize less sensitive information, to reduce privacy and security risks
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619311181)
-
+    
 1. **End-to-end network slicing for future wireless in multi-region cloud platforms**
 
     - `Publication`: CN 2020 (**CCF-B**)
     - `Authors`: Simona Marinova , Thomas Lin, Hadi Bannazadeh, Alberto Leon-Garcia
-    - `Keyworks`: VNFC, VNFP, Multi-domain, E2E (End-to-end) network slicing
+    - `Keyworks`: VNFC & VNFP, Multi-domain, E2E (End-to-end) network slicing
     - `Objective`: /
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619316081)

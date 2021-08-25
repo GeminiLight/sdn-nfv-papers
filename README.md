@@ -2,15 +2,15 @@
 
 This is a paper list about Resource Allocation in  [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV) and [Software-Defined Networking](https://en.wikipedia.org/wiki/Software-defined_networking) (SDN), including
 
-- Comprehensive **Surveys**
-- **VNE**: Virtual Network Embedding Algorithms
+- Comprehensive **Survey** and **Analysis**
+- **VNE**: Virtual Network Embedding
 - **VNFC**: Virtual Network Functions Chaining (also known as  Service Function Chains Orchestration) Algorithms
 - **VNFP**: Virtual Network Functions Placement (also known as  Service Function Chains Deployment) Algorithms
-- **VNFF**: Virtual Network Functions Migration Algorithms
-- **VNFS**: Virtual Network Functions Scheduling Algorithms
-- **Multi-domain**: also known as cross-domain, multi-region or other resemble name.
+- **VNFF**: Virtual Network Functions Migration
+- **VNFS**: Virtual Network Functions Scheduling
+- **Multi-domain** (also known as cross-domain, multi-region or other resemble name)
 
-Particularly, we mainly collect papers from high-quality journals and conferences, and **classify them according to method categories**.
+Particularly, we mainly collect papers from high-quality journals and conferences, and classify them according to method categories.
 
 **Favorably receive that submit relevant papers to this repository in the appropriate format.**
 
@@ -29,15 +29,15 @@ You can search the relevant papers by following keywords:
 
 ## [Content](#content)
 
-- <a href="#survey-papers">Survey</a>
+- <a href="#survey-and-analysis">Survey and Analysis</a>
 - <a href="#mathematical-based">Mathematical-based</a>
 - <a href="#heuristic-based">Heuristic-based</a>
   - <a href="#basic-heuristics">Basic heuristics</a>
   - <a href="#meta-heuristics">Meta-heuristics</a>
-- <a href="#reinforcement-learning-based">Reinforcement Learning-based</a>
+- :star:<a href="#reinforcement-learning-based">Reinforcement Learning-based</a>
   - <a href="#basic-rl">Basic RL</a>
-  - <a href="#deep-rl">Deep RL</a>
-- <a href="#unassorted">Unassorted</a>
+  - :star:<a href="#deep-rl">Deep RL</a>
+- <a href="#other-and-unassorted">Other & Unassorted</a>
 
 <!-- Template :star:
 
@@ -53,15 +53,22 @@ You can search the relevant papers by following keywords:
 <!-- more -->
 
 
-## [Survey papers](#content)
+## [Survey and Analysis](#content)
 
 1. **Recent Advances of Resource Allocation in Network Function Virtualization**
 
    - `Publication`: TPDS 2021 (**CCF-A**)
    - `Authors`: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9169857)
-   
+
+1. **On the Hardness and Inapproximability of Virtual Network Embeddings**
+
+   - `Publication`: TON 2020 (**CCF-A**)
+   - `Authors`: Matthias Rost and Stefan Schmid
+   - `Link`: [paper](https://www.univie.ac.at/ct/stefan/ton20hard.pdf)
+
 1. **SDN/NFV-Empowered Future IoV With Enhanced Communication, Computing, and Caching**
+
    - `Publication`: Proc. IEEE 2020 (**CCF-A**)
    - `Authors`: Weihua Zhuang; Qiang Ye; Feng Lyu; Nan Cheng; Ju Ren
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8907851)
@@ -86,14 +93,21 @@ You can search the relevant papers by following keywords:
 
 1. **Resource Allocation in NFV: A Comprehensive Survey**
 
-   - `Publication`: TNSM 2019 (**CCF-C**)
+   - `Publication`: TNSM 2019 (**JCR-Q1**)
    - `Authors`: Juliver Gil Herrera, Juan Felipe Botero
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7534741)
 
-1. **A comprehensive survey of network function virtualization**
+1. **A Comprehensive Survey of Network Function Virtualization**
+
    - `Publication`: CN 2018 (**CCF-B**)
    - `Authors`: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306)
+
+1. **Virtual Network Embedding: a Survey**
+
+   - `Publication`: IEEE Communications Surveys & Tutorials 2013 (**JCR-Q1**)
+   - `Authors`: Andreas Fischer; Juan Felipe Botero; Michael Till Beck; Hermann de Meer; Xavier Hesselbach
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/6463372)
 
 
 ## [Mathematical-based](#content)
@@ -102,6 +116,22 @@ You can search the relevant papers by following keywords:
 
 ### [Basic Heuristic](#content)
 
+1. **Joint Virtual Network Topology Design and Embedding for Cybertwin-Enabled 6G Core Networks**
+
+    - `Publication`: IoTJ 2021 (**JCR-1**)
+    - `Authors`: Junling Li; Weisen Shi; Qiang Ye; Shan Zhang; Weihua Zhuang; Xuemin Shen
+    - `Keyworks`: VNE, Joint, delay
+    - `Objective`: Find the optimal resource allocation with the minimum embedding cost
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9415134/)
+
+1. **Efficient Virtual Network Embedding of Cloud-Based Data Center Networks into Optical Networks**
+
+    - `Publication`: TSC 2021 (**CCF-B**)
+    - `Authors`: Weibei Fan; Fu Xiao; Xiaobai Chen; Lei Cui; Shui Yu
+    - `Keyworks`: VNE, Optical Network, Data Center
+    - `Objective`: Reduce complexity of the network topology by using the parallel transmission characteristics of optical fiber
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9415134/)
+
 1. **Energy and Cost Efficient Resource Allocation for Blockchain-Enabled NFV**
 
     - `Publication`: TSC 2021 (**CCF-B**)
@@ -109,6 +139,13 @@ You can search the relevant papers by following keywords:
     - `Keyworks`: VNFP, Blockchain-Enabled, HuRA (Hungarian-based Resource Allocation), HuRA (Hungarian-based Resource Allocation)
     - `Objective`: Minimize the energy consumption and utilized resource cost simultaneously
     - `Link`: [paper](https://arxiv.org/abs/2103.02139)
+
+1. **On Cross-domain Service Function Chain orchestration: An architectural framework**
+    - `Publication`: CN 2021 (**CCF-B**)
+    - `Authors`: Nassima Toumi, Olivier Bernier, Djamal-Eddine Meddour, Adlen Ksentini
+    - `Keyworks`: VNFC & VNFP, Multi-domain
+    - `Objective`: A novel architecture for orchestrating and enforcing multi-domain SFCs
+    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128621000013)
 
 1. **Towards Latency Optimization in Hybrid Service Function Chain Composition and Embedding**
 
@@ -184,11 +221,26 @@ You can search the relevant papers by following keywords:
 
 1. **Reliability Aware Service Placement Using a Viterbi-Based Algorithm**
 
-   - `Publication`: TNSM 2020 (**CCF-C**)
+   - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`:  Mohammad Karimzadeh-Farshbafan, Vahid Shah-Mansouri, Dusit Niyato
    - `Keyworks`: VNFP, MICP (mixed integer convex programming), Viterbi-based
    - `Objective`: Minimize the cost of resources of the InPs and maximize the reliability of the service
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8933111)
+
+1. **pSMART: A lightweight, privacy-aware service function chain orchestration in multi-domain NFV/SDN**
+   
+    - `Publication`: CN 2020 (**CCF-B**)
+    - `Authors`: Kalpana D. Joshi , Kotaro Kataoka
+    - `Keyworks`: VNFC, Multi-domain, Privacy
+    - `Objective`: Utilize less sensitive information, to reduce privacy and security risks
+    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619311181)
+    
+1. **End-to-end network slicing for future wireless in multi-region cloud platforms**
+    - `Publication`: CN 2020 (**CCF-B**)
+    - `Authors`: Simona Marinova , Thomas Lin, Hadi Bannazadeh, Alberto Leon-Garcia
+    - `Keyworks`: VNFC & VNFP, Multi-domain, E2E (End-to-end) network slicing
+    - `Objective`: /
+    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619316081)
 
 1. **Provably Efficient Algorithms for Placement of Service Function Chains with Ordering Constraints**
 
@@ -197,6 +249,14 @@ You can search the relevant papers by following keywords:
    - `Keyworks`: VNFP, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)
    - `Objective`: Minimize the total deployment cost
    - `Link`: [paper](https://hal.inria.fr/hal-01743273/document)
+
+1. **Joint VNF Placement and CPU Allocation in 5G**
+
+   - `Publication`: INFOCOM 2018 (**CCF-A**)
+   - `Authors`: Satyam Agarwal; Francesco Malandrino; Carla-Fabiana Chiasserini; S. De
+   - `Keyworks`: VNFP, Joint
+   - `Objective`:  Joint optimal decisions concerning the placement of VNFs across the physical hosts for realizing the services, and the allocation of CPU resources in VNFs sharing a host
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8485943)
 
 1. **Toward Profit-Seeking Virtual Network Embedding**
 
@@ -232,7 +292,6 @@ You can search the relevant papers by following keywords:
    - `Link`: [IEEE Xplore](https://www.researchgate.net/publication/257582253_Virtual_network_embedding_through_topology_awareness_and_optimization)
 
 
-
 ## [Reinforcement learning-based](#content)
 
 ### [Basic RL](#content)
@@ -241,8 +300,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li
-   - `Keyworks`: VNFP, Dynamic Reliability-aware, MDP (Markov Deci-
-   sion Process), Viterbi algorithm
+   - `Keyworks`: VNFP, Dynamic Reliability-aware, MDP (Markov Decision Process), Viterbi algorithm
    - `Objective`: Minimize the placement cost and maximize the number of admitted services
    - `Link`: [paper](https://arxiv.org/abs/1911.06532)
 
@@ -254,9 +312,17 @@ You can search the relevant papers by following keywords:
    - `Objective`: Maximize the server resources utilization and Minimize the number of physical links used
    - `Link`: [paper](http://120.126.16.250/Publication_PDF/journal/j44.pdf)
 
+1. **A Dynamic and Collaborative Multi-Layer Virtual Network Embedding Algorithm in SDN Based on Reinforcement Learning**
+
+   - `Publication`: TNSM 2020 (**JCR-Q1**)
+   - `Authors`: Mohammad Karimzadeh-Farshbafan; Vahid Shah-Mansouri; Dusit Niyato
+   - `Keyworks`: VNE, Collaborative, Multi-Layer, REINFORCE
+   - `Objective`: Reduce mapping costs and increase revenues
+   - `Link`: [paper](https://arxiv.org/pdf/1911.06532)
+
 1. **A Privacy-Preserving Reinforcement Learning Algorithm for Multi-Domain Virtual Network Embedding**
 
-   - `Publication`: TNSM 2020 (**CCF-C**)
+   - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`: Davide Andreoletti, Tanya Velichkova, Giacomo Verticale, Massimo Tornatore , Silvia Giordano
    - `Keyworks`: VNE, Multi-domain, Privacy
    - `Objective`: /
@@ -280,6 +346,16 @@ You can search the relevant papers by following keywords:
 
 
 ### [Deep RL](#content)
+
+1. **Dynamic Virtual Network Embedding Algorithm based on Graph Convolution Neural Network and Reinforcement Learning)**
+
+   - `Publication`: IoTJ 2021 (**JCR-Q1**)
+   - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Weishan Zhang; Lei Liu
+   - `Keyworks`: VNE, GNN, GCN,  MDP (Markov Decision Process), Viterbi algorithm
+   - `Objective`: Minimize the resource cost
+   - `Link`: [paper](https://ieeexplore.ieee.org/document/9475485)
+Dynamic Virtual Network Embedding Algorithm based on Graph Convolution Neural Network and Reinforcement Learning
+IoTJ 2021 (**JCR-Q1**)
 
 1. **Scalable Orchestration of Service Function Chains in NFV-Enabled Networks ~ A Federated Reinforcement Learning Approach**
    
@@ -328,6 +404,14 @@ You can search the relevant papers by following keywords:
    - `Keyworks`: VNFS, Latency-awareness, flow, DDPG (Deep Deterministic Policy Gradient)
    - `Objective`: Maximize the overall network utility with the consideration of end-to-end delay and various cost
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8931775)
+
+1. **A Continuous-Decision Virtual Network Embedding Scheme Relying on Reinforcement Learning**
+   
+   - `Publication`: TNSM 2020 (**JCR-Q1**)
+   - `Authors`: Haipeng Yao; Sihan Ma; Jingjing Wang; Peiying Zhang; Chunxiao Jiang; Song Guo
+   - `Keyworks`: Continuous-Decision, Time Series, RNN, Seq2Seq
+   - `Objective`: Maximize the long term average revenue to cost ratio
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8982091)
 
 1. **Virtual Network Function Placement Optimization with Deep Reinforcement Learning**
 
@@ -379,7 +463,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [paper](https://www.researchgate.net/publication/333789998_NFVdeep_adaptive_online_service_function_chain_deployment_with_deep_reinforcement_learning)
 
 
-## [Unassorted](#content)
+## [Other & Unassorted](#content)
 
 > They will be classified as soon as possible.
 
@@ -391,24 +475,3 @@ You can search the relevant papers by following keywords:
     - `Objective`: A novel architecture for orchestrating and enforcing multi-domain SFCs
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S138912862031118X)
 
-1. **On cross-domain Service Function Chain orchestration: An architectural framework**
-    - `Publication`: CN 2021 (**CCF-B**)
-    - `Authors`: Nassima Toumi, Olivier Bernier, Djamal-Eddine Meddour, Adlen Ksentini
-    - `Keyworks`: VNFC & VNFP, Multi-domain
-    - `Objective`: A novel architecture for orchestrating and enforcing multi-domain SFCs
-    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128621000013)
-    
-1. **pSMART: A lightweight, privacy-aware service function chain orchestration in multi-domain NFV/SDN**
-   
-    - `Publication`: CN 2020 (**CCF-B**)
-    - `Authors`: Kalpana D. Joshi , Kotaro Kataoka
-    - `Keyworks`: VNFC, Multi-domain, Privacy
-    - `Objective`: Utilize less sensitive information, to reduce privacy and security risks
-    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619311181)
-    
-1. **End-to-end network slicing for future wireless in multi-region cloud platforms**
-    - `Publication`: CN 2020 (**CCF-B**)
-    - `Authors`: Simona Marinova , Thomas Lin, Hadi Bannazadeh, Alberto Leon-Garcia
-    - `Keyworks`: VNFC & VNFP, Multi-domain, E2E (End-to-end) network slicing
-    - `Objective`: /
-    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619316081)

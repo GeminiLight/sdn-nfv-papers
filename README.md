@@ -1,11 +1,9 @@
 # Papers on Network Resource Allocation
 
 This is a paper list about Resource Allocation in  [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV) and [Software-Defined Networking](https://en.wikipedia.org/wiki/Software-defined_networking) (SDN), including
-
 - Comprehensive **Survey** and **Analysis**
-
 - **VNFC**: Virtual Network Functions Chaining (also known as Service Function Chains Orchestration)
-- **VNFP**: Virtual Network Functions Placement (also known as Virtual Network Embedding or Service Function Chains Deployment)
+- **VNFP**: Virtual Network Functions Placement (also known as Virtual Network Embedding or Service Function Chain Deployment)
 - **VNFS**: Virtual Network Functions Migration and Scheduling
 - **Routing**: Network Traffic Measurement and Management
 - **Multi-domain** (also known as cross-domain, multi-region or other resemble name)
@@ -29,8 +27,6 @@ You can search the relevant papers by following keywords:
 - <a href="#survey-and-analysis">Survey and Analysis</a>
 - <a href="#mathematical-based">Mathematical-based</a>
 - <a href="#heuristic-based">Heuristic-based</a>
-  - <a href="#basic-heuristics">Basic heuristics</a>
-  - <a href="#meta-heuristics">Meta-heuristics</a>
 - <a href="#machine-learning-based">Machine Learning-based</a> :star:
   - <a href="#vnfc">VNFC</a>
   - <a href="#vnfp">VNFP</a>
@@ -103,21 +99,21 @@ You can search the relevant papers by following keywords:
    - `Authors`: Andreas Fischer; Juan Felipe Botero; Michael Till Beck; Hermann de Meer; Xavier Hesselbach
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/6463372)
 
-
 ## [Mathematical-based](#content)
+
+> Solving these problems with exact mathematical methods usually needs expensive computing resources and running time, which limits its applications in most realistic scenarios.
 
 ## [Heuristic-based](#content)
 
-### [Basic Heuristic](#content)
+> Including basic heuristic-based and meta-heuristic-based methods.
 
 1. **Joint Virtual Network Topology Design and Embedding for Cybertwin-Enabled 6G Core Networks**
-
     - `Publication`: IoTJ 2021 (**JCR-1**)
     - `Authors`: Junling Li; Weisen Shi; Qiang Ye; Shan Zhang; Weihua Zhuang; Xuemin Shen
     - `Keywords`: VNE, Joint, Latency
     - `Objective`: Find the optimal resource allocation with the minimum embedding cost
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9415134/)
-
+    
 1. **Efficient Virtual Network Embedding of Cloud-Based Data Center Networks into Optical Networks**
 
     - `Publication`: TSC 2021 (**CCF-B**)
@@ -149,6 +145,9 @@ You can search the relevant papers by following keywords:
    - `Keywords`: VNFC & VNFP, HSFCE (Hybrid SFC composition and Embedding), Latency-aware, Betweenness Centrality
    - `Objective`: Minimize the latency for the constructed hybrid SFP
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9155529)
+
+<details>
+<summary> more </summary>
 
 1. **Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network Edge**
 
@@ -189,9 +188,6 @@ You can search the relevant papers by following keywords:
    - `Keywords`: VNFP, VNFM, SDN
    - `Objective`: Optimize the network allocation between different services by coordinating virtual dynamic SR-IOV and virtual machine live migration in autonomic way
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9151358)
-
-<details>
-<summary> more </summary>
 
 1. **Optimal Virtual Network Function Deployment for 5G Network Slicing in a Hybrid Cloud Infrastructure**
 
@@ -240,6 +236,14 @@ You can search the relevant papers by following keywords:
     - `Objective`: /
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619316081)
 
+1. **A Constructive Particle Swarm Optimizer for Virtual Network Embedding**
+
+   - `Publication`: TNSE 2020 (**JCR-Q1**)
+   - `Authors`: Yongqiang Gao; Haibing Guan; Zhengwei Qi; Yang Hou; Liang Liu
+   - `Keywords`: VNE, CPSO (Constructive Particle Swarm Optimizer)
+   - `Objective`: MinimiziE the cost of bandwidth for embedding the VN
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8786166)
+   
 1. **Provably Efficient Algorithms for Placement of Service Function Chains with Ordering Constraints**
 
    - `Publication`: INFOCOM 2018 (**CCF-A**)
@@ -264,18 +268,6 @@ You can search the relevant papers by following keywords:
    - `Objective`: Maximize the revenue-to-cost ratio and acceptance ratio
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/6847918)
 
-</details>
-
-### [Meta-Heuristic](#content)
-
-1. **A Constructive Particle Swarm Optimizer for Virtual Network Embedding**
-
-   - `Publication`: TNSE 2020 (**JCR-Q1**)
-   - `Authors`: Yongqiang Gao; Haibing Guan; Zhengwei Qi; Yang Hou; Liang Liu
-   - `Keywords`: VNE, CPSO (Constructive Particle Swarm Optimizer)
-   - `Objective`: MinimiziE the cost of bandwidth for embedding the VN
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8786166)
-   
 1. **A Multi-objective Ant Colony System algorithm for Virtual Machine Placement in Cloud Computing**
 
    - `Publication`: JCSS 2013 (**CCF-B**)
@@ -292,6 +284,8 @@ You can search the relevant papers by following keywords:
    - `Objective`: Minimize total resource wastage and power Consumption
    - `Link`: [IEEE Xplore](https://www.researchgate.net/publication/257582253_Virtual_network_embedding_through_topology_awareness_and_optimization)
 
+</details>
+
 
 ## [Machine Learning-based](#content)
 
@@ -301,7 +295,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: JSAC 2021 (**CCF-A**)
    - `Authors`: Haojun Huang, Cheng Zeng, Yangmin Zhao, Geyong Min, Yingying Zhu, Wang Miao , and Jia Hu
-   - `Keywords`: VNFC, VNFP, DQN, FL (Federated Learning), 
+   - `Keywords`: VNFC, VNFP, DQN, FL (Federated Learning)
    - `Objective`: Minimize the total weighted cost and  the number of servers to deploy SFCs in NFV-enabled networks
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9468364)
 
@@ -470,12 +464,11 @@ You can search the relevant papers by following keywords:
    - `Link`: [arXiv](https://arxiv.org/abs/2106.09754)
    
 1. **Unveiling the potential of Graph Neural Networks for network modeling and optimization in SDN**
-
    - `Publication`: SOSR 2019
    - `Authors`: Krzysztof Rusek, José Suárez-Varela, Albert Mestres, Pere Barlet-Ros, Albert Cabellos-Aparicio
    - `Keywords`: Routing, SL (Surpervised Learning), GNN
    - `Link`: [arXiv](https://arxiv.org/abs/1901.08113)
-
+   
 1. **Routing or Computing? The Paradigm Shift Towards Intelligent Computer Network Packet Transmission Based on Deep Learning**
 
    - `Publication`: TC 2019 (**CCF-A**)

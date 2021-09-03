@@ -190,7 +190,7 @@ You can search the relevant papers by following keywords:
    - `Objective`: Optimize the network allocation between different services by coordinating virtual dynamic SR-IOV and virtual machine live migration in autonomic way
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9151358)
 
-<!--<details>
+<details>
 <summary> more </summary>
 
 1. **Optimal Virtual Network Function Deployment for 5G Network Slicing in a Hybrid Cloud Infrastructure**
@@ -264,6 +264,8 @@ You can search the relevant papers by following keywords:
    - `Objective`: Maximize the revenue-to-cost ratio and acceptance ratio
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/6847918)
 
+</details>
+
 ### [Meta-Heuristic](#content)
 
 1. **A Constructive Particle Swarm Optimizer for Virtual Network Embedding**
@@ -289,9 +291,6 @@ You can search the relevant papers by following keywords:
    - `Keywords`: VNFP, PSO (Particle Swarm Optimization), Topology decomposition
    - `Objective`: Minimize total resource wastage and power Consumption
    - `Link`: [IEEE Xplore](https://www.researchgate.net/publication/257582253_Virtual_network_embedding_through_topology_awareness_and_optimization)
-
-</details> -->
-
 
 
 ## [Machine Learning-based](#content)

@@ -1,0 +1,684 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+
+/*!
+Misty Light
+Brought to you with ❤️ by E-Tiger Studio, 2017-2020
+https://github.com/etigerstudio/typora-misty-theme
+ */
+:root {
+  --control-text-color: #777;
+  --side-bar-bg-color: #f6f8fa
+}
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: subpixel-antialiased
+}
+body {
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: #24292e;
+  line-height: 1.5
+}
+#write {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 30px 100px
+}
+#write > ol:first-child,
+#write > ul:first-child {
+  margin-top: 30px
+}
+body > :first-child {
+  margin-top: 0!important
+}
+body > :last-child {
+  margin-bottom: 0!important
+}
+a {
+  color: #4183c4
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  cursor: text;
+  color: #142331
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+  text-decoration: none
+}
+h1 code,
+h1 tt,
+h2 code,
+h2 tt,
+h3 code,
+h3 tt,
+h4 code,
+h4 tt,
+h5 code,
+h5 tt,
+h6 code,
+h6 tt {
+  font-size: inherit
+}
+h1 {
+  text-align: center;
+  padding-bottom: .3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  margin: 1em auto 1.2em
+}
+h1:after {
+  border-bottom: 2px dashed #afec9e;
+  content: '';
+  width: 100px;
+  display: block;
+  margin: .2em auto 0;
+  height: 2px
+}
+h2 {
+  font-size: 1.75em;
+  padding-left: 9px;
+  line-height: 1.4;
+  border-left: 6px solid #cce5ff
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43
+}
+h3:before {
+  border-radius: 50%;
+  background-color: #9ed0ff;
+  content: '';
+  width: 6px;
+  display: inline-block;
+  height: 6px;
+  vertical-align: middle;
+  margin-bottom: .18em;
+  margin-right: 8px
+}
+#write > h3.md-focus:before,
+#write > h4.md-focus:before {
+  background-color: transparent;
+  width: auto;
+  height: auto
+}
+h4 {
+  font-size: 1.25em
+}
+h4:before {
+  background-color: #9ed0ff;
+  content: '';
+  width: 6px;
+  display: inline-block;
+  height: 2px;
+  vertical-align: middle;
+  margin-bottom: .18em;
+  margin-right: 8px
+}
+h5 {
+  font-size: 1em
+}
+h6 {
+  font-size: 1em;
+  color: #777
+}
+blockquote,
+dl,
+ol,
+p,
+table,
+ul {
+  margin: .8em 0
+}
+li > ol,
+li > ul {
+  margin: 0
+}
+hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0
+}
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6,
+body>h1:first-child,
+body>h1:first-child+h2,
+body>h2:first-child,
+body>h3:first-child,
+body>h4:first-child,
+body>h5:first-child,
+body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0
+}
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+  margin-top: 0
+}
+li p.first {
+  display: inline-block
+}
+ol,
+ul {
+  padding-left: 30px
+}
+ol:first-child,
+ul:first-child {
+  margin-top: 0
+}
+ol:last-child,
+ul:last-child {
+  margin-bottom: 0
+}
+blockquote {
+  border-left: 4px dotted #e5e8e8;
+  padding: 0 12px;
+  color: #444;
+  font-size: .9em
+}
+blockquote blockquote {
+  padding-right: 0
+}
+table {
+  padding: 0;
+  word-break: initial
+}
+table tr {
+  border-top: 1px solid #dadfe6;
+  margin: 0;
+  padding: 0
+}
+table.md-table tr:nth-child(2n) {
+  background-color: #fafbfc
+}
+table tr td,
+table tr th {
+  border: 1px solid #dadfe6;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px
+}
+table tr td:first-child,
+table tr th:first-child {
+  margin-top: 0
+}
+table tr td:last-child,
+table tr th:last-child {
+  margin-bottom: 0
+}
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd
+}
+.md-fences,
+code,
+tt {
+  font-size: 90%;
+  border-radius: 3px;
+  font-family: "SF Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace
+}
+code,
+tt {
+  margin: 0 2px;
+  padding: 2px 4px;
+  background-color: #e2f0ff
+}
+.md-fences {
+  background-color: #f6f8fa;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 12px 1em
+}
+.md-task-list-item > input {
+  margin-left: -1.45em;
+  margin-top: calc(1em - 10px)
+}
+#write pre.md-meta-block {
+  padding: 1rem;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7faf6;
+  border: 0;
+  border-radius: 3px;
+  color: #777;
+  margin-top: 0!important
+}
+.mathjax-block > .code-tooltip {
+  bottom: .375rem
+}
+#write > h3.md-focus:before {
+  left: -1.5625rem;
+  top: .375rem
+}
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before {
+  left: -1.5625rem;
+  top: .285714286rem
+}
+.md-image > .md-meta {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: "SF Mono",Consolas,"Liberation Mono",Courier,monospace;
+  padding: 2px 4px 0;
+  font-size: .9em;
+  color: inherit
+}
+.md-tag {
+  color: inherit
+}
+.md-toc {
+  margin-top: 20px;
+  padding-bottom: 20px
+}
+.sidebar-tabs {
+  border-bottom: none
+}
+#typora-quick-open {
+  border: 1px solid #ddd;
+  background-color: #f8f8f8
+}
+#typora-quick-open-item {
+  background-color: #fafafa;
+  border-color: #fefefe #e5e5e5 #e5e5e5 #eee;
+  border-style: solid;
+  border-width: 1px
+}
+.typora-quick-open-item {
+  padding-top: 3px
+}
+.typora-quick-open-list {
+  margin-top: 4px
+}
+.typora-quick-open-item-path {
+  margin-top: -2px
+}
+#md-notification:before {
+  top: 10px
+}
+.on-focus-mode blockquote {
+  border-left-color: rgba(85,85,85,.12)
+}
+.context-menu,
+.megamenu-content,
+footer,
+header {
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+  visibility: visible
+}
+.mac-seamless-mode #typora-sidebar {
+  background-color: var(--side-bar-bg-color)
+}
+.md-lang {
+  color: #b4654d
+}
+.pin-outline #outline-content .outline-active strong,
+.pin-outline .outline-active {
+  color: #232323;
+  font-weight: 600
+}
+.outline-label {
+  color: #646464;
+  font-weight: 400
+}
+.file-list-item-summary {
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+@media print {
+  body {
+    font-weight: 400
+  }
+  b,
+  strong {
+    font-weight: 600
+  }
+  pre,
+  table {
+    page-break-inside: avoid
+  }
+  pre {
+    word-wrap: break-word
+  }
+}
+body {
+  font-weight: 400;
+  -webkit-font-smoothing: unset
+}
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 600
+}
+h1,
+table tr th {
+  font-weight: 400
+}
+.file-list-item-file-name {
+  font-weight: 500
+}
+
+
+</style><title>README</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='papers-on-network-resource-allocation'><span>Papers on Network Resource Allocation</span></h1><p><span>This is a paper list about Resource Allocation in  </span><a href='https://en.wikipedia.org/wiki/Network_function_virtualization'><span>Network Functions Virtualization</span></a><span> (NFV) and </span><a href='https://en.wikipedia.org/wiki/Software-defined_networking'><span>Software-Defined Networking</span></a><span> (SDN), including</span></p><ul><li><span>Comprehensive </span><strong><span>Survey</span></strong><span> and </span><strong><span>Analysis</span></strong></li><li><strong><span>VNFC</span></strong><span>: Virtual Network Functions Chaining (also known as Service Function Chains Orchestration)</span></li><li><strong><span>VNFP</span></strong><span>: Virtual Network Functions Placement (also known as Virtual Network Embedding or Service Function Chain Deployment)</span></li><li><strong><span>VNFS</span></strong><span>: Virtual Network Functions Migration and Scheduling</span></li><li><strong><span>Routing</span></strong><span>: Network Traffic Measurement and Management</span></li><li><strong><span>Multi-domain</span></strong><span> (also known as cross-domain, multi-region or other resemble name)</span></li></ul><p><span>We mainly collect papers from high-quality journals and conferences, and classify them according to method categories. Particularly, you can find more details of  papers in the </span><strong><span>Machine Learning-based</span></strong><span> section, which represents a promising technique to efficiently solve network resource Allocation problems.</span></p><h3 id='search-by-keywords'><span>Search by Keywords</span></h3><p><span>You can search the relevant papers by following keywords:</span></p><ul><li><strong><span>Direction</span></strong><span>: </span><code>VNFC</code><span>, </span><code>VNFP</code><span>, </span><code>VNFS</code><span>, </span><code>Routing</code><span>, </span><code>Multi-domain</code></li><li><strong><span>Publication</span></strong><span>: </span><code>JSAC</code><span>, </span><code>TON</code><span>, </span><code>INFOCOM</code><span>, </span><code>TPDS</code><span>, ...</span></li><li><strong><span>PUB-rank</span></strong><span>: </span><code>CCF-A</code><span>, </span><code>CCF-B</code><span>, </span><code>JCR-Q1</code><span>, ...</span></li><li><strong><span>Awareness</span></strong><span>: </span><code>Latency</code><span>, </span><code>Congestion</code><span>, </span><code>Privacy</code><span>, </span><code>Energy</code></li><li><strong><span>RL-ALGO</span></strong><span>: </span><code>DQN</code><span>, </span><code>DDPG</code><span>, </span><code>A3C</code><span>, </span><code>PPO</code><span>, ...</span></li><li><strong><span>NN-type</span></strong><span>: </span><code>CNN</code><span>, </span><code>RNN</code><span>, </span><code>GNN</code><span>, ...</span></li></ul><h2 id='content'><a href='#contentcontent'><span>Content</span></a></h2><ul><li><p><a href="#survey-and-analysis"><span>Survey and Analysis</span></a></p></li><li><p><a href="#mathematical-based"><span>Mathematical-based</span></a></p></li><li><p><a href="#heuristic-based"><span>Heuristic-based</span></a></p></li><li><p><a href="#machine-learning-based"><span>Machine Learning-based</span></a><span> </span>⭐️</p><ul><li><a href="#vnfc"><span>VNFC</span></a></li><li><a href="#vnfp"><span>VNFP</span></a></li><li><a href="#vnfs"><span>VNFS</span></a></li><li><a href="#routing"><span>Routing</span></a></li></ul></li><li><p><a href="#other-and-unassorted"><span>Other &amp; Unassorted</span></a></p></li></ul><blockquote><p><span>Note: </span>⭐️<span> means it may be a promising research direction, which is considered subjectively.</span></p></blockquote><h2 id='survey-and-analysis'><a href='#contentcontent'><span>Survey and Analysis</span></a></h2><ol start='' ><li><p><strong><span>Recent Advances of Resource Allocation in Network Function Virtualization</span></strong></p><ul><li><code>Publication</code><span>: TPDS 2021 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9169857'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Graph-based Deep Learning for Communication Networks: A Survey</span></strong></p><ul><li><code>Publication</code><span>: arXiv 2021</span></li><li><code>Authors</code><span>: Weiwei Jiang</span></li><li><code>Link</code><span>: </span><a href='https://arxiv.org/abs/2106.02533'><span>arXiv</span></a></li></ul></li><li><p><strong><span>On the Hardness and Inapproximability of Virtual Network Embeddings</span></strong></p><ul><li><code>Publication</code><span>: TON 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Matthias Rost and Stefan Schmid</span></li><li><code>Link</code><span>: </span><a href='https://www.univie.ac.at/ct/stefan/ton20hard.pdf'><span>paper</span></a></li></ul></li><li><p><strong><span>SDN/NFV-Empowered Future IoV With Enhanced Communication, Computing, and Caching</span></strong></p><ul><li><code>Publication</code><span>: Proc. IEEE 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Weihua Zhuang; Qiang Ye; Feng Lyu; Nan Cheng; Ju Ren</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8907851'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Survey of Performance Acceleration Techniques for Network Function Virtualization</span></strong></p><ul><li><code>Publication</code><span>: Proc. IEEE 2019 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Leonardo Linguaglossa; Stanislav Lange; Salvatore Pontarelli; Gábor Rétvári; Dario Rossi; Thomas Zinner; Roberto Bifulco; Michael; Jarschel; Giuseppe Bianchi</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8666751'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Will Serverless Computing Revolutionize NFV?</span></strong></p><ul><li><code>Publication</code><span>: Proc. IEEE 2019 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Paarijaat Aditya; Istemi Ekin Akkus; Andre Beck; Ruichuan Chen; Volker Hilt; Ivica Rimac; Klaus Satzke; Manuel Stein</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8653379'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>A Survey on the Placement of Virtual Resources and Virtual Network Functions</span></strong></p><ul><li><code>Publication</code><span>: IEEE Communications Surveys &amp; Tutorials 2019 (</span><strong><span>JCR-Q1</span></strong><span>)</span></li><li><code>Authors</code><span>: Abdelquoddouss Laghrissi and Tarik Taleb</span></li><li><code>Link</code><span>: </span><a href='http://mosaic-lab.org/uploads/papers/078b601e-3e01-4a42-8a35-b98e2d113943.pdf'><span>paper</span></a></li></ul></li><li><p><strong><span>Resource Allocation in NFV: A Comprehensive Survey</span></strong></p><ul><li><code>Publication</code><span>: TNSM 2019 (</span><strong><span>JCR-Q1</span></strong><span>)</span></li><li><code>Authors</code><span>: Juliver Gil Herrera, Juan Felipe Botero</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/7534741'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>A Comprehensive Survey of Network Function Virtualization</span></strong></p><ul><li><code>Publication</code><span>: CN 2018 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang</span></li><li><code>Link</code><span>: </span><a href='https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306'><span>ScienceDirect</span></a></li></ul></li><li><p><strong><span>Virtual Network Embedding: a Survey</span></strong></p><ul><li><code>Publication</code><span>: IEEE Communications Surveys &amp; Tutorials 2013 (</span><strong><span>JCR-Q1</span></strong><span>)</span></li><li><code>Authors</code><span>: Andreas Fischer; Juan Felipe Botero; Michael Till Beck; Hermann de Meer; Xavier Hesselbach</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/6463372'><span>IEEE Xplore</span></a></li></ul></li></ol><h2 id='mathematical-based'><a href='#contentcontent'><span>Mathematical-based</span></a></h2><blockquote><p><span>Solving these problems with exact mathematical methods usually needs expensive computing resources and running time, which limits its applications in most realistic scenarios.</span></p></blockquote><h2 id='heuristic-based'><a href='#contentcontent'><span>Heuristic-based</span></a></h2><blockquote><p><span>Including basic heuristic-based and meta-heuristic-based methods.</span></p></blockquote><ol start='' ><li><p><strong><span>Joint Virtual Network Topology Design and Embedding for Cybertwin-Enabled 6G Core Networks</span></strong></p><ul><li><code>Publication</code><span>: IoTJ 2021 (</span><strong><span>JCR-1</span></strong><span>)</span></li><li><code>Authors</code><span>: Junling Li; Weisen Shi; Qiang Ye; Shan Zhang; Weihua Zhuang; Xuemin Shen</span></li><li><code>Keywords</code><span>: VNE, Joint, Latency</span></li><li><code>Objective</code><span>: Find the optimal resource allocation with the minimum embedding cost</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9415134/'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Efficient Virtual Network Embedding of Cloud-Based Data Center Networks into Optical Networks</span></strong></p><ul><li><code>Publication</code><span>: TSC 2021 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Weibei Fan; Fu Xiao; Xiaobai Chen; Lei Cui; Shui Yu</span></li><li><code>Keywords</code><span>: VNE, Optical Network, Data Center</span></li><li><code>Objective</code><span>: Reduce complexity of the network topology by using the parallel transmission characteristics of optical fiber</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9415134/'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Energy and Cost Efficient Resource Allocation for Blockchain-Enabled NFV</span></strong></p><ul><li><code>Publication</code><span>: TSC 2021 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Shiva Kazemi Taskou, Mehdi Rasti, Pedro H. J. Nardelli</span></li><li><code>Keywords</code><span>: VNFP, Blockchain-Enabled, HuRA (Hungarian-based Resource Allocation), HuRA (Hungarian-based Resource Allocation)</span></li><li><code>Objective</code><span>: Minimize the energy consumption and utilized resource cost simultaneously</span></li><li><code>Link</code><span>: </span><a href='https://arxiv.org/abs/2103.02139'><span>paper</span></a></li></ul></li><li><p><strong><span>On Cross-domain Service Function Chain orchestration: An architectural framework</span></strong></p><ul><li><code>Publication</code><span>: CN 2021 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Nassima Toumi, Olivier Bernier, Djamal-Eddine Meddour, Adlen Ksentini</span></li><li><code>Keywords</code><span>: VNFC &amp; VNFP, Multi-domain</span></li><li><code>Objective</code><span>: A novel architecture for orchestrating and enforcing multi-domain SFCs</span></li><li><code>Link</code><span>: </span><a href='https://www.sciencedirect.com/science/article/abs/pii/S1389128621000013'><span>ScienceDirect</span></a></li></ul></li><li><p><strong><span>Towards Latency Optimization in Hybrid Service Function Chain Composition and Embedding</span></strong></p><ul><li><code>Publication</code><span>: INFOCOM 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li</span></li><li><code>Keywords</code><span>: VNFC &amp; VNFP, HSFCE (Hybrid SFC composition and Embedding), Latency-aware, Betweenness Centrality</span></li><li><code>Objective</code><span>: Minimize the latency for the constructed hybrid SFP</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9155529'><span>IEEE Xplore</span></a></li></ul></li></ol><details>
+<summary> more </summary></details><ol start='' ><li><p><strong><span>Latency-aware VNF Chain Deployment with Efficient Resource Reuse at Network Edge</span></strong></p><ul><li><code>Publication</code><span>: INFOCOM 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li</span></li><li><code>Keywords</code><span>: VNFP, MILP (Mixed Integer Iinear Programming), Latency-aware, CDFSA (constrained depth-first search algorithm)</span></li><li><code>Objective</code><span>: Minimize the resource consumption of both servers and links with latency guarantees</span></li><li><code>Link</code><span>: </span><a href='https://fangmingliu.github.io/files/INFOCOM20-Edge-NFV.pdf'><span>paper</span></a></li></ul></li><li><p><strong><span>An Online Algorithm for VNF Service Chain Scaling in Datacenters</span></strong></p><ul><li><code>Publication</code><span>: TON 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Ziyue Luo, Chuan Wu</span></li><li><code>Keywords</code><span>: VNFP, ILP (Integer Linear Program), Regularization, Rounding</span></li><li><code>Objective</code><span>: Minimize the operating cost and deployment cost</span></li><li><code>Link</code><span>: </span><a href='https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf'><span>paper</span></a></li></ul></li><li><p><strong><span>Reliability-Aware Virtualized Network Function Services Provisioning in Mobile Edge Computing</span></strong></p><ul><li><code>Publication</code><span>: TON 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Meitian Huang, Weifa Liang, Xiaojun Shen, Yu Ma, Haibin Kan</span></li><li><code>Keywords</code><span>: VNFP, Reliability-aware, approximation algorithms, DP (dynamic programming), MEC (mobile edge computing)</span></li><li><code>Objective</code><span>:  Maximize the network throughput</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8758846'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Congestion-Aware and Energy-Aware Virtual Network Embedding</span></strong></p><ul><li><code>Publication</code><span>: TON 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Minh Pham, Doan B. Hoang, Zenon Chaczko</span></li><li><code>Keywords</code><span>: VNE, relaxed LP (linear Program), Congestion-aware, Energy-aware, SDN (Software-Defined Networks), SR (Segment Routing)</span></li><li><code>Objective</code><span>: Multiple-objective is to save cost, save energy and avoid network congestion simultaneously</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8945162'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Sova: A Software-Defined Autonomic Framework for Virtual Network Allocations</span></strong></p><ul><li><code>Publication</code><span>: TPDS 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>:  Zhiyong Ye, Yang Wang, Shuibing He, Chengzhong Xu, Xian-He Sun</span></li><li><code>Keywords</code><span>: VNFP, VNFM, SDN</span></li><li><code>Objective</code><span>: Optimize the network allocation between different services by coordinating virtual dynamic SR-IOV and virtual machine live migration in autonomic way</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9151358'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Optimal Virtual Network Function Deployment for 5G Network Slicing in a Hybrid Cloud Infrastructure</span></strong></p><ul><li><code>Publication</code><span>: TWC 2020 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>:  Antonio De Domenico, Ya-Feng Liu, Wei Yu</span></li><li><code>Keywords</code><span>: VNFP, ILP (Integer Linear Programming), Network Slicing</span></li><li><code>Objective</code><span>: Lead to high resource utilization efficiency and large gains in terms of the number of supported VNF chains</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9177288'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Cost-Efficient VNF Placement and Scheduling in Public Cloud Networks</span></strong></p><ul><li><code>Publication</code><span>: TCOM 2020 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>:  Tao Gao, Xin Li, Yu Wu , Weixia Zou, Shanguo Huang, Massimo Tornatore,  Biswanath Mukherjee</span></li><li><code>Keywords</code><span>: VNFP, VNFS, Cost Efficiency,  Public Cloud</span></li><li><code>Objective</code><span>: /</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9086616'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Virtual Network Embedding With Guaranteed Connectivity Under Multiple Substrate Link Failures</span></strong></p><ul><li><code>Publication</code><span>: TCOM 2020 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>:  Zhiyong Ye, Yang Wang, Shuibing He, Chengzhong Xu, Xian-He Sun</span></li><li><code>Keywords</code><span>: VNE, Connectivity, Fault Tolerance, Redundancy</span></li><li><code>Objective</code><span>: /</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8906179'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Reliability Aware Service Placement Using a Viterbi-Based Algorithm</span></strong></p><ul><li><code>Publication</code><span>: TNSM 2020 (</span><strong><span>JCR-Q1</span></strong><span>)</span></li><li><code>Authors</code><span>:  Mohammad Karimzadeh-Farshbafan, Vahid Shah-Mansouri, Dusit Niyato</span></li><li><code>Keywords</code><span>: VNFP, MICP (mixed integer convex programming), Viterbi-based</span></li><li><code>Objective</code><span>: Minimize the cost of resources of the InPs and maximize the reliability of the service</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8933111'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>pSMART: A lightweight, privacy-aware service function chain orchestration in multi-domain NFV/SDN</span></strong></p><ul><li><code>Publication</code><span>: CN 2020 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Kalpana D. Joshi , Kotaro Kataoka</span></li><li><code>Keywords</code><span>: VNFC, Multi-domain, Privacy</span></li><li><code>Objective</code><span>: Utilize less sensitive information, to reduce privacy and security risks</span></li><li><code>Link</code><span>: </span><a href='https://www.sciencedirect.com/science/article/abs/pii/S1389128619311181'><span>ScienceDirect</span></a></li></ul></li><li><p><strong><span>End-to-end network slicing for future wireless in multi-region cloud platforms</span></strong></p><ul><li><code>Publication</code><span>: CN 2020 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Simona Marinova , Thomas Lin, Hadi Bannazadeh, Alberto Leon-Garcia</span></li><li><code>Keywords</code><span>: VNFC &amp; VNFP, Multi-domain, E2E (End-to-end) network slicing</span></li><li><code>Objective</code><span>: /</span></li><li><code>Link</code><span>: </span><a href='https://www.sciencedirect.com/science/article/abs/pii/S1389128619316081'><span>ScienceDirect</span></a></li></ul></li><li><p><strong><span>A Constructive Particle Swarm Optimizer for Virtual Network Embedding</span></strong></p><ul><li><code>Publication</code><span>: TNSE 2020 (</span><strong><span>JCR-Q1</span></strong><span>)</span></li><li><code>Authors</code><span>: Yongqiang Gao; Haibing Guan; Zhengwei Qi; Yang Hou; Liang Liu</span></li><li><code>Keywords</code><span>: VNE, CPSO (Constructive Particle Swarm Optimizer)</span></li><li><code>Objective</code><span>: MinimiziE the cost of bandwidth for embedding the VN</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8786166'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Provably Efficient Algorithms for Placement of Service Function Chains with Ordering Constraints</span></strong></p><ul><li><code>Publication</code><span>: INFOCOM 2018 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Ziyue Luo, Chuan Wu</span></li><li><code>Keywords</code><span>: VNFP, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)</span></li><li><code>Objective</code><span>: Minimize the total deployment cost</span></li><li><code>Link</code><span>: </span><a href='https://hal.inria.fr/hal-01743273/document'><span>paper</span></a></li></ul></li><li><p><strong><span>Joint VNF Placement and CPU Allocation in 5G</span></strong></p><ul><li><code>Publication</code><span>: INFOCOM 2018 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Satyam Agarwal; Francesco Malandrino; Carla-Fabiana Chiasserini; S. De</span></li><li><code>Keywords</code><span>: VNFP, Joint</span></li><li><code>Objective</code><span>:  Joint optimal decisions concerning the placement of VNFs across the physical hosts for realizing the services, and the allocation of CPU resources in VNFs sharing a host</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8485943'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Toward Profit-Seeking Virtual Network Embedding</span></strong></p><ul><li><code>Publication</code><span>: INFOCOM 2014 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Long Gong, Yonggang Wen, Zuqing Zhu and Tony Lee</span></li><li><code>Keywords</code><span>: VNE, GRC (Global Resource Control)</span></li><li><code>Objective</code><span>: Maximize the revenue-to-cost ratio and acceptance ratio</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/6847918'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>A Multi-objective Ant Colony System algorithm for Virtual Machine Placement in Cloud Computing</span></strong></p><ul><li><code>Publication</code><span>: JCSS 2013 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li</span></li><li><code>Keywords</code><span>: VNFP, ACS (Ant Colony System), Multi-objective</span></li><li><code>Objective</code><span>: Minimize total resource wastage and power consumption</span></li><li><code>Link</code><span>: </span><a href='https://www.sciencedirect.com/science/article/pii/S0022000013000627'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Virtual Network Embedding through Topology Awareness and Optimization</span></strong></p><ul><li><code>Publication</code><span>: CN 2012 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Xiang Cheng, Sen Su, Zhongbao Zhang, Kai Shuang, Fangchun Yang, Yan Luo, Jie Wang</span></li><li><code>Keywords</code><span>: VNFP, PSO (Particle Swarm Optimization), Topology decomposition</span></li><li><code>Objective</code><span>: Minimize total resource wastage and power Consumption</span></li><li><code>Link</code><span>: </span><a href='https://www.researchgate.net/publication/257582253_Virtual_network_embedding_through_topology_awareness_and_optimization'><span>IEEE Xplore</span></a></li></ul></li></ol><p></details></p><h2 id='machine-learning-based'><a href='#contentcontent'><span>Machine Learning-based</span></a></h2><h3 id='vnfc'><a href='#contentcontent'><span>VNFC</span></a></h3><ol start='' ><li><p><strong><span>Scalable Orchestration of Service Function Chains in NFV-Enabled Networks: A Federated Reinforcement Learning Approach</span></strong></p><ul><li><code>Publication</code><span>: JSAC 2021 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Haojun Huang, Cheng Zeng, Yangmin Zhao, Geyong Min, Yingying Zhu, Wang Miao , and Jia Hu</span></li><li><code>Keywords</code><span>: VNFC, VNFP, DQN, FL (Federated Learning)</span></li><li><code>Objective</code><span>: Minimize the total weighted cost and  the number of servers to deploy SFCs in NFV-enabled networks</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9468364'><span>IEEE Xplore</span></a></li></ul></li></ol><h3 id='vnfp'><a href='#contentcontent'><span>VNFP</span></a></h3><ol start='' ><li><p><strong><span>Dynamic Virtual Network Embedding Algorithm based on Graph Convolution Neural Network and Reinforcement Learning</span></strong></p><ul><li><code>Publication</code><span>: IoTJ 2021 (</span><strong><span>JCR-Q1</span></strong><span>)</span></li><li><code>Authors</code><span>: Peiying Zhang; Chao Wang; Neeraj Kumar; Weishan Zhang; Lei Liu</span></li><li><code>Keywords</code><span>: VNE, GNN, GCN,  MDP (Markov Decision Process), Viterbi algorithm</span></li><li><code>Objective</code><span>: Minimize the resource cost</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9475485'><span>paper</span></a></li></ul></li><li><p><strong><span>Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach With Graph Convolutional Networks</span></strong></p><ul><li><code>Publication</code><span>: JSAC 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li</span></li><li><code>Keywords</code><span>: VNE, A3C (Asynchronous Advantage Actor-Critic), GNN, GCN (Graph Convolutional Network)</span></li><li><code>Objective</code><span>: Minimize the acceptance ratio and long-term average revenue</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9060910'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>MUVINE: Multi-Stage Virtual Network Embedding in Cloud Data Centers Using Reinforcement Learning-Based Predictions</span></strong></p><ul><li><code>Publication</code><span>: JSAC 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Hiren Kumar Thakkar, Chinmaya Dehury, Prasan Kumar Sahoo</span></li><li><code>Keywords</code><span>: VNE, Q-learning, ML(Machine Learning), Multi-Stage</span></li><li><code>Objective</code><span>: Maximize the server resources utilization and Minimize the number of physical links used</span></li><li><code>Link</code><span>: </span><a href='http://120.126.16.250/Publication_PDF/journal/j44.pdf'><span>paper</span></a></li></ul></li><li><p><strong><span>Optimal VNF Placement via Deep Reinforcement Learning in SDN/NFV-Enabled Networks</span></strong></p><ul><li><code>Publication</code><span>: JSAC 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Jianing Pei, Peilin Hong, Miao Pan, Jiangqing Liu, Jingsong Zhou</span></li><li><code>Keywords</code><span>: VNFP, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)</span></li><li><code>Objective</code><span>: Minimize the weighted cost consisting of VNF placement cost, penalty of reject SFCRs and VNFI running cost in every time interval $\Delta t$</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8932445'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>A Dynamic Reliability-Aware Service Placement for Network Function Virtualization (NFV)</span></strong></p><ul><li><code>Publication</code><span>: JSAC 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li</span></li><li><code>Keywords</code><span>: VNFP, Dynamic Reliability-aware, MDP (Markov Decision Process), Viterbi algorithm</span></li><li><code>Objective</code><span>: Minimize the placement cost and maximize the number of admitted services</span></li><li><code>Link</code><span>: </span><a href='https://arxiv.org/abs/1911.06532'><span>paper</span></a></li></ul></li><li><p><strong><span>A Dynamic and Collaborative Multi-Layer Virtual Network Embedding Algorithm in SDN Based on Reinforcement Learning</span></strong></p><ul><li><code>Publication</code><span>: TNSM 2020 (</span><strong><span>JCR-Q1</span></strong><span>)</span></li><li><code>Authors</code><span>: Mohammad Karimzadeh-Farshbafan; Vahid Shah-Mansouri; Dusit Niyato</span></li><li><code>Keywords</code><span>: VNE, Collaborative, Multi-Layer, REINFORCE</span></li><li><code>Objective</code><span>: Reduce mapping costs and increase revenues</span></li><li><code>Link</code><span>: </span><a href='https://arxiv.org/pdf/1911.06532'><span>paper</span></a></li></ul></li><li><p><strong><span>A Continuous-Decision Virtual Network Embedding Scheme Relying on Reinforcement Learning</span></strong></p><ul><li><code>Publication</code><span>: TNSM 2020 (</span><strong><span>JCR-Q1</span></strong><span>)</span></li><li><code>Authors</code><span>: Haipeng Yao; Sihan Ma; Jingjing Wang; Peiying Zhang; Chunxiao Jiang; Song Guo</span></li><li><code>Keywords</code><span>: Continuous-Decision, Time Series, RNN, Seq2Seq</span></li><li><code>Objective</code><span>: Maximize the long term average revenue to cost ratio</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8982091'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>A Privacy-Preserving Reinforcement Learning Algorithm for Multi-Domain Virtual Network Embedding</span></strong></p><ul><li><code>Publication</code><span>: TNSM 2020 (</span><strong><span>JCR-Q1</span></strong><span>)</span></li><li><code>Authors</code><span>: Davide Andreoletti, Tanya Velichkova, Giacomo Verticale, Massimo Tornatore , Silvia Giordano</span></li><li><code>Keywords</code><span>: VNE, Multi-domain, Privacy</span></li><li><code>Objective</code><span>: /</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9187205'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach</span></strong></p><ul><li><code>Publication</code><span>: INFOCOM 2019 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Pham Tran Anh Quang, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul</span></li><li><code>Keywords</code><span>: VNFP, DDPG (Deep Deterministic Policy Gradient), Multi-domain, Non-cooperative</span></li><li><code>Link</code><span>: </span><a href='https://hal.archives-ouvertes.fr/hal-02088819/file/MultiDomain_VNF_FG_embedding__A_Deep_reinforcement_learning_approach-authors%20version.pdf'><span>paper</span></a></li></ul></li><li><p><strong><span>DeepViNE: Virtual Network Embedding with Deep Reinforcement Learning</span></strong></p><ul><li><code>Publication</code><span>: INFOCOM 2019 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Mahdi Dolati, Seyedeh Bahereh Hassanpour, Majid Ghaderi, Ahmad Khonsari</span></li><li><code>Keywords</code><span>: VNE, DQN (Deep Q Network), Multi-channels Representations</span></li><li><code>Objective</code><span>: Minimize the VN blocking probability</span></li><li><code>Link</code><span>: </span><a href='https://people.ucalgary.ca/~mghaderi/docs/infocom19-deepvine.pdf'><span>paper</span></a></li></ul></li><li><p><strong><span>Virtual Network Function Placement Optimization with Deep Reinforcement Learning</span></strong></p><ul><li><code>Publication</code><span>: JSAC 2019 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal</span></li><li><code>Keywords</code><span>: VNFP, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)</span></li><li><code>Objective</code><span>: Minimize the overall power consumption</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8945291'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>NFVdeep: adaptive online service function chain deployment with deep reinforcement learning</span></strong></p><ul><li><code>Publication</code><span>: IWQoS 2019 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Yikai  Xiao, Qixia  Zhang, Fangming Liu, Jia  Wang, Miao  Zhao, Zhongxing  Zhang, Jiaxing  Zhang</span></li><li><code>Keywords</code><span>: VNFP, PG (Policy Gradient), Serialization and Backtracking, Time Slots</span></li><li><code>Objective</code><span>: Minimize the operation cost of occupied servers and maximize the total throughput of accepted requests</span></li><li><code>Link</code><span>: </span><a href='https://www.researchgate.net/publication/333789998_NFVdeep_adaptive_online_service_function_chain_deployment_with_deep_reinforcement_learning'><span>paper</span></a></li></ul></li><li><p><strong><span>VNE-TD: A virtual network embedding algorithm based on temporal-difference learning</span></strong></p><ul><li><code>Publication</code><span>: CN 2019 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Sen Wang, Jun Bi, Jianping Wu, Athanasios V. Vasilakos, Qilin Fan</span></li><li><code>Keywords</code><span>: VNFP, TD (Temporal Difference), GRC (Global Resource Control)</span></li><li><code>Objective</code><span>: Maximize the long-term time-average revenue of the InP</span></li><li><code>Link</code><span>: </span><a href='https://www.sciencedirect.com/science/article/abs/pii/S138912861830584X'><span>ScienceDirect</span></a></li></ul></li><li><p><strong><span>Virtual Network Embedding via Monte Carlo Tree Search</span></strong></p><ul><li><code>Publication</code><span>: IEEE Trans on Cybernetics 2018 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Soroush Haeri and Ljiljana Trajkovi´c</span></li><li><code>Keywords</code><span>: VNE, MCTS (Monte Carlo Tree Search)</span></li><li><code>Objective</code><span>: Maximize the profit of InPs (revenue-to-cost and acceptance ratio)</span></li><li><code>Link</code><span>: </span><a href='https://www.researchgate.net/publication/313873926_Virtual_Network_Embedding_via_Monte_Carlo_Tree_Search'><span>paper</span></a></li></ul></li><li><p><strong><span>An Efficient Algorithm for Virtual Network Function Placement and Chaining</span></strong></p><ul><li><code>Publication</code><span>: CCNC 2017</span></li><li><code>Authors</code><span>: Oussama Soualah, Marouen Mechtri, Chaima Ghribi, Djamal Zeghlache</span></li><li><code>Keywords</code><span>: VNFP, MCTS (Monte Carlo Tree Search)</span></li><li><code>Objective</code><span>: Maximize the acceptance rate of provisioning requests</span></li><li><code>Link</code><span>: </span><a href='https://www.researchgate.net/publication/318579373_An_efficient_algorithm_for_virtual_network_function_placement_and_chaining'><span>paper</span></a></li></ul></li></ol><h3 id='vnfs'><a href='#contentcontent'><span>VNFS</span></a></h3><ol start='' ><li><p><strong><span>Reliability-aware Dynamic Service Chain Scheduling in 5G Networks based on Reinforcement Learning</span></strong></p><ul><li><code>Publication</code><span>: INFOCOM 2021 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Junzhong Jia; Lei Yang; Jiannong Cao</span></li><li><code>Keywords</code><span>: VNFS, MIIP, Reliability, Redundancy, A3C, TextCNN</span></li><li><code>Objective</code><span>: Decide the redundancy of the VNFs while minimizing delay</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/abstract/document/9488707/'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Intelligent VNF Orchestration and Flow Scheduling via Model-Assisted Deep Reinforcement Learning</span></strong></p><ul><li><code>Publication</code><span>: JSAC 2020 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Lin Gu, Deze Zeng, Wei Li, Song Guo, Albert Y. Zomaya, Hai Jin</span></li><li><code>Keywords</code><span>: VNFS, Latency-awareness, flow, DDPG (Deep Deterministic Policy Gradient)</span></li><li><code>Objective</code><span>: Maximize the overall network utility with the consideration of end-to-end delay and various cost</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8931775'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Deep Reinforcement Learning based VNF Management in Geo-distributed Edge Computing</span></strong></p><ul><li><code>Publication</code><span>: ICDCS 2019 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Lin Gu, Deze Zeng, Wei Li, Song Guo, Albert Y. Zomaya, Hai Jin</span></li><li><code>Keywords</code><span>: VNFS, Latency-awareness, flow, DDPG (Deep Deterministic Policy Gradient)</span></li><li><code>Objective</code><span>: Minimize the end-to-end delays and various operation costs</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/8885151'><span>IEEE Xplore</span></a></li></ul></li></ol><h3 id='routing'><a href='#contentcontent'><span>Routing</span></a></h3><ol start='' ><li><p><strong><span>DRL-OR: Deep Reinforcement Learning-based Online Routing for Multi-type Service Requirements</span></strong></p><ul><li><code>Publication</code><span>: INFOCOM 2021 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Chenyi Liu; Mingwei Xu; Yuan Yang; Nan Geng</span></li><li><code>Keywords</code><span>: VNFS, Latency, Multi-agent, PPO</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/9488736/'><span>IEEE Xplore</span></a></li></ul></li><li><p><strong><span>Towards Real-Time Routing Optimization with Deep Reinforcement Learning: Open Challenges</span></strong></p><ul><li><code>Publication</code><span>: INFOCOM 2021 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Paul Almasan, José Suárez-Varela, Bo Wu, Shihan Xiao, Pere Barlet-Ros, Albert Cabellos-Aparicio</span></li><li><code>Keywords</code><span>: RL, GNN, PPO</span></li><li><code>Link</code><span>: </span><a href='https://arxiv.org/abs/2106.09754'><span>arXiv</span></a></li></ul></li><li><p><strong><span>Unveiling the potential of Graph Neural Networks for network modeling and optimization in SDN</span></strong></p><ul><li><code>Publication</code><span>: SOSR 2019</span></li><li><code>Authors</code><span>: Krzysztof Rusek, José Suárez-Varela, Albert Mestres, Pere Barlet-Ros, Albert Cabellos-Aparicio</span></li><li><code>Keywords</code><span>: Routing, SL (Surpervised Learning), GNN</span></li><li><code>Link</code><span>: </span><a href='https://arxiv.org/abs/1901.08113'><span>arXiv</span></a></li></ul></li><li><p><strong><span>Routing or Computing? The Paradigm Shift Towards Intelligent Computer Network Packet Transmission Based on Deep Learning</span></strong></p><ul><li><code>Publication</code><span>: TC 2019 (</span><strong><span>CCF-A</span></strong><span>)</span></li><li><code>Authors</code><span>: Bomin Mao; Zubair Md. Fadlullah; Fengxiao Tang; Nei Kato; Osamu Akashi; Takeru Inoue; Kimihiro Mizutani</span></li><li><code>Keywords</code><span>: Routing, SL (Surpervised Learning)</span></li><li><code>Link</code><span>: </span><a href='https://ieeexplore.ieee.org/document/7935536'><span>IEEE Xplore</span></a></li></ul></li></ol><h2 id='other--unassorted'><a href='#contentcontent'><span>Other &amp; Unassorted</span></a></h2><blockquote><p><span>They will be classified as soon as possible.</span></p></blockquote><ol start='' ><li><p><strong><span>Virtual Network Functions Migration Cost: from Identification to Prediction</span></strong></p><ul><li><code>Publication</code><span>: CN 2020 (</span><strong><span>CCF-B</span></strong><span>)</span></li><li><code>Authors</code><span>: Rafael de JesusMartins, Cristiano Bonato Both, Juliano Araújo Wickboldt, Lisandro Zambenedett iGranville</span></li><li><code>Keywords</code><span>: VNFM, Linear regression</span></li><li><code>Objective</code><span>: A novel architecture for orchestrating and enforcing multi-domain SFCs</span></li><li><code>Link</code><span>: </span><a href='https://www.sciencedirect.com/science/article/pii/S138912862031118X'><span>ScienceDirect</span></a></li></ul></li></ol><h2 id='contributing'><span>Contributing</span></h2><p><span>😃Favorably receive that submit relevant papers to this repository in the appropriate format:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="markdown" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="markdown"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 8.66667px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" cm-header cm-header1 CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" cm-header cm-header1"># Exemples</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" cm-header cm-header2 CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" cm-header cm-header2">## The template of Survey &amp; Analysis</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-block-start cm-variable-2">1. </span><span class="cm-strong cm-variable-2">**Recent Advances of Resource Allocation in Network Function Virtualization**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-block-start cm-variable-2">- </span><span class="cm-comment cm-variable-2">`Publication`</span><span class="cm-variable-2">: TPDS 2021 (</span><span class="cm-strong cm-variable-2">**CCF-A**</span><span class="cm-variable-2">)</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-block-start cm-variable-2">- </span><span class="cm-comment cm-variable-2">`Authors`</span><span class="cm-variable-2">: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-block-start cm-variable-2">- </span><span class="cm-comment cm-variable-2">`Link`</span><span class="cm-variable-2">: </span><span class="cm-link cm-variable-2">[IEEE Xplore]</span><span class="cm-string">(https://ieeexplore.ieee.org/document/9169857)</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" cm-header cm-header2 CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" cm-header cm-header2">## The template of Research paper</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-block-start cm-variable-2">1. </span><span class="cm-strong cm-variable-2">**An Online Algorithm for VNF Service Chain Scaling in Datacenters**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-block-start cm-variable-2">- </span><span class="cm-comment cm-variable-2">`Publication`</span><span class="cm-variable-2">: TON 2020 (</span><span class="cm-strong cm-variable-2">**CCF-A**</span><span class="cm-variable-2">)</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-block-start cm-variable-2">- </span><span class="cm-comment cm-variable-2">`Authors`</span><span class="cm-variable-2">: Ziyue Luo, Chuan Wu</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-block-start cm-variable-2">- </span><span class="cm-comment cm-variable-2">`Keywords`</span><span class="cm-variable-2">: VNFS, VNFP, ILP (Integer Linear Program), Regularization, Rounding</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-block-start cm-variable-2">- </span><span class="cm-comment cm-variable-2">`Objective`</span><span class="cm-variable-2">: Minimize the operating cost and deployment cost</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-block-start cm-variable-2">- </span><span class="cm-comment cm-variable-2">`Link`</span><span class="cm-variable-2">: </span><span class="cm-link cm-variable-2">[paper]</span><span class="cm-string">(https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 405px;"></div><div class="CodeMirror-gutters" style="display: none; height: 405px;"></div></div></div></pre><h2 id='recommend'><span>Recommend</span></h2><p><span>🤩There are some repositories which probably help you to comprehend or research this topic: </span></p><ul><li><a href='https://github.com/jwwthu/GNN-Communication-Networks'><span>GNN-Communication-Networks</span></a></li><li><a href='https://github.com/aikorea/awesome-rl'><span>awesome-rl (Awesome Reinforcement Learning)</span></a></li><li><a href='https://github.com/Thinklab-SJTU/awesome-ml4co'><span>awesome-ml4co (Awesome Machine Learning for Combinatorial Optimization Resources)</span></a></li></ul><p>&nbsp;</p></div></div>
+</body>
+</html>

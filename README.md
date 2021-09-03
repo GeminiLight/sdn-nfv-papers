@@ -4,14 +4,10 @@ This is a paper list about Resource Allocation in  [Network Functions Virtualiza
 
 - Comprehensive **Survey** and **Analysis**
 
-- **VNFC**: Virtual Network Functions Chaining (also known as  Virtual Network Embedding, Service Function Chains Orchestration)
-
-- **VNFP**: Virtual Network Functions Placement (also known as  Service Function Chains Deployment)
-
+- **VNFC**: Virtual Network Functions Chaining (also known as Service Function Chains Orchestration)
+- **VNFP**: Virtual Network Functions Placement (also known as Virtual Network Embedding or Service Function Chains Deployment)
 - **VNFS**: Virtual Network Functions Migration and Scheduling
-
 - **Routing**: Network Traffic Measurement and Management
-
 - **Multi-domain** (also known as cross-domain, multi-region or other resemble name)
 
 We mainly collect papers from high-quality journals and conferences, and classify them according to method categories. Particularly, you can find more details of  papers in the **Machine Learning-based** section, which represents a promising technique to efficiently solve network resource Allocation problems.
@@ -35,7 +31,7 @@ You can search the relevant papers by following keywords:
 - <a href="#heuristic-based">Heuristic-based</a>
   - <a href="#basic-heuristics">Basic heuristics</a>
   - <a href="#meta-heuristics">Meta-heuristics</a>
-- <a href="#reinforcement-learning-based">Machine Learning-based</a> :star:
+- <a href="#machine-learning-based">Machine Learning-based</a> :star:
   - <a href="#vnfc">VNFC</a>
   - <a href="#vnfp">VNFP</a>
   - <a href="#vnfs">VNFS</a>
@@ -194,7 +190,8 @@ You can search the relevant papers by following keywords:
    - `Objective`: Optimize the network allocation between different services by coordinating virtual dynamic SR-IOV and virtual machine live migration in autonomic way
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9151358)
 
-<!-- <details><summary> more </summary>  -->
+<!--<details>
+<summary> more </summary>
 
 1. **Optimal Virtual Network Function Deployment for 5G Network Slicing in a Hybrid Cloud Infrastructure**
 
@@ -293,8 +290,11 @@ You can search the relevant papers by following keywords:
    - `Objective`: Minimize total resource wastage and power Consumption
    - `Link`: [IEEE Xplore](https://www.researchgate.net/publication/257582253_Virtual_network_embedding_through_topology_awareness_and_optimization)
 
+</details> -->
 
-## [Machine learning-based](#content)
+
+
+## [Machine Learning-based](#content)
 
 ### [VNFC](#content)
 

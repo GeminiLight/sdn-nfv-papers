@@ -25,7 +25,7 @@ You can search the relevant papers by following keywords:
 
 ### Repository & Website
 
-- [Repository](https://geminilight.github.io/nfv-papers/):  More timely updates
+- [Repository](https://github.com/GeminiLight/nfv-papers):  More timely updates
 - [Website](https://geminilight.github.io/nfv-papers/): Better reading experience
 
 ## [Content](#content)

@@ -33,17 +33,17 @@ You can search the relevant papers by following keywords:
 - <a href="#1-survey-and-analysis">1. Survey and Analysis</a>
 - <a href="#2-mathematical-based-methods">2. Mathematical-based Methods</a>
 - <a href="#3-heuristic-based-methods">3. Heuristic-based Methods</a>
-  - <a href="#3.1-slicing">3.1. Slicing</a>
-  - <a href="#3.2-vnfc">3.2 VNFC</a>
-  - <a href="#3.3-vnfp">3.3 VNFP</a>
-  - <a href="#3.4-vnfs">3.4 VNFS</a>
-  - <a href="#3.5-routing">3.5. Routing</a>
+  - <a href="#31-slicing">3.1 Slicing</a>
+  - <a href="#32-vnfc">3.2 VNFC</a>
+  - <a href="#33-vnfp">3.3 VNFP</a>
+  - <a href="#34-vnfs">3.4 VNFS</a>
+  - <a href="#35-routing">3.5 Routing</a>
 - <a href="#4-machine-learning-based-methods">4. Machine Learning-based Methods</a> :star:
-  - <a href="#4.1-slicing">4.1. Slicing</a>
-  - <a href="#4.2-vnfc">4.2. VNFC</a>
-  - <a href="#4.3-vnfp">4.3. VNFP</a>
-  - <a href="#4.4-vnfs">4.4. VNFS</a>
-  - <a href="#4.5-routing">4.5. Routing</a>
+  - <a href="#41-slicing">4.1 Slicing</a>
+  - <a href="#42-vnfc">4.2 VNFC</a>
+  - <a href="#43-vnfp">4.3 VNFP</a>
+  - <a href="#44-vnfs">4.4 VNFS</a>
+  - <a href="#45-routing">4.5 Routing</a>
 - <a href="#5-other-and-unassorted">5. Other & Unassorted</a>
 
 > Note: :star: means it may be a promising research direction, which is considered subjectively.
@@ -119,7 +119,7 @@ You can search the relevant papers by following keywords:
 
 > There are some heuristic-based and meta-heuristic-based methods, only part of which recently published are displayed directly. You can obtain more papers by clicking `more` button.
 
-### [3.1. Slicing](#content)
+### [3.1 Slicing](#content)
 
 1. **A Coverage-Aware Resource Provisioning Method for Network Slicing**
 
@@ -145,7 +145,7 @@ You can search the relevant papers by following keywords:
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8668438)
 
-### [3.2. VNFC](#content)
+### [3.2 VNFC](#content)
 
 1. **Leveraging Network Functions Virtualization Orchestrators to Achieve Software-Defined Access Control in the Clouds**
 
@@ -240,7 +240,7 @@ You can search the relevant papers by following keywords:
 
 </details>
 
-### [3.3. VNFP](#content)
+### [3.3 VNFP](#content)
 
 1. **Prune and Plant: Efficient Placement and Parallelism of Virtual Network Functions**
 
@@ -546,7 +546,7 @@ You can search the relevant papers by following keywords:
 
 </details>
 
-### [3.4. VNFS](#content)
+### [3.4 VNFS](#content)
 
 1. **An Online Algorithm for VNF Service Chain Scaling in Datacenters**
 
@@ -580,7 +580,7 @@ You can search the relevant papers by following keywords:
    - `Objective`: QoS +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9212908)
 
-### [3.5. Routing](#content)
+### [3.5 Routing](#content)
 
 1. **Real-Time Update of Joint SFC and Routing in Software Defined Networks**
 
@@ -617,9 +617,9 @@ Congestion Minimization for Service Chain Routing Problems With Path Length Cons
 
 ## [4. Machine Learning-based Methods](#content) 
 
-### [4.1. Slicing](#content)
+### [4.1 Slicing](#content)
 
-### [4.2. VNFC](#content)
+### [4.2 VNFC](#content)
 
 1. **Scalable Orchestration of Service Function Chains in NFV-Enabled Networks: A Federated Reinforcement Learning Approach**
 
@@ -637,7 +637,7 @@ Congestion Minimization for Service Chain Routing Problems With Path Length Cons
    - `Objective`: Orchestration cost
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9326381)
 
-### [4.3. VNFP](#content)
+### [4.3 VNFP](#content)
 
 1. **Dynamic Virtual Network Embedding Algorithm based on Graph Convolution Neural Network and Reinforcement Learning**
 
@@ -771,7 +771,7 @@ Congestion Minimization for Service Chain Routing Problems With Path Length Cons
    - `Objective`: Maximize the acceptance rate of provisioning requests
    - `Link`: [paper](https://www.researchgate.net/publication/318579373_An_efficient_algorithm_for_virtual_network_function_placement_and_chaining)
 
-### [4.4. VNFS](#content)
+### [4.4 VNFS](#content)
 
 1. **Reliability-aware Dynamic Service Chain Scheduling in 5G Networks based on Reinforcement Learning**
    
@@ -812,7 +812,7 @@ Congestion Minimization for Service Chain Routing Problems With Path Length Cons
    - `Objective`: Minimize the end-to-end delays and various operation costs
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8885151)
 
-### [4.5. Routing](#content)
+### [4.5 Routing](#content)
 
 1. **DRL-OR: Deep Reinforcement Learning-based Online Routing for Multi-type Service Requirements**
 

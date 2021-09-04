@@ -23,22 +23,27 @@ You can search the relevant papers by following keywords:
 - **RL-ALGO**: `DQN`, `DDPG`, `A3C`, `PPO`, ...
 - **NN-type**: `CNN`, `RNN`, `GNN`, ...
 
+### Repository & Website
+
+- [Repository](https://geminilight.github.io/nfv-papers/):  More timely updates
+- [Website](https://geminilight.github.io/nfv-papers/): Better reading experience
+
 ## [Content](#content)
 
 - <a href="#1-survey-and-analysis">1. Survey and Analysis</a>
 - <a href="#2-mathematical-based-methods">2. Mathematical-based Methods</a>
 - <a href="#3-heuristic-based-methods">3. Heuristic-based Methods</a>
-  - <a href="#3-1-slicing">3.1. Slicing</a>
-  - <a href="#3-2-vnfc">3.2 VNFC</a>
-  - <a href="#3-3-vnfp">3.3 VNFP</a>
-  - <a href="#3-4-vnfs">3.4 VNFS</a>
-  - <a href="#3-5-routing">3.5. Routing</a>
+  - <a href="#3.1-slicing">3.1. Slicing</a>
+  - <a href="#3.2-vnfc">3.2 VNFC</a>
+  - <a href="#3.3-vnfp">3.3 VNFP</a>
+  - <a href="#3.4-vnfs">3.4 VNFS</a>
+  - <a href="#3.5-routing">3.5. Routing</a>
 - <a href="#4-machine-learning-based-methods">4. Machine Learning-based Methods</a> :star:
-  - <a href="#4-1-slicing">4.1. Slicing</a>
-  - <a href="#4-2-vnfc">4.2. VNFC</a>
-  - <a href="#4-3-vnfp">4.3. VNFP</a>
-  - <a href="#4-4vnfs">4.4. VNFS</a>
-  - <a href="#4-5-routing">4.5. Routing</a>
+  - <a href="#4.1-slicing">4.1. Slicing</a>
+  - <a href="#4.2-vnfc">4.2. VNFC</a>
+  - <a href="#4.3-vnfp">4.3. VNFP</a>
+  - <a href="#4.4-vnfs">4.4. VNFS</a>
+  - <a href="#4.5-routing">4.5. Routing</a>
 - <a href="#5-other-and-unassorted">5. Other & Unassorted</a>
 
 > Note: :star: means it may be a promising research direction, which is considered subjectively.

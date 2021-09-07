@@ -87,6 +87,12 @@ You can search the relevant papers by following keywords:
    - `Authors`: Paarijaat Aditya; Istemi Ekin Akkus; Andre Beck; Ruichuan Chen; Volker Hilt; Ivica Rimac; Klaus Satzke; Manuel Stein
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8653379)
 
+1. **5G network slicing using SDN and NFV: A survey of taxonomy, architectures and future challenges**
+
+   - `Publication`: CN 2020 (**CCF-B**)
+   - `Authors`: Alcardo AlexBarakabitze, ArslanAhmad, Rashid Mijumb, Andrew Hinesd
+   - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1389128619304773)
+
 1. **Routing via Functions in Virtual Networks: The Curse of Choices**
 
    - `Publication`: TON 2019 (**CCF-A**)

@@ -400,6 +400,14 @@ You can search the relevant papers by following keywords:
     - `Objective`: Reduce complexity of the network topology by using the parallel transmission characteristics of optical fiber
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345794)
 
+1. **Dynamic VNF Placement, Resource Allocation and Traffic Routing in 5G**
+
+   - `Publication`: CN 2021 (**CCF-B**)
+   - `Authors`: Morteza Golkarifard, C. Chiasserini, F. Malandrino, A. Movaghar
+   - `Keywords`: VNFP, Routing
+   - `Objective`: Placement cost -
+   - `Link`: [arXiv](https://arxiv.org/pdf/2102.09426.pdf)
+
 1. **Efficient Virtual Network Embedding of Cloud-Based Data Center Networks into Optical Networks**
 
     - `Publication`: TSC 2021 (**CCF-B**)
@@ -448,6 +456,14 @@ You can search the relevant papers by following keywords:
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9189853)
 
+1. **Joint Resource Allocation and Routing for Service Function Chaining with In-Subnetwork Processing**
+
+   - `Publication`: ICASSP 2020 (**CCF-B**)
+   - `Authors`:  Navid Reyhanian; Hamid Farmanbar; Soheil Mohajer; Zhi-Quan Luo
+   - `Keywords`: VNFP, Routing
+   - `Objective`: Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9054706)
+
 1. **Congestion-Aware and Energy-Aware Virtual Network Embedding**
 
    - `Publication`: TON 2020 (**CCF-A**)
@@ -495,6 +511,14 @@ You can search the relevant papers by following keywords:
    - `Keywords`: VNFP, Edge, Reliablity, Backup
    - `Objective`: Reliablity +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9312434)
+
+1. **Approximation algorithms for data-intensive service chain embedding**
+
+   - `Publication`: MobiHoc 2020(**CCF-B**)
+   - `Authors`:  Konstantinos Poularakis, J. Llorca, A. Tulino, L. Tassiulas
+   - `Keywords`: VNFP, Data-intensive
+   - `Objective`: Placement cost -
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3397166.3409149)
 
 1. **Joint Availability- and Traffic-aware Placement of Parallelized Service Chain in NFV-enabled Data Center**
 
@@ -575,6 +599,14 @@ You can search the relevant papers by following keywords:
     - `Keywords`: VNFP
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8846601)
+
+1. **Adaptive Interference-Aware VNF Placement for Service-Customized 5G Network Slices**
+
+    - `Publication`: INFOCOM 2019 (**CCF-A**)
+    - `Authors`: Qixia Zhang, Fangming Liu, Chaobing Zeng
+    - `Keywords`: VNFP, Interference
+    - `Objective`:Acceptance rate +
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8737544)
 
 1. **Octans: Optimal Placement of Service Function Chains in Many-Core Systems**
 
@@ -818,7 +850,7 @@ Georgios B. Giannakis
    - `Publication`: ICWS 2020 (**CCF-B**)
    - `Authors`:  Biyi Li; Bo Cheng; Junliang Chen
    - `Keywords`: VNFS, Migration
-   - `Objective`: Minimize the end-to-end delay for all affected SFCs and to guarantee network load balancing after the migration simultaneously
+   - `Objective`: Latency -, Load balancing +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9284106)
 
 1. **Finedge: A Dynamic Cost-Efficient Edge Resource Management Platform for NFV Network**
@@ -852,6 +884,22 @@ Georgios B. Giannakis
    - `Keywords`: VNFS, Migration, Heterogeneous
    - `Objective`: Revenue of InP +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8476209)
+
+1. **A multi-criteria decision approach for minimizing the influence of VNF migration**
+
+   - `Publication`: CN 2019 (**CCF-B**)
+   - `Authors`: Bo Yi, X. Wang, Min Huang, Anwei Dong
+   - `Keywords`: VNFS, Migration
+   - `Objective`: Influence -
+   - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619304748?via%3Dihub)
+
+1. **Network Function Virtualization in Dynamic Networks: A Stochastic Perspective**
+
+    - `Publication`: JSAC 2018 (**CCF-A**)
+    - `Authors`: Xiangle Cheng; Yulei Wu; Geyong Min; Albert Y. Zomaya
+    - `Keywords`: VNFP, Dynamic
+    - `Objective`: /
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8463557/)
 
 1. **Energy-Aware Virtual Machine Scheduling on Data Centers with Heterogeneous Bandwidths**
 
@@ -966,16 +1014,22 @@ Georgios B. Giannakis
 
 ### [4.1 Slicing](#content)
 
+1. **A Constrained Reinforcement Learning Based Approach for Network Slicing**
+   - `Publication`: ICNP 2020 (**CCF-B**)
+   - `Authors`: Yongshuai Liu; Jiaxin Ding; Xin Liu
+   - `Keywords`: Slicing
+   - `Objective`: /
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9259378)
+
 ### [4.2 VNFC](#content)
 
 1. **Space-Air-Ground Integrated Multi-Domain Network Resource Orchestration Based on Virtual Network Architecture: A DRL Method**
-
    - `Publication`: TITS 2021 (**CCF-B**)
    - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Lei Liu
    - `Keywords`: VNFC, VNFP, Multi-Domain, DQN
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9505612)
-
+   
 1. **Scalable Orchestration of Service Function Chains in NFV-Enabled Networks: A Federated Reinforcement Learning Approach**
 
    - `Publication`: JSAC 2021 (**CCF-A**)
@@ -1190,7 +1244,14 @@ Georgios B. Giannakis
    - `Authors`: Paul Almasan, José Suárez-Varela, Bo Wu, Shihan Xiao, Pere Barlet-Ros, Albert Cabellos-Aparicio
    - `Keywords`: RL, GNN, PPO
    - `Link`: [arXiv](https://arxiv.org/abs/2106.09754)
-   
+
+1. **A Multi-agent Reinforcement Learning Perspective on Distributed Traffic Engineering**
+
+   - `Publication`: ICNP 2020 (**CCF-B**)
+   - `Authors`: Nan Geng; Tian Lan; Vaneet Aggarwal; Yuan Yang; Mingwei Xu
+   - `Keywords`: VNFS, Multi-agent, Traffic Engineering
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9259413/)
+
 1. **Unveiling the potential of Graph Neural Networks for network modeling and optimization in SDN**
    - `Publication`: SOSR 2019
    - `Authors`: Krzysztof Rusek, José Suárez-Varela, Albert Mestres, Pere Barlet-Ros, Albert Cabellos-Aparicio

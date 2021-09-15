@@ -1,10 +1,11 @@
 # Papers on Network Resource Allocation
 
 This is a paper list about Resource Allocation in  [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV) and [Software-Defined Networking](https://en.wikipedia.org/wiki/Software-defined_networking) (SDN), including
+
 - Comprehensive **Survey** and **Analysis**
 - **Slicing**: Network Slicing
 - **VNFC**: Virtual Network Functions Chaining (also known as Service Function Chains Orchestration)
-- **VNFP**: Virtual Network Functions Placement (also known as Virtual Network Embedding or Service Function Chain Deployment)
+- **VNFP**: Virtual Network Functions Placement (also known as Service Function Chain Deployment)
 - **VNFS**: Virtual Network Functions Scheduling (including Scaling, Reconfiguration and Migration)
 - **Routing**: Network Traffic Measurement and Management
 - **Multi-domain** (also known as cross-domain, multi-region or other resemble name)
@@ -129,7 +130,7 @@ You can search the relevant papers by following keywords:
 
 ## [3. Heuristic-based Methods](#content)
 
-> There are some heuristic-based and meta-heuristic-based methods, only part of which recently published are displayed directly. You can obtain more papers by clicking `more` button.
+> Here are many heuristic-based and meta-heuristic-based methods, only part of which recently published are displayed directly. You can obtain more papers by clicking `more` button.
 
 ### [3.1 Slicing](#content)
 
@@ -777,13 +778,37 @@ Georgios B. Giannakis
    - `Objective`:  Placement cost -	
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7938678)
 
-1. **VReliable Virtual Machine Placement and Routing in Clouds**
+1. **Reliable Virtual Machine Placement and Routing in Clouds**
 
    - `Publication`: TPDS 2017 (**CCF-A**)
    - `Authors`: Song Yang; Philipp Wieder; Ramin Yahyapour; Stojan Trajanovski; Xiaoming Fu
-   - `Keywords`: VNFP, Cloud, Latency
+   - `Keywords`: VNFP, Routing, Cloud, Latency
    - `Objective`:  Placement cost -, Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8281644)
+
+1. **Multi-resource Load Balancing for Virtual Network Functions**
+
+   - `Publication`: ICDCS 2017 (**CCF-B**)
+   - `Authors`: Tao Wang; Hong Xu; Fangming Liu
+   - `Keywords`: VNFP, Load Balancing, Multi-resource
+   - `Objective`:  Load Balancing +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7980072)
+
+1. **SLA-NFV: an SLA-aware High Performance Framework for Network Function Virtualization**
+
+   - `Publication`: SIGCOMM 2016 (**CCF-A**)
+   - `Authors`: Chen Sun, Jun Bi, Zhilong Zheng, Hongxin Hu
+   - `Keywords`: VNFP, Latency
+   - `Objective`:  Latency +
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/2934872.2959058)
+
+1. **Deploying chains of virtual network functions: On the relation between link and server usage**
+
+   - `Publication`: INFOCOM 2016 (**CCF-A**)
+   - `Authors`: Tung-Wei Kuo; Bang-Heng Liou; Kate Ching-Ju Lin; Ming-Jer Tsai
+   - `Keywords`: VNFP
+   - `Objective`:  Acceptance rate +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7524565)
 
 1. **Toward Profit-Seeking Virtual Network Embedding**
 
@@ -812,6 +837,14 @@ Georgios B. Giannakis
 </details>
 
 ### [3.4 VNFS](#content)
+
+1. **HASFC: A MANO-Compliant Framework for Availability Management of Service Chains**
+
+   - `Publication`: IEEE Communications Magazine 2021 (**JCR-Q1**)
+   - `Authors`: Mario Di Mauro; Giovanni Galatro; Maurizio Longo; Fabio Postiglione; Marco Tambasco
+   - `Keywords`: VNFS, VNFP, Reliabilty
+   - `Objective`: Cost -, Reliabilty +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9376772)
 
 1. **Highly-Efficient Switch Migration for Controller Load Balancing in Elastic Optical Inter-Datacenter Networks**
 
@@ -1054,23 +1087,34 @@ Georgios B. Giannakis
    - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Weishan Zhang; Lei Liu
    - `Keywords`: VNFP, GNN, GCN, MDP (Markov Decision Process), Viterbi algorithm
    - `Objective`: Placement cost -
-   - `Link`: [paper](https://ieeexplore.ieee.org/document/9475485)
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9475485)
 
 1. **On the Effective Parallelization and Near-Optimal Deployment of Service Function Chains**
+
     - `Publication`: TPDS 2021 (**CCF-A**)
     - `Authors`: Jianzhen Luo; Jun Li; Lei Jiao; Jun Cai
     - `Keywords`: VNFP, Parallelization, Viterbi Dynamic Programming algorithm
     - `Objective`: Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9300184)
 
-1. **DDQP: A Double Deep Q-Learning Approach to Online Fault-Tolerant SFC Placement**
+1. **A-DDPG: Attention Mechanism-based Deep Reinforcement Learning for NFV**
+
+   - `Publication`: IWQoS 2021 (**CCF-B**)
+   - `Authors`: Nan He, S. Yang, Fan Li, S. Trajanovski, F.A. Kuipers, Xiaoming Fu
+   - `Keywords`: VNFP, Attention, DDPG, Latency
+   - `Objective`: Placement cost -, Latency -
+   - `Link`: [paper](https://research.tudelft.nl/files/93969106/IWQoS2021.pdf)
+
+1. **A Heuristically Assisted Deep Reinforcement Learning Approach for Network Slice Placement**
+
    - `Publication`: TNSM 2020 (**JCR-Q1**)
-   - `Authors`: Lei Wang; Weixi Mao; Jin Zhao; Yuedong Xu
-   - `Keywords`: VNFP, DDQN
-   - `Objective`: Acceptance rate +, Placement cost -
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9313044)
+   - `Authors`: Jose Jurandir Alves Esteves, Amina Boubendir, Fabrice Guillemin, Pierre Sens
+   - `Keywords`: VNFP, A3C, GCN
+   - `Objective`: Acceptance rate +
+   - `Link`: [arXiv](https://arxiv.org/abs/2105.06741)
 
 1. **Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach With Graph Convolutional Networks**
+
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li
    - `Keywords`: VNFP, A3C (Asynchronous Advantage Actor-Critic), GNN, GCN (Graph Convolutional Network)
@@ -1116,6 +1160,13 @@ Georgios B. Giannakis
    - `Keywords`: VNFP, Collaborative, Multi-Layer, REINFORCE
    - `Objective`: Acceptance rate +, Long-term average revenue +
    - `Link`: [IEEE Xplore](http://ieeexplore.ieee.org/document/9151980)
+
+1. **DDQP: A Double Deep Q-Learning Approach to Online Fault-Tolerant SFC Placement**
+   - `Publication`: TNSM 2020 (**JCR-Q1**)
+   - `Authors`: Lei Wang; Weixi Mao; Jin Zhao; Yuedong Xu
+   - `Keywords`: VNFP, DDQN
+   - `Objective`: Acceptance rate +, Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9313044)
 
 1. **A Continuous-Decision Virtual Network Embedding Scheme Relying on Reinforcement Learning**
    
@@ -1267,7 +1318,32 @@ Georgios B. Giannakis
 
 ## [5. Other & Unassorted](#content)
 
-> They will be classified as soon as possible.
+> Here are two types of papers: one is related to other topics of NFV and SDN and waiting to be classified; the other is the latest research work collected from arXiv.
+
+1. **The Greatest Teacher, Failure is: Using Reinforcement Learning for SFC Placement Based on Availability and Energy Consumption**
+
+   - `Authors`: Guto Leoni Santos, Theo Lynn, Judith Kelner, Patricia Takako Endo
+   - `Link`: [arXiv](https://arxiv.org/abs/2010.05711)
+
+1. **Learning based E2E Energy Efficient in Joint Radio and NFV Resource Allocation for 5G and Beyond Networks**
+
+   - `Authors`: Narges Gholipoor, Ali Nouruzi, Shima Salarhosseini, Mohammad Reza Javan, Nader Mokari, Eduard A. Jorswieck
+   - `Link`: [arXiv](https://arxiv.org/abs/2107.05991)
+
+1. **When SRv6 meets 5G Core: Implementation and Deployment of a Network Service Chaining Function in SmartNICs**
+
+   - `Authors`: Guilherme Matos, Fabio Luciano Verdi, Luis Miguel Contreras, Leandro C. de Almeida
+   - `Link`: [arXiv](https://arxiv.org/abs/2107.11966)
+
+1. **End-to-End Delay Guaranteed SFC Deployment: A Multi-level Mapping Approach**
+
+   - `Authors`: Fatemeh Yaghoubpour, Bahador Bakhshi, Fateme Seifi
+   - `Link`: [arXiv](https://arxiv.org/abs/2102.06090)
+
+1. **Service Function Chaining in MEC: A Mean-Field Game and Reinforcement Learning Approach**
+
+   - `Authors`: Amine Abouaomar, Soumaya Cherkaoui, Zoubeir Mlika, Abdellatif Kobbane
+   - `Link`: [arXiv](https://arxiv.org/abs/2105.04701)
 
 1. **vSFC: Generic and Agile Verification of Service Function Chains in the Cloud**
 

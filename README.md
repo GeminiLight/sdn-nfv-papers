@@ -1,23 +1,23 @@
 # Papers on Network Resource Allocation
 
-This is a paper list about Resource Allocation in  [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV) and [Software-Defined Networking](https://en.wikipedia.org/wiki/Software-defined_networking) (SDN), including
+This is a paper list about Network Resource Allocation in [Software-Defined Networking](https://en.wikipedia.org/wiki/Software-defined_networking) (SDN) and [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV), including
 
 - Comprehensive **Survey** and **Analysis**
 - **Slicing**: Network Slicing
-- **VNFC**: Virtual Network Functions Chaining (also known as Service Function Chains Orchestration)
-- **VNFP**: Virtual Network Functions Placement (also known as Service Function Chain Deployment)
-- **VNFS**: Virtual Network Functions Scheduling (including Scaling, Reconfiguration and Migration)
+- **Chaining**: Virtual Network Functions Chaining (also known as Service Function Chains Orchestration)
+- **Placement**: Virtual Network Functions Placement (also known as Service Function Chain Deployment)
+- **Scheduling**: Virtual Network Functions Scheduling (including Scaling, Reconfiguration and Migration)
 - **Routing**: Network Traffic Measurement and Management
 - **Multi-domain** (also known as cross-domain, multi-region or other resemble name)
 
-We mainly collect papers from high-quality journals and conferences, and classify them according to method categories. Particularly, you can find more details of  papers in the **Machine Learning-based** section, which represents a promising technique to efficiently solve network resource allocation problems.
+We mainly collect papers from high-quality journals and conferences, and classify them according to method categories. Particularly, you can find more details of  papers in the **Machine Learning-based** section, which represents a encouraging technique to efficiently solve network resource allocation problems.
 
 ### Search by Keywords
 
 You can search the relevant papers by following keywords:
 
-- **Direction**: `VNFC`, `VNFP`, `VNFS`, `Routing`, `Multi-domain`, `Joint`
-- **Publication**: `JSAC`, `TON`, `INFOCOM`, `TPDS`, `TC`, `TMC`, ...
+- **Direction**: `Chaining`, `Placement`, `Scheduling`, `Routing`, `Multi-domain`, `Joint`
+- **Publication**: `SIGCOMM`, `JSAC`, `TON`, `INFOCOM`, `TPDS`, `TC`, `TMC`, ...
 - **PUB-rank**: `CCF-A`, `CCF-B`, `JCR-Q1`, ...
 - **Scenario**: `Dsitributed`,  `IoT`, `Edge`, `Mobile`, `Optical Network`, ...
 - **Awareness**: `Latency`, `Congestion`, `Privacy`, `Energy`, `Parallelization`, `Reliability`
@@ -35,17 +35,17 @@ You can search the relevant papers by following keywords:
 - <a href="#2-mathematical-based-methods">2. Mathematical-based Methods</a>
 - <a href="#3-heuristic-based-methods">3. Heuristic-based Methods</a>
   - <a href="#31-slicing">3.1 Slicing</a>
-  - <a href="#32-vnfc">3.2 VNFC</a>
-  - <a href="#33-vnfp">3.3 VNFP</a>
-  - <a href="#34-vnfs">3.4 VNFS</a>
+  - <a href="#32-vnfc">3.2 Chaining</a>
+  - <a href="#33-Placement">3.3 Placement</a>
+  - <a href="#34-Scheduling">3.4 Scheduling</a>
   - <a href="#35-routing">3.5 Routing</a>
 - <a href="#4-machine-learning-based-methods">4. Machine Learning-based Methods</a> :star:
   - <a href="#41-slicing">4.1 Slicing</a>
-  - <a href="#42-vnfc">4.2 VNFC</a>
-  - <a href="#43-vnfp">4.3 VNFP</a>
-  - <a href="#44-vnfs">4.4 VNFS</a>
+  - <a href="#42-vnfc">4.2 Chaining</a>
+  - <a href="#43-Placement">4.3 Placement</a>
+  - <a href="#44-Scheduling">4.4 Scheduling</a>
   - <a href="#45-routing">4.5 Routing</a>
-- <a href="#5-other-and-unassorted">5. Other & Unassorted</a>
+- <a href="#5-other-and-unclassified">5. Other and Unclassified</a>
 
 > Note: :star: means it may be a promising research direction, which is considered subjectively.
 
@@ -118,7 +118,13 @@ You can search the relevant papers by following keywords:
    - `Authors`: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306)
 
-1. **Virtual Network Embedding: a Survey**
+1. **A Survey on Service Function Chaining**
+
+   - `Publication`: Journal of Network and Computer Applications 2016 (**JCR-Q1**)
+   - `Authors`: Deval Bhamare, Raj Jain, Mohammed Samaka, Aiman Erbad
+   - `Link`: [paper](https://www.researchgate.net/publication/307997159_A_Survey_on_Service_Function_Chaining)
+
+1. **Virtual Network Embedding: A Survey**
 
    - `Publication`: IEEE Communications Surveys & Tutorials 2013 (**JCR-Q1**)
    - `Authors`: Andreas Fischer; Juan Felipe Botero; Michael Till Beck; Hermann de Meer; Xavier Hesselbach
@@ -151,13 +157,12 @@ You can search the relevant papers by following keywords:
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619316081)
 
 1. **Optimization Model for Cross-Domain Network Slices in 5G Networks**
-
     - `Publication`: TMC 2019 (**CCF-A**)
     - `Authors`: Rami Akrem Addad; Miloud Bagaa; Tarik Taleb; Diego Leonel Cadette Dutra; Hannu Flinck
     - `Keywords`: Slicing, Multi-domain
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8668438)
-
+    
 1. **Multi-Tenant Radio Access Network Slicing: Statistical Multiplexing of Spatial Loads**
 
     - `Publication`: TON 2017 (**CCF-A**)
@@ -166,13 +171,13 @@ You can search the relevant papers by following keywords:
     - `Objective`: Cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7982693)
 
-### [3.2 VNFC](#content)
+### [3.2 Chaining](#content)
 
 1. **Leveraging Network Functions Virtualization Orchestrators to Achieve Software-Defined Access Control in the Clouds**
 
     - `Publication`: TDSC 2021 (**CCF-A**)
     - `Authors`: Montida Pattaranantakul; Ruan He; Zonghua Zhang; Ahmed Meddahi; Ping Wang
-    - `Keywords`: VNFC
+    - `Keywords`: Chaining
     - `Objective`: Throughput +
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8588356)
 
@@ -180,7 +185,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TON 2021 (**CCF-A**)
     - `Authors`: Tom Barbette; Cyril Soldani; Laurent Mathy
-    - `Keywords`: VNFC, High-Speed
+    - `Keywords`: Chaining, High-Speed
     - `Objective`: Speed +
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9503101)
 
@@ -188,7 +193,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TON 2021 (**CCF-A**)
     - `Authors`: I-Chieh Lin; Yu-Hsuan Yeh; Kate Ching-Ju Lin
-    - `Keywords`: VNFC, Parallelization
+    - `Keywords`: Chaining, Parallelization
     - `Objective`: Latency -, Parallelization +
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9445660)
 
@@ -196,7 +201,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TPDS 2021 (**CCF-A**)
     - `Authors`: Niloofar Moradi; Alireza Shameli-Sendi; Alireza Khajouei
-    - `Keywords`: VNFC, Scalable
+    - `Keywords`: Chaining, Scalable
     - `Objective`: Cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9445660)
 
@@ -204,7 +209,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: IEEE Network 2021 (**JCR-1**)
     - `Authors`: Ibrahim Afolabi; Miloud Bagaa; Walid Boumezer; Tarik Taleb
-    - `Keywords`: VNFC, VNFP, Joint, Network Slice, Distributed
+    - `Keywords`: Chaining, Placement, Joint, Network Slice, Distributed
     - `Objective`: Framework
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9293090/)
 
@@ -212,18 +217,26 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: IoTJ 2021 (**JCR-1**)
     - `Authors`: Ahmadreza Montazerolghaem
-    - `Keywords`: VNFC, IoT, Network Slice
+    - `Keywords`: Chaining, IoT, Network Slice
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9475487/)
 
 <details>
 <summary> more </summary>
 
+1. **FlexNF: Flexible Network Function Orchestration on the Programmable Data Plane**
+
+    - `Publication`: IWQOS 2021 (**CCF-B**)
+    - `Authors`: Hanyu Zhao; Qing Li; Jingpu Duan; Yong Jiang; Kai Liu
+    - `Keywords`: Chaining, Programmable Data Plane
+    - `Objective`: Acceptance rate +
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9521320)
+
 1. **Log Management in NFV Service Orchestration**
 
     - `Publication`: SECON 2021 (**CCF-B**)
     - `Authors`: Engin Zeydan; Jorge Baranda; Josep Mangues-Bafalluy; Ricardo Martínez; Luca Vettori
-    - `Keywords`: VNFC, Log
+    - `Keywords`: Chaining, Log
     - `Objective`: Log
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9491606)
 
@@ -231,7 +244,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: CN 2021 (**CCF-B**)
     - `Authors`: Nassima Toumi, Olivier Bernier, Djamal-Eddine Meddour, Adlen Ksentini
-    - `Keywords`: VNFC, Multi-domain
+    - `Keywords`: Chaining, Multi-domain
     - `Objective`: Framework
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128621000013)
 
@@ -239,7 +252,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: INFOCOM 2020 (**CCF-A**)
    - `Authors`: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li
-   - `Keywords`: VNFC, VNFP, HSFCE (Hybrid SFC composition and Embedding), Latency-aware, Betweenness Centrality
+   - `Keywords`: Chaining, Placement, HSFCE (Hybrid SFC composition and Embedding), Latency-aware, Betweenness Centrality
    - `Objective`: Latency
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9155529)
 
@@ -247,23 +260,22 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TMC 2020 (**CCF-A**)
    - `Authors`: Ibrahim Afolabi; Jonathan Prados-Garzon; Miloud Bagaa; Tarik Taleb; Pablo Ameigeiras
-   - `Keywords`: VNFC, Dynamic 
+   - `Keywords`: Chaining, Dynamic 
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8772218)
 
 1. **Multiservice-Based Network Slicing Orchestration With Impatient Tenants**
-
    - `Publication`: TWC 2020 (**CCF-B**)
    - `Authors`: PDF Bin Han; Vincenzo Sciancalepore; Xavier Costa-Pérez; Di Feng; Hans D. Schotten
-   - `Keywords`: VNFC
+   - `Keywords`: Chaining
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9082203)
-
+   
 1. **pSMART: A lightweight, privacy-aware service function chain orchestration in multi-domain NFV/SDN**
    
     - `Publication`: CN 2020 (**CCF-B**)
     - `Authors`: Kalpana D. Joshi , Kotaro Kataoka
-    - `Keywords`: VNFC, Multi-domain, Privacy
+    - `Keywords`: Chaining, Multi-domain, Privacy
     - `Objective`: Utilize less sensitive information, to reduce privacy and security risks
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619311181)
 
@@ -271,7 +283,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TPDS 2019 (**CCF-A**)
     - `Authors`: Lin Cui; Fung Po Tso; Song Guo; Weijia Jia; Kaimin Wei; Wei Zhao
-    - `Keywords`: VNFC, Heterogeneous
+    - `Keywords`: Chaining, Heterogeneous
     - `Objective`: Cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8470961)
 
@@ -279,19 +291,19 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: ICDCS 2019 (**CCF-B**)
     - `Authors`: Qiang Liu; Tao Han
-    - `Keywords`: VNFC, VNFP, Multi-Domain
+    - `Keywords`: Chaining, Placement, Multi-Domain
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8884864)
 
 </details>
 
-### [3.3 VNFP](#content)
+### [3.3 Placement](#content)
 
 1. **Latency-Sensitive Edge/Cloud Serverless Dynamic Deployment Over Telemetry-Based Packet-Optical Network**
 
     - `Publication`: JSAC 2021 (**CCF-A**)
     - `Authors`: István Pelle; Francesco Paolucci; Balázs Sonkoly; Filippo Cugini
-    - `Keywords`: VNFP, Latency, Optical Network
+    - `Keywords`: Placement, Latency, Optical Network
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8962126)
 
@@ -299,7 +311,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TC 2021 (**CCF-A**)
     - `Authors`: Wei Bao; Dong Yuan; Bing Bing Zhou; Albert Y. Zomaya
-    - `Keywords`: VNFP, Parallelization, Prune and Plant
+    - `Keywords`: Placement, Parallelization, Prune and Plant
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8962126)
 
@@ -307,7 +319,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TC 2021 (**CCF-A**)
     - `Authors`: Xiaojun Shang; Zhenhua Liu; Yuanyuan Yang
-    - `Keywords`: VNFP, Routing, Online candidate path selection (OCPS)
+    - `Keywords`: Placement, Routing, Online candidate path selection (OCPS)
     - `Objective`: Latency -, Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9248649)
 
@@ -315,7 +327,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TC 2021 (**CCF-A**)
     - `Authors`: Xiaojun Shang; Zhenhua Liu; Yuanyuan Yang
-    - `Keywords`: VNFP, Prioritized
+    - `Keywords`: Placement, Prioritized
     - `Objective`: Latency -, Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9363457)
 
@@ -323,7 +335,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TC ( Early Access ) (**CCF-A**)
     - `Authors`: Yu Ma; Weifa Liang; Jing Li; Xiaohua Jia; Song Guo
-    - `Keywords`: VNFP, Mobility, Latency
+    - `Keywords`: Placement, Mobility, Latency
     - `Objective`: Latency -, Mobility +, Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9363457)
     
@@ -331,7 +343,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TMC 2021 (**CCF-A**)
     - `Authors`: Weifa Liang; Yu Ma; Wenzheng Xu; Zichuan Xu; Xiaohua Jia; Wanlei Zhou
-    - `Keywords`: VNFP, Reliability
+    - `Keywords`: Placement, Reliability
     - `Objective`: Reliability +
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9435077/)
 
@@ -339,30 +351,30 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TMC 2021 (**CCF-A**)
     - `Authors`: Song Yang; Fan Li; Stojan Trajanovski; Xu Chen; Yu Wang; Xiaoming Fu
-    - `Keywords`: VNFP, Latency
+    - `Keywords`: Placement, Latency
     - `Objective`: Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8844781/)
 
 1. **Online Adaptive Interference-Aware VNF Deployment and Migration for 5G Network Slice**
     - `Publication`: TON 2021 (**CCF-A**)
     - `Authors`: Qixia Zhang; Fangming Liu; Chaobing Zeng
-    - `Keywords`: VNFP, VNFS, Joint
-    - `Objective`: Acceptance cost +, Migration cost -
+    - `Keywords`: Placement, Scheduling, Joint
+    - `Objective`: Acceptance rate +, Migration cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9440734/)
 
 1. **Service Placement and Request Scheduling for Data-Intensive Applications in Edge Clouds**
 
     - `Publication`: TON 2021 (**CCF-A**)
     - `Authors`: Vajiheh Farhadi; Fidan Mehmeti; Ting He; Thomas F. La Porta; Hana Khamfroush; Shiqiang Wang
-    - `Keywords`: VNFP, VNFS, Joint
-    - `Objective`: Acceptance cost +, Migration cost -
+    - `Keywords`: Placement, Scheduling, Joint
+    - `Objective`: Acceptance rate +, Migration cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345766/)
 
 1. **Efficient Virtual Network Embedding of Cloud-Based Data Center Networks into Optical Networks**
 
     - `Publication`: TPDS 2021 (**CCF-A**)
     - `Authors`: Weibei Fan; Fu Xiao; Xiaobai Chen; Lei Cui; Shui Yu
-    - `Keywords`: VNFP, Optical Networks
+    - `Keywords`: Placement, Optical Networks
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9415134)
 
@@ -370,7 +382,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TPDS 2021 (**CCF-A**)
     - `Authors`: Yu Liu; Xiaojun Shang; Yuanyuan Yang
-    - `Keywords`: VNFP, VNFS, Joint, Heterogeneous, Edge, Latency
+    - `Keywords`: Placement, Scheduling, Joint, Heterogeneous, Edge, Latency
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9363567)
 
@@ -378,7 +390,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: IoTJ 2021 (**JCR-1**)
     - `Authors`: Junling Li; Weisen Shi; Qiang Ye; Shan Zhang; Weihua Zhuang; Xuemin Shen
-    - `Keywords`: VNFP, Joint, Latency
+    - `Keywords`: Placement, Joint, Latency
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9415134/)
 
@@ -386,9 +398,17 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: IoTJ 2021 (**JCR-1**)
     - `Authors`: Nguyen Huu Thanh; Nguyen Trung Kien; Ngo Van Hoa; Truong Thu Huong; Florian Wamser; Tobias Hossfeld
-    - `Keywords`: VNFP, IoT, Edge, Energy
+    - `Keywords`: Placement, IoT, Edge, Energy
     - `Objective`: Energy consumption -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9373577/)
+
+1. **Profit-aware Edge Server Placement**
+
+    - `Publication`: IoTJ 2021 (**JCR-1**)
+    - `Authors`: Yuanzhe Li; Ao Zhou; Xiao Ma; Shangguang Wang
+    - `Keywords`: Placement, Edge
+    - `Objective`: Energy consumption -, Latency -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9442389/)
 
 <details>
 <summary> more </summary>
@@ -401,11 +421,19 @@ You can search the relevant papers by following keywords:
     - `Objective`: Reduce complexity of the network topology by using the parallel transmission characteristics of optical fiber
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345794)
 
+1. **Optimal Virtual Network Embeddings for Tree Topologies**
+
+   - `Publication`: SPAA 2021 (**CCF-B**)
+   - `Authors`: Aleksander Figiel, Leon Kellerhals, Rolf Niedermeier, Matthias Rost, Stefan Schmid, Philipp Zschoche
+   - `Keywords`: Placement, VNE, parameterized complexity
+   - `Objective`: Running time -
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3409964.3461787)
+
 1. **Dynamic VNF Placement, Resource Allocation and Traffic Routing in 5G**
 
    - `Publication`: CN 2021 (**CCF-B**)
    - `Authors`: Morteza Golkarifard, C. Chiasserini, F. Malandrino, A. Movaghar
-   - `Keywords`: VNFP, Routing
+   - `Keywords`: Placement, Routing
    - `Objective`: Placement cost -
    - `Link`: [arXiv](https://arxiv.org/pdf/2102.09426.pdf)
 
@@ -413,7 +441,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TSC 2021 (**CCF-B**)
     - `Authors`: Weibei Fan; Fu Xiao; Xiaobai Chen; Lei Cui; Shui Yu
-    - `Keywords`: VNFP, Integer Linear Programming (ILP)
+    - `Keywords`: Placement, Integer Linear Programming (ILP)
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345794/)
 
@@ -421,7 +449,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TSC 2021 (**CCF-B**)
     - `Authors`: Shiva Kazemi Taskou, Mehdi Rasti, Pedro H. J. Nardelli
-    - `Keywords`: VNFP, Blockchain-Enabled, HuRA (Hungarian-based Resource Allocation), HuRA (Hungarian-based Resource Allocation)
+    - `Keywords`: Placement, Blockchain-Enabled, HuRA (Hungarian-based Resource Allocation), HuRA (Hungarian-based Resource Allocation)
     - `Objective`: Energy consumption -, Placement cost -
     - `Link`: [paper](https://arxiv.org/abs/2103.02139)
 
@@ -429,7 +457,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: INFOCOM 2020 (**CCF-A**)
    - `Authors`: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li
-   - `Keywords`: VNFP, MILP (Mixed Integer Iinear Programming), Latency, CDFSA (constrained depth-first search algorithm)
+   - `Keywords`: Placement, MILP (Mixed Integer Iinear Programming), Latency, CDFSA (constrained depth-first search algorithm)
    - `Objective`: Placement cost -, E2E Latency-
    - `Link`: [paper](https://fangmingliu.github.io/files/INFOCOM20-Edge-NFV.pdf)
 
@@ -437,7 +465,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Ziyue Luo, Chuan Wu
-   - `Keywords`: VNFP, ILP (Integer Linear Program), Regularization, Rounding
+   - `Keywords`: Placement, ILP (Integer Linear Program), Regularization, Rounding
    - `Objective`: Operating cost -, Placement cost -
    - `Link`: [paper](https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)
 
@@ -445,7 +473,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Meitian Huang, Weifa Liang, Xiaojun Shen, Yu Ma, Haibin Kan
-   - `Keywords`: VNFP, Reliability-aware, approximation algorithms, DP (dynamic programming), MEC (mobile edge computing)
+   - `Keywords`: Placement, Reliability-aware, approximation algorithms, DP (dynamic programming), MEC (mobile edge computing)
    - `Objective`:  Maximize the network throughput
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8758846)
 
@@ -453,7 +481,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Boyuan Yan; Yongli Zhao; Xiaosong Yu; Yajie Li; Sabidur Rahman; Yongqi He; Xiangjun Xin; Jie Zhang
-   - `Keywords`: VNFP, Multi-domain
+   - `Keywords`: Placement, Multi-domain
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9189853)
 
@@ -461,7 +489,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: ICASSP 2020 (**CCF-B**)
    - `Authors`:  Navid Reyhanian; Hamid Farmanbar; Soheil Mohajer; Zhi-Quan Luo
-   - `Keywords`: VNFP, Routing
+   - `Keywords`: Placement, Routing
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9054706)
 
@@ -469,7 +497,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Minh Pham, Doan B. Hoang, Zenon Chaczko
-   - `Keywords`: VNFP, relaxed LP (linear Program), Congestion, Energy, SR (Segment Routing)
+   - `Keywords`: Placement, relaxed LP (linear Program), Congestion, Energy, SR (Segment Routing)
    - `Objective`: Placement cost -, Energy Consumption -, Network congestion -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945162)
 
@@ -477,7 +505,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TPDS 2020 (**CCF-A**)
    - `Authors`:  Haozhe Ren; Zichuan Xu; Weifa Liang; Qiufen Xia; Pan Zhou; Omer F. Rana; Alex Galis; Guowei Wu
-   - `Keywords`: VNFP, Latency
+   - `Keywords`: Placement, Latency
    - `Objective`: Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9050847)
 
@@ -485,7 +513,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TPDS 2020 (**CCF-A**)
    - `Authors`:  Zhiyong Ye, Yang Wang, Shuibing He, Chengzhong Xu, Xian-He Sun
-   - `Keywords`: VNFP, VNFM, SDN
+   - `Keywords`: Placement, VNFM, SDN
    - `Objective`: Optimize the network allocation between different services by coordinating virtual dynamic SR-IOV and virtual machine live migration in autonomic way
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9151358)
 
@@ -493,7 +521,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TMC 2020 (**CCF-A**)
    - `Authors`:  Davit Harutyunyan; Nashid Shahriar; Raouf Boutaba; Roberto Riggio
-   - `Keywords`: VNFP, Latency, Mobility,  Edge computing
+   - `Keywords`: Placement, Latency, Mobility,  Edge computing
    - `Objective`: Latency -, Placement cost -, Energy consumption -, Qos +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9210756)
 
@@ -501,7 +529,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TMC 2020 (**CCF-A**)
    - `Authors`:  Sooeun Song; Changsung Lee; Hyoungjun Cho; Goeun Lim; Jong-Moon Chung
-   - `Keywords`: VNFP, Latency, Mobility,  Edge computing
+   - `Keywords`: Placement, Latency, Mobility,  Edge computing
    - `Objective`: Mobility +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/8674579)
 
@@ -509,7 +537,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TMC 2020 (**CCF-A**)
    - `Authors`:  Xiaojun Shang; Yaodong Huang; Zhenhua Liu; Yuanyuan Yang
-   - `Keywords`: VNFP, Edge, Reliablity, Backup
+   - `Keywords`: Placement, Edge, Reliablity, Backup
    - `Objective`: Reliablity +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9312434)
 
@@ -517,7 +545,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: MobiHoc 2020(**CCF-B**)
    - `Authors`:  Konstantinos Poularakis, J. Llorca, A. Tulino, L. Tassiulas
-   - `Keywords`: VNFP, Data-intensive
+   - `Keywords`: Placement, Data-intensive
    - `Objective`: Placement cost -
    - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3397166.3409149)
 
@@ -525,7 +553,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: ICWS 2020 (**CCF-B**)
    - `Authors`:  Meng Wang; Bo Cheng; Junliang Chen
-   - `Keywords`: VNFP, Parallelization, Multi-flow backup, Hybrid Placement Algorithm (HPA)
+   - `Keywords`: Placement, Parallelization, Multi-flow backup, Hybrid Placement Algorithm (HPA)
    - `Objective`: Latency -, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9284106)
 
@@ -533,7 +561,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TWC 2020 (**CCF-B**)
    - `Authors`:  Antonio De Domenico, Ya-Feng Liu, Wei Yu
-   - `Keywords`: VNFP, ILP (Integer Linear Programming), Network Slicing
+   - `Keywords`: Placement, ILP (Integer Linear Programming), Network Slicing
    - `Objective`: Lead to high resource utilization efficiency and large gains in terms of the number of supported VNF chains
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9177288)
 
@@ -541,7 +569,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TCOM 2020 (**CCF-B**)
     - `Authors`: Nashid Shahriar; Reaz Ahmed; Shihabur Rahman Chowdhury; Md Mashrur Alam Khan; Raouf Boutaba; Jeebak Mitra; Feng Zeng
-    - `Keywords`: VNFP
+    - `Keywords`: Placement
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8906179/)
 
@@ -549,7 +577,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TCOM 2020 (**CCF-B**)
    - `Authors`:  Tao Gao, Xin Li, Yu Wu , Weixia Zou, Shanguo Huang, Massimo Tornatore,  Biswanath Mukherjee
-   - `Keywords`: VNFP, VNFS, Cost Efficiency,  Public Cloud
+   - `Keywords`: Placement, Scheduling, Cost Efficiency,  Public Cloud
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9086616)
 
@@ -557,7 +585,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TCOM 2020 (**CCF-B**)
    - `Authors`:  Zhiyong Ye, Yang Wang, Shuibing He, Chengzhong Xu, Xian-He Sun
-   - `Keywords`: VNFP, Connectivity, Fault Tolerance, Redundancy
+   - `Keywords`: Placement, Connectivity, Fault Tolerance, Redundancy
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8906179)
 
@@ -565,7 +593,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`:  Mohammad Karimzadeh-Farshbafan, Vahid Shah-Mansouri, Dusit Niyato
-   - `Keywords`: VNFP, MICP (mixed integer convex programming), Viterbi-based
+   - `Keywords`: Placement, MICP (mixed integer convex programming), Viterbi-based
    - `Objective`: Minimize the cost of resources of the InPs and maximize the reliability of the service
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8933111)
 
@@ -573,7 +601,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TNSE 2020 (**JCR-Q1**)
    - `Authors`: Yongqiang Gao; Haibing Guan; Zhengwei Qi; Yang Hou; Liang Liu
-   - `Keywords`: VNFP, CPSO (Constructive Particle Swarm Optimizer)
+   - `Keywords`: Placement, CPSO (Constructive Particle Swarm Optimizer)
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8786166)
 
@@ -581,7 +609,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TMC 2019 (**CCF-A**)
    - `Authors`:  Meng Li; F. Richard Yu; Pengbo Si; Yanhua Zhang
-   - `Keywords`: VNFP, Mobile, Edge, Energy, partially observable Markov decision process (POMDP)
+   - `Keywords`: Placement, Mobile, Edge, Energy, partially observable Markov decision process (POMDP)
    - `Objective`: Placement cost -, Energy consumption -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9312434)
 
@@ -589,7 +617,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TON 2019 (**CCF-A**)
     - `Authors`: Anura P. Jayasumana; Randy Paffenroth; Gunjan Mahindre; Sridhar Ramasamy; Kelum Gajamannage
-    - `Keywords`: VNFP, Coordinates
+    - `Keywords`: Placement, Coordinates
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8924919)
 
@@ -597,7 +625,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TON 2019 (**CCF-A**)
     - `Authors`: Matthias Rost; Stefan Schmid
-    - `Keywords`: VNFP
+    - `Keywords`: Placement
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8846601)
 
@@ -605,7 +633,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: INFOCOM 2019 (**CCF-A**)
     - `Authors`: Qixia Zhang, Fangming Liu, Chaobing Zeng
-    - `Keywords`: VNFP, Interference
+    - `Keywords`: Placement, Interference
     - `Objective`:Acceptance rate +
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8737544)
 
@@ -613,7 +641,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: INFOCOM 2019 (**CCF-A**)
     - `Authors`: Zhilong Zheng; Jun Bi; Heng Yu; Haiping Wang; Chen Sun; Hongxin Hu; Jianping Wu
-    - `Keywords`: VNFP, Many-Core Systems
+    - `Keywords`: Placement, Many-Core Systems
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8737544)
 
@@ -621,7 +649,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TCOM 2019 (**CCF-B**)
     - `Authors`: Xiaojing Chen; Wei Ni; Iain B. Collings; Xin Wang; Shugong Xu
-    - `Keywords`: VNFP, Latency
+    - `Keywords`: Placement, Latency
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8501940)
 
@@ -629,7 +657,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: ICNP 2019 (**CCF-B**)
     - `Authors`: Sepehr Taeb; Nashid Shahriar; Shihabur Rahman Chowdhury; Massimo Tornatore; Raouf Boutaba; Jeebak Mitra; Mahdi Hemmati
-    - `Keywords`: VNFP, Optical Networks, Latency
+    - `Keywords`: Placement, Optical Networks, Latency
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8888056)
 
@@ -637,7 +665,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: SECON 2019 (**CCF-B**)
     - `Authors`: Yang Chen; Jie Wu
-    - `Keywords`: VNFP, Tree Topology
+    - `Keywords`: Placement, Tree Topology
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8824852)
 
@@ -645,23 +673,31 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: INFOCOM 2018 (**CCF-A**)
    - `Authors`: Ziyue Luo, Chuan Wu
-   - `Keywords`: VNFP, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)
-   - `Objective`: Minimize the total deployment cost
+   - `Keywords`: Placement, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)
+   - `Objective`: Placement cost -
    - `Link`: [paper](https://hal.inria.fr/hal-01743273/document)
+
+1. **Joint Placement and Routing of Network Function Chains in Data Centers**
+
+   - `Publication`: INFOCOM 2018 (**CCF-A**)
+   - `Authors`: Linqi Guo; John Pang; Anwar Walid
+   - `Keywords`: Placement, Routing, Joint, Data Center
+   - `Objective`:  Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8486429)
 
 1. **Joint VNF Placement and CPU Allocation in 5G**
 
    - `Publication`: INFOCOM 2018 (**CCF-A**)
    - `Authors`: Satyam Agarwal; Francesco Malandrino; Carla-Fabiana Chiasserini; S. De
-   - `Keywords`: VNFP, Joint
-   - `Objective`:  Joint optimal decisions concerning the placement of VNFs across the physical hosts for realizing the services, and the allocation of CPU resources in VNFs sharing a host
+   - `Keywords`: Placement, Joint
+   - `Objective`:  Joint optimal decisions concerning the placement of Scheduling across the physical hosts for realizing the services, and the allocation of CPU resources in Scheduling sharing a host
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8485943)
 
 1. **Enabling Efficient Network Service Function Chain Deployment on Heterogeneous Server Platform**
 
    - `Publication`: HPCA 2018 (**CCF-A**)
    - `Authors`: Yang Hu; Tao Li
-   - `Keywords`: VNFP, Graph-partition, Reorganizing
+   - `Keywords`: Placement, Graph-partition, Reorganizing
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8326996)
 
@@ -670,7 +706,7 @@ You can search the relevant papers by following keywords:
    - `Publication`: TMC 2018 (**CCF-A**)
    - `Authors`: Xiaojing Chen; Wei Ni; Tianyi Chen; Iain B. Collings; Xin Wang; Ren Ping Liu; 
 Georgios B. Giannakis
-   - `Keywords`: VNFP
+   - `Keywords`: Placement
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8570806)
 
@@ -678,7 +714,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2018 (**CCF-A**)
    - `Authors`: Nicolas Huin; Brigitte Jaumard; Frédéric Giroire
-   - `Keywords`: VNFP
+   - `Keywords`: Placement
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8362669)
 
@@ -686,7 +722,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2018 (**CCF-A**)
    - `Authors`: Tung-Wei Kuo; Bang-Heng Liou; Kate Ching-Ju Lin; Ming-Jer Tsai
-   - `Keywords`: VNFP
+   - `Keywords`: Placement
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8390937)
 
@@ -694,7 +730,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2018 (**CCF-A**)
    - `Authors`: Jianing Pei; Peilin Hong; Kaiping Xue; Defang Li
-   - `Keywords`: VNFP, Distributed, Binary Integer Programming (BIP)
+   - `Keywords`: Placement, Distributed, Binary Integer Programming (BIP)
    - `Objective`:  Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8532318)
 
@@ -702,7 +738,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2018 (**CCF-A**)
    - `Authors`: Defang Li; Peilin Hong; Kaiping Xue; jianing Pei
-   - `Keywords`: VNFP, Data Center
+   - `Keywords`: Placement, Data Center
    - `Objective`:  Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8281644)
 
@@ -710,7 +746,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2018 (**CCF-A**)
    - `Authors`: Prasan Kumar Sahoo; Chinmaya Kumar Dehury; Bharadwaj Veeravalli
-   - `Keywords`: VNFP, Cloud
+   - `Keywords`: Placement, Cloud
    - `Objective`:  Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8169111)
 
@@ -718,7 +754,7 @@ Georgios B. Giannakis
 
    - `Publication`: ICNP 2018 (**CCF-B**)
    - `Authors`: Yang Chen; Jie Wu; Bo Ji
-   - `Keywords`: VNFP, Tree Topology
+   - `Keywords`: Placement, Tree Topology
    - `Objective`:  Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8526811)
 
@@ -726,7 +762,7 @@ Georgios B. Giannakis
 
    - `Publication`: SECON 2018 (**CCF-B**)
    - `Authors`: Max Curran; Md. Shaifur Rahman; Himanshu Gupta; Vyas Sekar
-   - `Keywords`: VNFP
+   - `Keywords`: Placement
    - `Objective`:  Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8397143)
 
@@ -734,7 +770,7 @@ Georgios B. Giannakis
 
    - `Publication`: TSMC 2018 (**JCR-Q1**)
    - `Authors`: An Song; Wei-Neng Chen; Tianlong Gu; Huaqiang Yuan; Sam Kwong; Jun Zhang	
-   - `Keywords`: VNFP, Distributed, Particle Swarm Optimization (PSO)
+   - `Keywords`: Placement, Distributed, Particle Swarm Optimization (PSO)
    - `Objective`:  Acceptance rate +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8600712)
 
@@ -742,7 +778,7 @@ Georgios B. Giannakis
 
    - `Publication`: TMC 2017 (**CCF-A**)
    - `Authors`: Giorgos Chochlidakis; Vasilis Friderikos
-   - `Keywords`: VNFP, Mobility, Distributed 
+   - `Keywords`: Placement, Mobility, Distributed 
    - `Objective`:  Acceptance rate +, Mobility +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7514764)
 
@@ -750,7 +786,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Fangfang Yan; Tony T. Lee; Weisheng Hu
-   - `Keywords`: VNFP, Congestion
+   - `Keywords`: Placement, Congestion
    - `Objective`:  Placement cost -, Congestion -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7574364)
 
@@ -758,7 +794,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Fang Hao; Murali Kodialam; T. V. Lakshman; Sarit Mukherjee
-   - `Keywords`: VNFP, Distributed
+   - `Keywords`: Placement, Distributed
    - `Objective`:  Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7509597)
 
@@ -766,7 +802,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Vincenzo Eramo; Emanuele Miucci; Mostafa Ammar; Francesco Giacinto Lavacca
-   - `Keywords`: VNFP, VNFS,  Joint, energy
+   - `Keywords`: Placement, Scheduling,  Joint, energy
    - `Objective`:  Acceptance rate +, Energy consumption -	
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7866881)
 
@@ -774,7 +810,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Yossi Kanizo; Ori Rottenstreich; Itai Segall; Jose Yallouz
-   - `Keywords`: VNFP, Backup
+   - `Keywords`: Placement, Backup
    - `Objective`:  Placement cost -	
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7938678)
 
@@ -782,7 +818,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2017 (**CCF-A**)
    - `Authors`: Song Yang; Philipp Wieder; Ramin Yahyapour; Stojan Trajanovski; Xiaoming Fu
-   - `Keywords`: VNFP, Routing, Cloud, Latency
+   - `Keywords`: Placement, Routing, Cloud, Latency
    - `Objective`:  Placement cost -, Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8281644)
 
@@ -790,7 +826,7 @@ Georgios B. Giannakis
 
    - `Publication`: ICDCS 2017 (**CCF-B**)
    - `Authors`: Tao Wang; Hong Xu; Fangming Liu
-   - `Keywords`: VNFP, Load Balancing, Multi-resource
+   - `Keywords`: Placement, Load Balancing, Multi-resource
    - `Objective`:  Load Balancing +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7980072)
 
@@ -798,7 +834,7 @@ Georgios B. Giannakis
 
    - `Publication`: SIGCOMM 2016 (**CCF-A**)
    - `Authors`: Chen Sun, Jun Bi, Zhilong Zheng, Hongxin Hu
-   - `Keywords`: VNFP, Latency
+   - `Keywords`: Placement, Latency
    - `Objective`:  Latency +
    - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/2934872.2959058)
 
@@ -806,7 +842,7 @@ Georgios B. Giannakis
 
    - `Publication`: INFOCOM 2016 (**CCF-A**)
    - `Authors`: Tung-Wei Kuo; Bang-Heng Liou; Kate Ching-Ju Lin; Ming-Jer Tsai
-   - `Keywords`: VNFP
+   - `Keywords`: Placement
    - `Objective`:  Acceptance rate +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7524565)
 
@@ -814,7 +850,7 @@ Georgios B. Giannakis
 
    - `Publication`: INFOCOM 2014 (**CCF-A**)
    - `Authors`: Long Gong, Yonggang Wen, Zuqing Zhu and Tony Lee
-   - `Keywords`: VNFP, GRC (Global Resource Control)
+   - `Keywords`: Placement, GRC (Global Resource Control)
    - `Objective`: Acceptance rate +, Revenue-to-cost ratio +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/6847918)
 
@@ -822,27 +858,35 @@ Georgios B. Giannakis
 
    - `Publication`: JCSS 2013 (**CCF-B**)
    - `Authors`: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li
-   - `Keywords`: VNFP, ACS (Ant Colony System), Multi-objective
+   - `Keywords`: Placement, ACS (Ant Colony System), Multi-objective
    - `Objective`: Placement cost -, Energy consumption -
    - `Link`: [IEEE Xplore](https://www.sciencedirect.com/science/article/pii/S0022000013000627)
+
+1. **Joint VM placement and routing for data center traffic engineering**
+
+   - `Publication`: INFOCOM 2012 (**CCF-A**)
+   - `Authors`: Joe Wenjie Jiang; Tian Lan; Sangtae Ha; Minghua Chen; Mung Chiang
+   - `Keywords`: Placement, Routing, Joint, Markov approximation
+   - `Objective`: Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/6195719)
 
 1. **Virtual Network Embedding through Topology Awareness and Optimization**
 
    - `Publication`: CN 2012 (**CCF-B**)
    - `Authors`: Xiang Cheng, Sen Su, Zhongbao Zhang, Kai Shuang, Fangchun Yang, Yan Luo, Jie Wang
-   - `Keywords`: VNFP, PSO (Particle Swarm Optimization), Topology decomposition
-   - `Objective`: Minimize total resource wastage and power Consumption
+   - `Keywords`: Placement, PSO (Particle Swarm Optimization), Topology decomposition
+   - `Objective`: Placement cost -, Energy consumption -
    - `Link`: [IEEE Xplore](https://www.researchgate.net/publication/257582253_Virtual_network_embedding_through_topology_awareness_and_optimization)
 
 </details>
 
-### [3.4 VNFS](#content)
+### [3.4 Scheduling](#content)
 
 1. **HASFC: A MANO-Compliant Framework for Availability Management of Service Chains**
 
    - `Publication`: IEEE Communications Magazine 2021 (**JCR-Q1**)
    - `Authors`: Mario Di Mauro; Giovanni Galatro; Maurizio Longo; Fabio Postiglione; Marco Tambasco
-   - `Keywords`: VNFS, VNFP, Reliabilty
+   - `Keywords`: Scheduling, Placement, Reliabilty
    - `Objective`: Cost -, Reliabilty +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9376772)
 
@@ -850,31 +894,49 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2021 (**CCF-A**)
    - `Authors`: Yong Liu; Huaxi Gu; Fulong Yan; Nicola Calabretta
-   - `Keywords`: VNFS, Migration, Data Center
+   - `Keywords`: Scheduling, Migration, Data Center
    - `Objective`: Cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9376772)
 
 1. **Joint Resource Optimization and Delay-aware Virtual Network Function Migration in Data Center Networks**
 
-   - `Publication`: TNSM 2020 (**CCF-A**)
+   - `Publication`: TNSM 2021 (**JCR-Q1**)
    - `Authors`: Biyi Li; Bo Cheng; Xuan Liu; Meng Wang; Yi Yue; Junliang Chen
-   - `Keywords`: VNFS, Migration, Latency
+   - `Keywords`: Scheduling, Migration, Latency
    - `Objective`: Placement cost -, Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9383101)
 
+<details>
+<summary> more </summary>
+
+1. **A seamless virtualized network functions migration mechanism in mobile edge networks**
+   - `Publication`: MobiCom 2020 (**CCF-A**)
+   - `Authors`: Biyi Li, Bo Cheng, Yi Yue, Meng Wang, Junliang Chen
+   - `Keywords`: Migration
+   - `Objective`: Cost -, Latency -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9007052)
+   
 1. **An Online Algorithm for VNF Service Chain Scaling in Datacenters**
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Ziyue Luo; Chuan Wu
-   - `Keywords`: VNFS, Scaling
+   - `Keywords`: Scheduling, Scaling
    - `Objective`: Deployment cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9046286)
+
+1. **On Parallel and Hitless vSDN Reconfiguration**
+
+   - `Publication`: TON 2020 (**CCF-A**)
+   - `Authors`: Sicheng Zhao, Xing Wu, Zuqing Zhu
+   - `Keywords`: Reconfiguration
+   - `Objective`: Parallelism +
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1109/TNET.2020.3014655)
 
 1. **NFVnice: Dynamic Backpressure and Scheduling for NFV Service Chains**
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Sameer G. Kulkarni; Wei Zhang; Jinho Hwang; Shriram Rajagopalan; K. K. Ramakrishnan; Timothy Wood; Mayutan Arumaithurai; Xiaoming Fu
-   - `Keywords`: VNFS
+   - `Keywords`: Scheduling
    - `Objective`: Energy Consumption -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9007052)
 
@@ -882,7 +944,7 @@ Georgios B. Giannakis
 
    - `Publication`: ICWS 2020 (**CCF-B**)
    - `Authors`:  Biyi Li; Bo Cheng; Junliang Chen
-   - `Keywords`: VNFS, Migration
+   - `Keywords`: Scheduling, Migration
    - `Objective`: Latency -, Load balancing +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9284106)
 
@@ -890,7 +952,7 @@ Georgios B. Giannakis
 
    - `Publication`: ICWS 2020 (**CCF-B**)
    - `Authors`: Miao Li; Qixia Zhang; Fangming Liu
-   - `Keywords`: VNFS
+   - `Keywords`: Scheduling
    - `Objective`: QoS +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8030071)
 
@@ -898,7 +960,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2019 (**CCF-A**)
    - `Authors`: Chang-Heng Wang; Jaime Llorca; Antonia M. Tulino; Tara Javidi
-   - `Keywords`: VNFS, Reconfiguration, Latency
+   - `Keywords`: Scheduling, Reconfiguration, Latency
    - `Objective`: Latency -, Cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8626768)
 
@@ -906,7 +968,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2019 (**CCF-A**)
    - `Authors`: Hong Tang; Danny Zhou; Duan Chen
-   - `Keywords`: VNFS, VNFP, Scaling, Traffic Forecasting, Data Center
+   - `Keywords`: Scheduling, Placement, Scaling, Traffic Forecasting, Data Center
    - `Objective`: Cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8449985)
 
@@ -914,7 +976,7 @@ Georgios B. Giannakis
 
    - `Publication`: TMC 2019 (**CCF-A**)
    - `Authors`: Tai Manh Ho; Nguyen H. Tran; Long Bao Le; Zhu Han; S.M Ahsan Kazmi; Choong Seon Hong
-   - `Keywords`: VNFS, Migration, Heterogeneous
+   - `Keywords`: Scheduling, Migration, Heterogeneous
    - `Objective`: Revenue of InP +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8476209)
 
@@ -922,7 +984,7 @@ Georgios B. Giannakis
 
    - `Publication`: CN 2019 (**CCF-B**)
    - `Authors`: Bo Yi, X. Wang, Min Huang, Anwei Dong
-   - `Keywords`: VNFS, Migration
+   - `Keywords`: Scheduling, Migration
    - `Objective`: Influence -
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128619304748?via%3Dihub)
 
@@ -930,7 +992,7 @@ Georgios B. Giannakis
 
     - `Publication`: JSAC 2018 (**CCF-A**)
     - `Authors`: Xiangle Cheng; Yulei Wu; Geyong Min; Albert Y. Zomaya
-    - `Keywords`: VNFP, Dynamic
+    - `Keywords`: Placement, Dynamic
     - `Objective`: /
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8463557/)
 
@@ -938,7 +1000,7 @@ Georgios B. Giannakis
 
     - `Publication`: TPDS 2018 (**CCF-A**)
     - `Authors`: Daniel Guimaraes Lago; Edmundo R. M. Madeira; Deep Medhi
-    - `Keywords`: VNFS, Energy, Heterogeneous 
+    - `Keywords`: Scheduling, Energy, Heterogeneous 
     - `Objective`: Energy consumption -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8039210/)
 
@@ -946,7 +1008,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Esmail Asyabi; SeyedAlireza SanaeeKohroudi; Mohsen Sharifi; Azer Bestavros
-   - `Keywords`: VNFS, Latency
+   - `Keywords`: Scheduling, Latency
    - `Objective`: Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8338088)
 
@@ -954,7 +1016,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Yong Cui; Zhenjie Yang; Shihan Xiao; Xin Wang; Shenghui Yan
-   - `Keywords`: VNFS, Migration
+   - `Keywords`: Scheduling, Migration
    - `Objective`: Thoughtout +, cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8030071)
 
@@ -962,7 +1024,7 @@ Georgios B. Giannakis
 
     - `Publication`: TON 2017 (**CCF-A**)
     - `Authors`: Alberto Ceselli; Marco Premoli; Stefano Secc
-    - `Keywords`: VNFS
+    - `Keywords`: Scheduling
     - `Objective`: Cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7842598/)
 
@@ -970,7 +1032,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2017 (**CCF-A**)
    - `Authors`: Lingfang Zeng; Yang Wang; Xiaopeng Fan; Chengzhong Xu
-   - `Keywords`: VNFS
+   - `Keywords`: Scheduling
    - `Objective`: Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7883963)
 
@@ -978,9 +1040,20 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2017 (**CCF-A**)
    - `Authors`: Weizhan Zhang; Yuxuan Chen; Xiang Gao; Zhichao Mo; Qinghua Zheng; Zongqing Lu
-   - `Keywords`: VNFS, Migration
+   - `Keywords`: Scheduling, Migration
    - `Objective`: Cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7909001)
+
+1. **OpenBox: A Software-Defined Framework for Developing, Deploying, and Managing Network Functions**
+
+   - `Publication`: TPDS 2017 (**CCF-A**)
+   - `Authors`: Weizhan Zhang; Yuxuan Chen; Xiang Gao; Zhichao Mo; Qinghua Zheng; Zongqing Lu
+   - `Keywords`: Chaining, Placement, Scheduling, Migration, Joint
+   - `Objective`: Framework
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/2934872.2934875)
+
+</details>
+
 
 ### [3.5 Routing](#content)
 
@@ -1007,6 +1080,9 @@ Georgios B. Giannakis
     - `Keywords`: Routing
     - `Objective`: Congestion -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9488289/)
+
+<details>
+<summary> more </summary>
 
 1. **Congestion Minimization for Service Chain Routing Problems With Path Length Considerations**
 
@@ -1040,6 +1116,16 @@ Georgios B. Giannakis
     - `Objective`: Throughput +
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9067027/)
 
+1. **Central Control Over Distributed Routing**
+
+    - `Publication`: SIGCOMM 2015 (**CCF-A**)
+    - `Authors`: Stefano Vissicchio, Olivier Tilmans, Laurent Vanbever, Jennifer Rexford
+    - `Keywords`: Routing, Distributed
+    - `Objective`: Overhead -, Failure -
+    - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/2785956.2787497)
+
+</details>
+
 
 ## [4. Machine Learning-based Methods](#content) 
 
@@ -1054,12 +1140,12 @@ Georgios B. Giannakis
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9259378)
 
-### [4.2 VNFC](#content)
+### [4.2 Chaining](#content)
 
 1. **Space-Air-Ground Integrated Multi-Domain Network Resource Orchestration Based on Virtual Network Architecture: A DRL Method**
    - `Publication`: TITS 2021 (**CCF-B**)
    - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Lei Liu
-   - `Keywords`: VNFC, VNFP, Multi-Domain, DQN
+   - `Keywords`: Chaining, Placement, Multi-Domain, DQN
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9505612)
    
@@ -1067,7 +1153,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2021 (**CCF-A**)
    - `Authors`: Haojun Huang, Cheng Zeng, Yangmin Zhao, Geyong Min, Yingying Zhu, Wang Miao , and Jia Hu
-   - `Keywords`: VNFC, VNFP, DQN, FL (Federated Learning)
+   - `Keywords`: Chaining, Placement, DQN, FL (Federated Learning)
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9468364)
 
@@ -1075,33 +1161,41 @@ Georgios B. Giannakis
 
    - `Publication`: TC 2021 (**CCF-A**)
    - `Authors`: Shaoyong Guo; Yuanyuan Qi; Yi Jin; Wenjing Li; Xuesong Qiu; Luoming Meng
-   - `Keywords`: VNFC, A3C (Asynchronous Advantage Actor-Critic)
+   - `Keywords`: Chaining, A3C (Asynchronous Advantage Actor-Critic)
    - `Objective`: Orchestration cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9326381)
 
-### [4.3 VNFP](#content)
-
-1. **Dynamic Virtual Network Embedding Algorithm based on Graph Convolution Neural Network and Reinforcement Learning**
-
-   - `Publication`: IoTJ 2021 (**JCR-Q1**)
-   - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Weishan Zhang; Lei Liu
-   - `Keywords`: VNFP, GNN, GCN, MDP (Markov Decision Process), Viterbi algorithm
-   - `Objective`: Placement cost -
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9475485)
+### [4.3 Placement](#content)
 
 1. **On the Effective Parallelization and Near-Optimal Deployment of Service Function Chains**
 
     - `Publication`: TPDS 2021 (**CCF-A**)
     - `Authors`: Jianzhen Luo; Jun Li; Lei Jiao; Jun Cai
-    - `Keywords`: VNFP, Parallelization, Viterbi Dynamic Programming algorithm
+    - `Keywords`: Placement, Parallelization, Viterbi Dynamic Programming algorithm
     - `Objective`: Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9300184)
+
+1. **Dynamic Virtual Network Embedding Algorithm based on Graph Convolution Neural Network and Reinforcement Learning**
+
+   - `Publication`: IoTJ 2021 (**JCR-Q1**)
+   - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Weishan Zhang; Lei Liu
+   - `Keywords`: Placement, GNN, GCN, MDP (Markov Decision Process), Viterbi algorithm
+   - `Objective`: Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9475485)
+
+1. **VNE-HRL: A Proactive Virtual Network Embedding Algorithm Based on Hierarchical Reinforcement Learning**
+
+    - `Publication`: TNSM 2021 (**JCR-Q1**)
+    - `Authors`: Jin Cheng; Yulei Wu; Yeming Lin; Yuepeng E; Fan Tang; Jingguo Ge
+    - `Keywords`: VNE, Hierarchical RL
+    - `Objective`: Long-term revenue +
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9570771)
 
 1. **A-DDPG: Attention Mechanism-based Deep Reinforcement Learning for NFV**
 
    - `Publication`: IWQoS 2021 (**CCF-B**)
    - `Authors`: Nan He, S. Yang, Fan Li, S. Trajanovski, F.A. Kuipers, Xiaoming Fu
-   - `Keywords`: VNFP, Attention, DDPG, Latency
+   - `Keywords`: Placement, Attention, DDPG, Latency
    - `Objective`: Placement cost -, Latency -
    - `Link`: [paper](https://research.tudelft.nl/files/93969106/IWQoS2021.pdf)
 
@@ -1109,7 +1203,7 @@ Georgios B. Giannakis
 
    - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`: Jose Jurandir Alves Esteves, Amina Boubendir, Fabrice Guillemin, Pierre Sens
-   - `Keywords`: VNFP, A3C, GCN
+   - `Keywords`: Placement, A3C, GCN
    - `Objective`: Acceptance rate +
    - `Link`: [arXiv](https://arxiv.org/abs/2105.06741)
 
@@ -1117,7 +1211,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li
-   - `Keywords`: VNFP, A3C (Asynchronous Advantage Actor-Critic), GNN, GCN (Graph Convolutional Network)
+   - `Keywords`: Placement, A3C (Asynchronous Advantage Actor-Critic), GNN, GCN (Graph Convolutional Network)
    - `Objective`: Acceptance rate +, Long-term average revenue +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9060910)
    
@@ -1125,7 +1219,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Hiren Kumar Thakkar, Chinmaya Dehury, Prasan Kumar Sahoo
-   - `Keywords`: VNFP, Q-learning, ML(Machine Learning), Multi-Stage
+   - `Keywords`: Placement, Q-learning, ML(Machine Learning), Multi-Stage
    - `Objective`: Long-term average revenue +, Placement cost -
    - `Link`: [paper](http://120.126.16.250/Publication_PDF/journal/j44.pdf)
 
@@ -1133,7 +1227,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Jianing Pei, Peilin Hong, Miao Pan, Jiangqing Liu, Jingsong Zhou
-   - `Keywords`: VNFP, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)
+   - `Keywords`: Placement, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)
    - `Objective`: Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8932445)
 
@@ -1141,7 +1235,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li
-   - `Keywords`: VNFP, Dynamic Reliability-aware, MDP (Markov Decision Process), Viterbi algorithm
+   - `Keywords`: Placement, Dynamic Reliability-aware, MDP (Markov Decision Process), Viterbi algorithm
    - `Objective`: Acceptance rate +, Placement cost -
    - `Link`: [arXiv](https://arxiv.org/abs/1911.06532)
 
@@ -1149,7 +1243,7 @@ Georgios B. Giannakis
 
    - `Publication`: TWC 2020 (**CCF-B**)
    - `Authors`: Xiaoyuan Fu; F. Richard Yu; Jingyu Wang; Qi Qi; Jianxin Liao
-   - `Keywords`: VNFP, Latency, DQN, Dynamic
+   - `Keywords`: Placement, Latency, DQN, Dynamic
    - `Objective`: Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8874993)
 
@@ -1157,14 +1251,14 @@ Georgios B. Giannakis
 
    - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`: Mohammad Karimzadeh-Farshbafan; Vahid Shah-Mansouri; Dusit Niyato
-   - `Keywords`: VNFP, Collaborative, Multi-Layer, REINFORCE
+   - `Keywords`: Placement, Collaborative, Multi-Layer, REINFORCE
    - `Objective`: Acceptance rate +, Long-term average revenue +
    - `Link`: [IEEE Xplore](http://ieeexplore.ieee.org/document/9151980)
 
 1. **DDQP: A Double Deep Q-Learning Approach to Online Fault-Tolerant SFC Placement**
    - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`: Lei Wang; Weixi Mao; Jin Zhao; Yuedong Xu
-   - `Keywords`: VNFP, DDQN
+   - `Keywords`: Placement, DDQN
    - `Objective`: Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9313044)
 
@@ -1180,7 +1274,7 @@ Georgios B. Giannakis
 
    - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`: Davide Andreoletti, Tanya Velichkova, Giacomo Verticale, Massimo Tornatore , Silvia Giordano
-   - `Keywords`: VNFP, Multi-domain, Privacy
+   - `Keywords`: Placement, Multi-domain, Privacy
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9187205)
 
@@ -1188,14 +1282,14 @@ Georgios B. Giannakis
 
    - `Publication`: INFOCOM 2019 (**CCF-A**)
    - `Authors`: Pham Tran Anh Quang, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul
-   - `Keywords`: VNFP, DDPG (Deep Deterministic Policy Gradient), Multi-domain, Non-cooperative
+   - `Keywords`: Placement, DDPG (Deep Deterministic Policy Gradient), Multi-domain, Non-cooperative
    - `Link`: [paper](https://hal.archives-ouvertes.fr/hal-02088819/file/MultiDomain_VNF_FG_embedding__A_Deep_reinforcement_learning_approach-authors%20version.pdf)
 
 1. **DeepViNE: Virtual Network Embedding with Deep Reinforcement Learning**
 
    - `Publication`: INFOCOM 2019 (**CCF-A**)
    - `Authors`: Mahdi Dolati, Seyedeh Bahereh Hassanpour, Majid Ghaderi, Ahmad Khonsari
-   - `Keywords`: VNFP, DQN (Deep Q Network), Multi-channels Representations
+   - `Keywords`: Placement, DQN (Deep Q Network), Multi-channels Representations
    - `Objective`: Acceptance rate +
    - `Link`: [paper](https://people.ucalgary.ca/~mghaderi/docs/infocom19-deepvine.pdf)
 
@@ -1203,7 +1297,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2019 (**CCF-A**)
    - `Authors`: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal
-   - `Keywords`: VNFP, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)
+   - `Keywords`: Placement, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)
    - `Objective`: Energy consumption -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
 
@@ -1211,7 +1305,7 @@ Georgios B. Giannakis
 
    - `Publication`: IWQoS 2019 (**CCF-B**)
    - `Authors`: Yikai  Xiao, Qixia  Zhang, Fangming Liu, Jia  Wang, Miao  Zhao, Zhongxing  Zhang, Jiaxing  Zhang
-   - `Keywords`: VNFP, PG (Policy Gradient), Serialization and Backtracking, Time Slots
+   - `Keywords`: Placement, PG (Policy Gradient), Serialization and Backtracking, Time Slots
    - `Objective`:  Energy consumption -, Acceptance rate +
    - `Link`: [paper](https://www.researchgate.net/publication/333789998_NFVdeep_adaptive_online_service_function_chain_deployment_with_deep_reinforcement_learning)
 
@@ -1219,7 +1313,7 @@ Georgios B. Giannakis
 
    - `Publication`: CN 2019 (**CCF-B**)
    - `Authors`: Sen Wang, Jun Bi, Jianping Wu, Athanasios V. Vasilakos, Qilin Fan
-   - `Keywords`: VNFP, TD (Temporal Difference), GRC (Global Resource Control)
+   - `Keywords`: Placement, TD (Temporal Difference), GRC (Global Resource Control)
    - `Objective`: Long-term time-average revenue +
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S138912861830584X)
 
@@ -1227,33 +1321,41 @@ Georgios B. Giannakis
 
    - `Publication`: IEEE Trans on Cybernetics 2018 (**CCF-B**)
    - `Authors`: Soroush Haeri and Ljiljana Trajkovi´c
-   - `Keywords`: VNFP, MCTS (Monte Carlo Tree Search)
+   - `Keywords`: Placement, MCTS (Monte Carlo Tree Search)
    - `Objective`: Revenue-to-cost +, Acceptance rate +
    - `Link`: [paper](https://www.researchgate.net/publication/313873926_Virtual_Network_Embedding_via_Monte_Carlo_Tree_Search)
 
-1. **An Efficient Algorithm for Virtual Network Function Placement and Chaining**
+1. **Knowledge-Defined Networking**
 
    - `Publication`: CCNC 2017
    - `Authors`: Oussama Soualah, Marouen Mechtri, Chaima Ghribi, Djamal Zeghlache
-   - `Keywords`: VNFP, MCTS (Monte Carlo Tree Search)
+   - `Keywords`: Placement, MCTS (Monte Carlo Tree Search)
    - `Objective`: Acceptance rate +
    - `Link`: [paper](https://www.researchgate.net/publication/318579373_An_efficient_algorithm_for_virtual_network_function_placement_and_chaining)
 
-### [4.4 VNFS](#content)
+1. **An Efficient Algorithm for Virtual Network Function Placement and Chaining**
+
+   - `Publication`: ACM SIGCOMM Computer Communication Review 2017
+   - `Authors`: Albert Mestres et al.
+   - `Keywords`: Placement an so on
+   - `Objective`: /
+   - `Link`: [paper](https://arxiv.org/pdf/1606.06222.pdf)
+
+### [4.4 Scheduling](#content)
 
 1. **Reliability-aware Dynamic Service Chain Scheduling in 5G Networks based on Reinforcement Learning**
    
    - `Publication`: INFOCOM 2021 (**CCF-A**)
    - `Authors`: Junzhong Jia; Lei Yang; Jiannong Cao
-   - `Keywords`: VNFS, MIIP, Reliability, Redundancy, A3C, TextCNN
-   - `Objective`: Decide the redundancy of the VNFs while minimizing delay
+   - `Keywords`: Scheduling, MIIP, Reliability, Redundancy, A3C, TextCNN
+   - `Objective`: Decide the redundancy of the Scheduling while minimizing delay
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9488707/)
 
 1. **Management and Orchestration of Virtual Network Functions via Deep Reinforcement Learning**
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Joan S. Pujol Roig; David M. Gutierrez-Estevez; Deniz Gündüz
-   - `Keywords`: VNFS, VNFC, Actor-Critic
+   - `Keywords`: Scheduling, Chaining, Actor-Critic
    - `Objective`: Cost -, QoS +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8932565)
 
@@ -1261,14 +1363,14 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Lin Gu, Deze Zeng, Wei Li, Song Guo, Albert Y. Zomaya, Hai Jin
-   - `Keywords`: VNFS, Latency-awareness, flow, DDPG (Deep Deterministic Policy Gradient)
+   - `Keywords`: Scheduling, Latency-awareness, flow, DDPG (Deep Deterministic Policy Gradient)
    - `Objective`: Maximize the overall network utility with the consideration of end-to-end delay and various cost
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8931775)
 
 1. **Virtual Network Functions Migration Cost: from Identification to Prediction**
     - `Publication`: CN 2020 (**CCF-B**)
     - `Authors`: Rafael de JesusMartins, Cristiano Bonato Both, Juliano Araújo Wickboldt, Lisandro Zambenedett iGranville
-    - `Keywords`: VNFS, SL, Linear regression
+    - `Keywords`: Scheduling, SL, Linear regression
     - `Objective`: A novel architecture for orchestrating and enforcing multi-domain SFCs
     - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S138912862031118X)
 
@@ -1276,7 +1378,7 @@ Georgios B. Giannakis
 
    - `Publication`: ICDCS 2019 (**CCF-B**)
    - `Authors`: Lin Gu, Deze Zeng, Wei Li, Song Guo, Albert Y. Zomaya, Hai Jin
-   - `Keywords`: VNFS, Latency-awareness, flow, DDPG (Deep Deterministic Policy Gradient)
+   - `Keywords`: Scheduling, Latency-awareness, flow, DDPG (Deep Deterministic Policy Gradient)
    - `Objective`: Latency -, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8885151)
 
@@ -1286,7 +1388,7 @@ Georgios B. Giannakis
 
    - `Publication`: INFOCOM 2021 (**CCF-A**)
    - `Authors`: Chenyi Liu; Mingwei Xu; Yuan Yang; Nan Geng
-   - `Keywords`: VNFS, Latency, Multi-agent, PPO
+   - `Keywords`: Scheduling, Latency, Multi-agent, PPO
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9488736/)
 
 1. **Towards Real-Time Routing Optimization with Deep Reinforcement Learning: Open Challenges**
@@ -1300,7 +1402,7 @@ Georgios B. Giannakis
 
    - `Publication`: ICNP 2020 (**CCF-B**)
    - `Authors`: Nan Geng; Tian Lan; Vaneet Aggarwal; Yuan Yang; Mingwei Xu
-   - `Keywords`: VNFS, Multi-agent, Traffic Engineering
+   - `Keywords`: Scheduling, Multi-agent, Traffic Engineering
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9259413/)
 
 1. **Unveiling the potential of Graph Neural Networks for network modeling and optimization in SDN**
@@ -1316,7 +1418,16 @@ Georgios B. Giannakis
    - `Keywords`: Routing, SL (Surpervised Learning)
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7935536)
 
-## [5. Other & Unassorted](#content)
+1. **Learning to Route**
+
+   - `Publication`: HotNets 2017
+   - `Authors`: Asaf Valadarsky, Michael Schapira, Dafna Shahaf, Aviv Tamar
+   - `Keywords`: Route, RL
+   - `Objective`: Automatically generate "good" routing configurations
+   - `Link`: [paper](https://conferences.sigcomm.org/hotnets/2017/papers/hotnets17-final28.pdf)
+
+
+## [5. Other and Unclassified](#content)
 
 > Here are two types of papers: one is related to other topics of NFV and SDN and waiting to be classified; the other is the latest research work collected from arXiv.
 
@@ -1324,7 +1435,7 @@ Georgios B. Giannakis
 
    - `Authors`: Guto Leoni Santos, Theo Lynn, Judith Kelner, Patricia Takako Endo
    - `Link`: [arXiv](https://arxiv.org/abs/2010.05711)
-
+   
 1. **Learning based E2E Energy Efficient in Joint Radio and NFV Resource Allocation for 5G and Beyond Networks**
 
    - `Authors`: Narges Gholipoor, Ali Nouruzi, Shima Salarhosseini, Mohammad Reza Javan, Nader Mokari, Eduard A. Jorswieck
@@ -1345,12 +1456,40 @@ Georgios B. Giannakis
    - `Authors`: Amine Abouaomar, Soumaya Cherkaoui, Zoubeir Mlika, Abdellatif Kobbane
    - `Link`: [arXiv](https://arxiv.org/abs/2105.04701)
 
+1. **Automated SmartNIC Offloading Insights for Network Functions**
+
+   - `Publication`: SOSP 2021 (**CCF-A**)
+   - `Authors`: Yiming Qiu, Jiarong Xing, Kuo-Feng Hsu, Qiao Kang, Ming Liu, Srinivas Narayana, Ang Chen
+   - `Keywords`: Offloading 
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3477132.3483583)
+
+1. **Bento: safely bringing network function virtualization to Tor**
+
+   - `Publication`: SIGCOMM 2021 (**CCF-A**)
+   - `Authors`: Michael Reininger, Arushi Arora, Stephen Herwig, Nicholas Francino, Jayson Hurst, Christina Garman, Dave Levin
+   - `Keywords`: Programmable 
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3452296.3472919)
+
 1. **vSFC: Generic and Agile Verification of Service Function Chains in the Cloud**
 
    - `Publication`: TON 2021 (**CCF-A**)
    - `Authors`: Xiaoli Zhang; Qi Li; Zeyu Zhang; Jianping Wu; Jiahai Yang
    - `Keywords`: Verification
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9240965)
+
+1. **Contention-Aware Performance Prediction For Virtualized Network Functions**
+
+   - `Publication`: SIGCOMM 2020 (**CCF-A**)
+   - `Authors`: Antonis Manousis, Rahul Anand Sharma, Vyas Sekar, Justine Sherry
+   - `Keywords`: VNF Performance Prediction
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3387514.3405868)
+
+1. **Fault Tolerant Service Function Chaining**
+
+   - `Publication`: SIGCOMM 2020 (**CCF-A**)
+   - `Authors`: Milad Ghaznavi, Elaheh Jalalpour, Bernard Wong, Raouf Boutaba, Ali José Mashtizadeh
+   - `Keywords`: Fault-tolerant
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3387514.3405863)
 
 1. **Looking Glass of NFV: Inferring the Structure and State of NFV Network From External Observations**
 
@@ -1365,6 +1504,13 @@ Georgios B. Giannakis
    - `Authors`: Cataldo Basile; Fulvio Valenza; Antonio Lioy; Diego R. Lopez; Antonio Pastor Perales
    - `Keywords`: Security
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8637976)
+
+1. **Automated synthesis of adversarial workloads for network functions**
+
+   - `Publication`: SIGCOMM 2018 (**CCF-A**)
+   - `Authors`: Luis Pedrosa, Rishabh Iyer, Arseniy Zaostrovnykh, Jonas Fietz, Katerina Argyraki
+   - `Keywords`: Adversarial workloads
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3230543.3230573)
 
 1. **Design, Implementation and Verification of Cloud Architecture for Monitoring a Virtual Machine's Security Health**
 
@@ -1394,7 +1540,7 @@ Georgios B. Giannakis
 
 - `Publication`: TON 2020 (**CCF-A**)
 - `Authors`: Ziyue Luo, Chuan Wu
-- `Keywords`: VNFS, VNFP, ILP (Integer Linear Program), Regularization, Rounding
+- `Keywords`: Scheduling, Placement, ILP (Integer Linear Program), Regularization, Rounding
 - `Objective`: Minimize the operating cost and deployment cost
 - `Link`: [paper](https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)
 ```

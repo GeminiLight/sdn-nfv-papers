@@ -10,17 +10,17 @@ This is a paper list about Network Resource Allocation in [Software-Defined Netw
 - **Routing**: Network Traffic Measurement and Management
 - **Multi-domain** (also known as cross-domain, multi-region or other resemble name)
 
-We mainly collect papers from high-quality journals and conferences, and classify them according to method categories. Particularly, you can find more details of  papers in the **Machine Learning-based** section, which represents a encouraging technique to efficiently solve network resource allocation problems.
+We mainly collect papers from high-quality journals and conferences, and classify them according to method categories. Particularly, you can find more details of  papers in the **Machine Learning-based** section, which represents an encouraging technique to efficiently solve network resource allocation problems.
 
 ### Search by Keywords
 
 You can search the relevant papers by following keywords:
 
-- **Direction**: `Chaining`, `Placement`, `Scheduling`, `Routing`, `Multi-domain`, `Joint`
-- **Publication**: `SIGCOMM`, `JSAC`, `TON`, `INFOCOM`, `TPDS`, `TC`, `TMC`, ...
+- **Direction**: `Chaining`, `Placement`, `Scheduling`, `Routing`, `Joint`
+- **Publication**: `SIGCOMM`, `JSAC`,`INFOCOM`,  `TON`,`TMC`,  `TPDS`, ...
 - **PUB-rank**: `CCF-A`, `CCF-B`, `JCR-Q1`, ...
 - **Scenario**: `Dsitributed`,  `IoT`, `Edge`, `Mobile`, `Optical Network`, ...
-- **Awareness**: `Latency`, `Congestion`, `Privacy`, `Energy`, `Parallelization`, `Reliability`
+- **Awareness**: `Latency`, `Congestion`, `Privacy`, `Energy`, `Parallelization`, `Reliability`, `Splittable`, `Multipath`
 - **RL-ALGO**: `DQN`, `DDPG`, `A3C`, `PPO`, ...
 - **NN-type**: `CNN`, `RNN`, `GNN`, ...
 
@@ -39,7 +39,7 @@ You can search the relevant papers by following keywords:
   - <a href="#33-Placement">3.3 Placement</a>
   - <a href="#34-Scheduling">3.4 Scheduling</a>
   - <a href="#35-routing">3.5 Routing</a>
-- <a href="#4-machine-learning-based-methods">4. Machine Learning-based Methods</a> :star:
+- <a href="#4-machine-learning-based-methods">4. Machine Learning-based Methods</a>
   - <a href="#41-slicing">4.1 Slicing</a>
   - <a href="#42-vnfc">4.2 Chaining</a>
   - <a href="#43-Placement">4.3 Placement</a>
@@ -47,17 +47,14 @@ You can search the relevant papers by following keywords:
   - <a href="#45-routing">4.5 Routing</a>
 - <a href="#5-other-and-unclassified">5. Other and Unclassified</a>
 
-> Note: :star: means it may be a promising research direction, which is considered subjectively.
-
 
 ## [1. Survey and Analysis](#content)
 
 1. **Recent Advances of Resource Allocation in Network Function Virtualization**
-
    - `Publication`: TPDS 2021 (**CCF-A**)
    - `Authors`: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9169857)
-
+   
 1. **Graph-based Deep Learning for Communication Networks: A Survey**
 
    - `Publication`: arXiv 2021
@@ -65,11 +62,10 @@ You can search the relevant papers by following keywords:
    - `Link`: [arXiv](https://arxiv.org/abs/2106.02533)
 
 1. **On the Hardness and Inapproximability of Virtual Network Embeddings**
-
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Matthias Rost and Stefan Schmid
    - `Link`: [paper](https://www.univie.ac.at/ct/stefan/ton20hard.pdf)
-
+   
 1. **SDN/NFV-Empowered Future IoV With Enhanced Communication, Computing, and Caching**
 
    - `Publication`: Proc. IEEE 2020 (**CCF-A**)
@@ -461,6 +457,22 @@ You can search the relevant papers by following keywords:
    - `Objective`: Placement cost -, E2E Latency-
    - `Link`: [paper](https://fangmingliu.github.io/files/INFOCOM20-Edge-NFV.pdf)
 
+1. **SFC-Based Service Provisioning for Reconfigurable Space-Air-Ground Integrated Networks**
+
+   - `Publication`: JSAC 2020 (**CCF-A**)
+   - `Authors`: Guangchao Wang; Sheng Zhou; Shan Zhang; Zhisheng Niu; Xuemin Shen
+   - `Keywords`: Placement, Routing, Joint, Space-Air-Ground
+   - `Objective`:  Acceptance rate+, Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9062531)
+
+1. **A Virtual Network Customization Framework for Multicast Services in NFV-Enabled Core Networks**
+
+   - `Publication`: JSAC 2020 (**CCF-A**)
+   - `Authors`: Omar Alhussein; Phu Thinh Do; Qiang Ye; Junling Li; Weisen Shi; Weihua Zhuang; Xuemin Shen; Xu Li; Jaya Rao
+   - `Keywords`: Placement, Multipath routing, Joint
+   - `Objective`:  Acceptance rate+, Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9060940)
+
 1. **An Online Algorithm for VNF Service Chain Scaling in Datacenters**
 
    - `Publication`: TON 2020 (**CCF-A**)
@@ -605,6 +617,30 @@ You can search the relevant papers by following keywords:
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8786166)
 
+1. **Adaptive Interference-Aware VNF Placement for Service-Customized 5G Network Slices**
+
+    - `Publication`: INFOCOM 2019 (**CCF-A**)
+    - `Authors`: Qixia Zhang, Fangming Liu, Chaobing Zeng
+    - `Keywords`: Placement, Interference
+    - `Objective`:Acceptance rate +
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8737544)
+
+1. **Octans: Optimal Placement of Service Function Chains in Many-Core Systems**
+
+    - `Publication`: INFOCOM 2019 (**CCF-A**)
+    - `Authors`: Zhilong Zheng; Jun Bi; Heng Yu; Haiping Wang; Chen Sun; Hongxin Hu; Jianping Wu
+    - `Keywords`: Placement, Many-Core Systems
+    - `Objective`: Placement cost -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8737544)
+
+1. **DYVINE: Fitness-Based Dynamic Virtual Network Embedding in Cloud Computing**
+
+   - `Publication`: JSAC 2019 (**CCF-A**)
+   - `Authors`: Chinmaya Kumar Dehury; Prasan Kumar Sahoo
+   - `Keywords`: Placement, Dynamic, Multipath routing
+   - `Objective`:  Acceptance rate+, Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8672596)
+
 1. **Energy-Efficient Machine-to-Machine (M2M) Communications in Virtualized Cellular Networks with Mobile Edge Computing (MEC)**
 
    - `Publication`: TMC 2019 (**CCF-A**)
@@ -628,22 +664,6 @@ You can search the relevant papers by following keywords:
     - `Keywords`: Placement
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8846601)
-
-1. **Adaptive Interference-Aware VNF Placement for Service-Customized 5G Network Slices**
-
-    - `Publication`: INFOCOM 2019 (**CCF-A**)
-    - `Authors`: Qixia Zhang, Fangming Liu, Chaobing Zeng
-    - `Keywords`: Placement, Interference
-    - `Objective`:Acceptance rate +
-    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8737544)
-
-1. **Octans: Optimal Placement of Service Function Chains in Many-Core Systems**
-
-    - `Publication`: INFOCOM 2019 (**CCF-A**)
-    - `Authors`: Zhilong Zheng; Jun Bi; Heng Yu; Haiping Wang; Chen Sun; Hongxin Hu; Jianping Wu
-    - `Keywords`: Placement, Many-Core Systems
-    - `Objective`: Placement cost -
-    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8737544)
 
 1. **Automated Function Placement and Online Optimization of Network Functions Virtualization**
 
@@ -692,6 +712,30 @@ You can search the relevant papers by following keywords:
    - `Keywords`: Placement, Joint
    - `Objective`:  Joint optimal decisions concerning the placement of Scheduling across the physical hosts for realizing the services, and the allocation of CPU resources in Scheduling sharing a host
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8485943)
+
+1. **Virtual Network Survivability Through Joint Spare Capacity Allocation and Embedding**
+
+   - `Publication`: JSAC 2018 (**CCF-A**)
+   - `Authors`: Nashid Shahriar; Shihabur Rahman Chowdhury; Reaz Ahmed; Aimal Khan; Siavash Fathi; Raouf Boutaba; Jeebak Mitra; Liu Liu
+   - `Keywords`: Placement, Reliability
+   - `Objective`:  Acceptance rate+, Reliability +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8314665)
+
+1. **Network Function Virtualization in Dynamic Networks: A Stochastic Perspective**
+
+   - `Publication`: JSAC 2018 (**CCF-A**)
+   - `Authors`:Xiangle Cheng; Yulei Wu; Geyong Min; Albert Y. Zomaya
+   - `Keywords`: Placement, Stochastic, Admission Control, decomposition method
+   - `Objective`:  Acceptance rate+
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8463557)
+
+1. **vSPACE: VNF Simultaneous Placement, Admission Control and Embedding**
+
+   - `Publication`: JSAC 2018 (**CCF-A**)
+   - `Authors`: Mohammad Ali Tahmasbi Nejad; Saeedeh Parsaeefard; Mohammad Ali Maddah-Ali; Toktam Mahmoodi; Babak Hossein Khalaj
+   - `Keywords`: Placement, Joint, Admission Control, Splittable VNF, Multipath routing
+   - `Objective`:  Acceptance rate+
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8314726)
 
 1. **Enabling Efficient Network Service Function Chain Deployment on Heterogeneous Server Platform**
 
@@ -766,6 +810,15 @@ Georgios B. Giannakis
    - `Objective`:  Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8397143)
 
+1. **Automated Function Placement and Online Optimization of Network Functions Virtualization**
+
+   - `Publication`: TCOM 2018 (**CCF-B**)
+   - `Authors`: Xiaojing Chen; Wei Ni; Iain B. Collings; Xin Wang; Shugong Xu
+   - `Keywords`: Placement, Latency
+   - `Objective`:  Placement cost -, Latency -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8501940)
+
+
 1. **Distributed Virtual Network Embedding System With Historical Archives and Set-Based Particle Swarm Optimization**
 
    - `Publication`: TSMC 2018 (**JCR-Q1**)
@@ -830,6 +883,14 @@ Georgios B. Giannakis
    - `Objective`:  Load Balancing +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7980072)
 
+1. **Joint Optimization of Chain Placement and Request Scheduling for Network Function Virtualization**
+
+   - `Publication`: ICDCS 2017 (**CCF-B**)
+   - `Authors`: Qixia Zhang; Yikai Xiao; Fangming Liu; John C.S. Lui; Jian Guo; Tao Wang
+   - `Keywords`: Placement, Scheduling, Joint
+   - `Objective`:  Acceptance rate +, Latency -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7980016)
+
 1. **SLA-NFV: an SLA-aware High Performance Framework for Network Function Virtualization**
 
    - `Publication`: SIGCOMM 2016 (**CCF-A**)
@@ -882,13 +943,13 @@ Georgios B. Giannakis
 
 ### [3.4 Scheduling](#content)
 
-1. **HASFC: A MANO-Compliant Framework for Availability Management of Service Chains**
+1. **Service Placement and Request Scheduling for Data-Intensive Applications in Edge Clouds**
 
-   - `Publication`: IEEE Communications Magazine 2021 (**JCR-Q1**)
-   - `Authors`: Mario Di Mauro; Giovanni Galatro; Maurizio Longo; Fabio Postiglione; Marco Tambasco
-   - `Keywords`: Scheduling, Placement, Reliabilty
-   - `Objective`: Cost -, Reliabilty +
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9376772)
+   - `Publication`: TON 2021 (**CCF-A**)
+   - `Authors`: Vajiheh Farhadi; Fidan Mehmeti; Ting He; Thomas F. La Porta; Hana Khamfroush; Shiqiang Wang; Kevin S. Chan; Konstantinos Poularakis
+   - `Keywords`: Joint, Placement, Scheduling, Mobile Edge Computing
+   - `Objective`: Cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345766)
 
 1. **Highly-Efficient Switch Migration for Controller Load Balancing in Elastic Optical Inter-Datacenter Networks**
 
@@ -906,6 +967,14 @@ Georgios B. Giannakis
    - `Objective`: Placement cost -, Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9383101)
 
+1. **HASFC: A MANO-Compliant Framework for Availability Management of Service Chains**
+
+   - `Publication`: IEEE Communications Magazine 2021 (**JCR-Q1**)
+   - `Authors`: Mario Di Mauro; Giovanni Galatro; Maurizio Longo; Fabio Postiglione; Marco Tambasco
+   - `Keywords`: Scheduling, Placement, Reliabilty
+   - `Objective`: Cost -, Reliabilty +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9376772)
+   - 
 <details>
 <summary> more </summary>
 
@@ -1223,6 +1292,14 @@ Georgios B. Giannakis
    - `Objective`: Long-term average revenue +, Placement cost -
    - `Link`: [paper](http://120.126.16.250/Publication_PDF/journal/j44.pdf)
 
+1. **Virtual Network Function Placement Optimization With Deep Reinforcement Learning**
+
+   - `Publication`: JSAC 2020 (**CCF-A**)
+   - `Authors`: Ruben Solozabal; Josu Ceberio; Aitor Sanchoyerto; Luis Zabala; Bego Blanco; Fidel Liberal
+   - `Keywords`: Placement, PG (Policy Gradients), Attention, LSTM
+   - `Objective`: Acceptance rate +, Power consumption -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
+
 1. **Optimal VNF Placement via Deep Reinforcement Learning in SDN/NFV-Enabled Networks**
 
    - `Publication`: JSAC 2020 (**CCF-A**)
@@ -1301,6 +1378,14 @@ Georgios B. Giannakis
    - `Objective`: Energy consumption -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
 
+1. **Deep Reinforcement Learning Based VNF Management in Geo-distributed Edge Computing**
+
+   - `Publication`: ICDCS 2019 (**CCF-B**)
+   - `Authors`: Lin Gu; Deze Zeng; Wei Li; Song Guo; Albert Zomaya; Hai Jin
+   - `Keywords`: Placement, DDPG, Latency
+   - `Objective`:  Acceptance rate +, Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8885151)
+
 1. **NFVdeep: adaptive online service function chain deployment with deep reinforcement learning**
 
    - `Publication`: IWQoS 2019 (**CCF-B**)
@@ -1316,6 +1401,14 @@ Georgios B. Giannakis
    - `Keywords`: Placement, TD (Temporal Difference), GRC (Global Resource Control)
    - `Objective`: Long-term time-average revenue +
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S138912861830584X)
+
+1. **NeuroViNE: A Neural Preprocessor for Your Virtual Network Embedding Algorithm**
+
+   - `Publication`: INFOCOM 2018 (**CCF-A**)
+   - `Authors`: Andreas Blenk; Patrick Kalmbach; Johannes Zerwas; Michael Jarschel; Stefan Schmid; Wolfgang Kellerer
+   - `Keywords`: Placement, Hopfield Network
+   - `Objective`: Revenue-cost ratio +, Running time -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8486263)
 
 1. **Virtual Network Embedding via Monte Carlo Tree Search**
 
@@ -1341,6 +1434,14 @@ Georgios B. Giannakis
    - `Objective`: /
    - `Link`: [paper](https://arxiv.org/pdf/1606.06222.pdf)
 
+1. **MDP and Machine Learning-Based Cost-Optimization of Dynamic Resource Allocation for Network Function Virtualization**
+
+   - `Publication`: SCC 2015
+   - `Authors`: Runyu Shi; Jia Zhang; Wenjing Chu; Qihao Bao; Xiatao Jin; Chenran Gong; Qihao Zhu; Chang Yu; Steven Rosenberg
+   - `Keywords`: Placement, MDP, Bayesian learning
+   - `Objective`:  Acceptance rate +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7207337)
+
 ### [4.4 Scheduling](#content)
 
 1. **Reliability-aware Dynamic Service Chain Scheduling in 5G Networks based on Reinforcement Learning**
@@ -1348,9 +1449,16 @@ Georgios B. Giannakis
    - `Publication`: INFOCOM 2021 (**CCF-A**)
    - `Authors`: Junzhong Jia; Lei Yang; Jiannong Cao
    - `Keywords`: Scheduling, MIIP, Reliability, Redundancy, A3C, TextCNN
-   - `Objective`: Decide the redundancy of the Scheduling while minimizing delay
+     - `Objective`: Decide the redundancy of the Scheduling while minimizing delay
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9488707/)
 
+1. **Towards Chain-Aware Scaling Detection in NFV with Reinforcement Learning**
+   - `Publication`: IWQOS 2021 (**CCF-B**)
+   - `Authors`: Lin He; Lis han Li; Ying Liu
+   - `Keywords`: Scaling ,A3C
+   - `Objective`: Cost -	
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9521362/)
+   
 1. **Management and Orchestration of Virtual Network Functions via Deep Reinforcement Learning**
 
    - `Publication`: JSAC 2020 (**CCF-A**)
@@ -1381,6 +1489,14 @@ Georgios B. Giannakis
    - `Keywords`: Scheduling, Latency-awareness, flow, DDPG (Deep Deterministic Policy Gradient)
    - `Objective`: Latency -, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8885151)
+
+1. **Study of Reconfiguration Cost and Energy Aware VNE Policies in Cycle-Stationary Traffic Scenarios**
+
+   - `Publication`: JASC 2016 (**CCF-A**)
+   - `Authors`: Tung-Wei Kuo; Bang-Heng Liou; Kate Ching-Ju Lin; Ming-Jer Tsai
+   - `Keywords`: Placement, Reconfiguration, Joint, Energy, Cycle-Stationary Traffic, MDP
+   - `Objective`:  Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7389320)
 
 ### [4.5 Routing](#content)
 

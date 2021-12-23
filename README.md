@@ -498,13 +498,12 @@ You can search the relevant papers by following keywords:
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9189853)
 
 1. **Joint Resource Allocation and Routing for Service Function Chaining with In-Subnetwork Processing**
-
    - `Publication`: ICASSP 2020 (**CCF-B**)
    - `Authors`:  Navid Reyhanian; Hamid Farmanbar; Soheil Mohajer; Zhi-Quan Luo
    - `Keywords`: Placement, Routing
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9054706)
-
+   
 1. **Congestion-Aware and Energy-Aware Virtual Network Embedding**
 
    - `Publication`: TON 2020 (**CCF-A**)
@@ -826,6 +825,14 @@ Georgios B. Giannakis
    - `Keywords`: Placement, Distributed, Particle Swarm Optimization (PSO)
    - `Objective`:  Acceptance rate +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8600712)
+
+1. **Distributed Service Function Chaining**
+
+   - `Publication`: JSAC 2017 (**CCF-A**)
+   - `Authors`: Milad Ghaznavi; Nashid Shahriar; Shahin Kamali; Reaz Ahmed; Raouf Boutaba
+   - `Keywords`: Placement, Distributed 
+   - `Objective`:  Acceptance rate +, Cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8058439)
 
 1. **Mobility Aware Virtual Network Embedding**
 
@@ -1184,6 +1191,14 @@ Georgios B. Giannakis
     - `Keywords`: Routing
     - `Objective`: Throughput +
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9067027/)
+
+1. **Shortest Path and Maximum Flow Problems Under Service Function Chaining Constraints**
+
+    - `Publication`: INFOCOM 2018 (**CCF-A**)
+    - `Authors`: Gamal Sallam, Gagan R. Gupta, Bin Li, and Bo Ji
+    - `Keywords`: Routing, Constrained
+    - `Objective`: Running time -
+    - `Link`: [paper](https://arxiv.org/pdf/1801.05795.pdf)
 
 1. **Central Control Over Distributed Routing**
 

@@ -5,7 +5,7 @@ This is a paper list about Network Resource Allocation in [Software-Defined Netw
 - Comprehensive **Survey** and **Analysis**
 - **Slicing**: Network Slicing
 - **Chaining**: Virtual Network Functions Chaining (also known as Service Function Chains Orchestration)
-- **Placement**: Virtual Network Functions Placement (also known as Service Function Chain Deployment)
+- **Deployment**: Virtual Network Functions Deployment (also known as Service Function Chain Deployment)
 - **Scheduling**: Virtual Network Functions Scheduling (including Scaling, Reconfiguration and Migration)
 - **Routing**: Network Traffic Measurement and Management
 - **Multi-domain** (also known as cross-domain, multi-region or other resemble name)
@@ -16,7 +16,7 @@ We mainly collect papers from high-quality journals and conferences, and classif
 
 You can search the relevant papers by following keywords:
 
-- **Direction**: `Chaining`, `Placement`, `Scheduling`, `Routing`, `Joint`
+- **Direction**: `Chaining`, `Deployment`, `Scheduling`, `Routing`, `Joint`
 - **Publication**: `SIGCOMM`,`INFOCOM`, `JSAC`, `TON`,`TMC`, `TPDS`, ...
 - **PUB-rank**: `CCF-A`, `CCF-B`, `JCR-Q1`, ...
 - **Scenario**: `Dsitributed`, `IoT`, `Edge`, `Mobile`, `Optical Network`, ...
@@ -34,17 +34,17 @@ You can search the relevant papers by following keywords:
 - <a href="#1-survey-and-analysis">1. Survey and Analysis</a>
 - <a href="#2-mathematical-based-methods">2. Mathematical-based Methods</a>
 - <a href="#3-heuristic-based-methods">3. Heuristic-based Methods</a>
-  - <a href="#31-slicing">3.1 Slicing</a>
-  - <a href="#32-vnfc">3.2 Chaining</a>
-  - <a href="#33-Placement">3.3 Placement</a>
+  - <a href="#31-Slicing">3.1 Slicing</a>
+  - <a href="#32-Chaining">3.2 Chaining</a>
+  - <a href="#33-Deployment">3.3 Deployment</a>
   - <a href="#34-Scheduling">3.4 Scheduling</a>
-  - <a href="#35-routing">3.5 Routing</a>
+  - <a href="#35-Routing">3.5 Routing</a>
 - <a href="#4-machine-learning-based-methods">4. Machine Learning-based Methods</a>
-  - <a href="#41-slicing">4.1 Slicing</a>
-  - <a href="#42-vnfc">4.2 Chaining</a>
-  - <a href="#43-Placement">4.3 Placement</a>
+  - <a href="#41-Slicing">4.1 Slicing</a>
+  - <a href="#42-Chaining">4.2 Chaining</a>
+  - <a href="#43-Deployment">4.3 Deployment</a>
   - <a href="#44-Scheduling">4.4 Scheduling</a>
-  - <a href="#45-routing">4.5 Routing</a>
+  - <a href="#45-Routing">4.5 Routing</a>
 - <a href="#5-other-and-unclassified">5. Other and Unclassified</a>
 
 
@@ -205,7 +205,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: IEEE Network 2021 (**JCR-1**)
     - `Authors`: Ibrahim Afolabi; Miloud Bagaa; Walid Boumezer; Tarik Taleb
-    - `Keywords`: Chaining, Placement, Joint, Network Slice, Distributed
+    - `Keywords`: Chaining, Deployment, Joint, Network Slice, Distributed
     - `Objective`: Framework
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9293090/)
 
@@ -248,7 +248,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: INFOCOM 2020 (**CCF-A**)
    - `Authors`: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li
-   - `Keywords`: Chaining, Placement, HSFCE (Hybrid SFC composition and Embedding), Latency-aware, Betweenness Centrality
+   - `Keywords`: Chaining, Deployment, HSFCE (Hybrid SFC composition and Embedding), Latency-aware, Betweenness Centrality
    - `Objective`: Latency
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9155529)
 
@@ -287,19 +287,19 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: ICDCS 2019 (**CCF-B**)
     - `Authors`: Qiang Liu; Tao Han
-    - `Keywords`: Chaining, Placement, Multi-Domain
+    - `Keywords`: Chaining, Deployment, Multi-Domain
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8884864)
 
 </details>
 
-### [3.3 Placement](#content)
+### [3.3 Deployment](#content)
 
 1. **Latency-Sensitive Edge/Cloud Serverless Dynamic Deployment Over Telemetry-Based Packet-Optical Network**
 
     - `Publication`: JSAC 2021 (**CCF-A**)
     - `Authors`: István Pelle; Francesco Paolucci; Balázs Sonkoly; Filippo Cugini
-    - `Keywords`: Placement, Latency, Optical Network
+    - `Keywords`: Deployment, Latency, Optical Network
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8962126)
 
@@ -307,7 +307,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TC 2021 (**CCF-A**)
     - `Authors`: Wei Bao; Dong Yuan; Bing Bing Zhou; Albert Y. Zomaya
-    - `Keywords`: Placement, Parallelization, Prune and Plant
+    - `Keywords`: Deployment, Parallelization, Prune and Plant
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8962126)
 
@@ -315,7 +315,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TC 2021 (**CCF-A**)
     - `Authors`: Xiaojun Shang; Zhenhua Liu; Yuanyuan Yang
-    - `Keywords`: Placement, Routing, Online candidate path selection (OCPS)
+    - `Keywords`: Deployment, Routing, Online candidate path selection (OCPS)
     - `Objective`: Latency -, Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9248649)
 
@@ -323,7 +323,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TC 2021 (**CCF-A**)
     - `Authors`: Xiaojun Shang; Zhenhua Liu; Yuanyuan Yang
-    - `Keywords`: Placement, Prioritized
+    - `Keywords`: Deployment, Prioritized
     - `Objective`: Latency -, Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9363457)
 
@@ -331,7 +331,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TC ( Early Access ) (**CCF-A**)
     - `Authors`: Yu Ma; Weifa Liang; Jing Li; Xiaohua Jia; Song Guo
-    - `Keywords`: Placement, Mobility, Latency
+    - `Keywords`: Deployment, Mobility, Latency
     - `Objective`: Latency -, Mobility +, Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9363457)
     
@@ -339,7 +339,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TMC 2021 (**CCF-A**)
     - `Authors`: Weifa Liang; Yu Ma; Wenzheng Xu; Zichuan Xu; Xiaohua Jia; Wanlei Zhou
-    - `Keywords`: Placement, Reliability
+    - `Keywords`: Deployment, Reliability
     - `Objective`: Reliability +
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9435077/)
 
@@ -347,14 +347,14 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TMC 2021 (**CCF-A**)
     - `Authors`: Song Yang; Fan Li; Stojan Trajanovski; Xu Chen; Yu Wang; Xiaoming Fu
-    - `Keywords`: Placement, Latency
+    - `Keywords`: Deployment, Latency
     - `Objective`: Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8844781/)
 
 1. **Online Adaptive Interference-Aware VNF Deployment and Migration for 5G Network Slice**
     - `Publication`: TON 2021 (**CCF-A**)
     - `Authors`: Qixia Zhang; Fangming Liu; Chaobing Zeng
-    - `Keywords`: Placement, Scheduling, Joint
+    - `Keywords`: Deployment, Scheduling, Joint
     - `Objective`: Acceptance rate +, Migration cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9440734/)
 
@@ -362,7 +362,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TON 2021 (**CCF-A**)
     - `Authors`: Vajiheh Farhadi; Fidan Mehmeti; Ting He; Thomas F. La Porta; Hana Khamfroush; Shiqiang Wang
-    - `Keywords`: Placement, Scheduling, Joint
+    - `Keywords`: Deployment, Scheduling, Joint
     - `Objective`: Acceptance rate +, Migration cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345766/)
 
@@ -370,7 +370,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TPDS 2021 (**CCF-A**)
     - `Authors`: Weibei Fan; Fu Xiao; Xiaobai Chen; Lei Cui; Shui Yu
-    - `Keywords`: Placement, Optical Networks
+    - `Keywords`: Deployment, Optical Networks
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9415134)
 
@@ -378,7 +378,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TPDS 2021 (**CCF-A**)
     - `Authors`: Yu Liu; Xiaojun Shang; Yuanyuan Yang
-    - `Keywords`: Placement, Scheduling, Joint, Heterogeneous, Edge, Latency
+    - `Keywords`: Deployment, Scheduling, Joint, Heterogeneous, Edge, Latency
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9363567)
 
@@ -386,7 +386,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: IoTJ 2021 (**JCR-1**)
     - `Authors`: Junling Li; Weisen Shi; Qiang Ye; Shan Zhang; Weihua Zhuang; Xuemin Shen
-    - `Keywords`: Placement, Joint, Latency
+    - `Keywords`: Deployment, Joint, Latency
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9415134/)
 
@@ -394,7 +394,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: IoTJ 2021 (**JCR-1**)
     - `Authors`: Nguyen Huu Thanh; Nguyen Trung Kien; Ngo Van Hoa; Truong Thu Huong; Florian Wamser; Tobias Hossfeld
-    - `Keywords`: Placement, IoT, Edge, Energy
+    - `Keywords`: Deployment, IoT, Edge, Energy
     - `Objective`: Energy consumption -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9373577/)
 
@@ -402,7 +402,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: IoTJ 2021 (**JCR-1**)
     - `Authors`: Yuanzhe Li; Ao Zhou; Xiao Ma; Shangguang Wang
-    - `Keywords`: Placement, Edge
+    - `Keywords`: Deployment, Edge
     - `Objective`: Energy consumption -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9442389/)
 
@@ -421,7 +421,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: SPAA 2021 (**CCF-B**)
    - `Authors`: Aleksander Figiel, Leon Kellerhals, Rolf Niedermeier, Matthias Rost, Stefan Schmid, Philipp Zschoche
-   - `Keywords`: Placement, VNE, parameterized complexity
+   - `Keywords`: Deployment, VNE, parameterized complexity
    - `Objective`: Running time -
    - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3409964.3461787)
 
@@ -429,7 +429,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: CN 2021 (**CCF-B**)
    - `Authors`: Morteza Golkarifard, C. Chiasserini, F. Malandrino, A. Movaghar
-   - `Keywords`: Placement, Routing
+   - `Keywords`: Deployment, Routing
    - `Objective`: Placement cost -
    - `Link`: [arXiv](https://arxiv.org/pdf/2102.09426.pdf)
 
@@ -437,7 +437,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TSC 2021 (**CCF-B**)
     - `Authors`: Weibei Fan; Fu Xiao; Xiaobai Chen; Lei Cui; Shui Yu
-    - `Keywords`: Placement, Integer Linear Programming (ILP)
+    - `Keywords`: Deployment, Integer Linear Programming (ILP)
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345794/)
 
@@ -445,7 +445,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TSC 2021 (**CCF-B**)
     - `Authors`: Shiva Kazemi Taskou, Mehdi Rasti, Pedro H. J. Nardelli
-    - `Keywords`: Placement, Blockchain-Enabled, HuRA (Hungarian-based Resource Allocation), HuRA (Hungarian-based Resource Allocation)
+    - `Keywords`: Deployment, Blockchain-Enabled, HuRA (Hungarian-based Resource Allocation), HuRA (Hungarian-based Resource Allocation)
     - `Objective`: Energy consumption -, Placement cost -
     - `Link`: [paper](https://arxiv.org/abs/2103.02139)
 
@@ -453,7 +453,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: INFOCOM 2020 (**CCF-A**)
    - `Authors`: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li
-   - `Keywords`: Placement, MILP (Mixed Integer Iinear Programming), Latency, CDFSA (constrained depth-first search algorithm)
+   - `Keywords`: Deployment, MILP (Mixed Integer Iinear Programming), Latency, CDFSA (constrained depth-first search algorithm)
    - `Objective`: Placement cost -, E2E Latency-
    - `Link`: [paper](https://fangmingliu.github.io/files/INFOCOM20-Edge-NFV.pdf)
 
@@ -461,7 +461,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Guangchao Wang; Sheng Zhou; Shan Zhang; Zhisheng Niu; Xuemin Shen
-   - `Keywords`: Placement, Routing, Joint, Space-Air-Ground
+   - `Keywords`: Deployment, Routing, Joint, Space-Air-Ground
    - `Objective`:  Acceptance rate+, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9062531)
 
@@ -469,7 +469,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Omar Alhussein; Phu Thinh Do; Qiang Ye; Junling Li; Weisen Shi; Weihua Zhuang; Xuemin Shen; Xu Li; Jaya Rao
-   - `Keywords`: Placement, Multipath routing, Joint
+   - `Keywords`: Deployment, Multipath routing, Joint
    - `Objective`:  Acceptance rate+, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9060940)
 
@@ -477,7 +477,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Ziyue Luo, Chuan Wu
-   - `Keywords`: Placement, ILP (Integer Linear Program), Regularization, Rounding
+   - `Keywords`: Deployment, ILP (Integer Linear Program), Regularization, Rounding
    - `Objective`: Operating cost -, Placement cost -
    - `Link`: [paper](https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)
 
@@ -485,7 +485,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Meitian Huang, Weifa Liang, Xiaojun Shen, Yu Ma, Haibin Kan
-   - `Keywords`: Placement, Reliability-aware, approximation algorithms, DP (dynamic programming), MEC (mobile edge computing)
+   - `Keywords`: Deployment, Reliability-aware, approximation algorithms, DP (dynamic programming), MEC (mobile edge computing)
    - `Objective`:  Maximize the network throughput
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8758846)
 
@@ -493,14 +493,14 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Boyuan Yan; Yongli Zhao; Xiaosong Yu; Yajie Li; Sabidur Rahman; Yongqi He; Xiangjun Xin; Jie Zhang
-   - `Keywords`: Placement, Multi-domain
+   - `Keywords`: Deployment, Multi-domain
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9189853)
 
 1. **Joint Resource Allocation and Routing for Service Function Chaining with In-Subnetwork Processing**
    - `Publication`: ICASSP 2020 (**CCF-B**)
    - `Authors`:  Navid Reyhanian; Hamid Farmanbar; Soheil Mohajer; Zhi-Quan Luo
-   - `Keywords`: Placement, Routing
+   - `Keywords`: Deployment, Routing
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9054706)
    
@@ -508,7 +508,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TON 2020 (**CCF-A**)
    - `Authors`: Minh Pham, Doan B. Hoang, Zenon Chaczko
-   - `Keywords`: Placement, relaxed LP (linear Program), Congestion, Energy, SR (Segment Routing)
+   - `Keywords`: Deployment, relaxed LP (linear Program), Congestion, Energy, SR (Segment Routing)
    - `Objective`: Placement cost -, Energy Consumption -, Network congestion -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945162)
 
@@ -516,7 +516,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TPDS 2020 (**CCF-A**)
    - `Authors`:  Haozhe Ren; Zichuan Xu; Weifa Liang; Qiufen Xia; Pan Zhou; Omer F. Rana; Alex Galis; Guowei Wu
-   - `Keywords`: Placement, Latency
+   - `Keywords`: Deployment, Latency
    - `Objective`: Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9050847)
 
@@ -524,7 +524,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TPDS 2020 (**CCF-A**)
    - `Authors`:  Zhiyong Ye, Yang Wang, Shuibing He, Chengzhong Xu, Xian-He Sun
-   - `Keywords`: Placement, VNFM, SDN
+   - `Keywords`: Deployment, VNFM, SDN
    - `Objective`: Optimize the network allocation between different services by coordinating virtual dynamic SR-IOV and virtual machine live migration in autonomic way
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9151358)
 
@@ -532,7 +532,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TMC 2020 (**CCF-A**)
    - `Authors`:  Davit Harutyunyan; Nashid Shahriar; Raouf Boutaba; Roberto Riggio
-   - `Keywords`: Placement, Latency, Mobility,  Edge computing
+   - `Keywords`: Deployment, Latency, Mobility,  Edge computing
    - `Objective`: Latency -, Placement cost -, Energy consumption -, Qos +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9210756)
 
@@ -540,7 +540,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TMC 2020 (**CCF-A**)
    - `Authors`:  Sooeun Song; Changsung Lee; Hyoungjun Cho; Goeun Lim; Jong-Moon Chung
-   - `Keywords`: Placement, Latency, Mobility,  Edge computing
+   - `Keywords`: Deployment, Latency, Mobility,  Edge computing
    - `Objective`: Mobility +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/8674579)
 
@@ -548,7 +548,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TMC 2020 (**CCF-A**)
    - `Authors`:  Xiaojun Shang; Yaodong Huang; Zhenhua Liu; Yuanyuan Yang
-   - `Keywords`: Placement, Edge, Reliablity, Backup
+   - `Keywords`: Deployment, Edge, Reliablity, Backup
    - `Objective`: Reliablity +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9312434)
 
@@ -556,7 +556,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: MobiHoc 2020(**CCF-B**)
    - `Authors`:  Konstantinos Poularakis, J. Llorca, A. Tulino, L. Tassiulas
-   - `Keywords`: Placement, Data-intensive
+   - `Keywords`: Deployment, Data-intensive
    - `Objective`: Placement cost -
    - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3397166.3409149)
 
@@ -564,7 +564,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: ICWS 2020 (**CCF-B**)
    - `Authors`:  Meng Wang; Bo Cheng; Junliang Chen
-   - `Keywords`: Placement, Parallelization, Multi-flow backup, Hybrid Placement Algorithm (HPA)
+   - `Keywords`: Deployment, Parallelization, Multi-flow backup, Hybrid Placement Algorithm (HPA)
    - `Objective`: Latency -, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9284106)
 
@@ -572,7 +572,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TWC 2020 (**CCF-B**)
    - `Authors`:  Antonio De Domenico, Ya-Feng Liu, Wei Yu
-   - `Keywords`: Placement, ILP (Integer Linear Programming), Network Slicing
+   - `Keywords`: Deployment, ILP (Integer Linear Programming), Network Slicing
    - `Objective`: Lead to high resource utilization efficiency and large gains in terms of the number of supported VNF chains
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9177288)
 
@@ -588,7 +588,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TCOM 2020 (**CCF-B**)
    - `Authors`:  Tao Gao, Xin Li, Yu Wu , Weixia Zou, Shanguo Huang, Massimo Tornatore,  Biswanath Mukherjee
-   - `Keywords`: Placement, Scheduling, Cost Efficiency,  Public Cloud
+   - `Keywords`: Deployment, Scheduling, Cost Efficiency,  Public Cloud
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9086616)
 
@@ -596,7 +596,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TCOM 2020 (**CCF-B**)
    - `Authors`:  Zhiyong Ye, Yang Wang, Shuibing He, Chengzhong Xu, Xian-He Sun
-   - `Keywords`: Placement, Connectivity, Fault Tolerance, Redundancy
+   - `Keywords`: Deployment, Connectivity, Fault Tolerance, Redundancy
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8906179)
 
@@ -604,7 +604,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`:  Mohammad Karimzadeh-Farshbafan, Vahid Shah-Mansouri, Dusit Niyato
-   - `Keywords`: Placement, MICP (mixed integer convex programming), Viterbi-based
+   - `Keywords`: Deployment, MICP (mixed integer convex programming), Viterbi-based
    - `Objective`: Minimize the cost of resources of the InPs and maximize the reliability of the service
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8933111)
 
@@ -612,7 +612,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TNSE 2020 (**JCR-Q1**)
    - `Authors`: Yongqiang Gao; Haibing Guan; Zhengwei Qi; Yang Hou; Liang Liu
-   - `Keywords`: Placement, CPSO (Constructive Particle Swarm Optimizer)
+   - `Keywords`: Deployment, CPSO (Constructive Particle Swarm Optimizer)
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8786166)
 
@@ -620,7 +620,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: INFOCOM 2019 (**CCF-A**)
     - `Authors`: Qixia Zhang, Fangming Liu, Chaobing Zeng
-    - `Keywords`: Placement, Interference
+    - `Keywords`: Deployment, Interference
     - `Objective`:Acceptance rate +
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8737544)
 
@@ -628,7 +628,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: INFOCOM 2019 (**CCF-A**)
     - `Authors`: Zhilong Zheng; Jun Bi; Heng Yu; Haiping Wang; Chen Sun; Hongxin Hu; Jianping Wu
-    - `Keywords`: Placement, Many-Core Systems
+    - `Keywords`: Deployment, Many-Core Systems
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8737544)
 
@@ -636,7 +636,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: JSAC 2019 (**CCF-A**)
    - `Authors`: Chinmaya Kumar Dehury; Prasan Kumar Sahoo
-   - `Keywords`: Placement, Dynamic, Multipath routing
+   - `Keywords`: Deployment, Dynamic, Multipath routing
    - `Objective`:  Acceptance rate+, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8672596)
 
@@ -644,7 +644,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: TMC 2019 (**CCF-A**)
    - `Authors`:  Meng Li; F. Richard Yu; Pengbo Si; Yanhua Zhang
-   - `Keywords`: Placement, Mobile, Edge, Energy, partially observable Markov decision process (POMDP)
+   - `Keywords`: Deployment, Mobile, Edge, Energy, partially observable Markov decision process (POMDP)
    - `Objective`: Placement cost -, Energy consumption -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9312434)
 
@@ -652,7 +652,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TON 2019 (**CCF-A**)
     - `Authors`: Anura P. Jayasumana; Randy Paffenroth; Gunjan Mahindre; Sridhar Ramasamy; Kelum Gajamannage
-    - `Keywords`: Placement, Coordinates
+    - `Keywords`: Deployment, Coordinates
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8924919)
 
@@ -668,7 +668,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: TCOM 2019 (**CCF-B**)
     - `Authors`: Xiaojing Chen; Wei Ni; Iain B. Collings; Xin Wang; Shugong Xu
-    - `Keywords`: Placement, Latency
+    - `Keywords`: Deployment, Latency
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8501940)
 
@@ -676,7 +676,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: ICNP 2019 (**CCF-B**)
     - `Authors`: Sepehr Taeb; Nashid Shahriar; Shihabur Rahman Chowdhury; Massimo Tornatore; Raouf Boutaba; Jeebak Mitra; Mahdi Hemmati
-    - `Keywords`: Placement, Optical Networks, Latency
+    - `Keywords`: Deployment, Optical Networks, Latency
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8888056)
 
@@ -684,7 +684,7 @@ You can search the relevant papers by following keywords:
 
     - `Publication`: SECON 2019 (**CCF-B**)
     - `Authors`: Yang Chen; Jie Wu
-    - `Keywords`: Placement, Tree Topology
+    - `Keywords`: Deployment, Tree Topology
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8824852)
 
@@ -692,7 +692,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: INFOCOM 2018 (**CCF-A**)
    - `Authors`: Ziyue Luo, Chuan Wu
-   - `Keywords`: Placement, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)
+   - `Keywords`: Deployment, Equivalence with Hitting Set, Naive and Faster Greedy, LP-Rounding, DP (Dynamic Programming)
    - `Objective`: Placement cost -
    - `Link`: [paper](https://hal.inria.fr/hal-01743273/document)
 
@@ -700,7 +700,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: INFOCOM 2018 (**CCF-A**)
    - `Authors`: Linqi Guo; John Pang; Anwar Walid
-   - `Keywords`: Placement, Routing, Joint, Data Center
+   - `Keywords`: Deployment, Routing, Joint, Data Center
    - `Objective`:  Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8486429)
 
@@ -708,7 +708,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: INFOCOM 2018 (**CCF-A**)
    - `Authors`: Satyam Agarwal; Francesco Malandrino; Carla-Fabiana Chiasserini; S. De
-   - `Keywords`: Placement, Joint
+   - `Keywords`: Deployment, Joint
    - `Objective`:  Joint optimal decisions concerning the placement of Scheduling across the physical hosts for realizing the services, and the allocation of CPU resources in Scheduling sharing a host
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8485943)
 
@@ -716,7 +716,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: JSAC 2018 (**CCF-A**)
    - `Authors`: Nashid Shahriar; Shihabur Rahman Chowdhury; Reaz Ahmed; Aimal Khan; Siavash Fathi; Raouf Boutaba; Jeebak Mitra; Liu Liu
-   - `Keywords`: Placement, Reliability
+   - `Keywords`: Deployment, Reliability
    - `Objective`:  Acceptance rate+, Reliability +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8314665)
 
@@ -724,7 +724,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: JSAC 2018 (**CCF-A**)
    - `Authors`:Xiangle Cheng; Yulei Wu; Geyong Min; Albert Y. Zomaya
-   - `Keywords`: Placement, Stochastic, Admission Control, decomposition method
+   - `Keywords`: Deployment, Stochastic, Admission Control, decomposition method
    - `Objective`:  Acceptance rate+
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8463557)
 
@@ -732,7 +732,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: JSAC 2018 (**CCF-A**)
    - `Authors`: Mohammad Ali Tahmasbi Nejad; Saeedeh Parsaeefard; Mohammad Ali Maddah-Ali; Toktam Mahmoodi; Babak Hossein Khalaj
-   - `Keywords`: Placement, Joint, Admission Control, Splittable VNF, Multipath routing
+   - `Keywords`: Deployment, Joint, Admission Control, Splittable VNF, Multipath routing
    - `Objective`:  Acceptance rate+
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8314726)
 
@@ -740,7 +740,7 @@ You can search the relevant papers by following keywords:
 
    - `Publication`: HPCA 2018 (**CCF-A**)
    - `Authors`: Yang Hu; Tao Li
-   - `Keywords`: Placement, Graph-partition, Reorganizing
+   - `Keywords`: Deployment, Graph-partition, Reorganizing
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8326996)
 
@@ -773,7 +773,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2018 (**CCF-A**)
    - `Authors`: Jianing Pei; Peilin Hong; Kaiping Xue; Defang Li
-   - `Keywords`: Placement, Distributed, Binary Integer Programming (BIP)
+   - `Keywords`: Deployment, Distributed, Binary Integer Programming (BIP)
    - `Objective`:  Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8532318)
 
@@ -781,7 +781,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2018 (**CCF-A**)
    - `Authors`: Defang Li; Peilin Hong; Kaiping Xue; jianing Pei
-   - `Keywords`: Placement, Data Center
+   - `Keywords`: Deployment, Data Center
    - `Objective`:  Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8281644)
 
@@ -789,7 +789,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2018 (**CCF-A**)
    - `Authors`: Prasan Kumar Sahoo; Chinmaya Kumar Dehury; Bharadwaj Veeravalli
-   - `Keywords`: Placement, Cloud
+   - `Keywords`: Deployment, Cloud
    - `Objective`:  Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8169111)
 
@@ -797,7 +797,7 @@ Georgios B. Giannakis
 
    - `Publication`: ICNP 2018 (**CCF-B**)
    - `Authors`: Yang Chen; Jie Wu; Bo Ji
-   - `Keywords`: Placement, Tree Topology
+   - `Keywords`: Deployment, Tree Topology
    - `Objective`:  Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8526811)
 
@@ -813,7 +813,7 @@ Georgios B. Giannakis
 
    - `Publication`: TCOM 2018 (**CCF-B**)
    - `Authors`: Xiaojing Chen; Wei Ni; Iain B. Collings; Xin Wang; Shugong Xu
-   - `Keywords`: Placement, Latency
+   - `Keywords`: Deployment, Latency
    - `Objective`:  Placement cost -, Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8501940)
 
@@ -822,7 +822,7 @@ Georgios B. Giannakis
 
    - `Publication`: TSMC 2018 (**JCR-Q1**)
    - `Authors`: An Song; Wei-Neng Chen; Tianlong Gu; Huaqiang Yuan; Sam Kwong; Jun Zhang	
-   - `Keywords`: Placement, Distributed, Particle Swarm Optimization (PSO)
+   - `Keywords`: Deployment, Distributed, Particle Swarm Optimization (PSO)
    - `Objective`:  Acceptance rate +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8600712)
 
@@ -830,7 +830,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2017 (**CCF-A**)
    - `Authors`: Milad Ghaznavi; Nashid Shahriar; Shahin Kamali; Reaz Ahmed; Raouf Boutaba
-   - `Keywords`: Placement, Distributed 
+   - `Keywords`: Deployment, Distributed 
    - `Objective`:  Acceptance rate +, Cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8058439)
 
@@ -838,7 +838,7 @@ Georgios B. Giannakis
 
    - `Publication`: TMC 2017 (**CCF-A**)
    - `Authors`: Giorgos Chochlidakis; Vasilis Friderikos
-   - `Keywords`: Placement, Mobility, Distributed 
+   - `Keywords`: Deployment, Mobility, Distributed 
    - `Objective`:  Acceptance rate +, Mobility +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7514764)
 
@@ -846,7 +846,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Fangfang Yan; Tony T. Lee; Weisheng Hu
-   - `Keywords`: Placement, Congestion
+   - `Keywords`: Deployment, Congestion
    - `Objective`:  Placement cost -, Congestion -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7574364)
 
@@ -854,7 +854,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Fang Hao; Murali Kodialam; T. V. Lakshman; Sarit Mukherjee
-   - `Keywords`: Placement, Distributed
+   - `Keywords`: Deployment, Distributed
    - `Objective`:  Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7509597)
 
@@ -862,7 +862,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Vincenzo Eramo; Emanuele Miucci; Mostafa Ammar; Francesco Giacinto Lavacca
-   - `Keywords`: Placement, Scheduling,  Joint, energy
+   - `Keywords`: Deployment, Scheduling,  Joint, energy
    - `Objective`:  Acceptance rate +, Energy consumption -	
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7866881)
 
@@ -870,7 +870,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Yossi Kanizo; Ori Rottenstreich; Itai Segall; Jose Yallouz
-   - `Keywords`: Placement, Backup
+   - `Keywords`: Deployment, Backup
    - `Objective`:  Placement cost -	
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7938678)
 
@@ -878,7 +878,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2017 (**CCF-A**)
    - `Authors`: Song Yang; Philipp Wieder; Ramin Yahyapour; Stojan Trajanovski; Xiaoming Fu
-   - `Keywords`: Placement, Routing, Cloud, Latency
+   - `Keywords`: Deployment, Routing, Cloud, Latency
    - `Objective`:  Placement cost -, Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8281644)
 
@@ -886,7 +886,7 @@ Georgios B. Giannakis
 
    - `Publication`: ICDCS 2017 (**CCF-B**)
    - `Authors`: Tao Wang; Hong Xu; Fangming Liu
-   - `Keywords`: Placement, Load Balancing, Multi-resource
+   - `Keywords`: Deployment, Load Balancing, Multi-resource
    - `Objective`:  Load Balancing +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7980072)
 
@@ -894,7 +894,7 @@ Georgios B. Giannakis
 
    - `Publication`: ICDCS 2017 (**CCF-B**)
    - `Authors`: Qixia Zhang; Yikai Xiao; Fangming Liu; John C.S. Lui; Jian Guo; Tao Wang
-   - `Keywords`: Placement, Scheduling, Joint
+   - `Keywords`: Deployment, Scheduling, Joint
    - `Objective`:  Acceptance rate +, Latency -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7980016)
 
@@ -902,7 +902,7 @@ Georgios B. Giannakis
 
    - `Publication`: SIGCOMM 2016 (**CCF-A**)
    - `Authors`: Chen Sun, Jun Bi, Zhilong Zheng, Hongxin Hu
-   - `Keywords`: Placement, Latency
+   - `Keywords`: Deployment, Latency
    - `Objective`:  Latency +
    - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/2934872.2959058)
 
@@ -918,7 +918,7 @@ Georgios B. Giannakis
 
    - `Publication`: INFOCOM 2014 (**CCF-A**)
    - `Authors`: Long Gong, Yonggang Wen, Zuqing Zhu and Tony Lee
-   - `Keywords`: Placement, GRC (Global Resource Control)
+   - `Keywords`: Deployment, GRC (Global Resource Control)
    - `Objective`: Acceptance rate +, Revenue-to-cost ratio +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/6847918)
 
@@ -926,7 +926,7 @@ Georgios B. Giannakis
 
    - `Publication`: JCSS 2013 (**CCF-B**)
    - `Authors`: Panpan Jin; Xincai Fei; Qixia Zhang; Fangming Liu; Bo Li
-   - `Keywords`: Placement, ACS (Ant Colony System), Multi-objective
+   - `Keywords`: Deployment, ACS (Ant Colony System), Multi-objective
    - `Objective`: Placement cost -, Energy consumption -
    - `Link`: [IEEE Xplore](https://www.sciencedirect.com/science/article/pii/S0022000013000627)
 
@@ -934,7 +934,7 @@ Georgios B. Giannakis
 
    - `Publication`: INFOCOM 2012 (**CCF-A**)
    - `Authors`: Joe Wenjie Jiang; Tian Lan; Sangtae Ha; Minghua Chen; Mung Chiang
-   - `Keywords`: Placement, Routing, Joint, Markov approximation
+   - `Keywords`: Deployment, Routing, Joint, Markov approximation
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/6195719)
 
@@ -942,7 +942,7 @@ Georgios B. Giannakis
 
    - `Publication`: CN 2012 (**CCF-B**)
    - `Authors`: Xiang Cheng, Sen Su, Zhongbao Zhang, Kai Shuang, Fangchun Yang, Yan Luo, Jie Wang
-   - `Keywords`: Placement, PSO (Particle Swarm Optimization), Topology decomposition
+   - `Keywords`: Deployment, PSO (Particle Swarm Optimization), Topology decomposition
    - `Objective`: Placement cost -, Energy consumption -
    - `Link`: [IEEE Xplore](https://www.researchgate.net/publication/257582253_Virtual_network_embedding_through_topology_awareness_and_optimization)
 
@@ -954,7 +954,7 @@ Georgios B. Giannakis
 
    - `Publication`: TON 2021 (**CCF-A**)
    - `Authors`: Vajiheh Farhadi; Fidan Mehmeti; Ting He; Thomas F. La Porta; Hana Khamfroush; Shiqiang Wang; Kevin S. Chan; Konstantinos Poularakis
-   - `Keywords`: Joint, Placement, Scheduling, Mobile Edge Computing
+   - `Keywords`: Joint, Deployment, Scheduling, Mobile Edge Computing
    - `Objective`: Cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345766)
 
@@ -978,7 +978,7 @@ Georgios B. Giannakis
 
    - `Publication`: IEEE Communications Magazine 2021 (**JCR-Q1**)
    - `Authors`: Mario Di Mauro; Giovanni Galatro; Maurizio Longo; Fabio Postiglione; Marco Tambasco
-   - `Keywords`: Scheduling, Placement, Reliabilty
+   - `Keywords`: Scheduling, Deployment, Reliabilty
    - `Objective`: Cost -, Reliabilty +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9376772)
    - 
@@ -1044,7 +1044,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2019 (**CCF-A**)
    - `Authors`: Hong Tang; Danny Zhou; Duan Chen
-   - `Keywords`: Scheduling, Placement, Scaling, Traffic Forecasting, Data Center
+   - `Keywords`: Scheduling, Deployment, Scaling, Traffic Forecasting, Data Center
    - `Objective`: Cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8449985)
 
@@ -1068,7 +1068,7 @@ Georgios B. Giannakis
 
     - `Publication`: JSAC 2018 (**CCF-A**)
     - `Authors`: Xiangle Cheng; Yulei Wu; Geyong Min; Albert Y. Zomaya
-    - `Keywords`: Placement, Dynamic
+    - `Keywords`: Deployment, Dynamic
     - `Objective`: /
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8463557/)
 
@@ -1124,7 +1124,7 @@ Georgios B. Giannakis
 
    - `Publication`: TPDS 2017 (**CCF-A**)
    - `Authors`: Weizhan Zhang; Yuxuan Chen; Xiang Gao; Zhichao Mo; Qinghua Zheng; Zongqing Lu
-   - `Keywords`: Chaining, Placement, Scheduling, Migration, Joint
+   - `Keywords`: Chaining, Deployment, Scheduling, Migration, Joint
    - `Objective`: Framework
    - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/2934872.2934875)
 
@@ -1229,7 +1229,7 @@ Georgios B. Giannakis
 1. **Space-Air-Ground Integrated Multi-Domain Network Resource Orchestration Based on Virtual Network Architecture: A DRL Method**
    - `Publication`: TITS 2021 (**CCF-B**)
    - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Lei Liu
-   - `Keywords`: Chaining, Placement, Multi-Domain, DQN
+   - `Keywords`: Chaining, Deployment, Multi-Domain, DQN
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9505612)
    
@@ -1237,7 +1237,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2021 (**CCF-A**)
    - `Authors`: Haojun Huang, Cheng Zeng, Yangmin Zhao, Geyong Min, Yingying Zhu, Wang Miao , and Jia Hu
-   - `Keywords`: Chaining, Placement, DQN, FL (Federated Learning)
+   - `Keywords`: Chaining, Deployment, DQN, FL (Federated Learning)
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9468364)
 
@@ -1249,13 +1249,13 @@ Georgios B. Giannakis
    - `Objective`: Orchestration cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9326381)
 
-### [4.3 Placement](#content)
+### [4.3 Deployment](#content)
 
 1. **On the Effective Parallelization and Near-Optimal Deployment of Service Function Chains**
 
     - `Publication`: TPDS 2021 (**CCF-A**)
     - `Authors`: Jianzhen Luo; Jun Li; Lei Jiao; Jun Cai
-    - `Keywords`: Placement, Parallelization, Viterbi Dynamic Programming algorithm
+    - `Keywords`: Deployment, Parallelization, Viterbi Dynamic Programming algorithm
     - `Objective`: Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9300184)
 
@@ -1263,7 +1263,7 @@ Georgios B. Giannakis
 
    - `Publication`: IoTJ 2021 (**JCR-Q1**)
    - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Weishan Zhang; Lei Liu
-   - `Keywords`: Placement, GNN, GCN, MDP (Markov Decision Process), Viterbi algorithm
+   - `Keywords`: Deployment, GNN, GCN, MDP (Markov Decision Process), Viterbi algorithm
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9475485)
 
@@ -1279,7 +1279,7 @@ Georgios B. Giannakis
 
    - `Publication`: IWQoS 2021 (**CCF-B**)
    - `Authors`: Nan He, S. Yang, Fan Li, S. Trajanovski, F.A. Kuipers, Xiaoming Fu
-   - `Keywords`: Placement, Attention, DDPG, Latency
+   - `Keywords`: Deployment, Attention, DDPG, Latency
    - `Objective`: Placement cost -, Latency -
    - `Link`: [paper](https://research.tudelft.nl/files/93969106/IWQoS2021.pdf)
 
@@ -1287,7 +1287,7 @@ Georgios B. Giannakis
 
    - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`: Jose Jurandir Alves Esteves, Amina Boubendir, Fabrice Guillemin, Pierre Sens
-   - `Keywords`: Placement, A3C, GCN
+   - `Keywords`: Deployment, A3C, GCN
    - `Objective`: Acceptance rate +
    - `Link`: [arXiv](https://arxiv.org/abs/2105.06741)
 
@@ -1295,7 +1295,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li
-   - `Keywords`: Placement, A3C (Asynchronous Advantage Actor-Critic), GNN, GCN (Graph Convolutional Network)
+   - `Keywords`: Deployment, A3C (Asynchronous Advantage Actor-Critic), GNN, GCN (Graph Convolutional Network)
    - `Objective`: Acceptance rate +, Long-term average revenue +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9060910)
    
@@ -1303,7 +1303,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Hiren Kumar Thakkar, Chinmaya Dehury, Prasan Kumar Sahoo
-   - `Keywords`: Placement, Q-learning, ML(Machine Learning), Multi-Stage
+   - `Keywords`: Deployment, Q-learning, ML(Machine Learning), Multi-Stage
    - `Objective`: Long-term average revenue +, Placement cost -
    - `Link`: [paper](http://120.126.16.250/Publication_PDF/journal/j44.pdf)
 
@@ -1311,7 +1311,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Ruben Solozabal; Josu Ceberio; Aitor Sanchoyerto; Luis Zabala; Bego Blanco; Fidel Liberal
-   - `Keywords`: Placement, PG (Policy Gradients), Attention, LSTM
+   - `Keywords`: Deployment, PG (Policy Gradients), Attention, LSTM
    - `Objective`: Acceptance rate +, Power consumption -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
 
@@ -1319,7 +1319,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Jianing Pei, Peilin Hong, Miao Pan, Jiangqing Liu, Jingsong Zhou
-   - `Keywords`: Placement, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)
+   - `Keywords`: Deployment, DDQN (Double Deep Q Network), BIP (Binary Integer Programming)
    - `Objective`: Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8932445)
 
@@ -1327,7 +1327,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2020 (**CCF-A**)
    - `Authors`: Zhongxia Yan, Jingguo Ge, Yulei Wu, Liangxiong Li, Tong Li
-   - `Keywords`: Placement, Dynamic Reliability-aware, MDP (Markov Decision Process), Viterbi algorithm
+   - `Keywords`: Deployment, Dynamic Reliability-aware, MDP (Markov Decision Process), Viterbi algorithm
    - `Objective`: Acceptance rate +, Placement cost -
    - `Link`: [arXiv](https://arxiv.org/abs/1911.06532)
 
@@ -1335,7 +1335,7 @@ Georgios B. Giannakis
 
    - `Publication`: TWC 2020 (**CCF-B**)
    - `Authors`: Xiaoyuan Fu; F. Richard Yu; Jingyu Wang; Qi Qi; Jianxin Liao
-   - `Keywords`: Placement, Latency, DQN, Dynamic
+   - `Keywords`: Deployment, Latency, DQN, Dynamic
    - `Objective`: Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8874993)
 
@@ -1343,14 +1343,14 @@ Georgios B. Giannakis
 
    - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`: Mohammad Karimzadeh-Farshbafan; Vahid Shah-Mansouri; Dusit Niyato
-   - `Keywords`: Placement, Collaborative, Multi-Layer, REINFORCE
+   - `Keywords`: Deployment, Collaborative, Multi-Layer, REINFORCE
    - `Objective`: Acceptance rate +, Long-term average revenue +
    - `Link`: [IEEE Xplore](http://ieeexplore.ieee.org/document/9151980)
 
 1. **DDQP: A Double Deep Q-Learning Approach to Online Fault-Tolerant SFC Placement**
    - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`: Lei Wang; Weixi Mao; Jin Zhao; Yuedong Xu
-   - `Keywords`: Placement, DDQN
+   - `Keywords`: Deployment, DDQN
    - `Objective`: Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9313044)
 
@@ -1366,7 +1366,7 @@ Georgios B. Giannakis
 
    - `Publication`: TNSM 2020 (**JCR-Q1**)
    - `Authors`: Davide Andreoletti, Tanya Velichkova, Giacomo Verticale, Massimo Tornatore , Silvia Giordano
-   - `Keywords`: Placement, Multi-domain, Privacy
+   - `Keywords`: Deployment, Multi-domain, Privacy
    - `Objective`: /
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9187205)
 
@@ -1374,14 +1374,14 @@ Georgios B. Giannakis
 
    - `Publication`: INFOCOM 2019 (**CCF-A**)
    - `Authors`: Pham Tran Anh Quang, Abbas Bradai, Kamal Deep Singh, Yassine Hadjadj-Aoul
-   - `Keywords`: Placement, DDPG (Deep Deterministic Policy Gradient), Multi-domain, Non-cooperative
+   - `Keywords`: Deployment, DDPG (Deep Deterministic Policy Gradient), Multi-domain, Non-cooperative
    - `Link`: [paper](https://hal.archives-ouvertes.fr/hal-02088819/file/MultiDomain_VNF_FG_embedding__A_Deep_reinforcement_learning_approach-authors%20version.pdf)
 
 1. **DeepViNE: Virtual Network Embedding with Deep Reinforcement Learning**
 
    - `Publication`: INFOCOM 2019 (**CCF-A**)
    - `Authors`: Mahdi Dolati, Seyedeh Bahereh Hassanpour, Majid Ghaderi, Ahmad Khonsari
-   - `Keywords`: Placement, DQN (Deep Q Network), Multi-channels Representations
+   - `Keywords`: Deployment, DQN (Deep Q Network), Multi-channels Representations
    - `Objective`: Acceptance rate +
    - `Link`: [paper](https://people.ucalgary.ca/~mghaderi/docs/infocom19-deepvine.pdf)
 
@@ -1389,7 +1389,7 @@ Georgios B. Giannakis
 
    - `Publication`: JSAC 2019 (**CCF-A**)
    - `Authors`: Ruben Solozabal, Josu Ceberio, Aitor Sanchoyerto, Luis Zabala, Bego Blanco, Fidel Liberal
-   - `Keywords`: Placement, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)
+   - `Keywords`: Deployment, PG (Policy Gradient), Seq2Seq (Sequence-to-Sequence)
    - `Objective`: Energy consumption -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8945291)
 
@@ -1397,7 +1397,7 @@ Georgios B. Giannakis
 
    - `Publication`: ICDCS 2019 (**CCF-B**)
    - `Authors`: Lin Gu; Deze Zeng; Wei Li; Song Guo; Albert Zomaya; Hai Jin
-   - `Keywords`: Placement, DDPG, Latency
+   - `Keywords`: Deployment, DDPG, Latency
    - `Objective`:  Acceptance rate +, Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8885151)
 
@@ -1405,7 +1405,7 @@ Georgios B. Giannakis
 
    - `Publication`: IWQoS 2019 (**CCF-B**)
    - `Authors`: Yikai  Xiao, Qixia  Zhang, Fangming Liu, Jia  Wang, Miao  Zhao, Zhongxing  Zhang, Jiaxing  Zhang
-   - `Keywords`: Placement, PG (Policy Gradient), Serialization and Backtracking, Time Slots
+   - `Keywords`: Deployment, PG (Policy Gradient), Serialization and Backtracking, Time Slots
    - `Objective`:  Energy consumption -, Acceptance rate +
    - `Link`: [paper](https://www.researchgate.net/publication/333789998_NFVdeep_adaptive_online_service_function_chain_deployment_with_deep_reinforcement_learning)
 
@@ -1413,7 +1413,7 @@ Georgios B. Giannakis
 
    - `Publication`: CN 2019 (**CCF-B**)
    - `Authors`: Sen Wang, Jun Bi, Jianping Wu, Athanasios V. Vasilakos, Qilin Fan
-   - `Keywords`: Placement, TD (Temporal Difference), GRC (Global Resource Control)
+   - `Keywords`: Deployment, TD (Temporal Difference), GRC (Global Resource Control)
    - `Objective`: Long-term time-average revenue +
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S138912861830584X)
 
@@ -1421,7 +1421,7 @@ Georgios B. Giannakis
 
    - `Publication`: INFOCOM 2018 (**CCF-A**)
    - `Authors`: Andreas Blenk; Patrick Kalmbach; Johannes Zerwas; Michael Jarschel; Stefan Schmid; Wolfgang Kellerer
-   - `Keywords`: Placement, Hopfield Network
+   - `Keywords`: Deployment, Hopfield Network
    - `Objective`: Revenue-cost ratio +, Running time -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8486263)
 
@@ -1429,7 +1429,7 @@ Georgios B. Giannakis
 
    - `Publication`: IEEE Trans on Cybernetics 2018 (**CCF-B**)
    - `Authors`: Soroush Haeri and Ljiljana Trajkovi´c
-   - `Keywords`: Placement, MCTS (Monte Carlo Tree Search)
+   - `Keywords`: Deployment, MCTS (Monte Carlo Tree Search)
    - `Objective`: Revenue-to-cost +, Acceptance rate +
    - `Link`: [paper](https://www.researchgate.net/publication/313873926_Virtual_Network_Embedding_via_Monte_Carlo_Tree_Search)
 
@@ -1437,7 +1437,7 @@ Georgios B. Giannakis
 
    - `Publication`: CCNC 2017
    - `Authors`: Oussama Soualah, Marouen Mechtri, Chaima Ghribi, Djamal Zeghlache
-   - `Keywords`: Placement, MCTS (Monte Carlo Tree Search)
+   - `Keywords`: Deployment, MCTS (Monte Carlo Tree Search)
    - `Objective`: Acceptance rate +
    - `Link`: [paper](https://www.researchgate.net/publication/318579373_An_efficient_algorithm_for_virtual_network_function_placement_and_chaining)
 
@@ -1453,7 +1453,7 @@ Georgios B. Giannakis
 
    - `Publication`: SCC 2015
    - `Authors`: Runyu Shi; Jia Zhang; Wenjing Chu; Qihao Bao; Xiatao Jin; Chenran Gong; Qihao Zhu; Chang Yu; Steven Rosenberg
-   - `Keywords`: Placement, MDP, Bayesian learning
+   - `Keywords`: Deployment, MDP, Bayesian learning
    - `Objective`:  Acceptance rate +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7207337)
 
@@ -1509,7 +1509,7 @@ Georgios B. Giannakis
 
    - `Publication`: JASC 2016 (**CCF-A**)
    - `Authors`: Tung-Wei Kuo; Bang-Heng Liou; Kate Ching-Ju Lin; Ming-Jer Tsai
-   - `Keywords`: Placement, Reconfiguration, Joint, Energy, Cycle-Stationary Traffic, MDP
+   - `Keywords`: Deployment, Reconfiguration, Joint, Energy, Cycle-Stationary Traffic, MDP
    - `Objective`:  Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7389320)
 
@@ -1671,7 +1671,7 @@ Georgios B. Giannakis
 
 - `Publication`: TON 2020 (**CCF-A**)
 - `Authors`: Ziyue Luo, Chuan Wu
-- `Keywords`: Scheduling, Placement, ILP (Integer Linear Program), Regularization, Rounding
+- `Keywords`: Scheduling, Deployment, ILP (Integer Linear Program), Regularization, Rounding
 - `Objective`: Minimize the operating cost and deployment cost
 - `Link`: [paper](https://i.cs.hku.hk/~cwu/papers/zyluo-ton19.pdf)
 ```

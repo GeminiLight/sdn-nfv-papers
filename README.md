@@ -284,7 +284,6 @@ You can search the relevant papers by following keywords:
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8470961)
 
 1. **VirtualEdge: Multi-Domain Resource Orchestration and Virtualization in Cellular Edge Computing**
-
     - `Publication`: ICDCS 2019 (**CCF-B**)
     - `Authors`: Qiang Liu; Tao Han
     - `Keywords`: Chaining, Deployment, Multi-Domain
@@ -383,13 +382,12 @@ You can search the relevant papers by following keywords:
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9363567)
 
 1. **Joint Virtual Network Topology Design and Embedding for Cybertwin-Enabled 6G Core Networks**
-
     - `Publication`: IoTJ 2021 (**JCR-1**)
     - `Authors`: Junling Li; Weisen Shi; Qiang Ye; Shan Zhang; Weihua Zhuang; Xuemin Shen
     - `Keywords`: Deployment, Joint, Latency
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9415134/)
-
+    
 1. **Energy-Aware Service Function Chain Embedding in Edge–Cloud Environments for IoT Applications**
 
     - `Publication`: IoTJ 2021 (**JCR-1**)
@@ -615,6 +613,14 @@ You can search the relevant papers by following keywords:
    - `Keywords`: Deployment, CPSO (Constructive Particle Swarm Optimizer)
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8786166)
+
+1. **Service Placement and Request Scheduling for Data-intensive Applications in Edge Clouds**
+
+    - `Publication`: INFOCOM 2019 (**CCF-A**)
+    - `Authors`: Vajiheh Farhadi; Fidan Mehmeti; Ting He; Tom La Porta; Hana Khamfroush; Shiqiang Wang; Kevin S Chan
+    - `Keywords`: Deployment, Scheduling, Mobile Edge
+    - `Objective`:Acceptance rate +
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8737368)
 
 1. **Adaptive Interference-Aware VNF Placement for Service-Customized 5G Network Slices**
 

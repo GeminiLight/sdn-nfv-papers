@@ -1257,6 +1257,13 @@ Georgios B. Giannakis
 
 ### [4.3 Deployment](#content)
 
+
+1. **Monkey Business: Reinforcement learning meets neighborhood search for Virtual Network Embedding**
+
+- `Publication`: arXiv 2022
+- `Authors`: Maxime Elkael; Massinissa Ait Aba; Andrea Araldo; Hind Castel; Badii Jouaber
+- `Link`: [arXiv](https://arxiv.org/abs/2202.13706)
+
 1. **On the Effective Parallelization and Near-Optimal Deployment of Service Function Chains**
 
     - `Publication`: TPDS 2021 (**CCF-A**)

@@ -50,11 +50,22 @@ You can search the relevant papers by following keywords:
 
 ## [1. Survey and Analysis](#content)
 
+1. **Network Services Anomalies in NFV: Survey, Taxonomy, and Verification Methods**
+   - `Publication`: TNSM 2022 (**JCR-Q1**)
+   - `Authors`: Moubarak Zoure;Toufik Ahmed;Laurent Réveillére
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9686060/)
+
+
 1. **Recent Advances of Resource Allocation in Network Function Virtualization**
    - `Publication`: TPDS 2021 (**CCF-A**)
    - `Authors`: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9169857)
-   
+
+1. **ONETS: Online Network Slice Broker From Theory to Practice**
+   - `Publication`: TWC 2021 (**CCF-B**)
+   - `Authors`: Vincenzo Sciancalepore; Lanfranco Zanzi; Xavier Costa-Pérez; Antonio Capone
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9495099)
+
 1. **Graph-based Deep Learning for Communication Networks: A Survey**
 
    - `Publication`: arXiv 2021
@@ -102,17 +113,17 @@ You can search the relevant papers by following keywords:
    - `Authors`: Abdelquoddouss Laghrissi and Tarik Taleb
    - `Link`: [paper](http://mosaic-lab.org/uploads/papers/078b601e-3e01-4a42-8a35-b98e2d113943.pdf)
 
-1. **Resource Allocation in NFV: A Comprehensive Survey**
-
-   - `Publication`: TNSM 2019 (**JCR-Q1**)
-   - `Authors`: Juliver Gil Herrera, Juan Felipe Botero
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7534741)
-
 1. **A Comprehensive Survey of Network Function Virtualization**
 
    - `Publication`: CN 2018 (**CCF-B**)
    - `Authors`: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306)
+
+1. **Resource Allocation in NFV: A Comprehensive Survey**
+
+   - `Publication`: TNSM 2016 (**JCR-Q1**)
+   - `Authors`: Juliver Gil Herrera, Juan Felipe Botero
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7534741)
 
 1. **A Survey on Service Function Chaining**
 
@@ -135,6 +146,22 @@ You can search the relevant papers by following keywords:
 > Here are many heuristic-based and meta-heuristic-based methods, only part of which recently published are displayed directly. You can obtain more papers by clicking `more` button.
 
 ### [3.1 Slicing](#content)
+
+1. **Coordinated 5G Network Slicing: How Constructive Interference Can Boost Network Throughput**
+
+    - `Publication`: TON 2021 (**CCF-A**)
+    - `Authors`: Salvatore D’Oro; Leonardo Bonati; Francesco Restuccia; Tommaso Melodia
+    - `Keywords`: Slicing, Radio access network (RAN)
+    - `Objective`: /
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9411723)
+
+1. **An Efficient Linear Programming Rounding-and-Refinement Algorithm for Large-Scale Network Slicing Problem**
+
+    - `Publication`: ICASSP 2021 (**CCF-A**)
+    - `Authors`: Wei-Kun Chen; Ya-Feng Liu; Yu-Hong Dai; Zhi-Quan Luo
+    - `Keywords`: Slicing, Large-Scale, Linear Programming, Rounding-and-Refinement
+    - `Objective`: /
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9413378)
 
 1. **A Coverage-Aware Resource Provisioning Method for Network Slicing**
 
@@ -294,6 +321,28 @@ You can search the relevant papers by following keywords:
 
 ### [3.3 Deployment](#content)
 
+1. **Online Service Function Chain Placement for Cost-effectiveness and Network Congestion Control**
+
+    - `Publication`: TC 2022 (**CCF-A**)
+    - `Authors`: Xiaojun Shang; Zhenhua Liu; Yuanyuan Yang
+    - `Keywords`: Deployment, Routing, Online candidate path selection (OCPS)
+    - `Objective`: Latency -, Placement cost -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9248649)
+
+1. **Multi-Resource VNF Deployment in a Heterogeneous Cloud**
+    - `Publication`: TC 2022 (**CCF-A**)
+    - `Authors`: Jiaqi Zheng; Zixuan Zhang; Qiufang Ma; Xiaofeng Gao; Chen Tian; Guihai Chen
+    - `Keywords`: Deployment, Multi-Resource, Heterogeneous Cloud
+    - `Objective`: Placement cost -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9280355)
+    
+1. **CoShare: An Efficient Approach for Redundancy Allocation in NFV**
+    - `Publication`: TON 2021 (**CCF-A**) (Early Access)
+    - `Authors`: Yordanos Tibebu Woldeyohannes; Besmir Tola; Yuming Jiang; K. K. Ramakrishnan
+    - `Keywords`: Deployment, Redundancy Allocation, Reliablity
+    - `Objective`: Reliablity -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9280355)
+    
 1. **Latency-Sensitive Edge/Cloud Serverless Dynamic Deployment Over Telemetry-Based Packet-Optical Network**
 
     - `Publication`: JSAC 2021 (**CCF-A**)
@@ -301,7 +350,7 @@ You can search the relevant papers by following keywords:
     - `Keywords`: Deployment, Latency, Optical Network
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8962126)
-
+    
 1. **Prune and Plant: Efficient Placement and Parallelism of Virtual Network Functions**
 
     - `Publication`: TC 2021 (**CCF-A**)
@@ -309,14 +358,6 @@ You can search the relevant papers by following keywords:
     - `Keywords`: Deployment, Parallelization, Prune and Plant
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8962126)
-
-1. **Online Service Function Chain Placement for Cost-effectiveness and Network Congestion Control**
-
-    - `Publication`: TC 2021 (**CCF-A**)
-    - `Authors`: Xiaojun Shang; Zhenhua Liu; Yuanyuan Yang
-    - `Keywords`: Deployment, Routing, Online candidate path selection (OCPS)
-    - `Objective`: Latency -, Placement cost -
-    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9248649)
 
 1. **Prioritized Deployment of Dynamic Service Function Chains**
 
@@ -357,6 +398,13 @@ You can search the relevant papers by following keywords:
     - `Objective`: Acceptance rate +, Migration cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9440734/)
 
+1. **Joint Placement and Allocation of VNF Nodes With Budget and Capacity Constraints**
+    - `Publication`: TON 2021 (**CCF-A**)
+    - `Authors`: Gamal Sallam; Bo Ji
+    - `Keywords`: Deployment, Relaxation
+    - `Objective`: Cost -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9440734/)
+
 1. **Service Placement and Request Scheduling for Data-Intensive Applications in Edge Clouds**
 
     - `Publication`: TON 2021 (**CCF-A**)
@@ -364,6 +412,14 @@ You can search the relevant papers by following keywords:
     - `Keywords`: Deployment, Scheduling, Joint
     - `Objective`: Acceptance rate +, Migration cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345766/)
+
+1. **Incremental Server Deployment for Software-Defined NFV-Enabled Networks**
+
+    - `Publication`: TON 2021 (**CCF-A**)
+    - `Authors`: Jianchun Liu; Hongli Xu; Gongming Zhao; Chen Qian; Xingpeng Fan; Xuwei Yang; He Huang
+    - `Keywords`: Incremental Server Deployment
+    - `Objective`: Cost -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9237146/)
 
 1. **Efficient Virtual Network Embedding of Cloud-Based Data Center Networks into Optical Networks**
 
@@ -380,6 +436,14 @@ You can search the relevant papers by following keywords:
     - `Keywords`: Deployment, Scheduling, Joint, Heterogeneous, Edge, Latency
     - `Objective`: Placement cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9363567)
+
+1. **Dynamic Network Function Provisioning to Enable Network in Box for Industrial Applications**
+
+   - `Publication`: TII 2021 (**JCR-Q1**)
+   - `Authors`: Gang Sun; Zhu Xu; Hongfang Yu; Victor Chang
+   - `Keywords`: Deployment, Path Selection
+   - `Objective`: Cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9286738)
 
 1. **Joint Virtual Network Topology Design and Embedding for Cybertwin-Enabled 6G Core Networks**
     - `Publication`: IoTJ 2021 (**JCR-1**)
@@ -407,11 +471,19 @@ You can search the relevant papers by following keywords:
 <details>
 <summary> more </summary>
 
+1. **Virtual Network Function Allocation in Service Function Chains Using Backups With Availability Schedule**
+
+    - `Publication`: TNSM 2021 (**JCR-Q1**)
+    - `Authors`: Rui Kang; Fujun He; Eiji Oki
+    - `Keywords`: Deploymeny, Availability Schedule, Reliablity
+    - `Objective`: Reliablity +
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9480669)
+
 1. **Reliable Placement of Service Function Chains and Virtual Monitoring Functions With Minimal Cost in Softwarized 5G Networks**
 
     - `Publication`: TNSM 2021 (**JCR-Q1**)
     - `Authors`: Prabhu Kaliyammal Thiruvasagam; Abhishek Chakraborty; Abin Mathew; C. Siva Ram Murthy
-    - `Keywords`: VNE, Optical Network, Data Center
+    - `Keywords`: Deployment, VNE, Optical Network, Data Center
     - `Objective`: Reduce complexity of the network topology by using the parallel transmission characteristics of optical fiber
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345794)
 
@@ -496,6 +568,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9189853)
 
 1. **Joint Resource Allocation and Routing for Service Function Chaining with In-Subnetwork Processing**
+
    - `Publication`: ICASSP 2020 (**CCF-B**)
    - `Authors`:  Navid Reyhanian; Hamid Farmanbar; Soheil Mohajer; Zhi-Quan Luo
    - `Keywords`: Deployment, Routing
@@ -987,7 +1060,15 @@ Georgios B. Giannakis
    - `Keywords`: Scheduling, Deployment, Reliabilty
    - `Objective`: Cost -, Reliabilty +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9376772)
-   - 
+
+1. **An Efficient Algorithm for Service Function Chains Reconfiguration in Mobile Edge Cloud Networks**
+
+   - `Publication`: ICWS 2021 (**CCF-B**)
+   - `Authors`: Biyi Li; Bo Cheng; Junliang Chen
+   - `Keywords`: Scheduling, Migration, Dynamic Programmingbased
+   - `Objective`: Placement cost -, Latency -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9590432)
+
 <details>
 <summary> more </summary>
 
@@ -1232,6 +1313,14 @@ Georgios B. Giannakis
 
 ### [4.2 Chaining](#content)
 
+1. **Endogenous Trusted DRL-Based Service Function Chain Orchestration for IoT**
+
+   - `Publication`: TC 2022 (**CCF-A**)
+   - `Authors`: Shaoyong Guo; Yuanyuan Qi; Yi Jin; Wenjing Li; Xuesong Qiu; Luoming Meng
+   - `Keywords`: Chaining, A3C (Asynchronous Advantage Actor-Critic)
+   - `Objective`: Orchestration cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9326381)
+
 1. **Space-Air-Ground Integrated Multi-Domain Network Resource Orchestration Based on Virtual Network Architecture: A DRL Method**
    - `Publication`: TITS 2021 (**CCF-B**)
    - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Lei Liu
@@ -1247,22 +1336,16 @@ Georgios B. Giannakis
    - `Objective`: Placement cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9468364)
 
-1. **Endogenous Trusted DRL-Based Service Function Chain Orchestration for IoT**
-
-   - `Publication`: TC 2021 (**CCF-A**)
-   - `Authors`: Shaoyong Guo; Yuanyuan Qi; Yi Jin; Wenjing Li; Xuesong Qiu; Luoming Meng
-   - `Keywords`: Chaining, A3C (Asynchronous Advantage Actor-Critic)
-   - `Objective`: Orchestration cost -
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9326381)
-
 ### [4.3 Deployment](#content)
 
 
 1. **Monkey Business: Reinforcement learning meets neighborhood search for Virtual Network Embedding**
 
-- `Publication`: arXiv 2022
-- `Authors`: Maxime Elkael; Massinissa Ait Aba; Andrea Araldo; Hind Castel; Badii Jouaber
-- `Link`: [arXiv](https://arxiv.org/abs/2202.13706)
+   - `Publication`: arXiv 2022
+   - `Authors`: Maxime Elkael; Massinissa Ait Aba; Andrea Araldo; Hind Castel; Badii Jouaber
+   - `Keywords`: Deployment, MCTS (Monte Carlo tree search), Neighborhood Search
+   - `Objective`: Cost -, Revenue-to-cost +
+   - `Link`: [arXiv](https://arxiv.org/abs/2202.13706), [code](https://github.com/melkael/vne)
 
 1. **On the Effective Parallelization and Near-Optimal Deployment of Service Function Chains**
 
@@ -1575,6 +1658,21 @@ Georgios B. Giannakis
 
 > Here are two types of papers: one is related to other topics of NFV and SDN and waiting to be classified; the other is the latest research work collected from arXiv.
 
+
+1. **KPI Guarantees in Network Slicing**
+
+   - `Publication`: TON 2021 (**CCF-A**) (Early Access)
+   - `Authors`: Jorge Martín-Pérez; Francesco Malandrino; Carla Fabiana Chiasserini; Milan Groshev; Carlos J. Bernardos
+   - `Keywords`: Performance 
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9585074)
+
+1. **Dynamic Network Security Function Enforcement via Joint Flow and Function Scheduling**
+
+   - `Publication`: TIFS 2022 (**CCF-A**)
+   - `Authors`: Qi Li; Xinhao Deng; Zhuotao Liu; Yuan Yang; Xiaoyue Zou; Qian Wang; Mingwei Xu; Jianping Wu
+   - `Keywords`: Security 
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9680702)
+
 1. **The Greatest Teacher, Failure is: Using Reinforcement Learning for SFC Placement Based on Availability and Energy Consumption**
 
    - `Authors`: Guto Leoni Santos, Theo Lynn, Judith Kelner, Patricia Takako Endo
@@ -1621,11 +1719,25 @@ Georgios B. Giannakis
    - `Keywords`: Verification
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9240965)
 
+1. **Performance Modeling of Softwarized Network Services Based on Queuing Theory With Experimental Validation**
+
+   - `Publication`: TMC 2021 (**CCF-A**)
+   - `Authors`: Jonathan Prados-Garzon; Pablo Ameigeiras; Juan J. Ramos-Munoz; Jorge Navarro-Ortiz; Pilar Andres-Maldonado; Juan M. Lopez-Soler
+   - `Keywords`: Performance
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8943161)
+
+1. **Leveraging Network Functions Virtualization Orchestrators to Achieve Software-Defined Access Control in the Clouds**
+
+   - `Publication`: TDSC 2021 (**CCF-A**)
+   - `Authors`: Montida Pattaranantakul; Ruan He; Zonghua Zhang; Ahmed Meddahi; Ping Wang
+   - `Keywords`: Security
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8588356)
+
 1. **Contention-Aware Performance Prediction For Virtualized Network Functions**
 
    - `Publication`: SIGCOMM 2020 (**CCF-A**)
    - `Authors`: Antonis Manousis, Rahul Anand Sharma, Vyas Sekar, Justine Sherry
-   - `Keywords`: VNF Performance Prediction
+   - `Keywords`: Performance
    - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3387514.3405868)
 
 1. **Fault Tolerant Service Function Chaining**

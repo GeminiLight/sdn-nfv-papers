@@ -4,11 +4,13 @@ This is a paper list about Network Resource Allocation in [Software-Defined Netw
 
 - Comprehensive **Survey** and **Analysis**
 - **Slicing**: Network Slicing
-- **Chaining**: Virtual Network Functions Chaining (also known as Service Function Chains Orchestration)
-- **Deployment**: Virtual Network Functions Deployment (also known as Service Function Chain Deployment)
-- **Scheduling**: Virtual Network Functions Scheduling (including Scaling, Reconfiguration and Migration)
+- **Chaining**: VNF Chaining (aka SFC Orchestration)
+- **Deployment**: VNF Deployment (aka SFC Deployment)
+- **Scheduling**: VNF Scheduling (including Scaling, Reconfiguration and Migration)
 - **Routing**: Network Traffic Measurement and Management
-- **Multi-domain** (also known as cross-domain, multi-region or other resemble name)
+- **Multi-domain** (aka cross-domain, multi-region or other resemble name)
+
+Here, VNF - Virtual Network Function and SFC - Service Function Chain.
 
 We mainly collect papers from high-quality journals and conferences, and classify them according to method categories. Particularly, you can find more details of  papers in the **Machine Learning-based** section, which represents an encouraging technique to efficiently solve network resource allocation problems.
 
@@ -55,11 +57,15 @@ You can search the relevant papers by following keywords:
    - `Authors`: Moubarak Zoure;Toufik Ahmed;Laurent Réveillére
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9686060/)
 
-
 1. **Recent Advances of Resource Allocation in Network Function Virtualization**
    - `Publication`: TPDS 2021 (**CCF-A**)
    - `Authors`: Song Yang, Fan Li, Stojan Trajanovski, Ramin Yahyapour, Xiaoming Fu
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9169857)
+
+1. **A Survey of Network Virtualization Techniques for Internet of Things Using SDN and NFV**
+   - `Publication`: TPDS 2021 (**CCF-A**)
+   - `Authors`: Iqbal Alam, Kashif Sharif, Fan Li, Zohaib Latif, M. M. Karim, Sujit Biswas, Boubakr Nour, Yu Wang
+   - `Link`: [ACM DL](https://dl.acm.org/doi/abs/10.1145/3379444)
 
 1. **ONETS: Online Network Slice Broker From Theory to Practice**
    - `Publication`: TWC 2021 (**CCF-B**)

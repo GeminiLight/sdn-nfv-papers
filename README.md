@@ -1,5 +1,9 @@
 # Papers on Network Resource Allocation
 
+> 🌟 We release the first verison of [Virne](https://github.com/GeminiLight/virne).
+> 
+>  Virne is a python framework for Virtual Network Embedding (VNE) problem and provides various VNE algorithms.
+
 This is a paper list about Network Resource Allocation in [Software-Defined Networking](https://en.wikipedia.org/wiki/Software-defined_networking) (SDN) and [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV), including
 
 - Comprehensive **Survey** and **Analysis**
@@ -1812,6 +1816,7 @@ Georgios B. Giannakis
 
 🤩There are some repositories which probably help you to comprehend or research this topic: 
 
+- [Virne: Python framework for VNE](https://github.com/GeminiLight/virne).
 - [GNN-Communication-Networks](https://github.com/jwwthu/GNN-Communication-Networks)
 - [awesome-rl (Awesome Reinforcement Learning)](https://github.com/aikorea/awesome-rl)
 - [awesome-ml4co (Awesome Machine Learning for Combinatorial Optimization Resources)](https://github.com/Thinklab-SJTU/awesome-ml4co)

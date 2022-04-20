@@ -1,8 +1,6 @@
 # Papers on Network Resource Allocation
 
-> 🌟 We release the first verison of [Virne](https://github.com/GeminiLight/virne).
-> 
->  Virne is a python framework for Virtual Network Embedding (VNE) problem and provides various VNE algorithms.
+> 🌟 We release the first verison of [Virne](https://github.com/GeminiLight/virne), which is a python framework for Virtual Network Embedding (VNE) problem and provides various VNE algorithms.
 
 This is a paper list about Network Resource Allocation in [Software-Defined Networking](https://en.wikipedia.org/wiki/Software-defined_networking) (SDN) and [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV), including
 
@@ -123,11 +121,35 @@ You can search the relevant papers by following keywords:
    - `Authors`: Abdelquoddouss Laghrissi and Tarik Taleb
    - `Link`: [paper](http://mosaic-lab.org/uploads/papers/078b601e-3e01-4a42-8a35-b98e2d113943.pdf)
 
+1. **Dependability of the NFV Orchestrator: State of the Art and Research Challenges**
+
+   - `Publication`: IEEE Communications Surveys & Tutorials 2018 (**JCR-Q1**)
+   - `Authors`: Andres J. Gonzalez; Gianfranco Nencioni; Andrzej Kamisiński; Bjarne E. Helvik; Poul E. Heegaard
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8350296/)
+
+1. **Network Slicing and Softwarization: A Survey on Principles, Enabling Technologies, and Solutions**
+
+   - `Publication`: IEEE Communications Surveys & Tutorials 2018 (**JCR-Q1**)
+   - `Authors`: Ibrahim Afolabi; Tarik Taleb; Konstantinos Samdanis; Adlen Ksentini; Hannu Flinck
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8320765/)
+
 1. **A Comprehensive Survey of Network Function Virtualization**
 
    - `Publication`: CN 2018 (**CCF-B**)
    - `Authors`: Bo Yi, Xingwei Wang, Keqin Li, Sajal k. Das , Min Huang
    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1389128618300306)
+
+1. **Network Function Virtualization: State-of-the-Art and Research Challenges**
+
+   - `Publication`: IEEE Communications Surveys & Tutorials 2016 (**JCR-Q1**)
+   - `Authors`: Rashid Mijumbi; Joan Serrat; Juan-Luis Gorricho;Niels Bouten; Filip De Turck; Raouf Boutaba
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7243304/)
+
+1. **Survey on Network Virtualization Hypervisors for Software Defined Networking**
+
+   - `Publication`: IEEE Communications Surveys & Tutorials 2016 (**JCR-Q1**)
+   - `Authors`: Andreas Blenk; Arsany Basta; Martin Reisslein; Wolfgang Kellerer
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7295561/)
 
 1. **Resource Allocation in NFV: A Comprehensive Survey**
 
@@ -1003,6 +1025,22 @@ Georgios B. Giannakis
    - `Objective`:  Acceptance rate +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7524565)
 
+1. **Application of evolutionary mechanism to dynamic Virtual Network Function Placement**
+
+   - `Publication`: ICNP 2016 (**CCF-B**)
+   - `Authors`: Mari Otokura; Kenji Leibnitz; Yuki Koizumi; Daichi Kominami; Tetsuya Shimokawa; Masayuki Murata
+   - `Keywords`: Placement, Dynamic, Genetic algorithm
+   - `Objective`:  Cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7784475)
+
+1. **Optimizing virtual backup allocation for middleboxes**
+
+   - `Publication`: ICNP 2016 (**CCF-B**)
+   - `Authors`: Yossi Kanizo; Ori Rottenstreich; Itai Segall; Jose Yallouz
+   - `Keywords`: Placement, Backup, Reliablity
+   - `Objective`:  Reliablity +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7784411)
+
 1. **Toward Profit-Seeking Virtual Network Embedding**
 
    - `Publication`: INFOCOM 2014 (**CCF-A**)
@@ -1010,6 +1048,14 @@ Georgios B. Giannakis
    - `Keywords`: Deployment, GRC (Global Resource Control)
    - `Objective`: Acceptance rate +, Revenue-to-cost ratio +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/6847918)
+
+1. **Carlo Fuerst; Maciek Pacut; Paolo Costa; Stefan Schmid**
+
+   - `Publication`: ICNP 2015  (**CCF-B**)
+   - `Authors`: Carlo Fuerst; Maciek Pacut; Paolo Costa; Stefan Schmid
+   - `Keywords`: Placement
+   - `Objective`:  Cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7437112)
 
 1. **A Multi-objective Ant Colony System algorithm for Virtual Machine Placement in Cloud Computing**
 
@@ -1224,6 +1270,30 @@ Georgios B. Giannakis
    - `Keywords`: Chaining, Deployment, Scheduling, Migration, Joint
    - `Objective`: Framework
    - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/2934872.2934875)
+
+1. **Cache contention aware Virtual Machine placement and migration in cloud datacenters**
+
+   - `Publication`: ICNP 2016 (**CCF-B**)
+   - `Authors`: Yossi Kanizo; Ori Rottenstreich; Itai Segall; Jose Yallouz
+   - `Keywords`: Scheduling, Migration, Cache
+   - `Objective`:  Throughput +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7784447)
+
+1. **Transparent flow migration for NFV**
+
+   - `Publication`: ICNP 2016 (**CCF-B**)
+   - `Authors`: Yang Wang; Gaogang Xie; Zhenyu Li; Peng He; Kavé Salamatian
+   - `Keywords`: Scheduling, Migration
+   - `Objective`: Throughput +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7784446)
+
+1. **SliM: Enabling efficient, seamless NFV state migration**
+
+   - `Publication`: ICNP 2016 (**CCF-B**)
+   - `Authors`: Leonhard Nobach; Ivica Rimac; Volker Hilt; David Hausheer
+   - `Keywords`: Scheduling, Migration
+   - `Objective`: Cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7784459)
 
 </details>
 
@@ -1816,7 +1886,7 @@ Georgios B. Giannakis
 
 🤩There are some repositories which probably help you to comprehend or research this topic: 
 
-- [Virne: Python framework for VNE](https://github.com/GeminiLight/virne).
+- [Virne: Python framework for VNE](https://github.com/GeminiLight/virne)
 - [GNN-Communication-Networks](https://github.com/jwwthu/GNN-Communication-Networks)
 - [awesome-rl (Awesome Reinforcement Learning)](https://github.com/aikorea/awesome-rl)
 - [awesome-ml4co (Awesome Machine Learning for Combinatorial Optimization Resources)](https://github.com/Thinklab-SJTU/awesome-ml4co)

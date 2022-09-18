@@ -37,6 +37,7 @@ You can search the relevant papers by following keywords:
 
 - <a href="#1-survey-and-analysis">1. Survey and Analysis</a>
 - <a href="#2-mathematical-based-methods">2. Mathematical-based Methods</a>
+  - <a href="#23-Deployment">2.3 Deployment</a>
 - <a href="#3-heuristic-based-methods">3. Heuristic-based Methods</a>
   - <a href="#31-Slicing">3.1 Slicing</a>
   - <a href="#32-Chaining">3.2 Chaining</a>
@@ -172,6 +173,24 @@ You can search the relevant papers by following keywords:
 ## [2. Mathematical-based Methods](#content)
 
 > Solving these problems with exact mathematical methods usually needs expensive computing resources and running time, which limits its applications in most realistic scenarios.
+
+### [2.3 Deployment](#content)
+1. **A novel evaluation function for higher acceptance rates and more profitable metaheuristic-based online virtual network embedding**
+
+    - `Publication`: CN 2021 (**CCF-B**)
+    - `Authors`: ChristianAguilar-Fuster, JavierRubio-Loyola
+    - `Keywords`: Deployment, VNE, Evaluation functions, Fitness landscape
+    - `Objective`: Revenue-to-cost ratio+
+    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1389128621002449)
+
+1. **Enhancing Metaheuristic-Based Online Embedding in Network Virtualization Environments**
+
+    - `Publication`: TNSM 2018 (**JCR-Q1**)
+    - `Authors`: Javier Rubio-Loyola, Christian Aguilar-Fuster, Gregorio Toscano-Pulido, Rashid Mijumbi, and Joan Serrat-Fernández
+    - `Keywords`: Deployment, VNE, Fitness Function
+    - `Objective`: Revenue-to-cost ratio+
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9411723)
+
 
 ## [3. Heuristic-based Methods](#content)
 
@@ -354,20 +373,26 @@ You can search the relevant papers by following keywords:
 ### [3.3 Deployment](#content)
 
 1. **Online Service Function Chain Placement for Cost-effectiveness and Network Congestion Control**
-
     - `Publication`: TC 2022 (**CCF-A**)
     - `Authors`: Xiaojun Shang; Zhenhua Liu; Yuanyuan Yang
     - `Keywords`: Deployment, Routing, Online candidate path selection (OCPS)
     - `Objective`: Latency -, Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9248649)
-
+    
 1. **Multi-Resource VNF Deployment in a Heterogeneous Cloud**
     - `Publication`: TC 2022 (**CCF-A**)
     - `Authors`: Jiaqi Zheng; Zixuan Zhang; Qiufang Ma; Xiaofeng Gao; Chen Tian; Guihai Chen
     - `Keywords`: Deployment, Multi-Resource, Heterogeneous Cloud
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9280355)
-    
+
+1. **Optimal Embedding of Aggregated Service Function Tree**
+    - `Publication`: TPDS 2022 (**CCF-A**)
+    - `Authors`: Deke Guo; Bangbang Ren; Guoming Tang; Lailong Luo; Tao Chen; Xiaoming Fu
+    - `Keywords`: Deployment, aggregated service function tree, approximation algorithm
+    - `Objective`: Placement cost -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9698997)
+
 1. **CoShare: An Efficient Approach for Redundancy Allocation in NFV**
     - `Publication`: TON 2021 (**CCF-A**) (Early Access)
     - `Authors`: Yordanos Tibebu Woldeyohannes; Besmir Tola; Yuming Jiang; K. K. Ramakrishnan
@@ -1418,15 +1443,21 @@ Georgios B. Giannakis
 
 ### [4.3 Deployment](#content)
 
+1. **Multiagent Deep Reinforcement Learning for Cost- and Delay-Sensitive Virtual Network Function Placement and Routing**
+
+    - `Publication`: TPDS 2021 (**CCF-A**)
+    - `Authors`: Shaoyang Wang; Chau Yuen; Wei Ni; Yong Liang Guan; Tiejun Lvi
+    - `Keywords`: Deployment, Multiagent Deep Reinforcement Learning, deep deterministic policy gradient
+    - `Objective`: Cost -, Latency -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9810299)
 
 1. **Monkey Business: Reinforcement learning meets neighborhood search for Virtual Network Embedding**
-
-   - `Publication`: arXiv 2022
+   - `Publication`: CN 2022 (**CCF-B**)
    - `Authors`: Maxime Elkael; Massinissa Ait Aba; Andrea Araldo; Hind Castel; Badii Jouaber
    - `Keywords`: Deployment, MCTS (Monte Carlo tree search), Neighborhood Search
    - `Objective`: Cost -, Revenue-to-cost +
    - `Link`: [arXiv](https://arxiv.org/abs/2202.13706), [code](https://github.com/melkael/vne)
-
+   
 1. **On the Effective Parallelization and Near-Optimal Deployment of Service Function Chains**
 
     - `Publication`: TPDS 2021 (**CCF-A**)

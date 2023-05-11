@@ -21,7 +21,7 @@ We mainly collect papers from high-quality journals and conferences, and classif
 You can search the relevant papers by following keywords:
 
 - **Direction**: `Chaining`, `Deployment`, `Scheduling`, `Routing`, `Joint`
-- **Publication**: `SIGCOMM`,`INFOCOM`, `JSAC`, `TON`,`TMC`, `TPDS`, `TSC, ...
+- **Publication**: `SIGCOMM`,`INFOCOM`, `JSAC`, `TON`,`TMC`, `TPDS`, `TSC`, ...
 - **PUB-rank**: `CCF-A`, `CCF-B`, `JCR-Q1`, ...
 - **Scenario**: `Dsitributed`, `IoT`, `Edge`, `Mobile`, `Optical Network`, ...
 - **Awareness**: `Latency`, `Congestion`, `Privacy`, `Energy`, `Parallelization`, `Reliability`, `Multicast`
@@ -31,7 +31,7 @@ You can search the relevant papers by following keywords:
 ### Repository & Website
 
 - [Repository](https://github.com/GeminiLight/nfv-papers):  More timely updates
-- [Website](https://geminilight.github.io/nfv-papers/): Better reading experience
+- [Website](https://geminilight.github.io/sdn-nfv-papers/): Better reading experience
 
 ## [Content](#content)
 
@@ -175,28 +175,43 @@ You can search the relevant papers by following keywords:
 > Solving these problems with exact mathematical methods usually needs expensive computing resources and running time, which limits its applications in most realistic scenarios.
 
 ### [2.3 Deployment](#content)
-1. **A novel evaluation function for higher acceptance rates and more profitable metaheuristic-based online virtual network embedding**
 
-    - `Publication`: CN 2021 (**CCF-B**)
-    - `Authors`: ChristianAguilar-Fuster, JavierRubio-Loyola
-    - `Keywords`: Deployment, VNE, Evaluation functions, Fitness landscape
-    - `Objective`: Revenue-to-cost ratio+
-    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1389128621002449)
+1. **PlaceRAN: optimal placement of virtualized network functions in Beyond 5G radio access networks**
 
-1. **Enhancing Metaheuristic-Based Online Embedding in Network Virtualization Environments**
+    - `Publication`: TMC 2022 (**CCF-A**) (Early Access)
+    - `Authors`: Fernando Zanferrari Morais; Gabriel Matheus Faria De Almeida; Leizer Lima Pinto; Kleber Cardoso; Luis M. Contreras; Rodrigo da Rosa Righi; Cristiano Bonato Both
+    - `Keywords`: Deployment, Mobile, 5G Network, BILP (Binary Integer Linear Programming)
+    - `Objective`: Placement cost -, Latency -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9765734)
 
-    - `Publication`: TNSM 2018 (**JCR-Q1**)
-    - `Authors`: Javier Rubio-Loyola, Christian Aguilar-Fuster, Gregorio Toscano-Pulido, Rashid Mijumbi, and Joan Serrat-Fernández
-    - `Keywords`: Deployment, VNE, Fitness Function
-    - `Objective`: Revenue-to-cost ratio+
-    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9411723)
+1. **Digital Twin-Assisted, SFC-Enabled Service Provisioning in Mobile Edge Computing**
 
+    - `Publication`: TMC 2022 (**CCF-A**) (Early Access)
+    - `Authors`: Jing Li; Song Guo; Weifa Liang; Quan Chen; Zichuan Xu; Wenzheng Xu; Albert Y. Zomaya
+    - `Keywords`: Deployment, Mobile, Edge, Integer Linear Program (ILP)
+    - `Objective`: Placement cost -, Latency -, Reliability +
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9765734)
+
+1. **Placement and Allocation of Virtual Network Functions: Multi-dimensional Case**
+
+    - `Publication`: TMC 2022 (**CCF-A**) (Early Access)
+    - `Authors`: Sallam Gamal; Zizhan Zheng; Bo Ji
+    - `Keywords`: Deployment, Mobile, Edge, Relaxation, Multi-dimensional, Primal-dual technique
+    - `Objective`: Placement cost -, Latency -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9714778)
 
 ## [3. Heuristic-based Methods](#content)
 
 > Here are many heuristic-based and meta-heuristic-based methods, only part of which recently published are displayed directly. You can obtain more papers by clicking `more` button.
 
 ### [3.1 Slicing](#content)
+
+1. **An Agile and Distributed Mechanism for Inter-Domain Network Slicing in Next Generation Mobile Networks**
+    - `Publication`: TMC 2022 (**CCF-A**)
+    - `Authors`: Jalal Khamse-Ashari; Gamini Senarath; Irem Bor-Yaliniz; Halim Yanikomeroglu
+    - `Keywords`: Slicing, Distributed, Mobile Network
+    - `Objective`: Privacy-saving +
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9361144)
 
 1. **Multiservice-Based Network Slicing Orchestration With Impatient Tenants**
     - `Publication`: TWC 2022 (**CCF-B**)
@@ -273,6 +288,14 @@ You can search the relevant papers by following keywords:
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7982693)
 
 ### [3.2 Chaining](#content)
+
+1. **QoS and Resource-Aware Security Orchestration and Life Cycle Management**
+
+    - `Publication`: TMC 2022 (**CCF-A**)
+    - `Authors`: Miloud Bagaa; Tarik Taleb; Jorge Bernal Bernabe; Antonio Skarmeta
+    - `Keywords`: Chaining, Life Cycle Management, Security
+    - `Objective`: cost -, delay -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9305277)
 
 1. **Leveraging Network Functions Virtualization Orchestrators to Achieve Software-Defined Access Control in the Clouds**
 
@@ -422,6 +445,30 @@ You can search the relevant papers by following keywords:
     - `Objective`: Placement cost -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9967766)
 
+1. **Delay and Reliability-Constrained VNF Placement on Mobile and Volatile 5G Infrastructure**
+
+    - `Publication`: TMC 2022 (**CCF-A**)
+    - `Authors`: Balázs Németh; Nuria Molner; Jorge Martín-Pérez; Carlos J. Bernardos; Antonio de la Oliva; Balázs Sonkoly
+    - `Keywords`: Deployment, Mobile, 5G Network
+    - `Objective`: Placement cost -, Reliability -, Latency -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9339982)
+
+1. **Reducing the Service Function Chain Backup Cost Over the Edge and Cloud by a Self-Adapting Scheme**
+
+    - `Publication`: TMC 2022 (**CCF-A**)
+    - `Authors`: Xiaojun Shang; Yaodong Huang; Zhenhua Liu; Yuanyuan Yang
+    - `Keywords`: Deployment, Edge, Cloud
+    - `Objective`: Placement cost -, Reliability +, Latency -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9312434)
+
+1. **Pricing and Resource Allocation Optimization for IoT Fog Computing and NFV: An EPEC and Matching Based Perspective**
+
+    - `Publication`: TMC 2022 (**CCF-A**)
+    - `Authors`: Neetu Raveendran; Huaqing Zhang; Lingyang Song; Li-Chun Wang; Choong Seon Hong; Zhu Han
+    - `Keywords`: Deployment, Pricing
+    - `Objective`: Placement cost -
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9200548)
+
 1. **Optimal Embedding of Aggregated Service Function Tree**
 
     - `Publication`: TPDS 2022 (**CCF-A**)
@@ -569,6 +616,14 @@ You can search the relevant papers by following keywords:
 
 <details>
 <summary> more </summary>
+
+1. **A novel evaluation function for higher acceptance rates and more profitable metaheuristic-based online virtual network embedding**
+
+    - `Publication`: CN 2021 (**CCF-B**)
+    - `Authors`: ChristianAguilar-Fuster, JavierRubio-Loyola
+    - `Keywords`: Deployment, VNE, Evaluation functions, Fitness landscape
+    - `Objective`: Revenue-to-cost ratio+
+    - `Link`: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1389128621002449)
 
 1. **Virtual Network Function Allocation in Service Function Chains Using Backups With Availability Schedule**
 
@@ -1012,6 +1067,14 @@ Georgios B. Giannakis
    - `Objective`:  Acceptance rate +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8600712)
 
+1. **Enhancing Metaheuristic-Based Online Embedding in Network Virtualization Environments**
+
+    - `Publication`: TNSM 2018 (**JCR-Q1**)
+    - `Authors`: Javier Rubio-Loyola, Christian Aguilar-Fuster, Gregorio Toscano-Pulido, Rashid Mijumbi, and Joan Serrat-Fernández
+    - `Keywords`: Deployment, VNE, Fitness Function
+    - `Objective`: Revenue-to-cost ratio+
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9411723)
+
 1. **Distributed Service Function Chaining**
 
    - `Publication`: JSAC 2017 (**CCF-A**)
@@ -1168,13 +1231,29 @@ Georgios B. Giannakis
 
 ### [3.4 Scheduling](#content)
 
+1. **Online Control of Service Function Chainings Across Geo-Distributed Datacenters**
+
+   - `Publication`: TMC 2023 (**CCF-A**)
+   - `Authors`: Song Yang; Fan Li; Zhi Zhou; Xu Chen; Yu Wang; Xiaoming Fu
+   - `Keywords`: Scheduling, Online Control, Geo-Distributed Datacenters
+   - `Objective`: Cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9652100)
+
+1. **SAFE: Service Availability via Failure Elimination Through VNF Scaling**
+
+   - `Publication`: TON 2021 (**CCF-A**)
+   - `Authors`: Rui Xia; Haipeng Dai; Jiaqi Zheng; Rong Gu; Xiaoyu Wang; Weijun Wang; Guihai Chen
+   - `Keywords`: Scheduling, Scaling, Dynamic Programming, Consolidation 
+   - `Objective`: Number of servers -, Cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345766)
+
 1. **Service Placement and Request Scheduling for Data-Intensive Applications in Edge Clouds**
 
    - `Publication`: TON 2021 (**CCF-A**)
    - `Authors`: Vajiheh Farhadi; Fidan Mehmeti; Ting He; Thomas F. La Porta; Hana Khamfroush; Shiqiang Wang; Kevin S. Chan; Konstantinos Poularakis
    - `Keywords`: Joint, Deployment, Scheduling, Mobile Edge Computing
    - `Objective`: Cost -
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9345766)
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/10032318)
 
 1. **Highly-Efficient Switch Migration for Controller Load Balancing in Elastic Optical Inter-Datacenter Networks**
 
@@ -1484,6 +1563,22 @@ Georgios B. Giannakis
 
 ### [4.2 Chaining](#content)
 
+1. **Fair and Scalable Orchestration of Network and Compute Resources for Virtual Edge Services**
+
+   - `Publication`: TMC 2023 (**CCF-A**) (Early Access)
+   - `Authors`: Sharda Tripathi; Corrado Puligheddu; Somreeta Pramanik; Andres Garcia-Saavedra; Carla Fabiana Chiasserini
+   - `Keywords`: Chaining, DQN, Pareto analysis Autoencoder 
+   - `Objective`: Fair +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/10065522)
+
+1. **Orchestrating Energy-Efficient vRANs: Bayesian Learning and Experimental Results**
+
+   - `Publication`: TMC 2023 (**CCF-A**)
+   - `Authors`: Jose A. Ayala-Romero; Andres Garcia-Saavedra; Xavier Costa-Perez; George Iosifidis
+   - `Keywords`: Chaining, Energy, Bayesian Learning
+   - Objective: Energy -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9594669)
+
 1. **Endogenous Trusted DRL-Based Service Function Chain Orchestration for IoT**
 
    - `Publication`: TC 2022 (**CCF-A**)
@@ -1491,6 +1586,14 @@ Georgios B. Giannakis
    - `Keywords`: Chaining, A3C (Asynchronous Advantage Actor-Critic)
    - `Objective`: Orchestration cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9326381)
+
+1. **Endogenous Trusted DRL-Based Service Function Chain Orchestration for IoT**
+
+   - `Publication`: TMC 2022 (**CCF-A**)
+   - `Authors`: Jose A. Ayala-Romero; Andres Garcia-Saavedra; Marco Gramaglia; Xavier Costa-Pérez; Albert Banchs; Juan J. Alcaraz
+   - `Keywords`: Chaining, DDPG (deep deterministic policy gradient), Autoencoder 
+   - `Objective`: QoS +
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9286741)
 
 1. **Space-Air-Ground Integrated Multi-Domain Network Resource Orchestration Based on Virtual Network Architecture: A DRL Method**
    - `Publication`: TITS 2021 (**CCF-B**)
@@ -1532,22 +1635,6 @@ Georgios B. Giannakis
     - `Objective`: Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9300184)
 
-1. **Dynamic Virtual Network Embedding Algorithm based on Graph Convolution Neural Network and Reinforcement Learning**
-
-   - `Publication`: IoTJ 2021 (**JCR-Q1**)
-   - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Weishan Zhang; Lei Liu
-   - `Keywords`: Deployment, GNN, GCN, MDP (Markov Decision Process), Viterbi algorithm
-   - `Objective`: Placement cost -
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9475485)
-
-1. **VNE-HRL: A Proactive Virtual Network Embedding Algorithm Based on Hierarchical Reinforcement Learning**
-
-    - `Publication`: TNSM 2021 (**JCR-Q1**)
-    - `Authors`: Jin Cheng; Yulei Wu; Yeming Lin; Yuepeng E; Fan Tang; Jingguo Ge
-    - `Keywords`: VNE, Hierarchical RL
-    - `Objective`: Long-term revenue +
-    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9570771)
-
 1. **A-DDPG: Attention Mechanism-based Deep Reinforcement Learning for NFV**
 
    - `Publication`: IWQoS 2021 (**CCF-B**)
@@ -1556,13 +1643,13 @@ Georgios B. Giannakis
    - `Objective`: Placement cost -, Latency -
    - `Link`: [paper](https://research.tudelft.nl/files/93969106/IWQoS2021.pdf)
 
-1. **A Heuristically Assisted Deep Reinforcement Learning Approach for Network Slice Placement**
+1. **DRL-SFCP: Adaptive Service Function Chains Placement with Deep Reinforcement Learning**
 
-   - `Publication`: TNSM 2020 (**JCR-Q1**)
-   - `Authors`: Jose Jurandir Alves Esteves, Amina Boubendir, Fabrice Guillemin, Pierre Sens
-   - `Keywords`: Deployment, A3C, GCN
-   - `Objective`: Acceptance rate +
-   - `Link`: [arXiv](https://arxiv.org/abs/2105.06741)
+   - `Publication`: ICC 2021 (**CCF-C**)
+   - `Authors`: Tianfu Wang; Qilin Fan; Xiuhua Li; Xu Zhang; Qingyu Xiong; Shu Fu; Min Gao
+   - `Keywords`: Deployment, GNN, GCN, Seq2Seq, GRU, A3C
+   - `Objective`: Placement cost -, Acceptance rate +
+   - `Link`: [paper](https://www.researchgate.net/publication/353788807_DRL-SFCP_Adaptive_Service_Function_Chains_Placement_with_Deep_Reinforcement_Learning), [code](https://github.com/GeminiLight/drl-sfcp)
 
 1. **Automatic Virtual Network Embedding: A Deep Reinforcement Learning Approach With Graph Convolutional Networks**
 
@@ -1634,14 +1721,6 @@ Georgios B. Giannakis
    - `Keywords`: Continuous-Decision, Time Series, RNN, Seq2Seq
    - `Objective`: Long term average revenue to cost ratio +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/8982091)
-
-1. **A Privacy-Preserving Reinforcement Learning Algorithm for Multi-Domain Virtual Network Embedding**
-
-   - `Publication`: TNSM 2020 (**JCR-Q1**)
-   - `Authors`: Davide Andreoletti, Tanya Velichkova, Giacomo Verticale, Massimo Tornatore , Silvia Giordano
-   - `Keywords`: Deployment, Multi-domain, Privacy
-   - `Objective`: /
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9187205)
 
 1. **Multi-domain Non-cooperative VNF-FG Embedding: A Deep Reinforcement Learning Approach**
 
@@ -1730,22 +1809,62 @@ Georgios B. Giannakis
    - `Objective`:  Acceptance rate +
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/7207337)
 
+<!-- 1. **Dynamic Virtual Network Embedding Algorithm based on Graph Convolution Neural Network and Reinforcement Learning**
+
+   - `Publication`: IoTJ 2021 (**JCR-Q1**)
+   - `Authors`: Peiying Zhang; Chao Wang; Neeraj Kumar; Weishan Zhang; Lei Liu
+   - `Keywords`: Deployment, GNN, GCN, MDP (Markov Decision Process), Viterbi algorithm
+   - `Objective`: Placement cost -
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9475485) -->
+
+<!-- 1. **VNE-HRL: A Proactive Virtual Network Embedding Algorithm Based on Hierarchical Reinforcement Learning**
+
+    - `Publication`: TNSM 2021 (**JCR-Q1**)
+    - `Authors`: Jin Cheng; Yulei Wu; Yeming Lin; Yuepeng E; Fan Tang; Jingguo Ge
+    - `Keywords`: VNE, Hierarchical RL
+    - `Objective`: Long-term revenue +
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9570771) -->
+
+<!-- 1. **A Heuristically Assisted Deep Reinforcement Learning Approach for Network Slice Placement**
+
+   - `Publication`: TNSM 2020 (**JCR-Q1**)
+   - `Authors`: Jose Jurandir Alves Esteves, Amina Boubendir, Fabrice Guillemin, Pierre Sens
+   - `Keywords`: Deployment, A3C, GCN
+   - `Objective`: Acceptance rate +
+   - `Link`: [arXiv](https://arxiv.org/abs/2105.06741) -->
+
+<!-- 1. **A Privacy-Preserving Reinforcement Learning Algorithm for Multi-Domain Virtual Network Embedding**
+
+   - `Publication`: TNSM 2020 (**JCR-Q1**)
+   - `Authors`: Davide Andreoletti, Tanya Velichkova, Giacomo Verticale, Massimo Tornatore , Silvia Giordano
+   - `Keywords`: Deployment, Multi-domain, Privacy
+   - `Objective`: /
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9187205) -->
+
 ### [4.4 Scheduling](#content)
+
+1. **Revenue-Optimal Auction for Resource Allocation in Wireless Virtualization: A Deep Learning Approach**
+   
+   - `Publication`: TMC 2022 (**CCF-A**)
+   - `Authors`: Kun Zhu; Yuanyuan Xu; Qian Jun; Dusit Niyato
+   - `Keywords`: Scheduling, Resource Allocation, Auction
+   - `Objective`: Maximize MVNOs' own revenues 
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9186199)
 
 1. **Reliability-aware Dynamic Service Chain Scheduling in 5G Networks based on Reinforcement Learning**
    
    - `Publication`: INFOCOM 2021 (**CCF-A**)
    - `Authors`: Junzhong Jia; Lei Yang; Jiannong Cao
    - `Keywords`: Scheduling, MIIP, Reliability, Redundancy, A3C, TextCNN
-     - `Objective`: Decide the redundancy of the Scheduling while minimizing delay
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9488707/)
+   - `Objective`: Decide the redundancy of the Scheduling while minimizing delay
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9488707/)
 
 1. **Towards Chain-Aware Scaling Detection in NFV with Reinforcement Learning**
    - `Publication`: IWQOS 2021 (**CCF-B**)
    - `Authors`: Lin He; Lis han Li; Ying Liu
    - `Keywords`: Scaling ,A3C
    - `Objective`: Cost -	
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9521362/)
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9521362/)
    
 1. **Management and Orchestration of Virtual Network Functions via Deep Reinforcement Learning**
 
@@ -1834,6 +1953,13 @@ Georgios B. Giannakis
 ## [5. Other and Unclassified](#content)
 
 > Here are two types of papers: one is related to other topics of NFV and SDN and waiting to be classified; the other is the latest research work collected from arXiv.
+
+1. **Federated Multi-Discriminator BiWGAN-GP Based Collaborative Anomaly Detection for Virtualized Network Slicing**
+
+   - `Publication`: TMC 2022 (**CCF-A**)
+   - `Authors`: Weili Wang; Chengchao Liang; Lun Tang; Halim Yanikomeroglu; Qianbin Chen
+   - `Keywords`: Anomaly Detection
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9863661)
 
 1. **SDNShield: NFV-Based Defense Framework Against DDoS Attacks on SDN Control Plane**
 

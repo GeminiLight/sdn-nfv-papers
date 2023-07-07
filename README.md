@@ -1295,7 +1295,7 @@ Georgios B. Giannakis
    - `Authors`: Biyi Li, Bo Cheng, Yi Yue, Meng Wang, Junliang Chen
    - `Keywords`: Migration
    - `Objective`: Cost -, Latency -
-   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9007052)
+   - `Link`: [ACM DL](https://dl.acm.org/doi/10.1145/3372224.3418166)
    
 1. **An Online Algorithm for VNF Service Chain Scaling in Datacenters**
 

@@ -55,6 +55,11 @@ You can search the relevant papers by following keywords:
 
 ## [1. Survey and Analysis](#content)
 
+1. **VNF and CNF Placement in 5G: Recent Advances and Future Trends**
+   - `Publication`: IEEE Transactions on Network and Service Management  2023
+   - `Authors`: Wissal Attaoui, Essaid Sabir, Halima Elbiaze, Mohsen Guizani
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/10090468)
+
 1. **Network Services Anomalies in NFV: Survey, Taxonomy, and Verification Methods**
    - `Publication`: TNSM 2022 (**JCR-Q1**)
    - `Authors`: Moubarak Zoure;Toufik Ahmed;Laurent Réveillére

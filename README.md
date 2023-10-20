@@ -16,6 +16,10 @@ Here, VNF - Virtual Network Function and SFC - Service Function Chain.
 
 We mainly collect papers from high-quality journals and conferences, and classify them according to method categories. Particularly, you can find more details of  papers in the **Machine Learning-based** section, which represents an encouraging technique to efficiently solve network resource allocation problems.
 
+<div align="center">
+  <img src="sdn-nfv-illustration.png" alt="SDN and NFV Illustration" width="50%">
+</div>
+
 ### Search by Keywords
 
 You can search the relevant papers by following keywords:
@@ -56,7 +60,7 @@ You can search the relevant papers by following keywords:
 ## [1. Survey and Analysis](#content)
 
 1. **VNF and CNF Placement in 5G: Recent Advances and Future Trends**
-   - `Publication`: IEEE Transactions on Network and Service Management  2023
+   - `Publication`: TNSM 2023 (**JCR-Q1**)
    - `Authors`: Wissal Attaoui, Essaid Sabir, Halima Elbiaze, Mohsen Guizani
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/10090468)
 

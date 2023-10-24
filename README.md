@@ -1623,7 +1623,7 @@ Georgios B. Giannakis
 
 1. **Joint Admission Control and Resource Allocation of Virtual Network Embedding Via Hierarchical Deep Reinforcement Learning**
 
-    - `Publication`: TSC 2021 (**CCF-A**)
+    - `Publication`: TSC 2023 (**CCF-A**)
     - `Authors`: Tianfu Wang; Li Shen; Qilin Fan; Tong Xu; Tongliang Liu; Hui Xiong
     - `Keywords`: Deployment, Hierarchical Deep Reinforcement Learning; Graph Attention Network (GNN, GAT), proximal policy optimization (PPO)
     - `Objective`: Cost -, Revenue-to-cost +, Long-term Revenue +

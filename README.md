@@ -1621,6 +1621,21 @@ Georgios B. Giannakis
 
 ### [4.3 Deployment](#content)
 
+1. **Joint Admission Control and Resource Allocation of Virtual Network Embedding Via Hierarchical Deep Reinforcement Learning**
+
+    - `Publication`: TSC 2021 (**CCF-A**)
+    - `Authors`: Tianfu Wang; Li Shen; Qilin Fan; Tong Xu; Tongliang Liu; Hui Xiong
+    - `Keywords`: Deployment, Hierarchical Deep Reinforcement Learning; Graph Attention Network (GNN, GAT), proximal policy optimization (PPO)
+    - `Objective`: Cost -, Revenue-to-cost +, Long-term Revenue +
+    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/10291038)
+
+1. **Monkey Business: Reinforcement learning meets neighborhood search for Virtual Network Embedding**
+   - `Publication`: CN 2022 (**CCF-B**)
+   - `Authors`: Maxime Elkael; Massinissa Ait Aba; Andrea Araldo; Hind Castel; Badii Jouaber
+   - `Keywords`: Deployment, MCTS (Monte Carlo tree search), Neighborhood Search
+   - `Objective`: Cost -, Revenue-to-cost +
+   - `Link`: [arXiv](https://arxiv.org/abs/2202.13706), [code](https://github.com/melkael/vne)
+
 1. **Multiagent Deep Reinforcement Learning for Cost- and Delay-Sensitive Virtual Network Function Placement and Routing**
 
     - `Publication`: TPDS 2021 (**CCF-A**)
@@ -1629,13 +1644,6 @@ Georgios B. Giannakis
     - `Objective`: Cost -, Latency -
     - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9810299)
 
-1. **Monkey Business: Reinforcement learning meets neighborhood search for Virtual Network Embedding**
-   - `Publication`: CN 2022 (**CCF-B**)
-   - `Authors`: Maxime Elkael; Massinissa Ait Aba; Andrea Araldo; Hind Castel; Badii Jouaber
-   - `Keywords`: Deployment, MCTS (Monte Carlo tree search), Neighborhood Search
-   - `Objective`: Cost -, Revenue-to-cost +
-   - `Link`: [arXiv](https://arxiv.org/abs/2202.13706), [code](https://github.com/melkael/vne)
-   
 1. **On the Effective Parallelization and Near-Optimal Deployment of Service Function Chains**
 
     - `Publication`: TPDS 2021 (**CCF-A**)

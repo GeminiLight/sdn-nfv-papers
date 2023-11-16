@@ -1596,7 +1596,7 @@ Georgios B. Giannakis
    - `Objective`: Orchestration cost -
    - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/9326381)
 
-1. **Endogenous Trusted DRL-Based Service Function Chain Orchestration for IoT**
+1. **EvrAIn: Deep Learning Based Orchestration for Computing and Radio Resources in vRANs**
 
    - `Publication`: TMC 2022 (**CCF-A**)
    - `Authors`: Jose A. Ayala-Romero; Andres Garcia-Saavedra; Marco Gramaglia; Xavier Costa-Pérez; Albert Banchs; Juan J. Alcaraz

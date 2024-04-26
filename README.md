@@ -1621,6 +1621,14 @@ Georgios B. Giannakis
 
 ### [4.3 Deployment](#content)
 
+1. **FlagVNE: A Flexible and Generalizable Reinforcement Learning Framework for Network Resource Allocation**
+
+    - `Publication`: IJCAI 2024 (**CCF-A**)
+    - `Authors`: Tianfu Wang, Qilin Fan, Chao Wang, Long Yang, Leilei Ding, Nicholas Jing Yuan, Hui Xiong
+    - `Keywords`: Deployment, Deep Reinforcement Learning; Meta Learning; Graph Convolutional Network (GNN, GCN), proximal policy optimization (PPO)
+    - `Objective`: Cost -, Revenue-to-cost +, Long-term Revenue +
+    - `Link`: [arXiv](https://arxiv.org/abs/2404.12633)
+
 1. **Joint Admission Control and Resource Allocation of Virtual Network Embedding Via Hierarchical Deep Reinforcement Learning**
 
     - `Publication`: TSC 2023 (**CCF-A**)
@@ -1970,6 +1978,13 @@ Georgios B. Giannakis
 ## [5. Other and Unclassified](#content)
 
 > Here are two types of papers: one is related to other topics of NFV and SDN and waiting to be classified; the other is the latest research work collected from arXiv.
+
+1. **Availability Aware Online Virtual Network Function Backup in Edge Environments**
+
+   - `Publication`: TMC 2024 (**CCF-A**)
+   - `Authors`: Yu Liu; Xiaojun Shang; Yingling Mao; Zhenhua Liu; Yuanyuan Yang
+   - `Keywords`: Backup
+   - `Link`: [IEEE Xplore](https://ieeexplore.ieee.org/document/10141870)
 
 1. **Federated Multi-Discriminator BiWGAN-GP Based Collaborative Anomaly Detection for Virtualized Network Slicing**
 

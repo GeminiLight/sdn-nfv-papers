@@ -1,6 +1,9 @@
 # Papers on Network Resource Allocation
 
-> 🌟 We have released [Virne](https://github.com/GeminiLight/virne), a python framework providing various algorithms for Virtual Network Embedding (VNE) problem
+> [!IMPORTANT]
+> 🎉 We have released [Virne](https://github.com/GeminiLight/virne) and its benchmark paper. Welcome to check them out!
+>
+> ✨ [Virne](https://github.com/GeminiLight/virne) is a simulator and benchmark designed to address resource allocation (RA) problems in network function virtualization (NFV), with a highlight on supporting reinforcement learning (RL)-based algorithms.
 
 This is a paper list about Network Resource Allocation in [Software-Defined Networking](https://en.wikipedia.org/wiki/Software-defined_networking) (SDN) and [Network Functions Virtualization](https://en.wikipedia.org/wiki/Network_function_virtualization) (NFV), including
 
@@ -10,7 +13,7 @@ This is a paper list about Network Resource Allocation in [Software-Defined Netw
 - **Deployment**: VNF Deployment (aka SFC Deployment)
 - **Scheduling**: VNF Scheduling (including Scaling, Reconfiguration and Migration)
 - **Routing**: Network Traffic Measurement and Management
-- **Multi-domain** (aka cross-domain, multi-region or other resemble name)
+- **Multi-domain** (aka cross-domain, multi-region or other resemble names)
 
 Here, VNF - Virtual Network Function and SFC - Service Function Chain.
 

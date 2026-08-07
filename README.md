@@ -63,18 +63,21 @@ You can search the relevant papers by following keywords:
   <img src="visualization/papers-by-direction.svg" alt="Horizontal bar chart of cataloged papers by primary research direction" width="100%">
 </p>
 
-- **Catalog coverage:** 249 papers spanning **2012–2026**.
-- **Largest method family:** Heuristic — **156 papers (62.7%)**.
-- **Most represented direction:** Deployment — **126 papers (50.6%)**.
+- **Catalog coverage:** 336 papers spanning **2012–2026**.
+- **Largest method family:** Heuristic — **192 papers (57.1%)**.
+- **Most represented direction:** Deployment — **156 papers (46.4%)**.
 - **Most represented publication year:** 2021 — **56 papers**.
 
 ## Content
 
-> Generated from `data/papers.csv`: **249 verified paper records**.
+> Generated from `data/papers.csv`: **336 verified paper records**.
 
 - [1. Survey and Analysis](#1-survey-and-analysis)
 - [2. Mathematical-based Methods](#2-mathematical-based-methods)
+  - [2.1 Slicing](#21-slicing)
   - [2.3 Deployment](#23-deployment)
+  - [2.4 Scheduling](#24-scheduling)
+  - [2.5 Routing](#25-routing)
 - [3. Heuristic-based Methods](#3-heuristic-based-methods)
   - [3.1 Slicing](#31-slicing)
   - [3.2 Chaining](#32-chaining)
@@ -206,7 +209,65 @@ You can search the relevant papers by following keywords:
 
 ## [2. Mathematical-based Methods](#content)
 
+### [2.1 Slicing](#content)
+
+1. **Reliability-Enhanced Network Slicing for Time-Varying Software-Defined Space Information Network**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Huiting Yang; Feng Wang; Wei Liu; Wenqiang Pu; Haibo Zhou; Tony Q. S. Quek
+   - `Keywords`: Software-defined space information network; Network slicing; Service function chain; Reliability; Time-varying topology
+   - `Objective`: Service reliability +; Resource utilization +; Deployment cost -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2025.3642190)
+
+1. **Analytical Modeling and Improvement of Interference-Coupled RAN Slicing**
+   - `Publication`: TMC 2024 (**CCF-A**)
+   - `Authors`: Seyed Ali Hashemian; Farid Ashtiani
+   - `Keywords`: RAN slicing; Interference coupling; Analytical model; Resource isolation
+   - `Objective`: Resource efficiency +; Inter-slice interference -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2024.3431194)
+
+1. **End-to-End Resource Slicing for Coexistence of eMBB and URLLC Services in 5G-Advanced/6G Networks**
+   - `Publication`: TMC 2024 (**CCF-A**)
+   - `Authors`: Shiva Kazemi Taskou; Mehdi Rasti; Ekram Hossain
+   - `Keywords`: End-to-end slicing; eMBB; URLLC; 5G-Advanced; 6G
+   - `Objective`: eMBB throughput +; URLLC latency -; Reliability +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2023.3341810)
+
+1. **Hierarchical Network Slicing for UAV-Assisted Wireless Networks With Deployment Optimization**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Fengsheng Wei; Gang Feng; Shuang Qin; Youkun Peng; Yijing Liu
+   - `Keywords`: Hierarchical network slicing; UAV deployment; Joint optimization
+   - `Objective`: Slice utility +; UAV deployment cost -
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2024.3459055)
+
 ### [2.3 Deployment](#content)
+
+1. **Robust SFC Placement in Next Generation Multi-Domain IoT Networks Under Resource Demand Uncertainty**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Chuangchuang Zhang; Qiang He; Fuliang Li; Xingwei Wang; Wei Qian; Junxin Chen; Kaifa Zheng; Ammar Hawbani; Keping Yu
+   - `Keywords`: NFV; Service function chain; Multi-domain IoT; Robust optimization; Resource uncertainty
+   - `Objective`: Placement cost -; Constraint violations -; Robustness +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2026.3654970)
+
+1. **Quantum-Assisted Joint Virtual Network Function Deployment and Maximum Flow Routing for Space Information Networks**
+   - `Publication`: TMC 2025 (**CCF-A**)
+   - `Authors`: Yu Zhang; Yanmin Gong; Lei Fan; Yu Wang; Zhu Han; Yuanxiong Guo
+   - `Keywords`: NFV; Space information network; VNF deployment; Maximum-flow routing; Quantum optimization
+   - `Objective`: Processed data +; Routing throughput +; Solution time -
+   - `Link`: [arXiv](https://arxiv.org/abs/2409.13508), [published version](https://doi.org/10.1109/tmc.2024.3466857)
+
+1. **AoI-Aware Inference Services in Edge Computing via Digital Twin Network Slicing**
+   - `Publication`: TSC 2024 (**CCF-A**)
+   - `Authors`: Yuncan Zhang; Weifa Liang; Zichuan Xu; Wenzheng Xu; Min Chen
+   - `Keywords`: Digital twin; Network slicing; Edge inference; Online admission; Competitive analysis
+   - `Objective`: Expected cost -; Age of information -; Acceptance ratio +
+   - `Link`: [DOI](https://doi.org/10.1109/tsc.2024.3436705)
+
+1. **Cell-Free Massive MIMO in O-RAN: Energy-Aware Joint Orchestration of Cloud, Fronthaul, and Radio Resources**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Özlem Tuğfe Demir; Meysam Masoudi; Emil Björnson; Cicek Cavdar
+   - `Keywords`: O-RAN; Cell-free massive MIMO; Cloud resources; Fronthaul; Joint orchestration
+   - `Objective`: Energy consumption -
+   - `Link`: [arXiv](https://arxiv.org/abs/2301.06166), [published version](https://doi.org/10.1109/jsac.2023.3336187)
 
 1. **Digital Twin-Assisted, SFC-Enabled Service Provisioning in Mobile Edge Computing**
    - `Publication`: TMC 2024 (**CCF-A**)
@@ -214,6 +275,13 @@ You can search the relevant papers by following keywords:
    - `Keywords`: Deployment; Mobile; Edge; Integer Linear Program (ILP)
    - `Objective`: Placement cost -; Latency -; Reliability +
    - `Link`: [DOI](https://doi.org/10.1109/tmc.2022.3227248)
+
+1. **Neyman-Pearson Criterion Driven NFV-SDN Architectures and Optimal Resource-Allocations for Statistical-QoS Based mURLLC Over Next-Generation Metaverse Mobile Networks Using FBC**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Xi Zhang; Qixuan Zhu; H. Vincent Poor
+   - `Keywords`: NFV-SDN; Statistical QoS; mURLLC; Finite blocklength coding; Neyman-Pearson criterion
+   - `Objective`: Effective capacity +; QoS violation probability -
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2023.3345428)
 
 1. **Placement and Allocation of Virtual Network Functions: Multi-dimensional Case**
    - `Publication`: TMC 2023 (**CCF-A**)
@@ -229,10 +297,119 @@ You can search the relevant papers by following keywords:
    - `Objective`: Placement cost -; Latency -
    - `Link`: [DOI](https://doi.org/10.1109/tmc.2022.3171525)
 
+### [2.4 Scheduling](#content)
+
+1. **DetO-RAN: Dual-Timescale Resource Allocation for Flows in Deterministic Open RAN**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Kai Qiao; Hao Xiong; Qinding Wang; Zihao Zhang; Hongchao Wang; Weiting Zhang; Dong Yang
+   - `Keywords`: Deterministic O-RAN; Dual-timescale allocation; Flow scheduling; Radio resource management; QoS
+   - `Objective`: Schedulability +; Deadline violations -; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2026.3697378)
+
+1. **FairRIC: Real-Time Fair Allocation in O-RAN with Shared Computing**
+   - `Publication`: INFOCOM 2025 (**CCF-A**)
+   - `Authors`: Fatih Aslan; Jose A. Ayala-Romero; Andres Garcia-Saavedra; Xavier Costa-Perez; George Iosifidis
+   - `Keywords`: O-RAN; Shared computing; Online convex optimization; Real-time allocation; Long-term fairness
+   - `Objective`: Allocation fairness +; Energy consumption -; Decision time -
+   - `Link`: [DOI](https://doi.org/10.1109/infocom55648.2025.11044643)
+
+1. **Online Flow Scheduling in Virtualized Time-Sensitive Networks: A Joint Admission Control and VNF Embedding Approach**
+   - `Publication`: TMC 2025 (**CCF-A**)
+   - `Authors`: Yajing Zhang; Cailian Chen; Mingyan Li; Chaoqun You; Xinping Guan; Tony Q. S. Quek
+   - `Keywords`: Virtualized time-sensitive networking; Online scheduling; Admission control; VNF embedding; Deterministic latency
+   - `Objective`: Acceptance ratio +; Deadline violations -; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2025.3527749)
+
+1. **Optimal Control for Distributed Wireless SDN: Theory and Architecture**
+   - `Publication`: TON 2025 (**CCF-A**)
+   - `Authors`: Quang Minh Nguyen; Eytan Modiano
+   - `Keywords`: Distributed wireless SDN; Max-weight control; Inter-domain scheduling; Delayed network state; Controller synchronization
+   - `Objective`: Throughput +; Control delay -; Stability +
+   - `Link`: [DOI](https://doi.org/10.1109/ton.2025.3560605)
+
+1. **ORANUS: Latency-Tailored Orchestration via Stochastic Network Calculus in 6G O-RAN**
+   - `Publication`: INFOCOM 2024 (**CCF-A**)
+   - `Authors`: Oscar Adamuz-Hinojosa; Lanfranco Zanzi; Vincenzo Sciancalepore; Andres Garcia-Saavedra; Xavier Costa-Pérez
+   - `Keywords`: 6G O-RAN; Stochastic network calculus; Tail latency; Orchestration
+   - `Objective`: Tail latency violations -; Resource utilization +
+   - `Link`: [arXiv](https://arxiv.org/abs/2401.03812), [published version](https://doi.org/10.1109/infocom52122.2024.10621356)
+
+### [2.5 Routing](#content)
+
+1. **A Fast Solver-Free Algorithm for Traffic Engineering in Large-Scale Data Center Network**
+   - `Publication`: NSDI 2026 (**CCF-A**)
+   - `Authors`: Yingming Mao; Qiaozhu Zhai; Ximeng Liu; Zhen Yao; Xia Zhu; Yuzhou Zhou
+   - `Keywords`: Data center network; Traffic engineering; Solver-free optimization; Split ratio; Maximum link utilization
+   - `Objective`: Maximum link utilization -; Solver runtime -; Scalability +
+   - `Link`: [arXiv](https://arxiv.org/abs/2504.04027), [usenix.org](https://www.usenix.org/conference/nsdi26/presentation/mao)
+
+1. **An SFC-Constrained Max-Flow Solver for Satellite Networks Using Flexible Function-Time Expanded Graph**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Peng Wang; Suman Sourav; Binbin Chen; Hongyan Li
+   - `Keywords`: Satellite network; Service function chain; Maximum flow; Function-time expanded graph; Joint compute-network resources
+   - `Objective`: Maximum flow +; Resource utilization +; Solver runtime -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2025.3623456)
+
+1. **RRO: A Regularized Routing Optimization Algorithm for Enhanced Throughput and Low Latency With Efficient Complexity**
+   - `Publication`: JSAC 2025 (**CCF-A**)
+   - `Authors`: David Zenati; Tzalik Maimon; Kobi Cohen
+   - `Keywords`: Routing optimization; Regularization; Wireless networks; Low-complexity control
+   - `Objective`: Throughput +; Latency -; Computational complexity -
+   - `Link`: [arXiv](https://arxiv.org/abs/2407.18683), [published version](https://doi.org/10.1109/jsac.2025.3528813)
+
+1. **Network-Aided Intelligent Traffic Steering in 6G O-RAN: A Multi-Layer Optimization Framework**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Van-Dinh Nguyen; Thang X. Vu; Nhan Thanh Nguyen; Dinh C. Nguyen; Markku Juntti; Nguyen Cong Luong; Dinh Thai Hoang; Diep N. Nguyen; Symeon Chatzinotas
+   - `Keywords`: 6G O-RAN; Traffic steering; Multi-layer optimization; Radio resource allocation
+   - `Objective`: Network utility +; Throughput +
+   - `Link`: [arXiv](https://arxiv.org/abs/2302.02711), [published version](https://doi.org/10.1109/jsac.2023.3336183)
+
 
 ## [3. Heuristic-based Methods](#content)
 
 ### [3.1 Slicing](#content)
+
+1. **Failure Recovery for Network Slicing in Software-Defined Integrated Satellite-Terrestrial Networks**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Huiting Yang; Shengyu Zhang; Wei Liu; Wenqiang Pu; Haibo Zhou; Zan Li; Tony Q. S. Quek
+   - `Keywords`: Network slicing; Software-defined satellite-terrestrial network; Failure recovery; VNF remapping; Dynamic topology
+   - `Objective`: Recovery success +; Service interruption -; Recovery cost -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2026.3708374)
+
+1. **Mixed Numerology-Based Intelligent Resource Management in a Sliced 6G Space–Terrestrial Integrated Radio Access Network**
+   - `Publication`: TMC 2025 (**CCF-A**)
+   - `Authors`: Ning Hui; Qian Sun; Jie Zeng; Lin Tian; Yuanyuan Wang; Yiqing Zhou
+   - `Keywords`: 6G slicing; Space-terrestrial RAN; Mixed numerology; Social group optimization; Inter-numerology interference
+   - `Objective`: System utility +; Inter-numerology interference -; Slice isolation +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2024.3494842)
+
+1. **SAST-VNE: A Flexible Framework for Network Slicing in 6G Integrated Satellite-Terrestrial Networks**
+   - `Publication`: JSAC 2025 (**CCF-A**)
+   - `Authors`: Mario Minardi; Youssouf Drif; Thang X. Vu; Symeon Chatzinotas
+   - `Keywords`: Network slicing; Virtual network embedding; Satellite-terrestrial network; Traffic prioritization; Migration
+   - `Objective`: Migration cost -; Network load -; Slice priority satisfaction +
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2024.3460066)
+
+1. **Dynamic Network Slice for Bursty Edge Traffic**
+   - `Publication`: TON 2024 (**CCF-A**)
+   - `Authors`: Rongxin Han; Jingyu Wang; Qi Qi; Dezhi Chen; Zirui Zhuang; Haifeng Sun; Xiaoyuan Fu; Jianxin Liao; Song Guo
+   - `Keywords`: Dynamic slicing; Bursty traffic; Edge network; Elastic resource provisioning
+   - `Objective`: Resource utilization +; QoS violations -
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2024.3376794)
+
+1. **Information-Aware Driven Dynamic LEO-RAN Slicing Algorithm Joint With Communication, Computing, and Caching**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Geng Chen; Shuhu Qi; Fei Shen; Qingtian Zeng; Yu-Dong Zhang
+   - `Keywords`: LEO-RAN; Dynamic slicing; Communication-computing-caching; Information-aware scheduling
+   - `Objective`: Service utility +; Latency -
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2024.3365893)
+
+1. **Maximize the Long-Term Average Revenue of Network Slice Provider via Admission Control Among Heterogeneous Slices**
+   - `Publication`: TON 2024 (**CCF-A**)
+   - `Authors`: Miao Dai; Gang Sun; Hongfang Yu; Dusit Niyato
+   - `Keywords`: Network slicing; Admission control; Heterogeneous slices; Auction mechanism
+   - `Objective`: Provider revenue +; Admission fairness +
+   - `Link`: [arXiv](https://arxiv.org/abs/2304.10057), [published version](https://doi.org/10.1109/tnet.2023.3297883)
 
 1. **An Agile and Distributed Mechanism for Inter-Domain Network Slicing in Next Generation Mobile Networks**
    - `Publication`: TMC 2022 (**CCF-A**)
@@ -301,6 +478,27 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tnet.2017.2720668)
 
 ### [3.2 Chaining](#content)
+
+1. **SDN-Based Service Function Chaining in Integrated Terrestrial and LEO Satellite-Based Space Internet**
+   - `Publication`: JSAC 2025 (**CCF-A**)
+   - `Authors`: Gao Zheng; Ning Wang; Peng Qian; David Griffin; Regius Rahim Tafazolli
+   - `Keywords`: SDN; NFV; Service function chaining; LEO satellite; Geosynchronous orchestration
+   - `Objective`: Routing recalculation overhead -; Data-plane performance +; Control-plane performance +
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2025.3528807)
+
+1. **A Practical Near Optimal Deployment of Service Function Chains in Edge-to-Cloud Networks**
+   - `Publication`: INFOCOM 2024 (**CCF-A**)
+   - `Authors`: Rasoul Behravesh; David Breitgand; Dean H. Lorenz; Danny Raz
+   - `Keywords`: Service function chain; Edge-to-cloud; Near-optimal deployment
+   - `Objective`: Deployment cost -; Latency -
+   - `Link`: [arXiv](https://arxiv.org/abs/2401.07611), [published version](https://doi.org/10.1109/infocom52122.2024.10621162)
+
+1. **FlexNF: Flexible Network Function Orchestration for Scalable On-Path Service Chain Serving**
+   - `Publication`: TON 2024 (**CCF-A**)
+   - `Authors`: Jingyu Xiao; Xudong Zuo; Qing Li; Dan Zhao; Hanyu Zhao; Yong Jiang; Jiyong Sun; Bin Chen; Yong Liang; Jie Li
+   - `Keywords`: Network function orchestration; Service chaining; On-path serving; Programmable data plane
+   - `Objective`: Throughput +; Scalability +
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2023.3334237)
 
 1. **QoS and Resource-Aware Security Orchestration and Life Cycle Management**
    - `Publication`: TMC 2022 (**CCF-A**)
@@ -408,6 +606,104 @@ You can search the relevant papers by following keywords:
 
 ### [3.3 Deployment](#content)
 
+1. **PAAP: A Graph-Based VNF Deployment Framework for Embedding Bidirectional SFC in Mobile Edge Networks**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Yuhao Xie; Dehui Ou; Zhen Zhang; Yuhui Deng; Geyong Min; Lin Cui; Zhijie Wang
+   - `Keywords`: Bidirectional service function chain; VNF deployment; Mobile edge network; Graph embedding; User mobility
+   - `Objective`: Resource utilization +; Embedding cost -; Service latency -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2025.3617016)
+
+1. **VMR-STAG Based Online SFC Orchestration in Space-Terrestrial Integrated Networks**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Yepeng Liu; Ran Zhang; Jiang Liu; Ninghan Sun; Xinyuan Zhang
+   - `Keywords`: Space-terrestrial integrated network; Online SFC orchestration; Time-aggregated graph; Dynamic topology; Multi-resource storage
+   - `Objective`: Acceptance ratio +; Blocking rate -; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2025.3619832)
+
+1. **AoRA: AI-on-RAN for Backhaul-free Edge Inference**
+   - `Publication`: SIGCOMM 2025 (**CCF-A**)
+   - `Authors`: Siyavushkhon Kholmatov; Seongsik Cho; Kyunghan Lee; Song Chong
+   - `Keywords`: AI-on-RAN; Edge inference; RAN compute; Accelerator sharing; Backhaul-free execution
+   - `Objective`: Inference latency -; RAN resource utilization +; Backhaul traffic -
+   - `Link`: [DOI](https://doi.org/10.1145/3718958.3750517)
+
+1. **GreenRAN: A Channel-Aware Green O-RAN Framework for NextG Mobile Systems**
+   - `Publication`: INFOCOM 2025 (**CCF-A**)
+   - `Authors`: Chaoqun You; Xingqiu He; Yao Sun; Gang Feng; Tony Q. S. Quek
+   - `Keywords`: O-RAN; Radio unit sleep control; CU-DU placement; Workload consolidation; Channel-aware scheduling
+   - `Objective`: Power consumption -; QoS violations -; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/infocom55648.2025.11044706)
+
+1. **Joint Dynamic VNF Placement and Delay and Jitter Aware Multicast Routing in NFV-Enabled SDNs**
+   - `Publication`: TMC 2025 (**CCF-A**)
+   - `Authors`: Liang Liu; Siyuan Tan; Songtao Guo; Guiyan Liu; Hao Feng
+   - `Keywords`: NFV-enabled SDN; Dynamic VNF placement; Multicast routing; Service function tree; Delay and jitter
+   - `Objective`: End-to-end delay -; Jitter -; Routing cost -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2025.3581905)
+
+1. **O-RAN Intelligence Orchestration Framework for Quality-Driven xApp Deployment and Sharing**
+   - `Publication`: TMC 2025 (**CCF-A**)
+   - `Authors`: Federico Mungari; Corrado Puligheddu; Andres Garcia-Saavedra; Carla Fabiana Chiasserini
+   - `Keywords`: O-RAN; xApp orchestration; xApp sharing; Multi-layer graph; Energy-aware deployment
+   - `Objective`: Deployed services +; Energy consumption -; Resource sharing +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2025.3527707)
+
+1. **Provable Approximation Algorithms for Online Traffic-Sensitive SFC Deployment**
+   - `Publication`: TON 2025 (**CCF-A**)
+   - `Authors`: Yingling Mao; Xiaojun Shang; Yuanyuan Yang
+   - `Keywords`: NFV; Online SFC deployment; Traffic-sensitive placement; Flow routing; Approximation algorithm
+   - `Objective`: Resource cost -; Network latency -; Competitive ratio +
+   - `Link`: [DOI](https://doi.org/10.1109/ton.2025.3566728)
+
+1. **Provably Efficient Service Function Chain Embedding and Protection in Edge Networks**
+   - `Publication`: TON 2025 (**CCF-A**)
+   - `Authors`: Danyang Zheng; Xiaojun Cao
+   - `Keywords`: Service function chain; Edge network; Reliable embedding; Backup path; Approximation algorithm
+   - `Objective`: Resource consumption -; Reliability +; Embedding cost -
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2024.3475248)
+
+1. **Service Function Chain Deployment With VNF-Dependent Software Migration in Multi-Domain Networks**
+   - `Publication`: TMC 2025 (**CCF-A**)
+   - `Authors`: Yuhan Zhang; Ran Wang; Jie Hao; Qiang Wu; Yidan Teng; Ping Wang; Dusit Niyato
+   - `Keywords`: Service function chain; VNF migration; Multi-domain network; SDN; NFV
+   - `Objective`: Deployment cost -; Migration overhead -; End-to-end latency -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2024.3514173)
+
+1. **Small-scale LEO Satellite Networking for Global-scale Demands**
+   - `Publication`: SIGCOMM 2025 (**CCF-A**)
+   - `Authors`: Yuanjie Li; Yimei Chen; Jiabo Yang; Jinyao Zhang; Bowen Sun; Lixin Liu; Hewu Li; Jianping Wu; Zeqi Lai; Qian Wu; Jun Liu
+   - `Keywords`: LEO satellite network; Software-defined networking; Supply-demand matching; Constellation design; Network orchestration
+   - `Objective`: Constellation size -; Demand coverage +; Capital cost -
+   - `Link`: [DOI](https://doi.org/10.1145/3718958.3750525)
+
+1. **SPAVM: A SFC Placement and VNF Migration Framework for VNF Instance Reuse in Vehicle-Infrastructure Collaboration**
+   - `Publication`: TSC 2025 (**CCF-A**)
+   - `Authors`: Shihong Hu; Kaixin Zhang; Zhihao Qu; Baoliu Ye
+   - `Keywords`: Service function chain; VNF migration; VNF instance reuse; Vehicular edge network; Vehicle-infrastructure collaboration
+   - `Objective`: Delay -; Operating cost -; VNF reuse +
+   - `Link`: [DOI](https://doi.org/10.1109/tsc.2025.3592379)
+
+1. **Adaptive Network Management Service Based on Control Relation Graph for Software-Defined LEO Satellite Networks in 6G**
+   - `Publication`: TSC 2024 (**CCF-A**)
+   - `Authors`: Long Chen; Feilong Tang; Xu Li; Jiacheng Liu; Yanmin Zhu; Jiadi Yu
+   - `Keywords`: Software-defined LEO satellite network; Controller placement; Controller assignment; Control relation graph
+   - `Objective`: Management cost -; Control latency -; Load imbalance -
+   - `Link`: [DOI](https://doi.org/10.1109/tsc.2024.3440028)
+
+1. **CloudRIC: Open Radio Access Network (O-RAN) Virtualization with Shared Heterogeneous Computing**
+   - `Publication`: MobiCom 2024 (**CCF-A**)
+   - `Authors`: Leonardo Lo Schiavo; Gines Garcia-Aviles; Andres Garcia-Saavedra; Marco Gramaglia; Marco Fiore; Albert Banchs; Xavier Costa-Perez
+   - `Keywords`: O-RAN; Virtualized RAN; Heterogeneous computing; GPU sharing; O-Cloud
+   - `Objective`: Resource utilization +; Deadline violations -
+   - `Link`: [DOI](https://doi.org/10.1145/3636534.3649381)
+
+1. **Efficient Deployment of Partial Parallelized Service Function Chains in CPU+DPU-Based Heterogeneous NFV Platforms**
+   - `Publication`: TMC 2024 (**CCF-A**)
+   - `Authors`: Ran Wang; Xue Yu; Qiang Wu; Changyan Yi; Ping Wang; Dusit Niyato
+   - `Keywords`: Partial parallelization; Service function chain; CPU; DPU; Heterogeneous NFV
+   - `Objective`: Deployment cost -; End-to-end delay -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2024.3357796)
+
 1. **SFT-Box: An Online Approach for Minimizing the Embedding Cost of Multiple Hybrid SFCs**
    - `Publication`: TON 2023 (**CCF-A**)
    - `Authors`: Xu Lin; Deke Guo; Yulong Shen; Guoming Tang; Bangbang Ren; Ming Xu
@@ -449,6 +745,9 @@ You can search the relevant papers by following keywords:
    - `Keywords`: Deployment; Commodity maximum flow
    - `Objective`: Placement cost -
    - `Link`: [DOI](https://doi.org/10.1109/twc.2021.3116983)
+
+<details>
+<summary>Earlier papers (91)</summary>
 
 1. **Multi-Resource VNF Deployment in a Heterogeneous Cloud**
    - `Publication`: TC 2022 (**CCF-A**)
@@ -547,9 +846,6 @@ You can search the relevant papers by following keywords:
    - `Keywords`: Deployment; Optical Networks; Integer Linear Programming (ILP)
    - `Objective`: Placement cost -
    - `Link`: [DOI](https://doi.org/10.1109/tpds.2021.3075296)
-
-<details>
-<summary>Earlier papers (77)</summary>
 
 1. **Energy-Aware Service Function Chain Embedding in Edge–Cloud Environments for IoT Applications**
    - `Publication`: IoTJ 2021 (**JCR-Q1**)
@@ -1092,6 +1388,62 @@ You can search the relevant papers by following keywords:
 
 ### [3.4 Scheduling](#content)
 
+1. **Nezha: SmartNIC-based Virtual Switch Load Sharing**
+   - `Publication`: SIGCOMM 2025 (**CCF-A**)
+   - `Authors`: Xing Li; Enge Song; Bowen Yang; Tian Pan; Ye Yang; Qiang Fu; Yang Song; Yilong Lv; Zikang Chen; Jianyuan Lu; Shize Zhang; Xiaoqing Sun; Rong Wen; Xionglie Wei; Biao Lyu; Zhigang Zong; Qinming He; Shunmin Zhu
+   - `Keywords`: SmartNIC; Virtual switch; Network function; Load sharing; Remote resource pool
+   - `Objective`: Throughput +; SmartNIC utilization +; Load imbalance -
+   - `Link`: [DOI](https://doi.org/10.1145/3718958.3750466)
+
+1. **Aquifer: Transparent Microsecond-Scale Scheduling for vRAN Workloads**
+   - `Publication`: TSC 2024 (**CCF-A**)
+   - `Authors`: Yunshan Jia; Yinmin Zhong; Meng Wang; Jiaqi Gao; Pengyu Zhang; Xuanzhe Liu; Xin Jin
+   - `Keywords`: vRAN; Microsecond-scale scheduling; CPU reallocation; Run-to-completion
+   - `Objective`: Scheduling latency -; Deadline violations -
+   - `Link`: [DOI](https://doi.org/10.1109/tsc.2024.3440032)
+
+1. **Automatic Parallelization of Software Network Functions**
+   - `Publication`: NSDI 2024 (**CCF-A**)
+   - `Authors`: Francisco Pereira; Fernando M. V. Ramos; Luis Pedrosa
+   - `Keywords`: Software network functions; Automatic parallelization; Receive Side Scaling; Multi-core processing
+   - `Objective`: Throughput +; Parallelization scalability +
+   - `Link`: [arXiv](https://arxiv.org/abs/2307.14791), [usenix.org](https://www.usenix.org/conference/nsdi24/presentation/pereira)
+
+1. **O-M3: Real-Time Multi-Cell MIMO Scheduling in 5G O-RAN**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Yongce Chen; Y. Thomas Hou; Wenjing Lou; Jeffrey H. Reed; Sastry Kompella
+   - `Keywords`: 5G O-RAN; Multi-cell MIMO; Real-time scheduling
+   - `Objective`: Throughput +; Scheduling latency -
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2023.3336164)
+
+1. **OREO: O-RAN Intelligence Orchestration of xApp-Based Network Services**
+   - `Publication`: INFOCOM 2024 (**CCF-A**)
+   - `Authors`: Federico Mungari; Corrado Puligheddu; Andres Garcia-Saavedra; Carla Fabiana Chiasserini
+   - `Keywords`: O-RAN; xApp; Network service orchestration; Resource contention
+   - `Objective`: Service utility +; Resource contention -
+   - `Link`: [arXiv](https://arxiv.org/abs/2405.18198), [published version](https://doi.org/10.1109/infocom52122.2024.10621166)
+
+1. **Providing UE-Level QoS Support by Joint Scheduling and Orchestration for 5G vRAN**
+   - `Publication`: INFOCOM 2024 (**CCF-A**)
+   - `Authors`: Jiamei Lv; Yi Gao; Zhi Ding; Yuxiang Lin; Xinyun You; Guang Yang; Wei Dong
+   - `Keywords`: 5G vRAN; UE-level QoS; Joint scheduling; Resource orchestration
+   - `Objective`: QoS violations -; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/infocom52122.2024.10621408)
+
+1. **State Disaggregation for Dynamic Scaling of Network Functions**
+   - `Publication`: TON 2024 (**CCF-A**)
+   - `Authors`: Fabrício B. Carvalho; Ronaldo A. Ferreira; Ítalo Cunha; Marcos A. M. Vieira; Murali K. Ramanathan
+   - `Keywords`: Stateful network functions; State disaggregation; Dynamic scaling; Multi-core processing
+   - `Objective`: Scaling time -; Throughput +
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2023.3282562)
+
+1. **YinYangRAN: Resource Multiplexing in GPU-Accelerated Virtualized RANs**
+   - `Publication`: INFOCOM 2024 (**CCF-A**)
+   - `Authors`: Leonardo Lo Schiavo; Jose A. Ayala-Romero; Andres Garcia-Saavedra; Marco Fiore; Xavier Costa-Perez
+   - `Keywords`: Virtualized RAN; GPU acceleration; Resource multiplexing; Deadline-aware scheduling
+   - `Objective`: GPU utilization +; Deadline violations -
+   - `Link`: [DOI](https://doi.org/10.1109/infocom52122.2024.10621380)
+
 1. **Online Control of Service Function Chainings Across Geo-Distributed Datacenters**
    - `Publication`: TMC 2023 (**CCF-A**)
    - `Authors`: Song Yang; Fan Li; Zhi Zhou; Xu Chen; Yu Wang; Xiaoming Fu
@@ -1176,6 +1528,9 @@ You can search the relevant papers by following keywords:
    - `Objective`: Influence -
    - `Link`: [DOI](https://doi.org/10.1016/j.comnet.2019.04.010)
 
+<details>
+<summary>Earlier papers (13)</summary>
+
 1. **Dynamic Cloud Network Control Under Reconfiguration Delay and Cost**
    - `Publication`: TON 2019 (**CCF-A**)
    - `Authors`: Chang-Heng Wang; Jaime Llorca; Antonia M. Tulino; Tara Javidi
@@ -1232,9 +1587,6 @@ You can search the relevant papers by following keywords:
    - `Objective`: Latency -
    - `Link`: [DOI](https://doi.org/10.1109/tpds.2017.2685386)
 
-<details>
-<summary>Earlier papers (5)</summary>
-
 1. **Traffic-Aware Virtual Machine Migration in Topology-Adaptive DCN**
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Yong Cui; Zhenjie Yang; Shihan Xiao; Xin Wang; Shenghui Yan
@@ -1273,6 +1625,41 @@ You can search the relevant papers by following keywords:
 </details>
 
 ### [3.5 Routing](#content)
+
+1. **Fast Reoptimization With Only a Few Changes: Enhancing Tactical Traffic Engineering With Segment Routing Midpoint Optimization**
+   - `Publication`: JSAC 2025 (**CCF-A**)
+   - `Authors`: Alexander Brundiers; Timmy Schüller; Nils Aschenbruck
+   - `Keywords`: Traffic engineering; Segment routing; Midpoint optimization; Local search; Fast reoptimization
+   - `Objective`: Configuration changes -; Provisioning time -; Maximum link utilization -
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2025.3528811)
+
+1. **Maintaining Predictable Traffic Engineering Performance Under Controller Failures for Software-Defined WANs**
+   - `Publication`: JSAC 2025 (**CCF-A**)
+   - `Authors`: Songshi Dou; Zehua Guo
+   - `Keywords`: Software-defined WAN; Controller failure; Traffic engineering; Flow-controller reassignment; Flow rerouting
+   - `Objective`: Load imbalance -; Failure resilience +; Computation time -
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2025.3528814)
+
+1. **PreTE: Traffic Engineering with Predictive Failures**
+   - `Publication`: SIGCOMM 2025 (**CCF-A**)
+   - `Authors`: Congcong Miao; Zhizhen Zhong; Yiren Zhao; Arpit Gupta; Ying Zhang; Sirui Li; Zekun He; Xianneng Zou; Jilong Wang
+   - `Keywords`: WAN traffic engineering; Predictive failures; Optical degradation; Proactive routing; Availability
+   - `Objective`: Network availability +; Traffic loss -; Link utilization +
+   - `Link`: [DOI](https://doi.org/10.1145/3718958.3750508)
+
+1. **SaTE: Low-Latency Traffic Engineering for Satellite Networks**
+   - `Publication`: SIGCOMM 2025 (**CCF-A**)
+   - `Authors`: Hao Wu; Yizhan Han; Mohit Rajpal; Qizhen Zhang; Jingxian Wang
+   - `Keywords`: Satellite network; Traffic engineering; Dynamic topology; Low-latency optimization; Traffic allocation
+   - `Objective`: Optimization latency -; Maximum link utilization -; Scalability +
+   - `Link`: [DOI](https://doi.org/10.1145/3718958.3750524)
+
+1. **MegaTE: Extending WAN Traffic Engineering to Millions of Endpoints in Virtualized Cloud**
+   - `Publication`: SIGCOMM 2024 (**CCF-A**)
+   - `Authors`: Congcong Miao; Zhizhen Zhong; Yunming Xiao; Feng Yang; Senkuo Zhang; Yinan Jiang; Zizhuo Bai; Chaodong Lu; Jingyi Geng; Zekun He; Yachen Wang; Xianneng Zou; Chuanchuan Yang
+   - `Keywords`: WAN traffic engineering; Virtualized cloud; Endpoint scalability; Hierarchical optimization
+   - `Objective`: Solver runtime -; Traffic engineering scalability +
+   - `Link`: [DOI](https://doi.org/10.1145/3651890.3672242)
 
 1. **SAFE-ME: Scalable and Flexible Policy Enforcement in Middlebox Networks**
    - `Publication`: TON 2022 (**CCF-A**)
@@ -1341,6 +1728,76 @@ You can search the relevant papers by following keywords:
 
 ### [4.1 Slicing](#content)
 
+1. **Maritime-Oriented Network Slicing in O-RAN Integrated Aerial-Terrestrial Networks**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Sahar Ammar; Wiem Abderrahim; Basem Shihada
+   - `Keywords`: O-RAN; Maritime network slicing; Aerial-terrestrial network; UAV; AI-based resource allocation
+   - `Objective`: Slice utility +; QoS violations -; Coverage +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2025.3626785)
+
+1. **AdaSlicing: Adaptive Online Network Slicing Under Continual Network Dynamics in Open Radio Access Networks**
+   - `Publication`: INFOCOM 2025 (**CCF-A**)
+   - `Authors`: Ming Zhao; Yuru Zhang; Qiang Liu; Ahan Kak; Nakjung Choi
+   - `Keywords`: O-RAN; Adaptive network slicing; Bayesian learning; ADMM; Soft isolation
+   - `Objective`: Operating cost -; Slice performance +; Resource isolation +
+   - `Link`: [arXiv](https://arxiv.org/abs/2501.06943), [published version](https://doi.org/10.1109/infocom55648.2025.11044475)
+
+1. **O-RAN-Enabled Intelligent Network Slicing to Meet Service-Level Agreement (SLA)**
+   - `Publication`: TMC 2025 (**CCF-A**)
+   - `Authors`: Jiongyu Dai; Lianjun Li; Ramin Safavinejad; Shadab Mahboob; Hao Chen; Vishnu V Ratnam; Haining Wang; Jianzhong Zhang; Lingjia Liu
+   - `Keywords`: O-RAN; RAN slicing; Deep reinforcement learning; Two-level scheduling; SLA
+   - `Objective`: SLA violations -; Resource utilization +; Throughput +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2024.3476338)
+
+1. **Blockchain-Enabled Federated Learning-Based Resource Allocation and Trading for Network Slicing in 5G**
+   - `Publication`: TON 2024 (**CCF-A**)
+   - `Authors`: Daniel Ayepah-Mensah; Guolin Sun; Gordon Owusu Boateng; Stephen Anokye; Guisong Liu
+   - `Keywords`: Network slicing; Federated learning; Blockchain; Resource trading
+   - `Objective`: Resource trading utility +; Privacy +
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2023.3297390)
+
+1. **Deep Reinforcement Learning for Online Resource Allocation in Network Slicing**
+   - `Publication`: TMC 2024 (**CCF-A**)
+   - `Authors`: Yue Cai; Peng Cheng; Zhuo Chen; Ming Ding; Branka Vucetic; Yonghui Li
+   - `Keywords`: Network slicing; Online resource allocation; Deep reinforcement learning
+   - `Objective`: Long-term utility +; SLA violations -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2023.3328950)
+
+1. **Dynamic Fine-Grained SLA Management for 6G eMBB-Plus Slice Using mDNN & Smart Contracts**
+   - `Publication`: TSC 2024 (**CCF-A**)
+   - `Authors`: Sadaf Bukhari; Kashif Sharif; Liehuang Zhu; Chang Xu; Fan Li; Sujit Biswas
+   - `Keywords`: 6G slicing; SLA management; Meta-learning; Smart contracts
+   - `Objective`: SLA violations -; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/tsc.2024.3453709)
+
+1. **Energy-Aware Design Policy for Network Slicing Using Deep Reinforcement Learning**
+   - `Publication`: TSC 2024 (**CCF-A**)
+   - `Authors`: Ranyin Wang; Vasilis Friderikos; A. Hamid Aghvami
+   - `Keywords`: Network slicing; Energy-aware deployment; Deep reinforcement learning
+   - `Objective`: Energy consumption -; Slice acceptance +
+   - `Link`: [DOI](https://doi.org/10.1109/tsc.2024.3451176)
+
+1. **Flexible RAN Slicing in Open RAN With Constrained Multi-Agent Reinforcement Learning**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Mohammad Zangooei; Morteza Golkarifard; Mohamed Rouili; Niloy Saha; Raouf Boutaba
+   - `Keywords`: O-RAN; RAN slicing; Constrained multi-agent reinforcement learning; SLA
+   - `Objective`: Resource consumption -; SLA violations -
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2023.3336156)
+
+1. **Safe and Accelerated Deep Reinforcement Learning-Based O-RAN Slicing: A Hybrid Transfer Learning Approach**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Ahmad M. Nagib; Hatem Abou-Zeid; Hossam S. Hassanein
+   - `Keywords`: O-RAN slicing; Safe deep reinforcement learning; Transfer learning; Policy distillation
+   - `Objective`: Adaptation time -; SLA violations -
+   - `Link`: [arXiv](https://arxiv.org/abs/2309.07265), [published version](https://doi.org/10.1109/jsac.2023.3336191)
+
+1. **Slice Sandwich: Jagged Slicing Multi-Tier Dynamic Resources for Diversified V2X Services**
+   - `Publication`: TMC 2024 (**CCF-A**)
+   - `Authors`: Yu Liu; Zirui Zhuang; Qi Qi; Jingyu Wang; Dezhi Chen; Lu Lu; Hongwei Yang; Jianxin Liao; Zhu Han
+   - `Keywords`: V2X; Multi-tier computing; Neural bandits; Deep Q-learning; Dual-timescale allocation
+   - `Objective`: System revenue +; KPI satisfaction +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2023.3288637)
+
 1. **A Constrained Reinforcement Learning Based Approach for Network Slicing**
    - `Publication`: ICNP 2020 (**CCF-B**)
    - `Authors`: Yongshuai Liu; Jiaxin Ding; Xin Liu
@@ -1393,12 +1850,61 @@ You can search the relevant papers by following keywords:
 
 ### [4.3 Deployment](#content)
 
+1. **Adaptive Orchestration of Service Function Chains in SAGIN-MEC via Graph Reinforcement Learning**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Peiying Zhang; Shengpeng Chen; Jian Fan; Lizhuang Tan; Chunxiao Jiang
+   - `Keywords`: SAGIN-MEC; Service function chain; Graph reinforcement learning; Online embedding; Heterogeneous resources
+   - `Objective`: Acceptance ratio +; End-to-end latency -; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2026.3667743)
+
+1. **AvailGuard: An Availability-aware VNF Deployment Framework Based on Traffic Forecasting in SDN/NFV-enabled Networks**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Yi Yue; Xiongyan Tang; Lexi Xu; Chang Cao; Wencong Yang; Yaru Zhao; Lingyang Song
+   - `Keywords`: SDN; NFV; VNF deployment; Traffic forecasting; Availability-aware orchestration
+   - `Objective`: Service availability +; Deployment cost -; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2026.3709200)
+
+1. **Dynamic VNF Orchestration for UAV-Aided Emergency Networks: A Learning and Optimization Control Loop Framework**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Chuan Pham; Kim Khoa Nguyen
+   - `Keywords`: UAV-aided emergency network; Dynamic VNF orchestration; Learning and optimization; Closed-loop control
+   - `Objective`: Service reliability +; Orchestration cost -; Response latency -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2026.3682014)
+
+1. **FlexVNE: A LLM-Powered Flexible Framework for Virtual Network Embedding in Cloud-Network Convergence**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Fan Pan; Le Tian; Dan Li; Pengshuai Cui; Yu Wang; Xuanyan Song; Menglong Li; Xinglong Pei; Yuxiang Hu; Xiaobo Guo
+   - `Keywords`: Virtual network embedding; Large language model; Cloud-network convergence; Flexible orchestration
+   - `Objective`: Acceptance ratio +; Embedding cost -; Generalization +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2026.3700558)
+
 1. **Virne: A Comprehensive Benchmark for RL-based Network Resource Allocation in NFV**
    - `Publication`: ICLR 2026
    - `Authors`: Tianfu Wang; Liwei Deng; Xi Chen; Junyang Wang; Huiguo He; Zhengyu Hu; Wei Wu; Leilei Ding; Qilin Fan; Hui Xiong
    - `Keywords`: Deployment; Deep Reinforcement Learning; Network Simulation; Benchmark
    - `Objective`: Effectiveness; Solvability; Generalizability; Scalability
    - `Link`: [arXiv](https://arxiv.org/abs/2507.19234), [code](https://github.com/GeminiLight/Virne)
+
+1. **DeepSelector: A Deep Learning-Based Virtual Network Function Placement Approach in SDN/NFV-Enabled Networks**
+   - `Publication`: TMC 2025 (**CCF-A**)
+   - `Authors`: Yi Yue; Xiongyan Tang; Ying-Chang Liang; Chang Cao; Lexi Xu; Wencong Yang; Zhiyan Zhang
+   - `Keywords`: VNF placement; SDN; NFV; Deep learning; Service function chain
+   - `Objective`: Placement quality +; Decision time -; Scalability +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2024.3483779)
+
+1. **Network Diffuser for Placing-Scheduling Service Function Chains with Inverse Demonstration**
+   - `Publication`: INFOCOM 2025 (**CCF-A**)
+   - `Authors`: Zuyuan Zhang; Vaneet Aggarwal; Tian Lan
+   - `Keywords`: Service function chain; Diffusion model; Inverse demonstration; Joint placement and scheduling; Online arrivals
+   - `Objective`: SFC reward +; Waiting time -; Blocking rate -
+   - `Link`: [arXiv](https://arxiv.org/abs/2501.05673), [published version](https://doi.org/10.1109/infocom55648.2025.11044702)
+
+1. **AIRIC: Orchestration of Virtualized Radio Access Networks With Noisy Neighbours**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Josep Xavier Salvat Lozano; Andres Garcia-Saavedra; Xi Li; Xavier Costa Perez
+   - `Keywords`: Virtualized RAN; Noisy neighbours; Relation network; Deep Q-learning
+   - `Objective`: Operating cost -; Resource consumption -; Service guarantees +
+   - `Link`: [arXiv](https://arxiv.org/abs/2311.04649), [published version](https://doi.org/10.1109/jsac.2023.3339749)
 
 1. **FlagVNE: A Flexible and Generalizable Reinforcement Learning Framework for Network Resource Allocation**
    - `Publication`: IJCAI 2024 (**CCF-A**)
@@ -1413,6 +1919,27 @@ You can search the relevant papers by following keywords:
    - `Keywords`: Deployment; Hierarchical Deep Reinforcement Learning; Graph Attention Network (GNN, GAT); proximal policy optimization (PPO)
    - `Objective`: Cost -; Revenue-to-cost +; Long-term Revenue +
    - `Link`: [DOI](https://doi.org/10.1109/tsc.2023.3326539)
+
+1. **Parallel Placement of Virtualized Network Functions via Federated Deep Reinforcement Learning**
+   - `Publication`: TON 2024 (**CCF-A**)
+   - `Authors`: Haojun Huang; Jialin Tian; Geyong Min; Hao Yin; Cheng Zeng; Yangming Zhao; Dapeng Oliver Wu
+   - `Keywords`: VNF placement; Federated learning; Deep reinforcement learning; Parallel decision-making
+   - `Objective`: Placement cost -; Training overhead -; Privacy +
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2024.3366950)
+
+1. **QoS Aware Virtual Network Embedding in Space-Air-Ground-Ocean Integrated Network**
+   - `Publication`: TSC 2024 (**CCF-A**)
+   - `Authors`: Yi Zhang; Peiying Zhang; Chunxiao Jiang; Shangguang Wang; Hongxia Zhang; Chunming Rong
+   - `Keywords`: Virtual network embedding; Space-air-ground-ocean network; K-means; Reinforcement learning
+   - `Objective`: Acceptance ratio +; Revenue +; Delay -
+   - `Link`: [DOI](https://doi.org/10.1109/tsc.2024.3357707)
+
+1. **Traffic-Aware Lightweight Hierarchical Offloading Toward Adaptive Slicing-Enabled SAGIN**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Zheyi Chen; Junjie Zhang; Geyong Min; Zhaolong Ning; Jie Li
+   - `Keywords`: SAGIN; Adaptive slicing; Hierarchical offloading; Deep reinforcement learning; Knowledge distillation
+   - `Objective`: Service latency -; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2024.3459020)
 
 1. **Monkey Business: Reinforcement learning meets neighborhood search for Virtual Network Embedding**
    - `Publication`: CN 2022 (**CCF-B**)
@@ -1462,6 +1989,9 @@ You can search the relevant papers by following keywords:
    - `Keywords`: Continuous-Decision; Time Series; RNN; Seq2Seq
    - `Objective`: Long term average revenue to cost ratio +
    - `Link`: [DOI](https://doi.org/10.1109/tnsm.2020.2971543)
+
+<details>
+<summary>Earlier papers (16)</summary>
 
 1. **A Dynamic and Collaborative Multi-Layer Virtual Network Embedding Algorithm in SDN Based on Reinforcement Learning**
    - `Publication`: TNSM 2020 (**JCR-Q1**)
@@ -1532,9 +2062,6 @@ You can search the relevant papers by following keywords:
    - `Keywords`: Deployment; DDPG (Deep Deterministic Policy Gradient); Multi-domain; Non-cooperative
    - `Link`: [DOI](https://doi.org/10.1109/infcomw.2019.8845184), [PDF](https://hal.archives-ouvertes.fr/hal-02088819/file/MultiDomain_VNF_FG_embedding__A_Deep_reinforcement_learning_approach-authors%20version.pdf)
 
-<details>
-<summary>Earlier papers (6)</summary>
-
 1. **NFVdeep: Adaptive Online Service Function Chain Deployment with Deep Reinforcement Learning**
    - `Publication`: IWQoS 2019 (**CCF-B**)
    - `Authors`: Yikai Xiao; Qixia Zhang; Fangming Liu; Jia Wang; Miao Zhao; Zhongxing Zhang; Jiaxing Zhang
@@ -1580,6 +2107,62 @@ You can search the relevant papers by following keywords:
 </details>
 
 ### [4.4 Scheduling](#content)
+
+1. **CORMO-RAN: Energy Efficiency at the Near-RT RIC via Lossless Migration of O-RAN xApps**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Antonio Calagna; Stefano Maxenti; Leonardo Bonati; Salvatore D’Oro; Tommaso Melodia; Carla Fabiana Chiasserini
+   - `Keywords`: O-RAN; xApp migration; Near-RT RIC; Energy-aware orchestration; Traffic prediction
+   - `Objective`: Energy consumption -; Migration loss -; Resource utilization +
+   - `Link`: [arXiv](https://arxiv.org/abs/2506.19760), [published version](https://doi.org/10.1109/tmc.2026.3715058)
+
+1. **Traffic Digital Twin-Enabled Orchestration and Scheduling in O-RAN: A Multi-Timescale Joint Optimization Approach**
+   - `Publication`: TMC 2026 (**CCF-A**)
+   - `Authors`: Yinlin Ren; Longyu Zhou; Shaoyong Guo; Xuesong Qiu; Tony Q. S. Quek
+   - `Keywords`: O-RAN; Traffic digital twin; Multi-timescale optimization; Functional orchestration; Resource scheduling
+   - `Objective`: End-to-end latency -; Resource utilization +; Service utility +
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2025.3622895)
+
+1. **Cost-Aware Neural Adaptive Scaling for vRAN Resource Allocation**
+   - `Publication`: TMC 2025 (**CCF-A**)
+   - `Authors`: Taeyun Kim; Daeyoung Jung; Yujin Kim; Sangheon Pack
+   - `Keywords`: vRAN; Containerized network functions; Adaptive scaling; Neural resource allocation; Reconfiguration cost
+   - `Objective`: Operating cost -; Energy consumption -; Service interruptions -
+   - `Link`: [DOI](https://doi.org/10.1109/tmc.2025.3590472)
+
+1. **Kairos: Energy-Efficient Radio Unit Control for O-RAN via Advanced Sleep Modes**
+   - `Publication`: INFOCOM 2025 (**CCF-A**)
+   - `Authors`: J. Xavier Salvat Lozano; Jose A. Ayala-Romero; Andres Garcia-Saavedra; Xavier Costa-Perez
+   - `Keywords`: O-RAN; Radio unit control; Advanced sleep modes; Data-driven scheduling; QoS constraints
+   - `Objective`: Energy consumption -; QoS violations -; Scheduling latency -
+   - `Link`: [arXiv](https://arxiv.org/abs/2501.15853), [published version](https://doi.org/10.1109/infocom55648.2025.11044736)
+
+1. **ATHENA: Machine Learning and Reasoning for Radio Resources Scheduling in vRAN Systems**
+   - `Publication`: JSAC 2024 (**CCF-A**)
+   - `Authors`: Nikolaos Apostolakis; Marco Gramaglia; Livia Elena Chatzieleftheriou; Tejas Subramanya; Albert Banchs; Henning Sanneck
+   - `Keywords`: vRAN; Radio resource scheduling; Machine learning; Reasoning
+   - `Objective`: Resource utilization +; Service guarantees +
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2023.3336155)
+
+1. **Self-Learning Multi-Mode Slicing Mechanism for Dynamic Network Architectures**
+   - `Publication`: TON 2024 (**CCF-A**)
+   - `Authors`: Haitham H. Esmat; Beatriz Lorenzo
+   - `Keywords`: Network slicing; Self-learning; Multi-mode operation; Dynamic architecture
+   - `Objective`: Utility +; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2023.3305975)
+
+1. **Traffic Prediction-Based VNF Auto-Scaling and Deployment Mechanism for Flexible and Elastic Service Provision**
+   - `Publication`: TSC 2024 (**CCF-A**)
+   - `Authors`: Bo Yi; Jiacheng Wang; Qiang He; Xingwei Wang; Min Huang; Sajal K. Das; Keqin Li
+   - `Keywords`: VNF auto-scaling; Traffic prediction; GRU; Elastic deployment; State caching
+   - `Objective`: SLA violations -; Resource utilization +
+   - `Link`: [DOI](https://doi.org/10.1109/tsc.2024.3440050)
+
+1. **Train Once Apply Anywhere: Effective Scheduling for Network Function Chains Running on FUMES**
+   - `Publication`: INFOCOM 2024 (**CCF-A**)
+   - `Authors`: Marcel Blöcher; Nils Nedderhut; Pavel Chuprikov; Ramin Khalili; Patrick Eugster; Lin Wang
+   - `Keywords`: Network function chain; Scheduling; Transferable learning; FUMES
+   - `Objective`: Scheduling performance +; Retraining cost -
+   - `Link`: [DOI](https://doi.org/10.1109/infocom52122.2024.10621125)
 
 1. **Revenue-Optimal Auction for Resource Allocation in Wireless Virtualization: A Deep Learning Approach**
    - `Publication`: TMC 2022 (**CCF-A**)
@@ -1631,6 +2214,34 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/jsac.2016.2520179)
 
 ### [4.5 Routing](#content)
+
+1. **Adaptive and Low-Cost Traffic Engineering: A Traffic Matrix Clustering Perspective**
+   - `Publication`: JSAC 2025 (**CCF-A**)
+   - `Authors`: Yi Liu; Nan Geng; Mingwei Xu; Yuan Yang; Enhuan Dong; Chenyi Liu; Qiaoyin Gan; Qing Li; Jianping Wu
+   - `Keywords`: Traffic engineering; Traffic matrix clustering; Adaptive routing; Operating overhead
+   - `Objective`: Traffic engineering cost -; Routing overhead -; Load balance +
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2025.3528818)
+
+1. **Aether: Toward Generalized Traffic Engineering with Elastic Multi-agent Graph Transformers**
+   - `Publication`: INFOCOM 2025 (**CCF-A**)
+   - `Authors`: Yu Fan; Jingyao Liu; Pengjin Xie; Liang Liu
+   - `Keywords`: Traffic engineering; Multi-agent learning; Graph transformer; Cross-topology generalization; Elastic demand
+   - `Objective`: Traffic engineering performance +; Generalization +; Inference time -
+   - `Link`: [DOI](https://doi.org/10.1109/infocom55648.2025.11044607), [code](https://github.com/fanyubupt/Aether)
+
+1. **Hattrick: Solving Multi-Class TE using Neural Models**
+   - `Publication`: SIGCOMM 2025 (**CCF-A**)
+   - `Authors`: Abd AlRhman AlQiam; Zhuocong Li; Satyajeet Singh Ahuja; Zhaodong Wang; Ying Zhang; Sanjay G. Rao; Bruno Ribeiro; Mohit Tawarmalani
+   - `Keywords`: Multi-class traffic engineering; Neural optimization; Multi-task learning; WAN
+   - `Objective`: Traffic engineering performance +; Optimization time -; Class priorities +
+   - `Link`: [DOI](https://doi.org/10.1145/3718958.3750470)
+
+1. **Path-Based Graph Neural Network for Robust and Resilient Routing in Distributed Traffic Engineering**
+   - `Publication`: JSAC 2025 (**CCF-A**)
+   - `Authors`: Minghao Ye; Junjie Zhang; Zehua Guo; H. Jonathan Chao
+   - `Keywords`: Distributed traffic engineering; Graph neural network; Robust routing; Link failures; Traffic fluctuations
+   - `Objective`: Throughput +; Failure resilience +; Inference time -
+   - `Link`: [DOI](https://doi.org/10.1109/jsac.2025.3528815)
 
 1. **DRL-OR: Deep Reinforcement Learning-based Online Routing for Multi-type Service Requirements**
    - `Publication`: INFOCOM 2021 (**CCF-A**)
@@ -1685,6 +2296,13 @@ You can search the relevant papers by following keywords:
    - `Authors`: Yu Liu; Xiaojun Shang; Yingling Mao; Zhenhua Liu; Yuanyuan Yang
    - `Keywords`: Backup
    - `Link`: [DOI](https://doi.org/10.1109/tmc.2023.3282156)
+
+1. **eBPFlow: A Hardware/Software Platform to Seamlessly Offload Network Functions Leveraging eBPF**
+   - `Publication`: TON 2024 (**CCF-A**)
+   - `Authors`: Racyus D. G. Pacífico; Lucas F. S. Duarte; Luiz F. M. Vieira; Barath Raghavan; José A. M. Nacif; Marcos A. M. Vieira
+   - `Keywords`: NFV; SDN; eBPF; FPGA; Network function offloading
+   - `Objective`: Throughput +; Latency -
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2023.3318251)
 
 1. **Performance Tuning via Lean Measurements for Acceleration of Network Functions Virtualization**
    - `Publication`: TON 2023 (**CCF-A**)
@@ -1789,14 +2407,14 @@ You can search the relevant papers by following keywords:
    - `Authors`: Guto Leoni Santos; Theo Lynn; Judith Kelner; Patricia Takako Endo
    - `Link`: [arXiv](https://arxiv.org/abs/2010.05711)
 
+<details>
+<summary>Earlier papers (3)</summary>
+
 1. **Adding Support for Automatic Enforcement of Security Policies in NFV Networks**
    - `Publication`: TON 2019 (**CCF-A**)
    - `Authors`: Cataldo Basile; Fulvio Valenza; Antonio Lioy; Diego R. Lopez; Antonio Pastor Perales
    - `Keywords`: Security
    - `Link`: [DOI](https://doi.org/10.1109/tnet.2019.2895278)
-
-<details>
-<summary>Earlier papers (2)</summary>
 
 1. **Automated synthesis of adversarial workloads for network functions**
    - `Publication`: SIGCOMM 2018 (**CCF-A**)

@@ -5,7 +5,7 @@ Contributions are welcome. The paper catalog in `README.md` is generated from `d
 1. Add or update a fully quoted row in `data/papers.csv`.
 2. Use `; ` between multiple values in `categories`, `directions`, `authors`, `keywords`, `objectives`, and `other_urls`.
 3. Put the primary `categories` and `directions` value first; it determines the paper's single display location in the README.
-4. Regenerate and verify the README:
+4. Regenerate and verify the visualizations and README:
 
 ```bash
 python3 scripts/generate_readme.py

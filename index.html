@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A verified, searchable catalog of SDN and NFV network resource allocation research.">
+    <meta name="theme-color" content="#f4f7fb">
+    <title>SDN/NFV Paper Index</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232863eb'/%3E%3Cpath d='M18 20h28v7H25v7h17v7H25v9h-7z' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="assets/site.css">
+    <script defer src="assets/papers.js"></script>
+    <script defer src="assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">Skip to paper catalog</a>
+
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="wordmark" href="#top" aria-label="SDN/NFV Paper Index home">
+          <span class="wordmark-mark" aria-hidden="true"></span>
+          <span>SDN/NFV Index</span>
+        </a>
+        <div class="nav-links">
+          <a href="#catalog">Catalog</a>
+          <a href="#about">About</a>
+          <a href="https://github.com/GeminiLight/sdn-nfv-papers" target="_blank" rel="noreferrer">GitHub</a>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">Theme</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Curated research index</p>
+          <h1 id="hero-title">Navigate network research.</h1>
+          <p class="hero-summary">Search a verified catalog of SDN, NFV, slicing, chaining, deployment, scheduling, and routing papers.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalog">Browse papers</a>
+            <a class="button button-secondary" href="data/papers.csv">View source CSV</a>
+          </div>
+        </div>
+
+        <div class="coverage-panel" aria-labelledby="coverage-title">
+          <div class="coverage-heading">
+            <div>
+              <p class="panel-kicker">Catalog coverage</p>
+              <h2 id="coverage-title">Papers by year</h2>
+            </div>
+            <div class="coverage-controls">
+              <span class="coverage-note" id="coverage-note">All publication years</span>
+              <div class="coverage-toggle" role="group" aria-label="Coverage chart dimension">
+                <button type="button" data-coverage-view="year" aria-pressed="true">Year</button>
+                <button type="button" data-coverage-view="venue" aria-pressed="false">Venue</button>
+              </div>
+            </div>
+          </div>
+          <div class="coverage-view" id="coverage-year-view">
+            <div class="coverage-chart" id="coverage-chart" aria-label="Paper count by publication year"></div>
+          </div>
+          <div class="coverage-view" id="coverage-venue-view" hidden>
+            <div class="venue-chart" id="venue-chart" aria-label="Paper count for the eight most represented venues"></div>
+            <p class="venue-footnote" id="venue-footnote"></p>
+          </div>
+          <dl class="hero-stats">
+            <div>
+              <dt>Papers</dt>
+              <dd id="stat-papers">-</dd>
+            </div>
+            <div>
+              <dt>Venues</dt>
+              <dd id="stat-venues">-</dd>
+            </div>
+            <div>
+              <dt>Latest year</dt>
+              <dd id="stat-year">-</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalog" aria-labelledby="catalog-title">
+        <div class="shell">
+          <div class="section-heading">
+            <h2 id="catalog-title">Explore the catalog</h2>
+            <p>Combine full-text search with method, direction, venue, year, and rank filters.</p>
+          </div>
+
+          <div class="search-shell">
+            <label for="paper-search">Search title, author, keyword, venue, or objective</label>
+            <div class="search-control">
+              <input id="paper-search" type="search" autocomplete="off" placeholder="Try “service function chain”, “GNN”, or an author name">
+              <span class="search-shortcut" aria-hidden="true">/</span>
+            </div>
+          </div>
+
+          <div class="catalog-layout">
+            <aside class="filter-panel" aria-labelledby="filter-title">
+              <div class="filter-heading">
+                <h3 id="filter-title">Filters</h3>
+                <button class="text-button" id="clear-filters" type="button">Reset</button>
+              </div>
+
+              <div class="filter-fields">
+                <label>
+                  <span>Method</span>
+                  <select id="filter-category"><option value="">All methods</option></select>
+                </label>
+                <label>
+                  <span>Direction</span>
+                  <select id="filter-direction"><option value="">All directions</option></select>
+                </label>
+                <label>
+                  <span>Venue</span>
+                  <select id="filter-venue"><option value="">All venues</option></select>
+                </label>
+                <label>
+                  <span>Year</span>
+                  <select id="filter-year"><option value="">All years</option></select>
+                </label>
+                <label>
+                  <span>Rank</span>
+                  <select id="filter-rank"><option value="">All ranks</option></select>
+                </label>
+              </div>
+
+              <p class="filter-footnote">Multi-value fields match any paper containing the selected value.</p>
+            </aside>
+
+            <div class="results-panel">
+              <div class="results-toolbar">
+                <p id="result-count" role="status" aria-live="polite">Loading catalog</p>
+                <label class="sort-control">
+                  <span>Sort</span>
+                  <select id="sort-order">
+                    <option value="newest">Newest first</option>
+                    <option value="oldest">Oldest first</option>
+                    <option value="title">Title A-Z</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="loading-state" id="loading-state" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <ol class="paper-list" id="paper-list"></ol>
+              <div class="empty-state" id="empty-state" hidden>
+                <h3>No papers match these filters.</h3>
+                <p>Broaden the query or reset the filters to return to the full catalog.</p>
+                <button class="button button-secondary" id="empty-reset" type="button">Reset filters</button>
+              </div>
+              <button class="load-more" id="load-more" type="button" hidden>Show more papers</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section shell" id="about" aria-labelledby="about-title">
+        <div class="about-copy">
+          <h2 id="about-title">Built from one source of truth.</h2>
+          <p>The website, README, and coverage charts all derive from <code>data/papers.csv</code>. Every record keeps a stable DOI or arXiv identity.</p>
+        </div>
+        <dl class="method-grid">
+          <div>
+            <dt>Verified metadata</dt>
+            <dd>Titles, authors, venues, years, identifiers, and links are checked against authoritative sources.</dd>
+          </div>
+          <div>
+            <dt>Research taxonomy</dt>
+            <dd>Methods and directions remain explicit, composable filters instead of fixed README sections.</dd>
+          </div>
+          <div>
+            <dt>Portable by design</dt>
+            <dd>The site is static, dependency-free, and suitable for GitHub Pages or local browsing.</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>SDN/NFV Paper Index</p>
+        <p>Catalog coverage describes this collection, not total field output.</p>
+      </div>
+    </footer>
+
+    <dialog class="paper-dialog" id="paper-dialog">
+      <div class="dialog-shell">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Close paper details">Close</button>
+        <div id="dialog-content"></div>
+      </div>
+    </dialog>
+
+    <noscript>
+      <div class="noscript-message">JavaScript is required for search and filtering. The full catalog remains available in README.md.</div>
+    </noscript>
+  </body>
+</html>

@@ -37,35 +37,35 @@
   <text class="axis-label" x="1100.0" y="110" text-anchor="middle">175</text>
   <rect class="frame" x="224" y="120" width="876" height="324"/>
   <text x="208" y="151" text-anchor="end">Deployment</text>
-  <rect x="224" y="132" width="780.9" height="28" rx="3" fill="var(--series-blue)">
-    <title>Deployment: 156 papers (46.4%)</title>
+  <rect x="224" y="132" width="861.0" height="28" rx="3" fill="var(--series-blue)">
+    <title>Deployment: 172 papers (46.2%)</title>
   </rect>
-  <text class="value" x="1014.9" y="151">156 · 46.4%</text>
+  <text class="value" x="1095.0" y="151">172 · 46.2%</text>
   <text x="208" y="205" text-anchor="end">Scheduling</text>
-  <rect x="224" y="186" width="265.3" height="28" rx="3" fill="var(--series-green)">
-    <title>Scheduling: 53 papers (15.8%)</title>
+  <rect x="224" y="186" width="285.3" height="28" rx="3" fill="var(--series-green)">
+    <title>Scheduling: 57 papers (15.3%)</title>
   </rect>
-  <text class="value" x="499.3" y="205">53 · 15.8%</text>
+  <text class="value" x="519.3" y="205">57 · 15.3%</text>
   <text x="208" y="259" text-anchor="end">Other / unspecified</text>
   <rect x="224" y="240" width="215.2" height="28" rx="3" fill="var(--series-slate)">
-    <title>Other / unspecified: 43 papers (12.8%)</title>
+    <title>Other / unspecified: 43 papers (11.6%)</title>
   </rect>
-  <text class="value" x="449.2" y="259">43 · 12.8%</text>
+  <text class="value" x="449.2" y="259">43 · 11.6%</text>
   <text x="208" y="313" text-anchor="end">Slicing</text>
-  <rect x="224" y="294" width="160.2" height="28" rx="3" fill="var(--series-rose)">
-    <title>Slicing: 32 papers (9.5%)</title>
+  <rect x="224" y="294" width="200.2" height="28" rx="3" fill="var(--series-rose)">
+    <title>Slicing: 40 papers (10.8%)</title>
   </rect>
-  <text class="value" x="394.2" y="313">32 · 9.5%</text>
+  <text class="value" x="434.2" y="313">40 · 10.8%</text>
   <text x="208" y="367" text-anchor="end">Routing</text>
-  <rect x="224" y="348" width="140.2" height="28" rx="3" fill="var(--series-gold)">
-    <title>Routing: 28 papers (8.3%)</title>
+  <rect x="224" y="348" width="175.2" height="28" rx="3" fill="var(--series-gold)">
+    <title>Routing: 35 papers (9.4%)</title>
   </rect>
-  <text class="value" x="374.2" y="367">28 · 8.3%</text>
+  <text class="value" x="409.2" y="367">35 · 9.4%</text>
   <text x="208" y="421" text-anchor="end">Chaining</text>
-  <rect x="224" y="402" width="120.1" height="28" rx="3" fill="var(--series-purple)">
-    <title>Chaining: 24 papers (7.1%)</title>
+  <rect x="224" y="402" width="125.1" height="28" rx="3" fill="var(--series-purple)">
+    <title>Chaining: 25 papers (6.7%)</title>
   </rect>
-  <text class="value" x="354.1" y="421">24 · 7.1%</text>
+  <text class="value" x="359.1" y="421">25 · 6.7%</text>
   <text class="axis-title" x="662.0" y="478" text-anchor="middle">Paper count</text>
   <text class="note" x="54" y="512">Source: data/papers.csv · Multiple-value fields are represented by their primary direction</text>
 </svg>

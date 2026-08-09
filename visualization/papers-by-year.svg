@@ -163,19 +163,19 @@
   <rect x="880.3" y="466.6" width="44.0" height="5.4" fill="var(--series-purple)">
     <title>2023 — Survey &amp; analysis: 1</title>
   </rect>
-  <rect x="880.3" y="455.7" width="44.0" height="10.9" fill="var(--series-gold)">
-    <title>2023 — Mathematical: 2</title>
+  <rect x="880.3" y="434.0" width="44.0" height="32.6" fill="var(--series-gold)">
+    <title>2023 — Mathematical: 6</title>
   </rect>
-  <rect x="880.3" y="439.4" width="44.0" height="16.3" fill="var(--series-blue)">
-    <title>2023 — Heuristic: 3</title>
+  <rect x="880.3" y="309.0" width="44.0" height="125.0" fill="var(--series-blue)">
+    <title>2023 — Heuristic: 23</title>
   </rect>
-  <rect x="880.3" y="434.0" width="44.0" height="5.4" fill="var(--series-green)">
-    <title>2023 — Machine learning: 1</title>
+  <rect x="880.3" y="238.4" width="44.0" height="70.6" fill="var(--series-green)">
+    <title>2023 — Machine learning: 13</title>
   </rect>
-  <rect x="880.3" y="428.5" width="44.0" height="5.4" fill="var(--series-slate)">
+  <rect x="880.3" y="232.9" width="44.0" height="5.4" fill="var(--series-slate)">
     <title>2023 — Other / unclassified: 1</title>
   </rect>
-  <text class="value" x="902.3" y="420.5" text-anchor="middle">8</text>
+  <text class="value" x="902.3" y="224.9" text-anchor="middle">44</text>
   <text class="axis-label" x="902.3" y="496" text-anchor="middle">2023</text>
   <rect x="951.7" y="423.1" width="44.0" height="48.9" fill="var(--series-gold)">
     <title>2024 — Mathematical: 9</title>

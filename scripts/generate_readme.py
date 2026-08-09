@@ -21,6 +21,7 @@ HEADER_PATH = DATA_DIR / "README.header.md"
 FOOTER_PATH = DATA_DIR / "README.footer.md"
 VISUALIZATION_DIR = ROOT / "visualization"
 VISUALIZATION_SCRIPT = VISUALIZATION_DIR / "generate_visualizations.py"
+SITE_SCRIPT = ROOT / "scripts" / "generate_site.py"
 ANALYSIS_PATH = VISUALIZATION_DIR / "analysis.md"
 OUTPUT_PATH = ROOT / "README.md"
 
@@ -300,6 +301,18 @@ def refresh_visualizations(check: bool) -> int:
     return result.returncode
 
 
+def refresh_site_data(check: bool) -> int:
+    command = [sys.executable, "-B", str(SITE_SCRIPT)]
+    if check:
+        command.append("--check")
+    try:
+        result = subprocess.run(command, cwd=ROOT, check=False)
+    except OSError as error:
+        print(f"error: unable to run website data generator: {error}", file=sys.stderr)
+        return 2
+    return result.returncode
+
+
 def check_output(expected: str) -> int:
     actual = OUTPUT_PATH.read_text(encoding="utf-8") if OUTPUT_PATH.exists() else ""
     if actual == expected:
@@ -330,6 +343,10 @@ def main() -> int:
     visualization_status = refresh_visualizations(args.check)
     if visualization_status:
         return visualization_status
+
+    site_status = refresh_site_data(args.check)
+    if site_status:
+        return site_status
 
     try:
         content, paper_count = build_readme()

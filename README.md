@@ -97,12 +97,12 @@ You can search the relevant papers by following keywords:
 ## [1. Survey and Analysis](#content)
 
 1. **VNF and CNF Placement in 5G: Recent Advances and Future Trends**
-   - `Publication`: TNSM 2023 (**JCR-Q1**)
+   - `Publication`: TNSM 2023 (**CCF-C; JCR-Q1**)
    - `Authors`: Wissal Attaoui; Essaid Sabir; Halima Elbiaze; Mohsen Guizani
    - `Link`: [DOI](https://doi.org/10.1109/tnsm.2023.3264005)
 
 1. **Network Services Anomalies in NFV: Survey, Taxonomy, and Verification Methods**
-   - `Publication`: TNSM 2022 (**JCR-Q1**)
+   - `Publication`: TNSM 2022 (**CCF-C; JCR-Q1**)
    - `Authors`: Moubarak Zoure; Toufik Ahmed; Laurent Réveillére
    - `Link`: [DOI](https://doi.org/10.1109/tnsm.2022.3144582)
 
@@ -178,7 +178,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/comst.2018.2815638)
 
 1. **A Survey on Service Function Chaining**
-   - `Publication`: Journal of Network and Computer Applications 2016 (**JCR-Q1**)
+   - `Publication`: Journal of Network and Computer Applications 2016 (**CCF-C; JCR-Q1**)
    - `Authors`: Deval Bhamare; Raj Jain; Mohammed Samaka; Aiman Erbad
    - `Link`: [DOI](https://doi.org/10.1016/j.jnca.2016.09.001), [ResearchGate](https://www.researchgate.net/publication/307997159_A_Survey_on_Service_Function_Chaining)
 
@@ -188,7 +188,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/comst.2015.2477041)
 
 1. **Resource Allocation in NFV: A Comprehensive Survey**
-   - `Publication`: TNSM 2016 (**JCR-Q1**)
+   - `Publication`: TNSM 2016 (**CCF-C; JCR-Q1**)
    - `Authors`: Juliver Gil Herrera; Juan Felipe Botero
    - `Link`: [DOI](https://doi.org/10.1109/tnsm.2016.2598420)
 
@@ -459,7 +459,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/twc.2022.3182591)
 
 1. **An Efficient Linear Programming Rounding-and-Refinement Algorithm for Large-Scale Network Slicing Problem**
-   - `Publication`: ICASSP 2021 (**CCF-A**)
+   - `Publication`: ICASSP 2021 (**CCF-B**)
    - `Authors`: Wei-Kun Chen; Ya-Feng Liu; Yu-Hong Dai; Zhi-Quan Luo
    - `Keywords`: Slicing; Large-Scale; Linear Programming; Rounding-and-Refinement
    - `Link`: [DOI](https://doi.org/10.1109/icassp39728.2021.9413378)
@@ -541,7 +541,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tmc.2020.3046968)
 
 1. **Slicing-based Reliable Resource Orchestration for Secure Software Defined Edge-Cloud Computing Systems**
-   - `Publication`: IoTJ 2022 (**JCR-Q1**)
+   - `Publication`: IoTJ 2022 (**CCF-C; JCR-Q1**)
    - `Authors`: Jianhang Tang; Jiangtian Nie; Zehui Xiong; Jun Zhao; Yang Zhang; Dusit Niyato
    - `Keywords`: Chaining; IoT; Network Slice
    - `Objective`: Placement cost -; Latency -
@@ -896,7 +896,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tmc.2020.3025189)
 
 1. **Profit-aware Edge Server Placement**
-   - `Publication`: IoTJ 2022 (**JCR-Q1**)
+   - `Publication`: IoTJ 2022 (**CCF-C; JCR-Q1**)
    - `Authors`: Yuanzhe Li; Ao Zhou; Xiao Ma; Shangguang Wang
    - `Keywords`: Deployment; Edge
    - `Objective`: Energy consumption -; Latency -
@@ -931,14 +931,14 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tmc.2019.2942306)
 
 1. **Distributed Virtual Network Embedding System With Historical Archives and Set-Based Particle Swarm Optimization**
-   - `Publication`: TSMC 2021 (**JCR-Q1**)
+   - `Publication`: TSMC 2021 (**CCF-B; JCR-Q1**)
    - `Authors`: An Song; Wei-Neng Chen; Tianlong Gu; Huaqiang Yuan; Sam Kwong; Jun Zhang
    - `Keywords`: Deployment; Distributed; Particle Swarm Optimization (PSO)
    - `Objective`: Acceptance rate +
    - `Link`: [DOI](https://doi.org/10.1109/tsmc.2018.2884523)
 
 1. **Dynamic Network Function Provisioning to Enable Network in Box for Industrial Applications**
-   - `Publication`: TII 2021 (**JCR-Q1**)
+   - `Publication`: TII 2021 (**CCF-C; JCR-Q1**)
    - `Authors`: Gang Sun; Zhu Xu; Hongfang Yu; Victor Chang
    - `Keywords`: Deployment; Path Selection
    - `Objective`: Cost -
@@ -959,7 +959,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tpds.2021.3075296)
 
 1. **Energy-Aware Service Function Chain Embedding in Edge–Cloud Environments for IoT Applications**
-   - `Publication`: IoTJ 2021 (**JCR-Q1**)
+   - `Publication`: IoTJ 2021 (**CCF-C; JCR-Q1**)
    - `Authors`: Nguyen Huu Thanh; Nguyen Trung Kien; Ngo Van Hoa; Truong Thu Huong; Florian Wamser; Tobias Hossfeld
    - `Keywords`: Deployment; IoT; Edge; Energy
    - `Objective`: Energy consumption -; Latency -
@@ -987,7 +987,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tpds.2021.3062341)
 
 1. **Joint Virtual Network Topology Design and Embedding for Cybertwin-Enabled 6G Core Networks**
-   - `Publication`: IoTJ 2021 (**JCR-Q1**)
+   - `Publication`: IoTJ 2021 (**CCF-C; JCR-Q1**)
    - `Authors`: Junling Li; Weisen Shi; Qiang Ye; Shan Zhang; Weihua Zhuang; Xuemin Shen
    - `Keywords`: Deployment; Joint; Latency
    - `Objective`: Placement cost -
@@ -1022,7 +1022,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tnet.2021.3055074)
 
 1. **Reliable Placement of Service Function Chains and Virtual Monitoring Functions With Minimal Cost in Softwarized 5G Networks**
-   - `Publication`: TNSM 2021 (**JCR-Q1**)
+   - `Publication`: TNSM 2021 (**CCF-C; JCR-Q1**)
    - `Authors`: Prabhu Kaliyammal Thiruvasagam; Abhishek Chakraborty; Abin Mathew; C. Siva Ram Murthy
    - `Keywords`: Deployment; VNE; Optical Network; Data Center
    - `Objective`: Reduce complexity of the network topology by using the parallel transmission characteristics of optical fiber
@@ -1043,7 +1043,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tpds.2020.3012146)
 
 1. **Virtual Network Function Allocation in Service Function Chains Using Backups With Availability Schedule**
-   - `Publication`: TNSM 2021 (**JCR-Q1**)
+   - `Publication`: TNSM 2021 (**CCF-C; JCR-Q1**)
    - `Authors`: Rui Kang; Fujun He; Eiji Oki
    - `Keywords`: Deployment; Availability Schedule; Reliability
    - `Objective`: Reliability +
@@ -1154,7 +1154,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tc.2020.2967661)
 
 1. **Reliability Aware Service Placement Using a Viterbi-Based Algorithm**
-   - `Publication`: TNSM 2020 (**JCR-Q1**)
+   - `Publication`: TNSM 2020 (**CCF-C; JCR-Q1**)
    - `Authors`: Mohammad Karimzadeh-Farshbafan; Vahid Shah-Mansouri; Dusit Niyato
    - `Keywords`: Deployment; MICP (mixed integer convex programming); Viterbi-based
    - `Objective`: Minimize the cost of resources of the InPs and maximize the reliability of the service
@@ -1286,7 +1286,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/hpca.2018.00013)
 
 1. **Enhancing Metaheuristic-Based Online Embedding in Network Virtualization Environments**
-   - `Publication`: TNSM 2018 (**JCR-Q1**)
+   - `Publication`: TNSM 2018 (**CCF-C; JCR-Q1**)
    - `Authors`: Javier Rubio-Loyola; Christian Aguilar-Fuster; Gregorio Toscano-Pulido; Rashid Mijumbi; Joan Serrat-Fernández
    - `Keywords`: Deployment; VNE; Fitness Function
    - `Objective`: Revenue-to-cost ratio +
@@ -1603,7 +1603,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/jsac.2021.3064664)
 
 1. **Joint Resource Optimization and Delay-aware Virtual Network Function Migration in Data Center Networks**
-   - `Publication`: TNSM 2021 (**JCR-Q1**)
+   - `Publication`: TNSM 2021 (**CCF-C; JCR-Q1**)
    - `Authors`: Biyi Li; Bo Cheng; Xuan Liu; Meng Wang; Yi Yue; Junliang Chen
    - `Keywords`: Scheduling; Migration; Latency
    - `Objective`: Placement cost -; Latency -
@@ -1816,7 +1816,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tnet.2022.3167169)
 
 1. **Software-defined Internet of Multimedia Things: Energy-efficient and Load-balanced Resource Management**
-   - `Publication`: IoTJ 2022 (**JCR-Q1**)
+   - `Publication`: IoTJ 2022 (**CCF-C; JCR-Q1**)
    - `Authors`: Ahmadreza Montazerolghaem
    - `Keywords`: Routing; IoT; Energy; Load Balancing
    - `Objective`: Energy consumption -; Load Balancing +
@@ -2056,7 +2056,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tmc.2026.3700558)
 
 1. **Virne: A Comprehensive Benchmark for RL-based Network Resource Allocation in NFV**
-   - `Publication`: ICLR 2026
+   - `Publication`: ICLR 2026 (**CCF-A**)
    - `Authors`: Tianfu Wang; Liwei Deng; Xi Chen; Junyang Wang; Huiguo He; Zhengyu Hu; Wei Wu; Leilei Ding; Qilin Fan; Hui Xiong
    - `Keywords`: Deployment; Deep Reinforcement Learning; Network Simulation; Benchmark
    - `Objective`: Effectiveness; Solvability; Generalizability; Scalability
@@ -2084,7 +2084,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [arXiv](https://arxiv.org/abs/2311.04649), [published version](https://doi.org/10.1109/jsac.2023.3339749)
 
 1. **FlagVNE: A Flexible and Generalizable Reinforcement Learning Framework for Network Resource Allocation**
-   - `Publication`: IJCAI 2024 (**CCF-A**)
+   - `Publication`: IJCAI 2024 (**CCF-B**)
    - `Authors`: Tianfu Wang; Qilin Fan; Chao Wang; Long Yang; Leilei Ding; Nicholas Jing Yuan; Hui Xiong
    - `Keywords`: Deployment; Deep Reinforcement Learning; Meta Learning; Graph Convolutional Network (GNN, GCN); proximal policy optimization (PPO)
    - `Objective`: Cost -; Revenue-to-cost +; Long-term Revenue +
@@ -2158,7 +2158,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/iwqos52092.2021.9521285), [PDF](https://research.tudelft.nl/files/93969106/IWQoS2021.pdf)
 
 1. **DDQP: A Double Deep Q-Learning Approach to Online Fault-Tolerant SFC Placement**
-   - `Publication`: TNSM 2021 (**JCR-Q1**)
+   - `Publication`: TNSM 2021 (**CCF-C; JCR-Q1**)
    - `Authors`: Lei Wang; Weixi Mao; Jin Zhao; Yuedong Xu
    - `Keywords`: Deployment; DDQN
    - `Objective`: Acceptance rate +; Placement cost -
@@ -2182,14 +2182,14 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tpds.2020.3043768)
 
 1. **A Continuous-Decision Virtual Network Embedding Scheme Relying on Reinforcement Learning**
-   - `Publication`: TNSM 2020 (**JCR-Q1**)
+   - `Publication`: TNSM 2020 (**CCF-C; JCR-Q1**)
    - `Authors`: Haipeng Yao; Sihan Ma; Jingjing Wang; Peiying Zhang; Chunxiao Jiang; Song Guo
    - `Keywords`: Continuous-Decision; Time Series; RNN; Seq2Seq
    - `Objective`: Long term average revenue to cost ratio +
    - `Link`: [DOI](https://doi.org/10.1109/tnsm.2020.2971543)
 
 1. **A Dynamic and Collaborative Multi-Layer Virtual Network Embedding Algorithm in SDN Based on Reinforcement Learning**
-   - `Publication`: TNSM 2020 (**JCR-Q1**)
+   - `Publication`: TNSM 2020 (**CCF-C; JCR-Q1**)
    - `Authors`: Meilian Lu; Yun Gu; Dongliang Xie
    - `Keywords`: Deployment; Collaborative; Multi-Layer; REINFORCE
    - `Objective`: Acceptance rate +; Long-term average revenue +
@@ -2487,7 +2487,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [arXiv](https://arxiv.org/abs/1901.08113)
 
 1. **Learning to Route**
-   - `Publication`: HotNets 2017
+   - `Publication`: HotNets 2017 (**CCF-C**)
    - `Authors`: Asaf Valadarsky; Michael Schapira; Dafna Shahaf; Aviv Tamar
    - `Keywords`: Route; RL
    - `Objective`: Automatically generate "good" routing configurations

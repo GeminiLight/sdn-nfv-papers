@@ -14,6 +14,8 @@ This repository maintains a verified catalog of SDN/NFV network resource allocat
 
 - Preserve the existing CSV schema and quote every field.
 - Separate multiple values with `; ` and put the primary category or direction first.
+- Use the latest official CCF directory for CCF ranks and re-audit venue mappings when a new edition is released.
+- When both CCF and JCR ranks apply, put CCF first (for example, `CCF-C; JCR-Q1`). Treat JCR ranks as supplemental and do not add or update them without a source and ranking year.
 - Use unique `doi:<doi>` or `arxiv:<id>` paper IDs with matching canonical URLs.
 - Verify titles, authors, venue, year, identifiers, code, and data links from authoritative sources. Do not guess missing metadata; report uncertain items for user review.
 - Do not bulk reorder or reclassify papers without explicit approval.

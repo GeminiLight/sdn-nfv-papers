@@ -11,7 +11,7 @@
   <img src="visualization/papers-by-direction.svg" alt="Horizontal bar chart of cataloged papers by primary research direction" width="100%">
 </p>
 
-- **Catalog coverage:** 372 papers spanning **2012–2026**.
-- **Largest method family:** Heuristic — **212 papers (57.0%)**.
-- **Most represented direction:** Deployment — **172 papers (46.2%)**.
-- **Most represented publication year:** 2021 — **56 papers**.
+- **Catalog coverage:** 388 papers spanning **2012–2026**.
+- **Largest method family:** Heuristic — **209 papers (53.9%)**.
+- **Most represented direction:** Deployment — **174 papers (44.8%)**.
+- **Most represented publication year:** 2021 — **59 papers**.

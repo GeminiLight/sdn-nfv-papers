@@ -63,14 +63,14 @@ You can search the relevant papers by following keywords:
   <img src="visualization/papers-by-direction.svg" alt="Horizontal bar chart of cataloged papers by primary research direction" width="100%">
 </p>
 
-- **Catalog coverage:** 372 papers spanning **2012–2026**.
-- **Largest method family:** Heuristic — **212 papers (57.0%)**.
-- **Most represented direction:** Deployment — **172 papers (46.2%)**.
-- **Most represented publication year:** 2021 — **56 papers**.
+- **Catalog coverage:** 388 papers spanning **2012–2026**.
+- **Largest method family:** Heuristic — **209 papers (53.9%)**.
+- **Most represented direction:** Deployment — **174 papers (44.8%)**.
+- **Most represented publication year:** 2021 — **59 papers**.
 
 ## Content
 
-> Generated from `data/papers.csv`: **372 verified paper records**.
+> Generated from `data/papers.csv`: **388 verified paper records**.
 
 - [1. Survey and Analysis](#1-survey-and-analysis)
 - [2. Mathematical-based Methods](#2-mathematical-based-methods)
@@ -96,10 +96,64 @@ You can search the relevant papers by following keywords:
 
 ## [1. Survey and Analysis](#content)
 
+1. **Deep Reinforcement Learning in Software Defined Networking: A Survey, Research Challenges, and Future Perspectives**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2026 (**JCR-Q1**)
+   - `Authors`: Vijay Prakash Bijlwan; Neetesh Kumar
+   - `Keywords`: Deep reinforcement learning; Software-defined networking; Traffic engineering; QoS; Network optimization
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2026.3656733)
+
+1. **Leveraging Reinforcement Learning for Traffic Engineering in Programmable Networks: A Survey**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2026 (**JCR-Q1**)
+   - `Authors`: Santiago Ríos-Guiral; Abdelkader Lahmadi; Juan F. Botero; Sergio A. Gutiérrez
+   - `Keywords`: Reinforcement learning; Traffic engineering; Programmable networks; Software-defined networking; Routing
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2025.3632870)
+
+1. **A Survey on Artificial Intelligence Techniques for Improved Rich Media Content Delivery in a 5G and Beyond Network Slicing Context**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2025 (**JCR-Q1**)
+   - `Authors`: Fazal E. Subhan; Abid Yaqoob; Cristina Hava Muntean; Gabriel-Miro Muntean
+   - `Keywords`: Network slicing; Rich media; Artificial intelligence; Resource management; QoS; QoE
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2024.3442149)
+
+1. **A Survey on Beyond 5G Network Slicing for Smart Cities Applications**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2025 (**JCR-Q1**)
+   - `Authors`: Wajid Rafique; Joyeeta Rani Barai; Abraham O. Fapojuwo; Diwakar Krishnamurthy
+   - `Keywords`: Network slicing; Smart cities; Resource allocation; Orchestration; AI; B5G
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2024.3410295)
+
+1. **AI-Empowered Virtual Network Embedding: A Comprehensive Survey**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2025 (**JCR-Q1**)
+   - `Authors`: Sheng Wu; Ning Chen; Ailing Xiao; Peiying Zhang; Chunxiao Jiang; Wei Zhang
+   - `Keywords`: Virtual network embedding; Artificial intelligence; Reinforcement learning; Multi-domain; 6G
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2024.3424533)
+
+1. **Virtual Network Embedding: Literature Assessment, Recent Advancements, Opportunities, and Challenges**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2025 (**JCR-Q1**)
+   - `Authors`: Anurag Satpathy; Manmath Narayan Sahoo; Chittaranjan Swain; Paolo Bellavista; Mohsen Guizani; Khan Muhammad; Sambit Bakshi
+   - `Keywords`: Virtual network embedding; Network virtualization; Resource allocation; Taxonomy
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2025.3531724)
+
+1. **Network Slicing-Based Learning Techniques for IoV in 5G and Beyond Networks**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2024 (**JCR-Q1**)
+   - `Authors`: Wafa Hamdi; Chahrazed Ksouri; Hasan Bulut; Mohamed Mosbah
+   - `Keywords`: Network slicing; Internet of Vehicles; Machine learning; Resource allocation; 5G; 6G
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2024.3372083)
+
+1. **Resource Management From Single-Domain 5G to End-to-End 6G Network Slicing: A Survey**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2024 (**JCR-Q1**)
+   - `Authors`: Sina Ebrahimi; Faouzi Bouali; Olivier C. L. Haas
+   - `Keywords`: Network slicing; End-to-end; Resource management; Multi-domain; Orchestration; 5G; 6G
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2024.3390613)
+
 1. **VNF and CNF Placement in 5G: Recent Advances and Future Trends**
    - `Publication`: TNSM 2023 (**CCF-C; JCR-Q1**)
    - `Authors`: Wissal Attaoui; Essaid Sabir; Halima Elbiaze; Mohsen Guizani
    - `Link`: [DOI](https://doi.org/10.1109/tnsm.2023.3264005)
+
+1. **A Survey of Intelligent Network Slicing Management for Industrial IoT: Integrated Approaches for Smart Transportation, Smart Energy, and Smart Factory**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2022 (**JCR-Q1**)
+   - `Authors`: Yulei Wu; Hong-Ning Dai; Haozhe Wang; Zehui Xiong; Song Guo
+   - `Keywords`: Network slicing; Industrial IoT; Orchestration; Service function chaining; Resource management
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2022.3158270)
 
 1. **Network Services Anomalies in NFV: Survey, Taxonomy, and Verification Methods**
    - `Publication`: TNSM 2022 (**CCF-C; JCR-Q1**)
@@ -122,15 +176,42 @@ You can search the relevant papers by following keywords:
    - `Authors`: Weiwei Jiang
    - `Link`: [arXiv](https://arxiv.org/abs/2106.02533), [published version](https://doi.org/10.1016/j.comcom.2021.12.015)
 
+1. **Leveraging Deep Reinforcement Learning for Traffic Engineering: A Survey**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2021 (**JCR-Q1**)
+   - `Authors`: Yang Xiao; Jun Liu; Jiawei Wu; Nirwan Ansari
+   - `Keywords`: Deep reinforcement learning; Traffic engineering; Routing; Network optimization
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2021.3102580)
+
 1. **Recent Advances of Resource Allocation in Network Function Virtualization**
    - `Publication`: TPDS 2021 (**CCF-A**)
    - `Authors`: Song Yang; Fan Li; Stojan Trajanovski; Ramin Yahyapour; Xiaoming Fu
    - `Link`: [DOI](https://doi.org/10.1109/tpds.2020.3017001)
 
+1. **Segment Routing: A Comprehensive Survey of Research Activities, Standardization Efforts, and Implementation Results**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2021 (**JCR-Q1**)
+   - `Authors`: Pier Luigi Ventre; Stefano Salsano; Marco Polverini; Antonio Cianfrani; Ahmed Abdelsalam; Clarence Filsfils; Pablo Camarillo; Francois Clad
+   - `Keywords`: Segment routing; SRv6; Traffic engineering; Service function chaining; NFV
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2020.3036826), [arxiv.org](https://arxiv.org/abs/1904.03471)
+
+1. **Towards Low-Latency Service Delivery in a Continuum of Virtual Resources: State-of-the-Art and Research Directions**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2021 (**JCR-Q1**)
+   - `Authors`: Jose Santos; Tim Wauters; Bruno Volckaert; Filip De Turck
+   - `Keywords`: Softwarized networks; Service deployment; Cloud-edge continuum; Orchestration; Low latency
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2021.3095358)
+
 1. **5G network slicing using SDN and NFV: A survey of taxonomy, architectures and future challenges**
    - `Publication`: CN 2020 (**CCF-B**)
    - `Authors`: Alcardo Alex Barakabitze; Arslan Ahmad; Rashid Mijumbi; Andrew Hines
    - `Link`: [DOI](https://doi.org/10.1016/j.comnet.2019.106984)
+
+1. **On Energy Efficient Resource Allocation in Shared RANs: Survey and Qualitative Analysis**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2020 (**JCR-Q1**)
+   - `Authors`: Fatma Marzouk; Joao Paulo Barraca; Ayman Radwan
+   - `Keywords`: RAN sharing; Resource allocation; Energy efficiency; Network virtualization; VNF placement
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2020.3003261)
+
+<details>
+<summary>Earlier papers (20)</summary>
 
 1. **On the Hardness and Inapproximability of Virtual Network Embeddings**
    - `Publication`: TON 2020 (**CCF-A**)
@@ -142,6 +223,12 @@ You can search the relevant papers by following keywords:
    - `Authors`: Weihua Zhuang; Qiang Ye; Feng Lyu; Nan Cheng; Ju Ren
    - `Link`: [DOI](https://doi.org/10.1109/jproc.2019.2951169)
 
+1. **Sharing Distributed and Heterogeneous Resources toward End-to-End 5G Networks: A Comprehensive Survey and a Taxonomy**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2020 (**JCR-Q1**)
+   - `Authors`: Nina Slamnik-Krijestorac; Haris Kremo; Marco Ruffini; Johann M. Marquez-Barja
+   - `Keywords`: 5G; Resource sharing; Multi-domain; Edge-cloud; Network slicing
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2020.3003818)
+
 1. **A Survey on the Placement of Virtual Resources and Virtual Network Functions**
    - `Publication`: IEEE Communications Surveys & Tutorials 2019 (**JCR-Q1**)
    - `Authors`: Abdelquoddouss Laghrissi; Tarik Taleb
@@ -152,10 +239,22 @@ You can search the relevant papers by following keywords:
    - `Authors`: Thi-Minh Nguyen; André Girard; Catherine Rosenberg; Serge Fdida
    - `Link`: [DOI](https://doi.org/10.1109/tnet.2019.2912717)
 
+1. **Segment Routing in Software Defined Networks: A Survey**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2019 (**JCR-Q1**)
+   - `Authors`: Zahraa N. Abdullah; Imtiaz Ahmad; Iftekhar Hussain
+   - `Keywords`: Segment routing; Software-defined networking; Traffic engineering; Service function chaining; Network resiliency
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2018.2869754)
+
 1. **Survey of Performance Acceleration Techniques for Network Function Virtualization**
    - `Publication`: Proc. IEEE 2019 (**CCF-A**)
    - `Authors`: Leonardo Linguaglossa; Stanislav Lange; Salvatore Pontarelli; Gábor Rétvári; Dario Rossi; Thomas Zinner; Roberto Bifulco; Michael Jarschel; Giuseppe Bianchi
    - `Link`: [DOI](https://doi.org/10.1109/jproc.2019.2896848)
+
+1. **Traffic Steering for Service Function Chaining**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2019 (**JCR-Q1**)
+   - `Authors`: Hajar Hantouti; Nabil Benamar; Tarik Taleb; Abdelquoddous Laghrissi
+   - `Keywords`: Service function chaining; Traffic steering; Software-defined networking; NFV; Scalability
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2018.2862404)
 
 1. **Will Serverless Computing Revolutionize NFV?**
    - `Publication`: Proc. IEEE 2019 (**CCF-A**)
@@ -177,6 +276,12 @@ You can search the relevant papers by following keywords:
    - `Authors`: Ibrahim Afolabi; Tarik Taleb; Konstantinos Samdanis; Adlen Ksentini; Hannu Flinck
    - `Link`: [DOI](https://doi.org/10.1109/comst.2018.2815638)
 
+1. **A Survey on the Contributions of Software-Defined Networking to Traffic Engineering**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2017 (**JCR-Q1**)
+   - `Authors`: Alaitz Mendiola; Jasone Astorga; Eduardo Jacob; Marivi Higuero
+   - `Keywords`: Software-defined networking; Traffic engineering; Routing; Congestion; Load balancing
+   - `Link`: [DOI](https://doi.org/10.1109/comst.2016.2633579)
+
 1. **A Survey on Service Function Chaining**
    - `Publication`: Journal of Network and Computer Applications 2016 (**CCF-C; JCR-Q1**)
    - `Authors`: Deval Bhamare; Raj Jain; Mohammed Samaka; Aiman Erbad
@@ -197,13 +302,22 @@ You can search the relevant papers by following keywords:
    - `Authors`: Andreas Blenk; Arsany Basta; Martin Reisslein; Wolfgang Kellerer
    - `Link`: [DOI](https://doi.org/10.1109/comst.2015.2489183)
 
-<details>
-<summary>Earlier papers (1)</summary>
+1. **Data Center Network Virtualization: A Survey**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2013 (**JCR-Q1**)
+   - `Authors`: Md. Faizul Bari; Raouf Boutaba; Rafael Esteves; Lisandro Zambenedetti Granville; Maxim Podlesny; Md Golam Rabbani; Qi Zhang; Mohamed Faten Zhani
+   - `Keywords`: Data center; Network virtualization; Virtual data center; Resource allocation; Embedding
+   - `Link`: [DOI](https://doi.org/10.1109/surv.2012.090512.00043)
 
 1. **Virtual Network Embedding: A Survey**
    - `Publication`: IEEE Communications Surveys & Tutorials 2013 (**JCR-Q1**)
    - `Authors`: Andreas Fischer; Juan Felipe Botero; Michael Till Beck; Hermann de Meer; Xavier Hesselbach
    - `Link`: [DOI](https://doi.org/10.1109/surv.2013.013013.00155)
+
+1. **Resource Discovery and Allocation in Network Virtualization**
+   - `Publication`: IEEE Communications Surveys & Tutorials 2012 (**JCR-Q1**)
+   - `Authors`: Abdeltouab Belbekkouche; Md. Mahmud Hasan; Ahmed Karmouch
+   - `Keywords`: Network virtualization; Resource discovery; Resource allocation; Virtual network embedding
+   - `Link`: [DOI](https://doi.org/10.1109/surv.2011.122811.00060)
 
 </details>
 
@@ -774,7 +888,7 @@ You can search the relevant papers by following keywords:
    - `Link`: [DOI](https://doi.org/10.1109/tnet.2023.3252639)
 
 <details>
-<summary>Earlier papers (104)</summary>
+<summary>Earlier papers (101)</summary>
 
 1. **Flexible Offloading of Service Function Chains to Programmable Switches**
    - `Publication`: TSC 2023 (**CCF-A**)
@@ -1033,7 +1147,7 @@ You can search the relevant papers by following keywords:
    - `Authors`: Vajiheh Farhadi; Fidan Mehmeti; Ting He; Thomas F. La Porta; Hana Khamfroush; Shiqiang Wang; Kevin S. Chan; Konstantinos Poularakis
    - `Keywords`: Deployment; Scheduling; Joint; Mobile Edge; Mobile Edge Computing
    - `Objective`: Acceptance rate +; Migration cost -; Cost -
-   - `Link`: [DOI](https://doi.org/10.1109/tnet.2020.3048613)
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2020.3048613), [related DOI](https://doi.org/10.1109/infocom.2019.8737368)
 
 1. **Sova: A Software-Defined Autonomic Framework for Virtual Network Allocations**
    - `Publication`: TPDS 2021 (**CCF-A**)
@@ -1250,13 +1364,6 @@ You can search the relevant papers by following keywords:
    - `Objective`: Placement cost -
    - `Link`: [DOI](https://doi.org/10.1109/infocom.2019.8737544)
 
-1. **Service Placement and Request Scheduling for Data-Intensive Applications in Edge Clouds**
-   - `Publication`: INFOCOM 2019 (**CCF-A**)
-   - `Authors`: Vajiheh Farhadi; Fidan Mehmeti; Ting He; Tom La Porta; Hana Khamfroush; Shiqiang Wang; Kevin S. Chan
-   - `Keywords`: Deployment; Scheduling; Mobile Edge
-   - `Objective`: Acceptance rate +
-   - `Link`: [DOI](https://doi.org/10.1109/infocom.2019.8737368)
-
 1. **Virtual Network Embedding Approximations: Leveraging Randomized Rounding**
    - `Publication`: TON 2019 (**CCF-A**)
    - `Authors`: Matthias Rost; Stefan Schmid
@@ -1275,8 +1382,8 @@ You can search the relevant papers by following keywords:
    - `Publication`: TON 2018 (**CCF-A**)
    - `Authors`: Tung-Wei Kuo; Bang-Heng Liou; Kate Ching-Ju Lin; Ming-Jer Tsai
    - `Keywords`: Placement
-   - `Objective`: Placement cost -
-   - `Link`: [DOI](https://doi.org/10.1109/tnet.2018.2842798)
+   - `Objective`: Placement cost -; Acceptance rate +
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2018.2842798), [related DOI](https://doi.org/10.1109/infocom.2016.7524565)
 
 1. **Enabling Efficient Network Service Function Chain Deployment on Heterogeneous Server Platform**
    - `Publication`: HPCA 2018 (**CCF-A**)
@@ -1421,9 +1528,9 @@ You can search the relevant papers by following keywords:
 1. **Optimizing Virtual Backup Allocation for Middleboxes**
    - `Publication`: TON 2017 (**CCF-A**)
    - `Authors`: Yossi Kanizo; Ori Rottenstreich; Itai Segall; Jose Yallouz
-   - `Keywords`: Deployment; Backup
-   - `Objective`: Placement cost -
-   - `Link`: [DOI](https://doi.org/10.1109/tnet.2017.2703080)
+   - `Keywords`: Deployment; Backup; Reliability
+   - `Objective`: Placement cost -; Reliability +
+   - `Link`: [DOI](https://doi.org/10.1109/tnet.2017.2703080), [related DOI](https://doi.org/10.1109/icnp.2016.7784411)
 
 1. **Reliable Virtual Machine Placement and Routing in Clouds**
    - `Publication`: TPDS 2017 (**CCF-A**)
@@ -1438,20 +1545,6 @@ You can search the relevant papers by following keywords:
    - `Keywords`: Placement; Dynamic; Genetic algorithm
    - `Objective`: Cost -
    - `Link`: [DOI](https://doi.org/10.1109/icnp.2016.7784475)
-
-1. **Deploying Chains of Virtual Network Functions: On the Relation Between Link and Server Usage**
-   - `Publication`: INFOCOM 2016 (**CCF-A**)
-   - `Authors`: Tung-Wei Kuo; Bang-Heng Liou; Kate Ching-Ju Lin; Ming-Jer Tsai
-   - `Keywords`: Placement
-   - `Objective`: Acceptance rate +
-   - `Link`: [DOI](https://doi.org/10.1109/infocom.2016.7524565)
-
-1. **Optimizing Virtual Backup Allocation for Middleboxes**
-   - `Publication`: ICNP 2016 (**CCF-B**)
-   - `Authors`: Yossi Kanizo; Ori Rottenstreich; Itai Segall; Jose Yallouz
-   - `Keywords`: Placement; Backup; Reliability
-   - `Objective`: Reliability +
-   - `Link`: [DOI](https://doi.org/10.1109/icnp.2016.7784411)
 
 1. **SLA-NFV: an SLA-aware High Performance Framework for Network Function Virtualization**
    - `Publication`: SIGCOMM 2016 (**CCF-A**)

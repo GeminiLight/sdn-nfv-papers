@@ -45,18 +45,21 @@
   <text class="axis-label" x="70" y="150.0" text-anchor="end">60</text>
   <rect class="frame" x="82" y="146" width="1070" height="326"/>
   <text class="axis-title" transform="translate(22 309.0) rotate(-90)" text-anchor="middle">Paper count</text>
-  <rect x="95.7" y="461.1" width="44.0" height="10.9" fill="var(--series-blue)">
+  <rect x="95.7" y="466.6" width="44.0" height="5.4" fill="var(--series-purple)">
+    <title>2012 — Survey &amp; analysis: 1</title>
+  </rect>
+  <rect x="95.7" y="455.7" width="44.0" height="10.9" fill="var(--series-blue)">
     <title>2012 — Heuristic: 2</title>
   </rect>
-  <text class="value" x="117.7" y="453.1" text-anchor="middle">2</text>
+  <text class="value" x="117.7" y="447.7" text-anchor="middle">3</text>
   <text class="axis-label" x="117.7" y="496" text-anchor="middle">2012</text>
-  <rect x="167.0" y="466.6" width="44.0" height="5.4" fill="var(--series-purple)">
-    <title>2013 — Survey &amp; analysis: 1</title>
+  <rect x="167.0" y="461.1" width="44.0" height="10.9" fill="var(--series-purple)">
+    <title>2013 — Survey &amp; analysis: 2</title>
   </rect>
-  <rect x="167.0" y="461.1" width="44.0" height="5.4" fill="var(--series-blue)">
+  <rect x="167.0" y="455.7" width="44.0" height="5.4" fill="var(--series-blue)">
     <title>2013 — Heuristic: 1</title>
   </rect>
-  <text class="value" x="189.0" y="453.1" text-anchor="middle">2</text>
+  <text class="value" x="189.0" y="447.7" text-anchor="middle">3</text>
   <text class="axis-label" x="189.0" y="496" text-anchor="middle">2013</text>
   <rect x="238.3" y="466.6" width="44.0" height="5.4" fill="var(--series-blue)">
     <title>2014 — Heuristic: 1</title>
@@ -74,21 +77,24 @@
   <rect x="381.0" y="450.3" width="44.0" height="21.7" fill="var(--series-purple)">
     <title>2016 — Survey &amp; analysis: 4</title>
   </rect>
-  <rect x="381.0" y="406.8" width="44.0" height="43.5" fill="var(--series-blue)">
-    <title>2016 — Heuristic: 8</title>
+  <rect x="381.0" y="417.7" width="44.0" height="32.6" fill="var(--series-blue)">
+    <title>2016 — Heuristic: 6</title>
   </rect>
-  <rect x="381.0" y="401.4" width="44.0" height="5.4" fill="var(--series-green)">
+  <rect x="381.0" y="412.2" width="44.0" height="5.4" fill="var(--series-green)">
     <title>2016 — Machine learning: 1</title>
   </rect>
-  <text class="value" x="403.0" y="393.4" text-anchor="middle">13</text>
+  <text class="value" x="403.0" y="404.2" text-anchor="middle">11</text>
   <text class="axis-label" x="403.0" y="496" text-anchor="middle">2016</text>
-  <rect x="452.3" y="395.9" width="44.0" height="76.1" fill="var(--series-blue)">
+  <rect x="452.3" y="466.6" width="44.0" height="5.4" fill="var(--series-purple)">
+    <title>2017 — Survey &amp; analysis: 1</title>
+  </rect>
+  <rect x="452.3" y="390.5" width="44.0" height="76.1" fill="var(--series-blue)">
     <title>2017 — Heuristic: 14</title>
   </rect>
-  <rect x="452.3" y="374.2" width="44.0" height="21.7" fill="var(--series-green)">
+  <rect x="452.3" y="368.8" width="44.0" height="21.7" fill="var(--series-green)">
     <title>2017 — Machine learning: 4</title>
   </rect>
-  <text class="value" x="474.3" y="366.2" text-anchor="middle">18</text>
+  <text class="value" x="474.3" y="360.8" text-anchor="middle">19</text>
   <text class="axis-label" x="474.3" y="496" text-anchor="middle">2017</text>
   <rect x="523.7" y="455.7" width="44.0" height="16.3" fill="var(--series-purple)">
     <title>2018 — Survey &amp; analysis: 3</title>
@@ -104,61 +110,61 @@
   </rect>
   <text class="value" x="545.7" y="333.6" text-anchor="middle">24</text>
   <text class="axis-label" x="545.7" y="496" text-anchor="middle">2018</text>
-  <rect x="595.0" y="450.3" width="44.0" height="21.7" fill="var(--series-purple)">
-    <title>2019 — Survey &amp; analysis: 4</title>
+  <rect x="595.0" y="439.4" width="44.0" height="32.6" fill="var(--series-purple)">
+    <title>2019 — Survey &amp; analysis: 6</title>
   </rect>
-  <rect x="595.0" y="347.0" width="44.0" height="103.2" fill="var(--series-blue)">
-    <title>2019 — Heuristic: 19</title>
+  <rect x="595.0" y="341.6" width="44.0" height="97.8" fill="var(--series-blue)">
+    <title>2019 — Heuristic: 18</title>
   </rect>
-  <rect x="595.0" y="314.4" width="44.0" height="32.6" fill="var(--series-green)">
+  <rect x="595.0" y="309.0" width="44.0" height="32.6" fill="var(--series-green)">
     <title>2019 — Machine learning: 6</title>
   </rect>
-  <rect x="595.0" y="309.0" width="44.0" height="5.4" fill="var(--series-slate)">
+  <rect x="595.0" y="303.6" width="44.0" height="5.4" fill="var(--series-slate)">
     <title>2019 — Other / unclassified: 1</title>
   </rect>
-  <text class="value" x="617.0" y="301.0" text-anchor="middle">30</text>
+  <text class="value" x="617.0" y="295.6" text-anchor="middle">31</text>
   <text class="axis-label" x="617.0" y="496" text-anchor="middle">2019</text>
-  <rect x="666.3" y="455.7" width="44.0" height="16.3" fill="var(--series-purple)">
-    <title>2020 — Survey &amp; analysis: 3</title>
+  <rect x="666.3" y="444.8" width="44.0" height="27.2" fill="var(--series-purple)">
+    <title>2020 — Survey &amp; analysis: 5</title>
   </rect>
-  <rect x="666.3" y="271.0" width="44.0" height="184.7" fill="var(--series-blue)">
+  <rect x="666.3" y="260.1" width="44.0" height="184.7" fill="var(--series-blue)">
     <title>2020 — Heuristic: 34</title>
   </rect>
-  <rect x="666.3" y="200.3" width="44.0" height="70.6" fill="var(--series-green)">
+  <rect x="666.3" y="189.5" width="44.0" height="70.6" fill="var(--series-green)">
     <title>2020 — Machine learning: 13</title>
   </rect>
-  <rect x="666.3" y="178.6" width="44.0" height="21.7" fill="var(--series-slate)">
+  <rect x="666.3" y="167.7" width="44.0" height="21.7" fill="var(--series-slate)">
     <title>2020 — Other / unclassified: 4</title>
   </rect>
-  <text class="value" x="688.3" y="170.6" text-anchor="middle">54</text>
+  <text class="value" x="688.3" y="159.7" text-anchor="middle">56</text>
   <text class="axis-label" x="688.3" y="496" text-anchor="middle">2020</text>
-  <rect x="737.7" y="455.7" width="44.0" height="16.3" fill="var(--series-purple)">
-    <title>2021 — Survey &amp; analysis: 3</title>
+  <rect x="737.7" y="439.4" width="44.0" height="32.6" fill="var(--series-purple)">
+    <title>2021 — Survey &amp; analysis: 6</title>
   </rect>
-  <rect x="737.7" y="260.1" width="44.0" height="195.6" fill="var(--series-blue)">
+  <rect x="737.7" y="243.8" width="44.0" height="195.6" fill="var(--series-blue)">
     <title>2021 — Heuristic: 36</title>
   </rect>
-  <rect x="737.7" y="211.2" width="44.0" height="48.9" fill="var(--series-green)">
+  <rect x="737.7" y="194.9" width="44.0" height="48.9" fill="var(--series-green)">
     <title>2021 — Machine learning: 9</title>
   </rect>
-  <rect x="737.7" y="167.7" width="44.0" height="43.5" fill="var(--series-slate)">
+  <rect x="737.7" y="151.4" width="44.0" height="43.5" fill="var(--series-slate)">
     <title>2021 — Other / unclassified: 8</title>
   </rect>
-  <text class="value" x="759.7" y="159.7" text-anchor="middle">56</text>
+  <text class="value" x="759.7" y="143.4" text-anchor="middle">59</text>
   <text class="axis-label" x="759.7" y="496" text-anchor="middle">2021</text>
-  <rect x="809.0" y="461.1" width="44.0" height="10.9" fill="var(--series-purple)">
-    <title>2022 — Survey &amp; analysis: 2</title>
+  <rect x="809.0" y="455.7" width="44.0" height="16.3" fill="var(--series-purple)">
+    <title>2022 — Survey &amp; analysis: 3</title>
   </rect>
-  <rect x="809.0" y="357.9" width="44.0" height="103.2" fill="var(--series-blue)">
+  <rect x="809.0" y="352.5" width="44.0" height="103.2" fill="var(--series-blue)">
     <title>2022 — Heuristic: 19</title>
   </rect>
-  <rect x="809.0" y="325.3" width="44.0" height="32.6" fill="var(--series-green)">
+  <rect x="809.0" y="319.9" width="44.0" height="32.6" fill="var(--series-green)">
     <title>2022 — Machine learning: 6</title>
   </rect>
-  <rect x="809.0" y="298.1" width="44.0" height="27.2" fill="var(--series-slate)">
+  <rect x="809.0" y="292.7" width="44.0" height="27.2" fill="var(--series-slate)">
     <title>2022 — Other / unclassified: 5</title>
   </rect>
-  <text class="value" x="831.0" y="290.1" text-anchor="middle">32</text>
+  <text class="value" x="831.0" y="284.7" text-anchor="middle">33</text>
   <text class="axis-label" x="831.0" y="496" text-anchor="middle">2022</text>
   <rect x="880.3" y="466.6" width="44.0" height="5.4" fill="var(--series-purple)">
     <title>2023 — Survey &amp; analysis: 1</title>
@@ -177,41 +183,50 @@
   </rect>
   <text class="value" x="902.3" y="224.9" text-anchor="middle">44</text>
   <text class="axis-label" x="902.3" y="496" text-anchor="middle">2023</text>
-  <rect x="951.7" y="423.1" width="44.0" height="48.9" fill="var(--series-gold)">
+  <rect x="951.7" y="461.1" width="44.0" height="10.9" fill="var(--series-purple)">
+    <title>2024 — Survey &amp; analysis: 2</title>
+  </rect>
+  <rect x="951.7" y="412.2" width="44.0" height="48.9" fill="var(--series-gold)">
     <title>2024 — Mathematical: 9</title>
   </rect>
-  <rect x="951.7" y="336.2" width="44.0" height="86.9" fill="var(--series-blue)">
+  <rect x="951.7" y="325.3" width="44.0" height="86.9" fill="var(--series-blue)">
     <title>2024 — Heuristic: 16</title>
   </rect>
-  <rect x="951.7" y="238.4" width="44.0" height="97.8" fill="var(--series-green)">
+  <rect x="951.7" y="227.5" width="44.0" height="97.8" fill="var(--series-green)">
     <title>2024 — Machine learning: 18</title>
   </rect>
-  <rect x="951.7" y="227.5" width="44.0" height="10.9" fill="var(--series-slate)">
+  <rect x="951.7" y="216.6" width="44.0" height="10.9" fill="var(--series-slate)">
     <title>2024 — Other / unclassified: 2</title>
   </rect>
-  <text class="value" x="973.7" y="219.5" text-anchor="middle">45</text>
+  <text class="value" x="973.7" y="208.6" text-anchor="middle">47</text>
   <text class="axis-label" x="973.7" y="496" text-anchor="middle">2024</text>
-  <rect x="1023.0" y="444.8" width="44.0" height="27.2" fill="var(--series-gold)">
+  <rect x="1023.0" y="450.3" width="44.0" height="21.7" fill="var(--series-purple)">
+    <title>2025 — Survey &amp; analysis: 4</title>
+  </rect>
+  <rect x="1023.0" y="423.1" width="44.0" height="27.2" fill="var(--series-gold)">
     <title>2025 — Mathematical: 5</title>
   </rect>
-  <rect x="1023.0" y="352.5" width="44.0" height="92.4" fill="var(--series-blue)">
+  <rect x="1023.0" y="330.7" width="44.0" height="92.4" fill="var(--series-blue)">
     <title>2025 — Heuristic: 17</title>
   </rect>
-  <rect x="1023.0" y="298.1" width="44.0" height="54.3" fill="var(--series-green)">
+  <rect x="1023.0" y="276.4" width="44.0" height="54.3" fill="var(--series-green)">
     <title>2025 — Machine learning: 10</title>
   </rect>
-  <text class="value" x="1045.0" y="290.1" text-anchor="middle">32</text>
+  <text class="value" x="1045.0" y="268.4" text-anchor="middle">36</text>
   <text class="axis-label" x="1045.0" y="496" text-anchor="middle">2025</text>
-  <rect x="1094.3" y="444.8" width="44.0" height="27.2" fill="var(--series-gold)">
+  <rect x="1094.3" y="461.1" width="44.0" height="10.9" fill="var(--series-purple)">
+    <title>2026 — Survey &amp; analysis: 2</title>
+  </rect>
+  <rect x="1094.3" y="434.0" width="44.0" height="27.2" fill="var(--series-gold)">
     <title>2026 — Mathematical: 5</title>
   </rect>
-  <rect x="1094.3" y="428.5" width="44.0" height="16.3" fill="var(--series-blue)">
+  <rect x="1094.3" y="417.7" width="44.0" height="16.3" fill="var(--series-blue)">
     <title>2026 — Heuristic: 3</title>
   </rect>
-  <rect x="1094.3" y="385.1" width="44.0" height="43.5" fill="var(--series-green)">
+  <rect x="1094.3" y="374.2" width="44.0" height="43.5" fill="var(--series-green)">
     <title>2026 — Machine learning: 8</title>
   </rect>
-  <text class="value" x="1116.3" y="377.1" text-anchor="middle">16</text>
+  <text class="value" x="1116.3" y="366.2" text-anchor="middle">18</text>
   <text class="axis-label" x="1116.3" y="496" text-anchor="middle">2026</text>
   <text class="axis-title" x="617.0" y="522" text-anchor="middle">Publication year</text>
   <text class="note" x="54" y="548">Source: data/papers.csv · Primary category only · Counts describe catalog coverage, not total field output</text>

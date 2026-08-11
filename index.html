@@ -211,7 +211,7 @@
 
             <div class="results-panel">
               <div class="results-toolbar">
-                <p id="result-count" role="status" aria-live="polite">Loading catalog</p>
+                <p id="result-count" role="status" aria-live="polite" tabindex="-1">Loading catalog</p>
                 <div class="results-actions">
                   <button class="toolbar-button" id="export-csv" type="button" title="Download filtered results as CSV">CSV</button>
                   <button class="toolbar-button" id="export-bibtex" type="button" title="Download filtered results as BibTeX">BibTeX</button>
@@ -237,7 +237,7 @@
                 <p>Broaden the query or reset the filters to return to the full catalog.</p>
                 <button class="button button-secondary" id="empty-reset" type="button">Reset filters</button>
               </div>
-              <button class="load-more" id="load-more" type="button" hidden>Show more papers</button>
+              <nav class="pagination" id="pagination" aria-label="Paper result pages" hidden></nav>
             </div>
           </div>
         </div>

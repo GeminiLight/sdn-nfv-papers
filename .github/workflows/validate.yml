@@ -1,0 +1,33 @@
+name: Validate catalog
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run catalog regression tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate catalog sources
+        run: python3 scripts/validate_catalog.py
+      - name: Check browser JavaScript syntax
+        run: node --check assets/app.js && node --check assets/exports.js
+      - name: Test CSV and BibTeX exports
+        run: node tests/site_exports.test.js
+      - name: Check generated artifacts
+        run: python3 scripts/generate_readme.py --check

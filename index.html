@@ -3,13 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A verified, searchable catalog of SDN and NFV network resource allocation research.">
+    <meta name="description" content="A curated, searchable catalog of SDN and NFV network resource allocation research.">
     <meta name="theme-color" content="#f4f7fb">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SDN/NFV Paper Index">
+    <meta property="og:description" content="Explore a curated catalog of SDN, NFV, slicing, chaining, deployment, scheduling, and routing research.">
+    <meta property="og:url" content="https://tianfuwang.tech/sdn-nfv-papers/">
+    <meta name="twitter:card" content="summary">
     <title>SDN/NFV Paper Index</title>
+    <link rel="canonical" href="https://tianfuwang.tech/sdn-nfv-papers/">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232863eb'/%3E%3Cpath d='M18 20h28v7H25v7h17v7H25v9h-7z' fill='white'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="assets/site.css">
+    <link rel="stylesheet" href="assets/filters.css">
+    <link rel="stylesheet" href="assets/details.css">
+    <link rel="stylesheet" href="assets/responsive.css">
+    <script defer src="assets/exports.js"></script>
     <script defer src="assets/papers.js"></script>
     <script defer src="assets/app.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "SDN/NFV Paper Index",
+        "description": "A curated catalog of SDN and NFV network resource allocation research.",
+        "url": "https://tianfuwang.tech/sdn-nfv-papers/",
+        "isAccessibleForFree": true,
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://tianfuwang.tech/sdn-nfv-papers/data/papers.csv"
+        }
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#catalog">Skip to paper catalog</a>
@@ -34,7 +59,7 @@
         <div class="hero-copy">
           <p class="eyebrow">Curated research index</p>
           <h1 id="hero-title">Navigate network research.</h1>
-          <p class="hero-summary">Search a verified catalog of SDN, NFV, slicing, chaining, deployment, scheduling, and routing papers.</p>
+          <p class="hero-summary">Search a curated catalog of SDN, NFV, slicing, chaining, deployment, scheduling, and routing papers.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#catalog">Browse papers</a>
             <a class="button button-secondary" href="data/papers.csv">View source CSV</a>
@@ -83,7 +108,7 @@
         <div class="shell">
           <div class="section-heading">
             <h2 id="catalog-title">Explore the catalog</h2>
-            <p>Combine full-text search with method, direction, venue, year, and rank filters.</p>
+            <p>Combine full-text search with paper type, method, scenario, direction, venue, year, rank, verification, and artifact filters.</p>
           </div>
 
           <div class="search-shell">
@@ -95,50 +120,107 @@
           </div>
 
           <div class="catalog-layout">
-            <aside class="filter-panel" aria-labelledby="filter-title">
+            <button class="filter-toggle" id="filter-toggle" type="button" aria-controls="filter-panel" aria-expanded="false">
+              <span class="filter-toggle-copy">
+                <strong>Refine results</strong>
+                <span>Topic, venue, year, and access</span>
+              </span>
+              <span class="filter-toggle-trail">
+                <span class="filter-toggle-count" id="filter-toggle-count" hidden>0</span>
+                <span class="filter-toggle-icon" aria-hidden="true"></span>
+              </span>
+            </button>
+
+            <aside class="filter-panel" id="filter-panel" aria-labelledby="filter-title">
               <div class="filter-heading">
-                <h3 id="filter-title">Filters</h3>
-                <button class="text-button" id="clear-filters" type="button">Reset</button>
+                <div class="filter-heading-copy">
+                  <p>Refine results</p>
+                  <h3 id="filter-title">Filters <span class="filter-count" id="filter-count" hidden>0</span></h3>
+                </div>
+                <button class="text-button" id="clear-filters" type="button" disabled>Clear all</button>
               </div>
 
-              <div class="filter-fields">
-                <label>
-                  <span>Method</span>
-                  <select id="filter-category"><option value="">All methods</option></select>
-                </label>
-                <label>
-                  <span>Direction</span>
-                  <select id="filter-direction"><option value="">All directions</option></select>
-                </label>
-                <label>
-                  <span>Venue</span>
-                  <select id="filter-venue"><option value="">All venues</option></select>
-                </label>
-                <label>
-                  <span>Year</span>
-                  <select id="filter-year"><option value="">All years</option></select>
-                </label>
-                <label>
-                  <span>Rank</span>
-                  <select id="filter-rank"><option value="">All ranks</option></select>
-                </label>
+              <div class="filter-groups">
+                <fieldset class="filter-group">
+                  <legend>Research focus</legend>
+                  <div class="filter-fields">
+                    <label class="filter-field">
+                      <span>Paper type</span>
+                      <select id="filter-paper-type"><option value="">All paper types</option></select>
+                    </label>
+                    <label class="filter-field">
+                      <span>Method</span>
+                      <select id="filter-method"><option value="">All methods</option></select>
+                    </label>
+                    <label class="filter-field">
+                      <span>Direction</span>
+                      <select id="filter-direction"><option value="">All directions</option></select>
+                    </label>
+                    <label class="filter-field">
+                      <span>Scenario</span>
+                      <select id="filter-scenario"><option value="">All scenarios</option></select>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="filter-group">
+                  <legend>Publication</legend>
+                  <div class="filter-fields">
+                    <label class="filter-field">
+                      <span>Venue</span>
+                      <select id="filter-venue"><option value="">All venues</option></select>
+                    </label>
+                    <label class="filter-field">
+                      <span>Year</span>
+                      <select id="filter-year"><option value="">All years</option></select>
+                    </label>
+                    <label class="filter-field">
+                      <span>Rank</span>
+                      <select id="filter-rank"><option value="">All ranks</option></select>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="filter-group">
+                  <legend>Trust &amp; access</legend>
+                  <div class="filter-fields">
+                    <label class="filter-field">
+                      <span>Verification</span>
+                      <select id="filter-verification"><option value="">All verification states</option></select>
+                    </label>
+                    <label class="filter-field">
+                      <span>Artifacts</span>
+                      <select id="filter-availability">
+                        <option value="">Any availability</option>
+                        <option value="code">Code available</option>
+                        <option value="data">Data available</option>
+                      </select>
+                    </label>
+                  </div>
+                </fieldset>
               </div>
 
-              <p class="filter-footnote">Multi-value fields match any paper containing the selected value.</p>
+              <p class="filter-footnote">Filters combine with one another. Multi-value fields match papers containing the selected value.</p>
             </aside>
 
             <div class="results-panel">
               <div class="results-toolbar">
                 <p id="result-count" role="status" aria-live="polite">Loading catalog</p>
-                <label class="sort-control">
-                  <span>Sort</span>
-                  <select id="sort-order">
-                    <option value="newest">Newest first</option>
-                    <option value="oldest">Oldest first</option>
-                    <option value="title">Title A-Z</option>
-                  </select>
-                </label>
+                <div class="results-actions">
+                  <button class="toolbar-button" id="export-csv" type="button" title="Download filtered results as CSV">CSV</button>
+                  <button class="toolbar-button" id="export-bibtex" type="button" title="Download filtered results as BibTeX">BibTeX</button>
+                  <label class="sort-control">
+                    <span>Sort</span>
+                    <select id="sort-order">
+                      <option value="newest">Newest first</option>
+                      <option value="oldest">Oldest first</option>
+                      <option value="title">Title A-Z</option>
+                    </select>
+                  </label>
+                </div>
               </div>
+
+              <div class="active-filters" id="active-filters" aria-label="Active filters" hidden></div>
 
               <div class="loading-state" id="loading-state" aria-hidden="true">
                 <span></span><span></span><span></span>
@@ -158,16 +240,16 @@
       <section class="about-section shell" id="about" aria-labelledby="about-title">
         <div class="about-copy">
           <h2 id="about-title">Built from one source of truth.</h2>
-          <p>The website, README, and coverage charts all derive from <code>data/papers.csv</code>. Every record keeps a stable DOI or arXiv identity.</p>
+          <p>The website, README, and coverage charts all derive from the validated CSV catalog in <code>data/</code>. Every record keeps a stable DOI or arXiv identity.</p>
         </div>
         <dl class="method-grid">
           <div>
-            <dt>Verified metadata</dt>
-            <dd>Titles, authors, venues, years, identifiers, and links are checked against authoritative sources.</dd>
+            <dt>Transparent provenance</dt>
+            <dd>Each record carries an explicit source and verification status; legacy records remain distinguishable from recently reviewed metadata.</dd>
           </div>
           <div>
             <dt>Research taxonomy</dt>
-            <dd>Methods and directions remain explicit, composable filters instead of fixed README sections.</dd>
+            <dd>Paper type, methods, scenarios, and directions remain explicit, composable filters instead of fixed README sections.</dd>
           </div>
           <div>
             <dt>Portable by design</dt>
@@ -180,11 +262,11 @@
     <footer class="site-footer">
       <div class="shell footer-inner">
         <p>SDN/NFV Paper Index</p>
-        <p>Catalog coverage describes this collection, not total field output.</p>
+        <p><a href="papers.html">Static paper index</a> · Catalog coverage describes this collection, not total field output.</p>
       </div>
     </footer>
 
-    <dialog class="paper-dialog" id="paper-dialog">
+    <dialog class="paper-dialog" id="paper-dialog" aria-labelledby="dialog-title">
       <div class="dialog-shell">
         <button class="dialog-close" id="dialog-close" type="button" aria-label="Close paper details">Close</button>
         <div id="dialog-content"></div>
@@ -192,7 +274,7 @@
     </dialog>
 
     <noscript>
-      <div class="noscript-message">JavaScript is required for search and filtering. The full catalog remains available in README.md.</div>
+      <div class="noscript-message">JavaScript is required for interactive search and filtering. Browse the <a href="papers.html">static paper index</a> or README instead.</div>
     </noscript>
   </body>
 </html>

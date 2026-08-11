@@ -1,0 +1,147 @@
+.paper-dialog {
+  width: min(980px, calc(100% - 48px));
+  max-height: min(860px, calc(100dvh - 32px));
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  padding: 0;
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.paper-dialog::backdrop {
+  background: color-mix(in srgb, #111827 62%, transparent);
+  backdrop-filter: blur(5px);
+}
+
+.dialog-shell {
+  position: relative;
+  padding: clamp(32px, 4.2vw, 56px);
+}
+
+.dialog-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background: var(--surface);
+  padding: 7px 10px;
+  cursor: pointer;
+  color: var(--text-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.dialog-meta {
+  margin: 0 0 18px;
+  color: var(--accent-ink);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.dialog-title {
+  max-width: 90%;
+  margin: 0;
+  font-size: clamp(1.45rem, 2.4vw, 2.05rem);
+  font-weight: 680;
+  letter-spacing: -0.035em;
+  line-height: 1.18;
+}
+
+.dialog-authors {
+  margin: 18px 0 0;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.dialog-details {
+  display: grid;
+  margin: 30px 0 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background: var(--line);
+}
+
+.dialog-details div {
+  background: var(--surface);
+  padding: 14px 16px;
+}
+
+.dialog-details dt {
+  color: var(--text-faint);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.dialog-details dd {
+  margin: 5px 0 0;
+  font-size: 0.79rem;
+  font-weight: 650;
+}
+
+.dialog-section {
+  margin-top: 28px;
+}
+
+.dialog-section h3 {
+  margin: 0 0 8px;
+  font-size: 0.77rem;
+}
+
+.dialog-section p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.dialog-actions .button {
+  min-height: 40px;
+  padding: 9px 13px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.static-catalog-page {
+  min-height: 100vh;
+  background: var(--page);
+}
+
+.static-catalog-main {
+  padding-block: 72px 120px;
+}
+
+.static-catalog-heading {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.static-catalog-heading h1 {
+  margin: 12px 0 16px;
+  font-size: clamp(2.4rem, 7vw, 5.8rem);
+}
+
+.static-catalog-heading p {
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+.static-year-heading {
+  margin: 64px 0 0;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 14px;
+  font-size: 1.35rem;
+}

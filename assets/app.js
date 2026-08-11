@@ -2,16 +2,36 @@
   "use strict";
 
   const catalog = window.PAPER_CATALOG;
+  const exporters = window.PAPER_EXPORTS;
   const pageSize = 30;
 
-  const categoryLabels = {
+  const paperTypeLabels = {
+    research: "Research paper",
     survey_analysis: "Survey & analysis",
+  };
+  const methodLabels = {
     mathematical: "Mathematical",
     heuristic: "Heuristic",
     machine_learning: "Machine learning",
-    other_unclassified: "Other",
+    systems: "Systems",
+    unclassified: "Unclassified",
   };
-
+  const scenarioLabels = {
+    "5g": "5G",
+    "6g": "6G",
+    cloud: "Cloud",
+    data_center: "Data center",
+    edge: "Edge / MEC",
+    industrial_iot: "Industrial IoT",
+    internet_of_vehicles: "Internet of Vehicles",
+    iot: "IoT",
+    mobile: "Mobile",
+    multi_domain: "Multi-domain",
+    optical: "Optical",
+    radio_access: "Radio access / O-RAN",
+    satellite: "Satellite / SAGIN",
+    smart_city: "Smart city",
+  };
   const directionLabels = {
     slicing: "Slicing",
     chaining: "Chaining",
@@ -19,14 +39,23 @@
     scheduling: "Scheduling",
     routing: "Routing",
   };
+  const verificationLabels = {
+    verified: "Source-verified",
+    legacy: "Legacy record",
+    pending: "Verification pending",
+  };
 
   const elements = {
     search: document.querySelector("#paper-search"),
-    category: document.querySelector("#filter-category"),
+    paperType: document.querySelector("#filter-paper-type"),
+    method: document.querySelector("#filter-method"),
+    scenario: document.querySelector("#filter-scenario"),
     direction: document.querySelector("#filter-direction"),
     venue: document.querySelector("#filter-venue"),
     year: document.querySelector("#filter-year"),
     rank: document.querySelector("#filter-rank"),
+    verification: document.querySelector("#filter-verification"),
+    availability: document.querySelector("#filter-availability"),
     sort: document.querySelector("#sort-order"),
     list: document.querySelector("#paper-list"),
     count: document.querySelector("#result-count"),
@@ -35,6 +64,13 @@
     emptyReset: document.querySelector("#empty-reset"),
     loadMore: document.querySelector("#load-more"),
     loading: document.querySelector("#loading-state"),
+    exportCsv: document.querySelector("#export-csv"),
+    exportBibtex: document.querySelector("#export-bibtex"),
+    activeFilters: document.querySelector("#active-filters"),
+    filterPanel: document.querySelector("#filter-panel"),
+    filterToggle: document.querySelector("#filter-toggle"),
+    filterToggleCount: document.querySelector("#filter-toggle-count"),
+    filterCount: document.querySelector("#filter-count"),
     dialog: document.querySelector("#paper-dialog"),
     dialogClose: document.querySelector("#dialog-close"),
     dialogContent: document.querySelector("#dialog-content"),
@@ -48,14 +84,32 @@
 
   const state = {
     query: "",
-    category: "",
+    paperType: "",
+    method: "",
+    scenario: "",
     direction: "",
     venue: "",
     year: "",
     rank: "",
+    verification: "",
+    availability: "",
     sort: "newest",
+    paper: "",
     limit: pageSize,
   };
+
+  const filterDefinitions = [
+    { key: "query", label: "Search" },
+    { key: "paperType", label: "Paper type", labels: paperTypeLabels },
+    { key: "method", label: "Method", labels: methodLabels },
+    { key: "direction", label: "Direction", labels: directionLabels },
+    { key: "scenario", label: "Scenario", labels: scenarioLabels },
+    { key: "venue", label: "Venue" },
+    { key: "year", label: "Year" },
+    { key: "rank", label: "Rank" },
+    { key: "verification", label: "Verification", labels: verificationLabels },
+    { key: "availability", label: "Artifacts", labels: { code: "Code available", data: "Data available" } },
+  ];
 
   const splitValues = (value) => value ? value.split(";").map((part) => part.trim()).filter(Boolean) : [];
   const normalize = (value) => String(value || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -97,11 +151,14 @@
   }
 
   function initializeFilters(papers) {
-    appendOptions(elements.category, Object.keys(categoryLabels), categoryLabels);
+    appendOptions(elements.paperType, Object.keys(paperTypeLabels), paperTypeLabels);
+    appendOptions(elements.method, Object.keys(methodLabels).filter((value) => uniqueValues(papers, "method_families").includes(value)), methodLabels);
+    appendOptions(elements.scenario, Object.keys(scenarioLabels).filter((value) => uniqueValues(papers, "scenarios").includes(value)), scenarioLabels);
     appendOptions(elements.direction, Object.keys(directionLabels), directionLabels);
     appendOptions(elements.venue, uniqueValues(papers, "venue").sort((a, b) => a.localeCompare(b)));
     appendOptions(elements.year, uniqueValues(papers, "year").sort((a, b) => Number(b) - Number(a)));
     appendOptions(elements.rank, uniqueValues(papers, "ranks").sort((a, b) => a.localeCompare(b)));
+    appendOptions(elements.verification, uniqueValues(papers, "verification_status").sort(), verificationLabels);
   }
 
   function renderCoverage(papers) {
@@ -117,8 +174,9 @@
       const height = Math.max(4, Math.round((yearCounts[year] / max) * 100));
       const tone = Math.round(45 + (index / Math.max(years.length - 1, 1)) * 50);
       const showYear = index % 2 === 0 || index === years.length - 1;
+      const paperLabel = `${yearCounts[year]} paper${yearCounts[year] === 1 ? "" : "s"}`;
       return `
-        <div class="coverage-bar-wrap" style="--bar-height:${height}%;--bar-tone:${tone}%" title="${escapeHtml(year)}: ${yearCounts[year]} papers">
+        <div class="coverage-bar-wrap" style="--bar-height:${height}%;--bar-tone:${tone}%" title="${escapeHtml(year)}: ${paperLabel}">
           <span class="coverage-value">${yearCounts[year]}</span>
           <span class="coverage-bar"></span>
           <span class="coverage-year">${showYear ? escapeHtml(year) : ""}</span>
@@ -161,7 +219,6 @@
     elements.coverageButtons.forEach((button) => {
       button.addEventListener("click", () => setCoverageView(button.dataset.coverageView));
     });
-
     document.querySelector("#stat-papers").textContent = papers.length.toLocaleString();
     document.querySelector("#stat-venues").textContent = new Set(papers.map((paper) => paper.venue)).size.toLocaleString();
     document.querySelector("#stat-year").textContent = Math.max(...papers.map((paper) => Number(paper.year)));
@@ -169,15 +226,8 @@
 
   function searchableText(paper) {
     return normalize([
-      paper.title,
-      paper.authors,
-      paper.keywords,
-      paper.objectives,
-      paper.venue,
-      paper.year,
-      paper.ranks,
-      paper.categories,
-      paper.directions,
+      paper.title, paper.authors, paper.keywords, paper.objectives, paper.venue, paper.year, paper.ranks,
+      paper.paper_type, paper.method_families, paper.scenarios, paper.directions, paper.verification_status,
     ].join(" "));
   }
 
@@ -185,30 +235,36 @@
     const terms = normalize(state.query).split(/\s+/).filter(Boolean);
     const haystack = searchableText(paper);
     return terms.every((term) => haystack.includes(term))
-      && (!state.category || splitValues(paper.categories).includes(state.category))
+      && (!state.paperType || paper.paper_type === state.paperType)
+      && (!state.method || splitValues(paper.method_families).includes(state.method))
+      && (!state.scenario || splitValues(paper.scenarios).includes(state.scenario))
       && (!state.direction || splitValues(paper.directions).includes(state.direction))
       && (!state.venue || paper.venue === state.venue)
       && (!state.year || paper.year === state.year)
-      && (!state.rank || splitValues(paper.ranks).includes(state.rank));
+      && (!state.rank || splitValues(paper.ranks).includes(state.rank))
+      && (!state.verification || paper.verification_status === state.verification)
+      && (!state.availability || Boolean(paper[`${state.availability}_url`]));
   }
 
   function sortedPapers(papers) {
     return [...papers].sort((a, b) => {
-      if (state.sort === "oldest") {
-        return Number(a.year) - Number(b.year) || a.title.localeCompare(b.title);
-      }
-      if (state.sort === "title") {
-        return a.title.localeCompare(b.title) || Number(b.year) - Number(a.year);
-      }
+      if (state.sort === "oldest") return Number(a.year) - Number(b.year) || a.title.localeCompare(b.title);
+      if (state.sort === "title") return a.title.localeCompare(b.title) || Number(b.year) - Number(a.year);
       return Number(b.year) - Number(a.year) || a.title.localeCompare(b.title);
     });
   }
 
+  function filteredPapers() {
+    return sortedPapers(catalog.papers.filter(matchesState));
+  }
+
   function tagMarkup(paper) {
     const tags = [
-      ...splitValues(paper.categories).map((value) => categoryLabels[value] || value),
+      paper.paper_type === "survey_analysis" ? paperTypeLabels.survey_analysis : "",
+      ...splitValues(paper.method_families).map((value) => methodLabels[value] || value),
       ...splitValues(paper.directions).map((value) => directionLabels[value] || value),
-    ];
+      ...splitValues(paper.scenarios).map((value) => scenarioLabels[value] || value),
+    ].filter(Boolean).slice(0, 6);
     return tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
   }
 
@@ -222,14 +278,65 @@
           <p class="paper-authors">${escapeHtml(paper.authors.replaceAll("; ", ", "))}</p>
           <div class="paper-tags">${tagMarkup(paper)}</div>
         </div>
-        <div class="paper-actions">
-          <button class="details-button" type="button" data-paper-id="${escapeHtml(paper.paper_id)}">Details</button>
-        </div>
+        <div class="paper-actions"><button class="details-button" type="button" data-paper-id="${escapeHtml(paper.paper_id)}">Details</button></div>
       </li>`;
   }
 
   function activeFilterCount() {
-    return [state.query, state.category, state.direction, state.venue, state.year, state.rank].filter(Boolean).length;
+    return [state.query, state.paperType, state.method, state.scenario, state.direction, state.venue, state.year, state.rank, state.verification, state.availability].filter(Boolean).length;
+  }
+
+  function filterDisplayValue(definition, value) {
+    if (definition.key === "query") return `“${value}”`;
+    return definition.labels?.[value] || value;
+  }
+
+  function clearFilter(key) {
+    state[key] = "";
+    state.limit = pageSize;
+    if (key === "query") elements.search.value = "";
+    else elements[key].value = "";
+    render();
+  }
+
+  function renderActiveFilters() {
+    const active = filterDefinitions.filter(({ key }) => Boolean(state[key]));
+    elements.activeFilters.replaceChildren();
+    elements.activeFilters.hidden = active.length === 0;
+    active.forEach((definition) => {
+      const button = document.createElement("button");
+      const value = filterDisplayValue(definition, state[definition.key]);
+      button.className = "active-filter";
+      button.type = "button";
+      button.setAttribute("aria-label", `Remove ${definition.label} filter: ${value}`);
+      const label = document.createElement("span");
+      const name = document.createElement("strong");
+      name.textContent = `${definition.label}:`;
+      label.append(name, ` ${value}`);
+      const mark = document.createElement("span");
+      mark.className = "active-filter-mark";
+      mark.setAttribute("aria-hidden", "true");
+      mark.textContent = "×";
+      button.append(label, mark);
+      button.addEventListener("click", () => clearFilter(definition.key));
+      elements.activeFilters.append(button);
+    });
+  }
+
+  function syncFilterUi() {
+    const count = activeFilterCount();
+    elements.filterCount.textContent = String(count);
+    elements.filterCount.hidden = count === 0;
+    elements.filterToggleCount.textContent = String(count);
+    elements.filterToggleCount.hidden = count === 0;
+    elements.clear.disabled = count === 0;
+    filterDefinitions.forEach(({ key }) => {
+      if (key === "query") return;
+      elements[key].closest(".filter-field")?.classList.toggle("is-active", Boolean(state[key]));
+    });
+    const panelOpen = elements.filterPanel.classList.contains("is-open");
+    elements.filterToggle.setAttribute("aria-label", `${panelOpen ? "Hide" : "Show"} filters${count ? `, ${count} active` : ""}`);
+    renderActiveFilters();
   }
 
   function updateUrl() {
@@ -242,23 +349,38 @@
   }
 
   function render() {
-    const filtered = sortedPapers(catalog.papers.filter(matchesState));
+    const filtered = filteredPapers();
     const visible = filtered.slice(0, state.limit);
     const filters = activeFilterCount();
-
     elements.loading.hidden = true;
     elements.list.innerHTML = visible.map(paperMarkup).join("");
     elements.count.textContent = `${filtered.length.toLocaleString()} paper${filtered.length === 1 ? "" : "s"}${filters ? ` across ${filters} active filter${filters === 1 ? "" : "s"}` : ""}`;
     elements.empty.hidden = filtered.length !== 0;
+    elements.exportCsv.disabled = filtered.length === 0;
+    elements.exportBibtex.disabled = filtered.length === 0;
     elements.loadMore.hidden = visible.length >= filtered.length || filtered.length === 0;
-    if (!elements.loadMore.hidden) {
-      elements.loadMore.textContent = `Show ${Math.min(pageSize, filtered.length - visible.length)} more of ${filtered.length}`;
-    }
-
+    if (!elements.loadMore.hidden) elements.loadMore.textContent = `Show ${Math.min(pageSize, filtered.length - visible.length)} more of ${filtered.length}`;
     elements.list.querySelectorAll("[data-paper-id]").forEach((button) => {
       button.addEventListener("click", () => openDialog(button.dataset.paperId));
     });
+    syncFilterUi();
     updateUrl();
+  }
+
+  function linkLabel(url, paper) {
+    try {
+      const parsed = new URL(url);
+      const host = parsed.hostname.replace(/^www\./, "").toLowerCase();
+      const path = parsed.pathname.toLowerCase();
+      if (host === "doi.org") return paper.paper_id.startsWith("arxiv:") ? "Published version" : "Related DOI";
+      if (host === "arxiv.org") return "arXiv";
+      if (host === "dl.acm.org") return "ACM Digital Library";
+      if (host.includes("researchgate.net")) return "ResearchGate";
+      if (path.endsWith(".pdf") || path.includes("/pdf") || path.includes("document")) return "PDF";
+      return host || "Related link";
+    } catch {
+      return "Related link";
+    }
   }
 
   function dialogLink(url, label, primary = false) {
@@ -266,20 +388,49 @@
     return `<a class="button ${primary ? "button-primary" : "button-secondary"}" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
   }
 
+  function citationText(paper) {
+    return `${paper.authors.replaceAll("; ", ", ")}. “${paper.title}.” ${paper.venue}, ${paper.year}. ${paper.paper_url}`;
+  }
+
+  async function copyText(value, button, successLabel) {
+    try {
+      await navigator.clipboard.writeText(value);
+      const original = button.textContent;
+      button.textContent = successLabel;
+      window.setTimeout(() => { button.textContent = original; }, 1400);
+    } catch {
+      button.textContent = "Copy unavailable";
+    }
+  }
+
   function openDialog(paperId) {
     const paper = catalog.papers.find((item) => item.paper_id === paperId);
-    if (!paper) return;
-    const citation = `${paper.authors.replaceAll("; ", ", ")}. “${paper.title}.” ${paper.venue}, ${paper.year}.`;
+    if (!paper) {
+      state.paper = "";
+      updateUrl();
+      return;
+    }
+    state.paper = paperId;
+    updateUrl();
     const otherLinks = splitValues(paper.other_urls);
+    const methods = splitValues(paper.method_families).map((value) => methodLabels[value] || value).join(", ");
+    const scenarios = splitValues(paper.scenarios).map((value) => scenarioLabels[value] || value).join(", ");
+    const verification = paper.verification_status === "verified"
+      ? `Source-verified on ${paper.verified_at}`
+      : paper.verification_status === "pending"
+        ? "Verification pending"
+        : "Legacy record awaiting source-by-source re-verification";
     elements.dialogContent.innerHTML = `
       <p class="dialog-meta">${escapeHtml(paper.venue)} / ${escapeHtml(paper.year)}${paper.ranks ? ` / ${escapeHtml(paper.ranks)}` : ""}</p>
-      <h2 class="dialog-title">${escapeHtml(paper.title)}</h2>
+      <h2 class="dialog-title" id="dialog-title">${escapeHtml(paper.title)}</h2>
       <p class="dialog-authors">${escapeHtml(paper.authors.replaceAll("; ", ", "))}</p>
       <dl class="dialog-details">
-        <div><dt>Method</dt><dd>${escapeHtml(splitValues(paper.categories).map((value) => categoryLabels[value] || value).join(", ") || "Unspecified")}</dd></div>
+        <div><dt>Paper type</dt><dd>${escapeHtml(paperTypeLabels[paper.paper_type] || paper.paper_type)}</dd></div>
+        <div><dt>Method</dt><dd>${escapeHtml(methods || "Not assigned")}</dd></div>
         <div><dt>Direction</dt><dd>${escapeHtml(splitValues(paper.directions).map((value) => directionLabels[value] || value).join(", ") || "Other")}</dd></div>
+        <div><dt>Scenario</dt><dd>${escapeHtml(scenarios || "Not assigned")}</dd></div>
         <div><dt>Identifier</dt><dd>${escapeHtml(paper.paper_id)}</dd></div>
-        <div><dt>Rank</dt><dd>${escapeHtml(paper.ranks || "Not listed")}</dd></div>
+        <div><dt>Provenance</dt><dd>${escapeHtml(verification)}</dd></div>
       </dl>
       ${paper.keywords ? `<div class="dialog-section"><h3>Keywords</h3><p>${escapeHtml(paper.keywords.replaceAll("; ", ", "))}</p></div>` : ""}
       ${paper.objectives ? `<div class="dialog-section"><h3>Objectives</h3><p>${escapeHtml(paper.objectives.replaceAll("; ", ", "))}</p></div>` : ""}
@@ -287,55 +438,70 @@
         ${dialogLink(paper.paper_url, paper.paper_id.startsWith("arxiv:") ? "Open arXiv" : "Open DOI", true)}
         ${dialogLink(paper.code_url, "View code")}
         ${dialogLink(paper.data_url, "View data")}
-        ${otherLinks.map((url, index) => dialogLink(url, otherLinks.length > 1 ? `Related link ${index + 1}` : "Published version")).join("")}
+        ${otherLinks.map((url) => dialogLink(url, linkLabel(url, paper))).join("")}
         <button class="button button-secondary" id="copy-citation" type="button">Copy citation</button>
+        <button class="button button-secondary" id="copy-bibtex" type="button">Copy BibTeX</button>
+        <button class="button button-secondary" id="copy-paper-link" type="button">Copy link</button>
       </div>`;
 
-    elements.dialog.showModal();
-    document.querySelector("#copy-citation").addEventListener("click", async (event) => {
-      try {
-        await navigator.clipboard.writeText(citation);
-        event.currentTarget.textContent = "Copied";
-        window.setTimeout(() => { event.currentTarget.textContent = "Copy citation"; }, 1400);
-      } catch {
-        event.currentTarget.textContent = "Copy unavailable";
-      }
-    });
+    if (!elements.dialog.open) elements.dialog.showModal();
+    document.querySelector("#copy-citation").addEventListener("click", (event) => copyText(citationText(paper), event.currentTarget, "Copied"));
+    document.querySelector("#copy-bibtex").addEventListener("click", (event) => copyText(exporters.bibtexEntry(paper), event.currentTarget, "Copied"));
+    document.querySelector("#copy-paper-link").addEventListener("click", (event) => copyText(location.href, event.currentTarget, "Copied"));
+  }
+
+  function closeDialog() {
+    if (elements.dialog.open) elements.dialog.close();
+    if (state.paper) {
+      state.paper = "";
+      updateUrl();
+    }
+  }
+
+  function downloadFile(filename, content, type) {
+    const url = URL.createObjectURL(new Blob([content], { type }));
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = filename;
+    document.body.append(anchor);
+    anchor.click();
+    anchor.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
   function resetFilters() {
     Object.assign(state, {
-      query: "",
-      category: "",
-      direction: "",
-      venue: "",
-      year: "",
-      rank: "",
-      sort: "newest",
-      limit: pageSize,
+      query: "", paperType: "", method: "", scenario: "", direction: "", venue: "", year: "",
+      rank: "", verification: "", availability: "", sort: "newest", paper: "", limit: pageSize,
     });
-    elements.search.value = "";
-    elements.category.value = "";
-    elements.direction.value = "";
-    elements.venue.value = "";
-    elements.year.value = "";
-    elements.rank.value = "";
+    ["search", "paperType", "method", "scenario", "direction", "venue", "year", "rank", "verification", "availability"].forEach((key) => {
+      elements[key].value = "";
+    });
     elements.sort.value = "newest";
+    if (elements.dialog.open) elements.dialog.close();
     render();
   }
 
   function readUrlState() {
     const params = new URLSearchParams(location.search);
-    ["query", "category", "direction", "venue", "year", "rank", "sort"].forEach((key) => {
+    ["query", "paperType", "method", "scenario", "direction", "venue", "year", "rank", "verification", "availability", "sort", "paper"].forEach((key) => {
       if (params.has(key)) state[key] = params.get(key);
     });
+    if (params.has("category") && !params.has("method") && !params.has("paperType")) {
+      const legacyCategory = params.get("category");
+      if (legacyCategory === "survey_analysis") state.paperType = "survey_analysis";
+      else if (legacyCategory === "other_unclassified") state.method = "systems";
+      else state.method = legacyCategory;
+    }
     elements.search.value = state.query;
-    elements.category.value = state.category;
-    elements.direction.value = state.direction;
-    elements.venue.value = state.venue;
-    elements.year.value = state.year;
-    elements.rank.value = state.rank;
-    elements.sort.value = state.sort;
+    ["paperType", "method", "scenario", "direction", "venue", "year", "rank", "verification", "availability", "sort"].forEach((key) => {
+      const control = elements[key];
+      control.value = state[key];
+      if (control.value !== state[key]) {
+        state[key] = key === "sort" ? "newest" : "";
+        control.value = state[key];
+      }
+    });
   }
 
   function bindControls() {
@@ -348,24 +514,30 @@
         render();
       }, 100);
     });
-
-    ["category", "direction", "venue", "year", "rank", "sort"].forEach((key) => {
+    ["paperType", "method", "scenario", "direction", "venue", "year", "rank", "verification", "availability", "sort"].forEach((key) => {
       elements[key].addEventListener("change", () => {
         state[key] = elements[key].value;
         state.limit = pageSize;
         render();
       });
     });
-
     elements.clear.addEventListener("click", resetFilters);
-    elements.emptyReset.addEventListener("click", resetFilters);
-    elements.loadMore.addEventListener("click", () => {
-      state.limit += pageSize;
-      render();
+    elements.filterToggle.addEventListener("click", () => {
+      const panelOpen = elements.filterPanel.classList.toggle("is-open");
+      elements.filterToggle.setAttribute("aria-expanded", String(panelOpen));
+      elements.filterToggle.setAttribute("aria-label", `${panelOpen ? "Hide" : "Show"} filters${activeFilterCount() ? `, ${activeFilterCount()} active` : ""}`);
     });
-    elements.dialogClose.addEventListener("click", () => elements.dialog.close());
-    elements.dialog.addEventListener("click", (event) => {
-      if (event.target === elements.dialog) elements.dialog.close();
+    elements.emptyReset.addEventListener("click", resetFilters);
+    elements.loadMore.addEventListener("click", () => { state.limit += pageSize; render(); });
+    elements.exportCsv.addEventListener("click", () => downloadFile("sdn-nfv-papers-filtered.csv", `\uFEFF${exporters.csvExport(filteredPapers())}`, "text/csv;charset=utf-8"));
+    elements.exportBibtex.addEventListener("click", () => downloadFile("sdn-nfv-papers-filtered.bib", `${filteredPapers().map(exporters.bibtexEntry).join("\n\n")}\n`, "application/x-bibtex;charset=utf-8"));
+    elements.dialogClose.addEventListener("click", closeDialog);
+    elements.dialog.addEventListener("click", (event) => { if (event.target === elements.dialog) closeDialog(); });
+    elements.dialog.addEventListener("close", () => {
+      if (state.paper) {
+        state.paper = "";
+        updateUrl();
+      }
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "/" && !["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement.tagName)) {
@@ -380,19 +552,19 @@
     elements.count.textContent = "Catalog data could not be loaded";
     elements.empty.hidden = false;
     elements.empty.querySelector("h3").textContent = "The generated catalog is missing.";
-    elements.empty.querySelector("p").textContent = "Run python3 scripts/generate_site.py, then reload this page.";
+    elements.empty.querySelector("p").textContent = "Run python3 scripts/generate_site.py and verify the website assets, then reload this page.";
     elements.emptyReset.hidden = true;
   }
 
   initializeTheme();
-  if (!catalog || !Array.isArray(catalog.papers)) {
+  if (!catalog || !Array.isArray(catalog.papers) || !exporters) {
     showCatalogError();
     return;
   }
-
   initializeFilters(catalog.papers);
   renderCoverage(catalog.papers);
   readUrlState();
   bindControls();
   render();
+  if (state.paper) openDialog(state.paper);
 })();

@@ -1,0 +1,27 @@
+name: Check external links
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 3 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: external-link-check
+  cancel-in-progress: true
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate catalog
+        run: python3 scripts/validate_catalog.py
+      - name: Check authoritative and artifact links
+        run: python3 scripts/check_links.py --workers 10 --timeout 15

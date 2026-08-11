@@ -303,6 +303,26 @@
     grid-column: 1;
   }
 
+  .pagination {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 10px;
+    margin-top: 22px;
+    padding-top: 18px;
+  }
+
+  .pagination-pages {
+    display: none;
+  }
+
+  .pagination-summary {
+    display: block;
+  }
+
+  .pagination-button--nav {
+    min-width: 0;
+    padding-inline: 12px;
+  }
+
   .method-grid {
     grid-template-columns: 1fr;
     gap: 34px;

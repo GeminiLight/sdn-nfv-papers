@@ -146,8 +146,7 @@ code {
   margin-inline: auto;
 }
 
-.button:active,
-.load-more:active {
+.button:active {
   transform: translateY(1px);
 }
 
@@ -744,23 +743,90 @@ select:focus-visible {
   transform: translateY(1px);
 }
 
-.load-more {
-  width: 100%;
+.pagination {
+  display: grid;
+  grid-template-columns: minmax(92px, 1fr) auto minmax(92px, 1fr);
+  align-items: center;
+  gap: 18px;
   margin-top: 26px;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-small);
-  background: var(--surface-strong);
-  padding: 14px;
-  cursor: pointer;
-  color: var(--text);
-  font-size: 0.79rem;
-  font-weight: 500;
-  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+  padding-top: 22px;
 }
 
-.load-more:hover {
-  border-color: var(--accent);
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.pagination-button {
+  display: inline-flex;
+  min-width: 36px;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-small);
+  background: transparent;
+  padding: 0 10px;
+  cursor: pointer;
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.pagination-button--nav {
+  min-width: 92px;
+  border-color: var(--line);
+  background: var(--surface-strong);
+}
+
+.pagination-button--previous {
+  justify-self: start;
+}
+
+.pagination-button--next {
+  justify-self: end;
+}
+
+.pagination-button:not(:disabled):hover {
+  border-color: color-mix(in srgb, var(--accent) 58%, var(--line));
+  background: color-mix(in srgb, var(--surface-strong) 82%, var(--accent-soft) 18%);
   color: var(--accent-ink);
+}
+
+.pagination-button[aria-current="page"] {
+  border-color: color-mix(in srgb, var(--accent) 48%, var(--line));
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+.pagination-button:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+.pagination-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.pagination-ellipsis {
+  width: 26px;
+  color: var(--text-faint);
+  font-size: 0.76rem;
+  text-align: center;
+}
+
+.pagination-summary {
+  display: none;
+  margin: 0;
+  color: var(--text-faint);
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .loading-state {

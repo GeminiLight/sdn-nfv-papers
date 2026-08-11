@@ -62,7 +62,7 @@
     clear: document.querySelector("#clear-filters"),
     empty: document.querySelector("#empty-state"),
     emptyReset: document.querySelector("#empty-reset"),
-    loadMore: document.querySelector("#load-more"),
+    pagination: document.querySelector("#pagination"),
     loading: document.querySelector("#loading-state"),
     exportCsv: document.querySelector("#export-csv"),
     exportBibtex: document.querySelector("#export-bibtex"),
@@ -95,7 +95,7 @@
     availability: "",
     sort: "newest",
     paper: "",
-    limit: pageSize,
+    page: 1,
   };
 
   const customSelectControllers = new Map();
@@ -491,7 +491,7 @@
 
   function clearFilter(key) {
     state[key] = "";
-    state.limit = pageSize;
+    state.page = 1;
     if (key === "query") elements.search.value = "";
     else elements[key].value = "";
     render();
@@ -541,24 +541,108 @@
   function updateUrl() {
     const params = new URLSearchParams();
     Object.entries(state).forEach(([key, value]) => {
-      if (value && key !== "limit" && !(key === "sort" && value === "newest")) params.set(key, value);
+      if (!value || (key === "page" && value === 1) || (key === "sort" && value === "newest")) return;
+      params.set(key, value);
     });
     const next = `${location.pathname}${params.size ? `?${params}` : ""}${location.hash}`;
     history.replaceState(null, "", next);
   }
 
+  function paginationItems(currentPage, totalPages) {
+    if (totalPages <= 7) return Array.from({ length: totalPages }, (_, index) => index + 1);
+
+    const pages = new Set([1, totalPages]);
+    if (currentPage <= 4) {
+      for (let page = 2; page <= 5; page += 1) pages.add(page);
+    } else if (currentPage >= totalPages - 3) {
+      for (let page = totalPages - 4; page < totalPages; page += 1) pages.add(page);
+    } else {
+      pages.add(currentPage - 1);
+      pages.add(currentPage);
+      pages.add(currentPage + 1);
+    }
+
+    const items = [];
+    [...pages].sort((a, b) => a - b).forEach((page, index, ordered) => {
+      if (index && page - ordered[index - 1] > 1) items.push("ellipsis");
+      items.push(page);
+    });
+    return items;
+  }
+
+  function renderPagination(totalPages) {
+    elements.pagination.replaceChildren();
+    elements.pagination.hidden = totalPages <= 1;
+    if (totalPages <= 1) return;
+
+    const createButton = (label, page, className, disabled = false) => {
+      const button = document.createElement("button");
+      button.className = `pagination-button ${className}`;
+      button.type = "button";
+      button.textContent = label;
+      button.dataset.page = String(page);
+      button.disabled = disabled;
+      return button;
+    };
+
+    const previous = createButton("Previous", state.page - 1, "pagination-button--nav pagination-button--previous", state.page === 1);
+    previous.setAttribute("aria-label", "Previous page");
+    elements.pagination.append(previous);
+
+    const pages = document.createElement("div");
+    pages.className = "pagination-pages";
+    paginationItems(state.page, totalPages).forEach((item) => {
+      if (item === "ellipsis") {
+        const ellipsis = document.createElement("span");
+        ellipsis.className = "pagination-ellipsis";
+        ellipsis.setAttribute("aria-hidden", "true");
+        ellipsis.textContent = "…";
+        pages.append(ellipsis);
+        return;
+      }
+      const button = createButton(String(item), item, "pagination-button--page");
+      button.setAttribute("aria-label", `Page ${item}`);
+      if (item === state.page) button.setAttribute("aria-current", "page");
+      pages.append(button);
+    });
+    elements.pagination.append(pages);
+
+    const summary = document.createElement("p");
+    summary.className = "pagination-summary";
+    summary.textContent = `Page ${state.page} of ${totalPages}`;
+    elements.pagination.append(summary);
+
+    const next = createButton("Next", state.page + 1, "pagination-button--nav pagination-button--next", state.page === totalPages);
+    next.setAttribute("aria-label", "Next page");
+    elements.pagination.append(next);
+  }
+
+  function goToPage(page) {
+    const totalPages = Math.max(1, Math.ceil(filteredPapers().length / pageSize));
+    const nextPage = Math.max(1, Math.min(Number(page), totalPages));
+    if (!Number.isInteger(nextPage) || nextPage === state.page) return;
+    state.page = nextPage;
+    render();
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    elements.count.focus({ preventScroll: true });
+    elements.count.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+  }
+
   function render() {
     const filtered = filteredPapers();
-    const visible = filtered.slice(0, state.limit);
+    const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+    state.page = Math.max(1, Math.min(state.page, totalPages));
+    const startIndex = (state.page - 1) * pageSize;
+    const visible = filtered.slice(startIndex, startIndex + pageSize);
     const filters = activeFilterCount();
     elements.loading.hidden = true;
     elements.list.innerHTML = visible.map(paperMarkup).join("");
-    elements.count.textContent = `${filtered.length.toLocaleString()} paper${filtered.length === 1 ? "" : "s"}${filters ? ` across ${filters} active filter${filters === 1 ? "" : "s"}` : ""}`;
+    const shownRange = filtered.length ? `Showing ${(startIndex + 1).toLocaleString()}-${(startIndex + visible.length).toLocaleString()} of ` : "";
+    elements.count.textContent = `${shownRange}${filtered.length.toLocaleString()} paper${filtered.length === 1 ? "" : "s"}${filters ? ` across ${filters} active filter${filters === 1 ? "" : "s"}` : ""}`;
     elements.empty.hidden = filtered.length !== 0;
     elements.exportCsv.disabled = filtered.length === 0;
     elements.exportBibtex.disabled = filtered.length === 0;
-    elements.loadMore.hidden = visible.length >= filtered.length || filtered.length === 0;
-    if (!elements.loadMore.hidden) elements.loadMore.textContent = `Show ${Math.min(pageSize, filtered.length - visible.length)} more of ${filtered.length}`;
+    renderPagination(totalPages);
     elements.list.querySelectorAll("[data-paper-id]").forEach((button) => {
       button.addEventListener("click", () => openDialog(button.dataset.paperId));
     });
@@ -671,7 +755,7 @@
   function resetFilters() {
     Object.assign(state, {
       query: "", paperType: "", method: "", scenario: "", direction: "", venue: "", year: "",
-      rank: "", verification: "", availability: "", sort: "newest", paper: "", limit: pageSize,
+      rank: "", verification: "", availability: "", sort: "newest", paper: "", page: 1,
     });
     ["search", "paperType", "method", "scenario", "direction", "venue", "year", "rank", "verification", "availability"].forEach((key) => {
       elements[key].value = "";
@@ -692,6 +776,8 @@
       else if (legacyCategory === "other_unclassified") state.method = "systems";
       else state.method = legacyCategory;
     }
+    const requestedPage = Number.parseInt(params.get("page"), 10);
+    if (Number.isInteger(requestedPage) && requestedPage > 0) state.page = requestedPage;
     elements.search.value = state.query;
     ["paperType", "method", "scenario", "direction", "venue", "year", "rank", "verification", "availability", "sort"].forEach((key) => {
       const control = elements[key];
@@ -709,14 +795,14 @@
       window.clearTimeout(searchTimer);
       searchTimer = window.setTimeout(() => {
         state.query = elements.search.value.trim();
-        state.limit = pageSize;
+        state.page = 1;
         render();
       }, 100);
     });
     ["paperType", "method", "scenario", "direction", "venue", "year", "rank", "verification", "availability", "sort"].forEach((key) => {
       elements[key].addEventListener("change", () => {
         state[key] = elements[key].value;
-        state.limit = pageSize;
+        state.page = 1;
         render();
       });
     });
@@ -727,7 +813,10 @@
       elements.filterToggle.setAttribute("aria-label", `${panelOpen ? "Hide" : "Show"} filters${activeFilterCount() ? `, ${activeFilterCount()} active` : ""}`);
     });
     elements.emptyReset.addEventListener("click", resetFilters);
-    elements.loadMore.addEventListener("click", () => { state.limit += pageSize; render(); });
+    elements.pagination.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-page]");
+      if (button && !button.disabled) goToPage(Number(button.dataset.page));
+    });
     elements.exportCsv.addEventListener("click", () => downloadFile("sdn-nfv-papers-filtered.csv", `\uFEFF${exporters.csvExport(filteredPapers())}`, "text/csv;charset=utf-8"));
     elements.exportBibtex.addEventListener("click", () => downloadFile("sdn-nfv-papers-filtered.bib", `${filteredPapers().map(exporters.bibtexEntry).join("\n\n")}\n`, "application/x-bibtex;charset=utf-8"));
     elements.dialogClose.addEventListener("click", closeDialog);

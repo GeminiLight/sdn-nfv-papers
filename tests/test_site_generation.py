@@ -67,8 +67,10 @@ class SiteGenerationTests(unittest.TestCase):
             "active-filters",
             "export-csv",
             "export-bibtex",
+            "pagination",
         ):
             self.assertIn(f'id="{control_id}"', page)
+        self.assertNotIn('id="load-more"', page)
 
     def test_interactive_page_local_assets_exist(self) -> None:
         page = (ROOT / "index.html").read_text(encoding="utf-8")

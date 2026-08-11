@@ -90,6 +90,13 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('role", "listbox"', script)
         self.assertIn(".select-menu", styles)
 
+    def test_custom_select_triggers_are_not_nested_in_native_labels(self) -> None:
+        page = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertNotIn('<label class="filter-field">', page)
+        self.assertNotIn('<label class="sort-control">', page)
+        self.assertEqual(9, page.count('<div class="filter-field">'))
+        self.assertEqual(1, page.count('<div class="sort-control">'))
+
     def test_static_index_uses_shared_brand_treatment(self) -> None:
         outputs, _ = build_outputs()
         static_page = outputs[OUTPUT_PATHS["static"]]

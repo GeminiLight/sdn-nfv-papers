@@ -17,10 +17,10 @@ This is a paper list about Network Resource Allocation in [Software-Defined Netw
 
 Here, VNF - Virtual Network Function and SFC - Service Function Chain.
 
-We mainly collect papers from high-quality journals and conferences, and classify them according to method categories. Particularly, you can find more details of papers in the **Machine Learning-based** section, which represents an encouraging technique to efficiently solve network resource allocation problems.
+We mainly collect papers from high-quality journals and conferences. Paper type, method families, research directions, and scenarios are modeled independently; the README keeps one primary display section for readability, while the website exposes the complete multi-value taxonomy.
 
 <div align="center">
-  <img src="sdn-nfv-illustration.png" alt="SDN and NFV Illustration" width="50%">
+  <img src="sdn-nfv-illustration.webp" alt="SDN and NFV Illustration" width="50%">
 </div>
 
 ### Search by Keywords
@@ -37,5 +37,5 @@ You can search the relevant papers by following keywords:
 
 ### Repository & Website
 
-- [Repository](https://github.com/GeminiLight/nfv-papers): More timely updates
-- [Website](https://geminilight.github.io/sdn-nfv-papers/): Better reading experience
+- [Repository](https://github.com/GeminiLight/sdn-nfv-papers): More timely updates
+- [Website](https://tianfuwang.tech/sdn-nfv-papers/): Better reading experience

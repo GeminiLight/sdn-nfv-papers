@@ -1,10 +1,10 @@
 # Catalog Visualizations
 
-This directory contains deterministic, dependency-free visualizations generated from `data/papers.csv`.
+This directory contains deterministic, dependency-free visualizations generated from the validated paper and taxonomy sources in `data/`.
 
 Generated artifacts:
 
-- `papers-by-year.svg`: publication-year coverage, stacked by primary method category.
+- `papers-by-year.svg`: publication-year coverage, separating surveys from primary research method families.
 - `papers-by-direction.svg`: distribution of primary research directions.
 - `analysis.md`: concise statistics and chart embeds merged into the root `README.md`.
 
@@ -20,4 +20,4 @@ Verify that every generated file is current:
 python3 scripts/generate_readme.py --check
 ```
 
-For visualization-only development, run `python3 visualization/generate_visualizations.py`. Do not edit the generated SVG or analysis files directly; update the CSV or generator instead.
+For visualization-only development, run `python3 visualization/generate_visualizations.py`. Do not edit the generated SVG or analysis files directly; update the catalog sources or generator instead.

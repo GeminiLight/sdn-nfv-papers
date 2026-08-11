@@ -116,6 +116,8 @@ site:dl.acm.org NFV "resource allocation"
 
 不满足核心场景或资源决策条件、与现有记录重复，或无法可靠核验。应保留简短排除理由，避免重复检查。
 
+所有候选结论统一写入 `data/screening.csv`。`candidate_id` 优先使用 DOI，其次使用 arXiv ID；`reason` 应描述决定性边界，不只写“无关”。Include 记录在正式进入 catalog 后仍可保留，作为检索批次的审计轨迹。
+
 ## 6. 去重规则
 
 按以下优先级识别同一论文：
@@ -152,13 +154,15 @@ Placement cost -; Latency -; Acceptance ratio +; Energy consumption -
 
 1. 明确年份、方向和方法范围。
 2. 记录使用的数据库与检索式。
-3. 建立 Include、Pending、Exclude 三个候选列表。
+3. 在 `data/screening.csv` 建立 Include、Pending、Exclude 三类候选记录。
 4. 先按稳定标识去重，再阅读摘要和问题定义。
-5. 逐项核验 Include 论文并填写完整 CSV 字段。
+5. 逐项核验 Include 论文并填写 `papers.csv`、`taxonomy.csv` 和 `provenance.csv`；新 venue 同步登记到 `venues.csv`。
 6. 将 Pending 问题集中交给用户确认。
 7. 更新 `data/papers.csv` 后运行：
 
 ```bash
+python3 -m unittest discover -s tests -v
+python3 scripts/validate_catalog.py
 python3 scripts/generate_readme.py
 python3 scripts/generate_readme.py --check
 ```

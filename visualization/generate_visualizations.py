@@ -15,7 +15,7 @@ OUTPUT_DIR = Path(__file__).resolve().parent
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from generate_readme import ValidationError, load_papers, primary_value  # noqa: E402
+from catalog import ValidationError, load_catalog, primary_value  # noqa: E402
 
 
 CATEGORY_STYLES = (
@@ -23,7 +23,8 @@ CATEGORY_STYLES = (
     ("mathematical", "Mathematical", "var(--series-gold)"),
     ("heuristic", "Heuristic", "var(--series-blue)"),
     ("machine_learning", "Machine learning", "var(--series-green)"),
-    ("other_unclassified", "Other / unclassified", "var(--series-slate)"),
+    ("systems", "Systems", "var(--series-slate)"),
+    ("unclassified", "Unclassified", "var(--series-rose)"),
 )
 
 DIRECTION_STYLES = (
@@ -83,6 +84,12 @@ def year_tick_step(maximum: int) -> int:
     return 20
 
 
+def primary_classification(paper: dict[str, str]) -> str:
+    if paper["paper_type"] == "survey_analysis":
+        return "survey_analysis"
+    return primary_value(paper["method_families"]) or "unclassified"
+
+
 def render_year_chart(papers: list[dict[str, str]]) -> str:
     width, height = 1200, 560
     plot_left, plot_right = 82, 1152
@@ -92,7 +99,7 @@ def render_year_chart(papers: list[dict[str, str]]) -> str:
 
     by_year: dict[int, Counter[str]] = defaultdict(Counter)
     for paper in papers:
-        by_year[int(paper["year"])][primary_value(paper["categories"])] += 1
+        by_year[int(paper["year"])][primary_classification(paper)] += 1
 
     years = list(range(min(by_year), max(by_year) + 1))
     totals = {year: sum(by_year[year].values()) for year in years}
@@ -111,12 +118,12 @@ def render_year_chart(papers: list[dict[str, str]]) -> str:
         width,
         height,
         "Publication coverage over time",
-        "Stacked bars show paper counts by publication year and primary method category.",
+        "Stacked bars show paper counts by publication year and primary catalog classification.",
     )
     lines.extend(
         [
             '  <text class="title" x="54" y="45">Publication coverage over time</text>',
-            '  <text class="subtitle" x="54" y="72">Papers in this catalog, grouped by primary method category</text>',
+            '  <text class="subtitle" x="54" y="72">Research methods and surveys are represented as separate dimensions</text>',
         ]
     )
 
@@ -166,7 +173,7 @@ def render_year_chart(papers: list[dict[str, str]]) -> str:
     lines.extend(
         [
             f'  <text class="axis-title" x="{(plot_left + plot_right) / 2:.1f}" y="522" text-anchor="middle">Publication year</text>',
-            '  <text class="note" x="54" y="548">Source: data/papers.csv · Primary category only · Counts describe catalog coverage, not total field output</text>',
+            '  <text class="note" x="54" y="548">Sources: data/papers.csv + data/taxonomy.csv · Primary classification only · Catalog coverage, not total field output</text>',
             "</svg>",
         ]
     )
@@ -241,13 +248,17 @@ def render_direction_chart(papers: list[dict[str, str]]) -> str:
 
 
 def render_analysis(papers: list[dict[str, str]]) -> str:
-    category_counts = Counter(primary_value(paper["categories"]) for paper in papers)
+    method_counts = Counter(
+        primary_value(paper["method_families"])
+        for paper in papers
+        if paper["paper_type"] == "research"
+    )
     direction_counts = Counter(primary_value(paper["directions"]) for paper in papers)
     year_counts = Counter(int(paper["year"]) for paper in papers)
     category_labels = {key: label for key, label, _ in CATEGORY_STYLES}
     direction_labels = {key: label for key, label, _ in DIRECTION_STYLES}
 
-    largest_category, largest_category_count = max(category_counts.items(), key=lambda item: item[1])
+    largest_method, largest_method_count = max(method_counts.items(), key=lambda item: item[1])
     largest_direction, largest_direction_count = max(direction_counts.items(), key=lambda item: item[1])
     peak_year, peak_year_count = max(year_counts.items(), key=lambda item: (item[1], item[0]))
     first_year, last_year = min(year_counts), max(year_counts)
@@ -258,7 +269,7 @@ def render_analysis(papers: list[dict[str, str]]) -> str:
 > These charts summarize this curated catalog. Coverage changes may reflect collection activity as well as research activity.
 
 <p align="center">
-  <img src="visualization/papers-by-year.svg" alt="Stacked bar chart of cataloged papers by publication year and primary category" width="100%">
+  <img src="visualization/papers-by-year.svg" alt="Stacked bar chart of cataloged papers by publication year and primary classification" width="100%">
 </p>
 
 <p align="center">
@@ -266,7 +277,7 @@ def render_analysis(papers: list[dict[str, str]]) -> str:
 </p>
 
 - **Catalog coverage:** {len(papers)} papers spanning **{first_year}–{last_year}**.
-- **Largest method family:** {category_labels[largest_category]} — **{largest_category_count} papers ({largest_category_count / len(papers) * 100:.1f}%)**.
+- **Largest research method family:** {category_labels[largest_method]} — **{largest_method_count} papers ({largest_method_count / len(papers) * 100:.1f}% of the catalog)**.
 - **Most represented direction:** {direction_labels[largest_direction]} — **{largest_direction_count} papers ({largest_direction_count / len(papers) * 100:.1f}%)**.
 - **Most represented publication year:** {peak_year} — **{peak_year_count} papers**.
 """
@@ -298,7 +309,7 @@ def main() -> int:
     args = parser.parse_args()
 
     try:
-        papers = load_papers()
+        papers = load_catalog().papers
         outputs = build_outputs(papers)
     except (OSError, ValidationError, ValueError) as error:
         print(f"error: {error}", file=sys.stderr)

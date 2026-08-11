@@ -1,0 +1,245 @@
+.filter-toggle {
+  display: none;
+}
+
+.filter-panel {
+  position: sticky;
+  top: 96px;
+  max-height: calc(100vh - 116px);
+  overflow-y: auto;
+  scrollbar-color: var(--line-strong) transparent;
+  scrollbar-width: thin;
+  border: 1px solid color-mix(in srgb, var(--line) 82%, var(--accent) 18%);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--surface-strong) 94%, var(--accent-soft) 6%);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--surface-strong) 84%, transparent);
+  padding: 22px 20px 20px;
+}
+
+.filter-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.filter-heading-copy p {
+  margin: 0 0 3px;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  letter-spacing: 0.04em;
+}
+
+.filter-heading h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  letter-spacing: -0.025em;
+}
+
+.filter-count,
+.filter-toggle-count {
+  display: inline-grid;
+  min-width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 720;
+  vertical-align: 2px;
+}
+
+.text-button {
+  background: transparent;
+  padding: 4px 0;
+  cursor: pointer;
+  color: var(--accent-ink);
+  font-size: 0.73rem;
+  font-weight: 740;
+  transition: color 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.text-button:not(:disabled):hover {
+  color: var(--accent-hover);
+}
+
+.text-button:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+.text-button:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.filter-groups {
+  display: grid;
+  gap: 0;
+  margin-top: 26px;
+}
+
+.filter-group {
+  min-width: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.filter-group + .filter-group {
+  margin-top: 22px;
+  border-top: 1px solid var(--line);
+  padding-top: 21px;
+}
+
+.filter-group legend {
+  width: 100%;
+  margin: 0 0 13px;
+  padding: 0;
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: -0.01em;
+}
+
+.filter-fields {
+  display: grid;
+  gap: 13px;
+}
+
+.filter-field {
+  position: relative;
+  display: grid;
+  gap: 6px;
+}
+
+.filter-field::before {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: var(--surface-subtle);
+  content: "";
+  pointer-events: none;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.filter-field::after {
+  position: absolute;
+  right: 18px;
+  bottom: 19px;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid var(--text-faint);
+  border-bottom: 1.5px solid var(--text-faint);
+  content: "";
+  pointer-events: none;
+  transform: translateY(-2px) rotate(45deg);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.filter-field > span {
+  color: var(--text-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+  transition: color 180ms ease;
+}
+
+.filter-field select {
+  appearance: none;
+  height: 44px;
+  background: color-mix(in srgb, var(--surface) 88%, var(--surface-subtle) 12%);
+  padding-right: 48px;
+  overflow: hidden;
+  font-weight: 620;
+  text-overflow: ellipsis;
+}
+
+.filter-field:hover::after,
+.filter-field.is-active::after {
+  border-color: var(--accent-ink);
+}
+
+.filter-field:hover::before,
+.filter-field.is-active::before {
+  background: color-mix(in srgb, var(--surface-subtle) 65%, var(--accent-soft) 35%);
+}
+
+.filter-field:hover select {
+  border-color: color-mix(in srgb, var(--line-strong) 72%, var(--accent) 28%);
+  background: var(--surface-strong);
+}
+
+.filter-field.is-active > span {
+  color: var(--accent-ink);
+}
+
+.filter-field.is-active select {
+  border-color: color-mix(in srgb, var(--accent) 56%, var(--line));
+  background: color-mix(in srgb, var(--surface) 72%, var(--accent-soft) 28%);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.filter-field option {
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+.filter-footnote {
+  margin: 23px 0 0;
+  border-top: 1px solid var(--line);
+  padding-top: 17px;
+  color: var(--text-faint);
+  font-size: 0.68rem;
+  line-height: 1.55;
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0 15px;
+}
+
+.active-filter {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--line));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 70%, var(--accent-soft) 30%);
+  padding: 6px 9px 6px 10px;
+  cursor: pointer;
+  color: var(--accent-ink);
+  font-size: 0.69rem;
+  font-weight: 680;
+  line-height: 1.2;
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.active-filter:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.active-filter:active {
+  transform: translateY(1px);
+}
+
+.active-filter strong {
+  font-weight: 780;
+}
+
+.active-filter-mark {
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1;
+}

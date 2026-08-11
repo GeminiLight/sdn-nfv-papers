@@ -30,7 +30,7 @@
   cursor: pointer;
   color: var(--text-soft);
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .dialog-meta {
@@ -38,14 +38,14 @@
   color: var(--accent-ink);
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .dialog-title {
   max-width: 90%;
   margin: 0;
   font-size: clamp(1.45rem, 2.4vw, 2.05rem);
-  font-weight: 680;
+  font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 1.18;
 }
@@ -75,13 +75,13 @@
 .dialog-details dt {
   color: var(--text-faint);
   font-size: 0.65rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .dialog-details dd {
   margin: 5px 0 0;
   font-size: 0.79rem;
-  font-weight: 650;
+  font-weight: 500;
 }
 
 .dialog-section {
@@ -111,7 +111,7 @@
   min-height: 40px;
   padding: 9px 13px;
   font-size: 0.84rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0;
 }
 

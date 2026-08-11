@@ -48,7 +48,7 @@
   color: #ffffff;
   font-family: var(--font-mono);
   font-size: 0.62rem;
-  font-weight: 720;
+  font-weight: 600;
   vertical-align: 2px;
 }
 
@@ -58,7 +58,7 @@
   cursor: pointer;
   color: var(--accent-ink);
   font-size: 0.73rem;
-  font-weight: 740;
+  font-weight: 500;
   transition: color 180ms ease, opacity 180ms ease, transform 180ms ease;
 }
 
@@ -100,7 +100,7 @@
   padding: 0;
   color: var(--text-soft);
   font-size: 0.72rem;
-  font-weight: 760;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -142,10 +142,15 @@
   transition: border-color 180ms ease, transform 180ms ease;
 }
 
+.filter-field.has-custom-select::before,
+.filter-field.has-custom-select::after {
+  display: none;
+}
+
 .filter-field > span {
   color: var(--text-soft);
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 500;
   transition: color 180ms ease;
 }
 
@@ -155,8 +160,14 @@
   background: color-mix(in srgb, var(--surface) 88%, var(--surface-subtle) 12%);
   padding-right: 48px;
   overflow: hidden;
-  font-weight: 620;
+  font-weight: 500;
   text-overflow: ellipsis;
+}
+
+.filter-field .custom-select .select-trigger {
+  height: 44px;
+  background: color-mix(in srgb, var(--surface) 88%, var(--surface-subtle) 12%);
+  font-weight: 500;
 }
 
 .filter-field:hover::after,
@@ -174,11 +185,23 @@
   background: var(--surface-strong);
 }
 
+.filter-field:hover .select-trigger,
+.filter-field .custom-select.is-open .select-trigger {
+  border-color: color-mix(in srgb, var(--line-strong) 72%, var(--accent) 28%);
+  background: var(--surface-strong);
+}
+
 .filter-field.is-active > span {
   color: var(--accent-ink);
 }
 
 .filter-field.is-active select {
+  border-color: color-mix(in srgb, var(--accent) 56%, var(--line));
+  background: color-mix(in srgb, var(--surface) 72%, var(--accent-soft) 28%);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.filter-field.is-active .select-trigger {
   border-color: color-mix(in srgb, var(--accent) 56%, var(--line));
   background: color-mix(in srgb, var(--surface) 72%, var(--accent-soft) 28%);
   box-shadow: inset 3px 0 0 var(--accent);
@@ -218,7 +241,7 @@
   cursor: pointer;
   color: var(--accent-ink);
   font-size: 0.69rem;
-  font-weight: 680;
+  font-weight: 500;
   line-height: 1.2;
   transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
 }
@@ -233,7 +256,7 @@
 }
 
 .active-filter strong {
-  font-weight: 780;
+  font-weight: 600;
 }
 
 .active-filter-mark {

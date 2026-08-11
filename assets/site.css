@@ -16,7 +16,7 @@
   --shadow: 0 24px 70px rgba(70, 91, 126, 0.14);
   --radius: 14px;
   --radius-small: 9px;
-  --font-sans: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -81,6 +81,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+h1,
+h2,
+h3,
+strong {
+  font-weight: 600;
+}
+
 button,
 input,
 select {
@@ -139,85 +146,6 @@ code {
   margin-inline: auto;
 }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid color-mix(in srgb, var(--line) 86%, transparent);
-  background: color-mix(in srgb, var(--page) 88%, transparent);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-.nav-shell {
-  display: flex;
-  width: min(1400px, calc(100% - 64px));
-  min-height: 70px;
-  margin-inline: auto;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-.wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: 11px;
-  font-size: 0.94rem;
-  font-weight: 720;
-  letter-spacing: -0.015em;
-  white-space: nowrap;
-}
-
-.wordmark-mark {
-  position: relative;
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  border: 2px solid var(--accent);
-  border-radius: 6px;
-}
-
-.wordmark-mark::after {
-  position: absolute;
-  inset: 5px;
-  border-radius: 3px;
-  background: var(--accent);
-  content: "";
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  color: var(--text-soft);
-  font-size: 0.86rem;
-  font-weight: 650;
-  white-space: nowrap;
-}
-
-.nav-links a,
-.theme-toggle {
-  transition: color 180ms ease, transform 180ms ease;
-}
-
-.nav-links a:hover,
-.theme-toggle:hover {
-  color: var(--text);
-}
-
-.theme-toggle {
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-small);
-  background: var(--surface);
-  padding: 7px 11px;
-  cursor: pointer;
-  color: var(--text-soft);
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.theme-toggle:active,
 .button:active,
 .load-more:active {
   transform: translateY(1px);
@@ -242,7 +170,7 @@ code {
   color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  font-weight: 760;
+  font-weight: 600;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -251,7 +179,7 @@ code {
   max-width: 720px;
   margin: 0;
   font-size: clamp(3.2rem, 4.8vw, 5rem);
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: -0.065em;
   line-height: 0.98;
 }
@@ -281,7 +209,7 @@ code {
   padding: 10px 17px;
   cursor: pointer;
   font-size: 0.88rem;
-  font-weight: 720;
+  font-weight: 500;
   line-height: 1;
   white-space: nowrap;
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
@@ -290,6 +218,7 @@ code {
 .button-primary {
   background: var(--accent);
   color: #f8fbff;
+  font-weight: 600;
 }
 
 :root[data-theme="dark"] .button-primary {
@@ -370,7 +299,7 @@ code {
   cursor: pointer;
   color: var(--text-soft);
   font-size: 0.68rem;
-  font-weight: 720;
+  font-weight: 500;
   transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
@@ -467,14 +396,14 @@ code {
 .venue-name {
   overflow: hidden;
   color: var(--text-soft);
-  font-weight: 700;
+  font-weight: 500;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .venue-count {
   color: var(--text);
-  font-weight: 760;
+  font-weight: 600;
   text-align: right;
 }
 
@@ -524,14 +453,14 @@ code {
 .hero-stats dt {
   color: var(--text-faint);
   font-size: 0.69rem;
-  font-weight: 650;
+  font-weight: 500;
 }
 
 .hero-stats dd {
   margin: 5px 0 0;
   font-family: var(--font-mono);
   font-size: 1.22rem;
-  font-weight: 760;
+  font-weight: 600;
 }
 
 .catalog-section {
@@ -548,7 +477,7 @@ code {
 .about-copy h2 {
   margin: 0;
   font-size: clamp(2.3rem, 4.8vw, 4.8rem);
-  font-weight: 630;
+  font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 1.02;
 }
@@ -571,7 +500,7 @@ code {
   margin-bottom: 9px;
   color: var(--text-soft);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .search-control {
@@ -631,7 +560,7 @@ code {
 .sort-control > span {
   color: var(--text-soft);
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 select {
@@ -675,7 +604,7 @@ select:focus-visible {
   margin: 0;
   color: var(--text-soft);
   font-size: 0.82rem;
-  font-weight: 660;
+  font-weight: 500;
   font-variant-numeric: tabular-nums;
 }
 
@@ -703,7 +632,7 @@ select:focus-visible {
   cursor: pointer;
   color: var(--text-soft);
   font-size: 0.7rem;
-  font-weight: 720;
+  font-weight: 500;
 }
 
 .toolbar-button:not(:disabled):hover {
@@ -743,13 +672,14 @@ select:focus-visible {
   display: block;
   color: var(--text);
   font-size: 0.78rem;
+  font-weight: 600;
 }
 
 .paper-title {
   display: inline;
   color: var(--text);
   font-size: clamp(1.02rem, 1.45vw, 1.24rem);
-  font-weight: 680;
+  font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.4;
   text-decoration-thickness: 1px;
@@ -782,7 +712,7 @@ select:focus-visible {
   padding: 3px 8px;
   color: var(--text-soft);
   font-size: 0.64rem;
-  font-weight: 680;
+  font-weight: 500;
   line-height: 1.25;
 }
 
@@ -801,7 +731,7 @@ select:focus-visible {
   cursor: pointer;
   color: var(--text-soft);
   font-size: 0.7rem;
-  font-weight: 720;
+  font-weight: 500;
   transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
@@ -824,7 +754,7 @@ select:focus-visible {
   cursor: pointer;
   color: var(--text);
   font-size: 0.79rem;
-  font-weight: 720;
+  font-weight: 500;
   transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
@@ -895,7 +825,7 @@ select:focus-visible {
 
 .method-grid dt {
   font-size: 1rem;
-  font-weight: 720;
+  font-weight: 600;
   letter-spacing: -0.02em;
 }
 

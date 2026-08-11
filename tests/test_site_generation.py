@@ -79,6 +79,21 @@ class SiteGenerationTests(unittest.TestCase):
             with self.subTest(path=path):
                 self.assertTrue((ROOT / path).is_file(), f"missing local website asset: {path}")
 
+    def test_interactive_page_uses_custom_select_enhancement(self) -> None:
+        page = (ROOT / "index.html").read_text(encoding="utf-8")
+        script = (ROOT / "assets" / "app.js").read_text(encoding="utf-8")
+        styles = (ROOT / "assets" / "selects.css").read_text(encoding="utf-8")
+        self.assertIn('href="assets/selects.css"', page)
+        self.assertIn("initializeCustomSelects();", script)
+        self.assertIn('role", "listbox"', script)
+        self.assertIn(".select-menu", styles)
+
+    def test_static_index_uses_shared_brand_treatment(self) -> None:
+        outputs, _ = build_outputs()
+        static_page = outputs[OUTPUT_PATHS["static"]]
+        self.assertIn('href="assets/brand.css"', static_page)
+        self.assertIn('class="wordmark-descriptor">Paper Index</span>', static_page)
+
     def test_canonical_domain_is_consistent_across_pages_and_readme(self) -> None:
         expected_url = "https://tianfuwang.tech/sdn-nfv-papers/"
         self.assertEqual(expected_url, SITE_URL)

@@ -82,13 +82,14 @@ def render_static_catalog(papers: list[dict[str, str]]) -> str:
     <title>All papers · SDN/NFV Paper Index</title>
     <link rel="canonical" href="{SITE_URL}papers.html">
     <link rel="stylesheet" href="assets/site.css">
+    <link rel="stylesheet" href="assets/brand.css">
     <link rel="stylesheet" href="assets/details.css">
     <link rel="stylesheet" href="assets/responsive.css">
   </head>
   <body class="static-catalog-page">
     <header class="site-header">
       <nav class="nav-shell" aria-label="Primary navigation">
-        <a class="wordmark" href="./"><span class="wordmark-mark" aria-hidden="true"></span><span>SDN/NFV Index</span></a>
+        <a class="wordmark" href="./" aria-label="SDN/NFV Paper Index home"><span class="wordmark-mark" aria-hidden="true"></span><span class="wordmark-copy"><span class="wordmark-name">SDN/NFV</span><span class="wordmark-divider" aria-hidden="true"></span><span class="wordmark-descriptor">Paper Index</span></span></a>
         <div class="nav-links"><a href="./">Interactive catalog</a><a href="data/papers.csv">Source CSV</a></div>
       </nav>
     </header>

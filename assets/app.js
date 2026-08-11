@@ -98,6 +98,9 @@
     limit: pageSize,
   };
 
+  const customSelectControllers = new Map();
+  let openCustomSelect = null;
+
   const filterDefinitions = [
     { key: "query", label: "Search" },
     { key: "paperType", label: "Paper type", labels: paperTypeLabels },
@@ -159,6 +162,201 @@
     appendOptions(elements.year, uniqueValues(papers, "year").sort((a, b) => Number(b) - Number(a)));
     appendOptions(elements.rank, uniqueValues(papers, "ranks").sort((a, b) => a.localeCompare(b)));
     appendOptions(elements.verification, uniqueValues(papers, "verification_status").sort(), verificationLabels);
+  }
+
+  function initializeCustomSelect(select) {
+    const nativeOptions = Array.from(select.options);
+    const field = select.closest(".filter-field");
+    const compact = Boolean(select.closest(".sort-control"));
+    const label = field?.querySelector(":scope > span")?.textContent
+      || select.closest(".sort-control")?.querySelector(":scope > span")?.textContent
+      || "Choose an option";
+    const shell = document.createElement("div");
+    const trigger = document.createElement("button");
+    const value = document.createElement("span");
+    const chevron = document.createElement("span");
+    const menu = document.createElement("div");
+    const list = document.createElement("div");
+    let highlightedIndex = Math.max(select.selectedIndex, 0);
+    let typeahead = "";
+    let typeaheadTimer;
+
+    shell.className = `custom-select${compact ? " custom-select--compact" : ""}`;
+    trigger.className = "select-trigger";
+    trigger.type = "button";
+    trigger.id = `${select.id}-trigger`;
+    trigger.setAttribute("aria-haspopup", "listbox");
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.setAttribute("aria-controls", `${select.id}-menu`);
+    value.className = "select-value";
+    chevron.className = "select-chevron";
+    chevron.setAttribute("aria-hidden", "true");
+    trigger.append(value, chevron);
+
+    menu.className = "select-menu";
+    menu.id = `${select.id}-menu`;
+    menu.hidden = true;
+    list.className = "select-options";
+    list.setAttribute("role", "listbox");
+    list.setAttribute("aria-labelledby", trigger.id);
+    menu.append(list);
+
+    const renderedOptions = nativeOptions.map((option, index) => {
+      const item = document.createElement("button");
+      item.className = "select-option";
+      item.type = "button";
+      item.id = `${select.id}-option-${index}`;
+      item.setAttribute("role", "option");
+      item.textContent = option.textContent;
+      item.disabled = option.disabled;
+      item.addEventListener("pointermove", () => setHighlight(index, false));
+      item.addEventListener("click", () => choose(index));
+      list.append(item);
+      return item;
+    });
+
+    function setHighlight(index, shouldScroll = true) {
+      highlightedIndex = Math.max(0, Math.min(index, renderedOptions.length - 1));
+      renderedOptions.forEach((option, optionIndex) => {
+        option.classList.toggle("is-highlighted", optionIndex === highlightedIndex);
+      });
+      trigger.setAttribute("aria-activedescendant", renderedOptions[highlightedIndex].id);
+      if (shouldScroll) renderedOptions[highlightedIndex].scrollIntoView({ block: "nearest" });
+    }
+
+    function sync() {
+      const selectedIndex = Math.max(select.selectedIndex, 0);
+      const selected = nativeOptions[selectedIndex];
+      highlightedIndex = selectedIndex;
+      value.textContent = selected?.textContent || "";
+      trigger.title = selected?.textContent || "";
+      trigger.setAttribute("aria-label", `${label}: ${selected?.textContent || "No selection"}`);
+      renderedOptions.forEach((option, optionIndex) => {
+        option.setAttribute("aria-selected", String(optionIndex === selectedIndex));
+        option.classList.toggle("is-highlighted", optionIndex === highlightedIndex && !menu.hidden);
+      });
+    }
+
+    function positionMenu() {
+      if (menu.hidden) return;
+      const margin = 12;
+      const gap = 7;
+      const rect = trigger.getBoundingClientRect();
+      const width = Math.min(
+        Math.max(rect.width, compact ? 210 : 260),
+        window.innerWidth - (margin * 2),
+      );
+      menu.style.width = `${width}px`;
+      const menuHeight = Math.min(menu.scrollHeight, window.innerHeight - (margin * 2));
+      const roomBelow = window.innerHeight - rect.bottom - margin;
+      const roomAbove = rect.top - margin;
+      const placeAbove = roomBelow < Math.min(menuHeight, 190) && roomAbove > roomBelow;
+      const preferredLeft = compact ? rect.right - width : rect.left;
+      const left = Math.min(Math.max(preferredLeft, margin), window.innerWidth - width - margin);
+      const top = placeAbove
+        ? Math.max(margin, rect.top - menuHeight - gap)
+        : Math.min(rect.bottom + gap, window.innerHeight - menuHeight - margin);
+      menu.dataset.placement = placeAbove ? "top" : "bottom";
+      menu.style.left = `${Math.round(left)}px`;
+      menu.style.top = `${Math.round(top)}px`;
+    }
+
+    function open() {
+      if (openCustomSelect && openCustomSelect !== controller) openCustomSelect.close();
+      openCustomSelect = controller;
+      shell.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+      menu.hidden = false;
+      sync();
+      setHighlight(Math.max(select.selectedIndex, 0));
+      positionMenu();
+    }
+
+    function close(returnFocus = false) {
+      if (menu.hidden) return;
+      menu.hidden = true;
+      shell.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+      trigger.removeAttribute("aria-activedescendant");
+      if (openCustomSelect === controller) openCustomSelect = null;
+      if (returnFocus) trigger.focus();
+    }
+
+    function choose(index) {
+      if (nativeOptions[index]?.disabled) return;
+      select.selectedIndex = index;
+      sync();
+      close(true);
+      select.dispatchEvent(new Event("change", { bubbles: true }));
+    }
+
+    function moveHighlight(amount) {
+      let next = highlightedIndex;
+      do {
+        next = Math.max(0, Math.min(next + amount, renderedOptions.length - 1));
+      } while (nativeOptions[next]?.disabled && next > 0 && next < renderedOptions.length - 1);
+      setHighlight(next);
+    }
+
+    function handleTypeahead(key) {
+      window.clearTimeout(typeaheadTimer);
+      typeahead += normalize(key);
+      typeaheadTimer = window.setTimeout(() => { typeahead = ""; }, 650);
+      const start = highlightedIndex + 1;
+      const ordered = nativeOptions.slice(start).concat(nativeOptions.slice(0, start));
+      const match = ordered.find((option) => !option.disabled && normalize(option.textContent).startsWith(typeahead));
+      if (match) setHighlight(nativeOptions.indexOf(match));
+    }
+
+    trigger.addEventListener("click", () => {
+      if (menu.hidden) open();
+      else close();
+    });
+    trigger.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+        event.preventDefault();
+        if (menu.hidden) open();
+        else moveHighlight(event.key === "ArrowDown" ? 1 : -1);
+      } else if (event.key === "Home" || event.key === "End") {
+        event.preventDefault();
+        if (menu.hidden) open();
+        setHighlight(event.key === "Home" ? 0 : renderedOptions.length - 1);
+      } else if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        if (menu.hidden) open();
+        else choose(highlightedIndex);
+      } else if (event.key === "Escape" && !menu.hidden) {
+        event.preventDefault();
+        close(true);
+      } else if (event.key === "Tab") {
+        close();
+      } else if (event.key.length === 1 && !event.ctrlKey && !event.metaKey && !event.altKey) {
+        event.preventDefault();
+        if (menu.hidden) open();
+        handleTypeahead(event.key);
+      }
+    });
+
+    select.classList.add("native-select-control");
+    field?.classList.add("has-custom-select");
+    select.insertAdjacentElement("afterend", shell);
+    shell.append(trigger);
+    document.body.append(menu);
+    const controller = { shell, menu, trigger, close, positionMenu, sync };
+    customSelectControllers.set(select, controller);
+    sync();
+  }
+
+  function initializeCustomSelects() {
+    document.querySelectorAll("select").forEach(initializeCustomSelect);
+    document.addEventListener("pointerdown", (event) => {
+      if (!openCustomSelect) return;
+      if (!openCustomSelect.shell.contains(event.target) && !openCustomSelect.menu.contains(event.target)) {
+        openCustomSelect.close();
+      }
+    });
+    document.addEventListener("scroll", () => openCustomSelect?.positionMenu(), true);
+    window.addEventListener("resize", () => openCustomSelect?.positionMenu());
   }
 
   function renderCoverage(papers) {
@@ -334,6 +532,7 @@
       if (key === "query") return;
       elements[key].closest(".filter-field")?.classList.toggle("is-active", Boolean(state[key]));
     });
+    customSelectControllers.forEach((controller) => controller.sync());
     const panelOpen = elements.filterPanel.classList.contains("is-open");
     elements.filterToggle.setAttribute("aria-label", `${panelOpen ? "Hide" : "Show"} filters${count ? `, ${count} active` : ""}`);
     renderActiveFilters();
@@ -565,6 +764,7 @@
   renderCoverage(catalog.papers);
   readUrlState();
   bindControls();
+  initializeCustomSelects();
   render();
   if (state.paper) openDialog(state.paper);
 })();

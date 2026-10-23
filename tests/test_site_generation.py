@@ -104,7 +104,7 @@ class SiteGenerationTests(unittest.TestCase):
         self.assertIn('class="wordmark-descriptor">Paper Index</span>', static_page)
 
     def test_canonical_domain_is_consistent_across_pages_and_readme(self) -> None:
-        expected_url = "https://tianfuwang.tech/sdn-nfv-papers/"
+        expected_url = "https://tianfu.wang/sdn-nfv-papers/"
         self.assertEqual(expected_url, SITE_URL)
         self.assertFalse(
             (ROOT / "CNAME").exists(),

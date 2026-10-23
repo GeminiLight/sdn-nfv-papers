@@ -13,7 +13,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE_URL = "https://tianfuwang.tech/sdn-nfv-papers/"
+SITE_URL = "https://tianfu.wang/sdn-nfv-papers/"
 OUTPUT_PATHS = {
     "catalog": ROOT / "assets" / "papers.js",
     "static": ROOT / "papers.html",

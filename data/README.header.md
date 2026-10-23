@@ -38,4 +38,4 @@ You can search the relevant papers by following keywords:
 ### Repository & Website
 
 - [Repository](https://github.com/GeminiLight/sdn-nfv-papers): More timely updates
-- [Website](https://tianfuwang.tech/sdn-nfv-papers/): Better reading experience
+- [Website](https://tianfu.wang/sdn-nfv-papers/): Better reading experience

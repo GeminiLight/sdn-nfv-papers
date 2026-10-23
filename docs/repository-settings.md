@@ -18,8 +18,8 @@ For a single-maintainer repository, approving reviews can remain optional. The p
 
 - Source branch: `main`, repository root.
 - Project custom domain: leave empty. Do not add a `CNAME` file to this repository.
-- Domain owner: the account site repository `GeminiLight/geminilight.github.io` owns `tianfuwang.tech`; GitHub Pages automatically serves this project beneath that domain using the repository path.
-- Canonical project URL: `https://tianfuwang.tech/sdn-nfv-papers/`.
+- Domain owner: the account site repository `GeminiLight/geminilight.github.io` owns `tianfu.wang`; GitHub Pages automatically serves this project beneath that domain using the repository path.
+- Canonical project URL: `https://tianfu.wang/sdn-nfv-papers/`.
 - HTTPS enforcement belongs to the account site Pages setting because that repository owns the custom domain.
 
 The canonical project URL is also owned by `scripts/generate_site.py`. If the account site's custom domain or this repository name changes, update that constant and the website link in `data/README.header.md` together. Configuring a custom domain directly on this project would override the inherited `/sdn-nfv-papers/` URL.
